@@ -9,9 +9,10 @@ html {
 	box-sizing: border-box;
 }
 body {
-    display: flex;
+	display: flex;
 	min-height: 100%;
 	margin: 1em;
+	flex-direction: column;
 }
 #main {
     display: block;

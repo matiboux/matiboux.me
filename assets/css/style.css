@@ -21,6 +21,12 @@ body {
 	float: left;
 	transform: translate(0, -50%);
 }
+.fullscreen-absolute-bottom {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	border: 0;
+}
 
 .header-wrapper > h1 {
 	font-weight: bold;
@@ -60,9 +66,6 @@ body {
 	color: #f0f0f0;
 	background-color: #383838;
 }
-
-
-
 
 
 /** Bootstrap Fix */

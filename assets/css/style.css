@@ -8,13 +8,27 @@ html {
 	justify-content: center;
 	box-sizing: border-box;
 }
+
 body {
 	display: flex;
 	min-height: 100%;
-	margin: 1em;
+	padding: 2em 1em;
 	flex-direction: column;
 }
+
 #main {
+    display: block;
+    margin: auto;
+}
+
+#footer {
+	display: flex;
+	margin: 2em 0 -2em;
+	padding: 1em 2em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 2px solid #808080;
     display: block;
     margin: auto;
 }
@@ -82,7 +96,7 @@ body {
 }
 
 
-/* --------- */
+/* --------- 
 
 body {
 	background: #202020;
@@ -286,8 +300,7 @@ footer ul > li .fab, footer ul > li .fas {
 	header {
 		width: 100%;
 	}
-	/*section, footer {*/
-	section {
+	section, footer {
 		border-top: 1px solid #808080;
 		padding: 20px 0;
 		margin: 0 0 20px
@@ -333,3 +346,4 @@ footer ul > li .fab, footer ul > li .fas {
 		color:#444
 	}
 }
+*/

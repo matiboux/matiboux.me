@@ -1,6 +1,7 @@
 /** matiboux.me CSS stylesheet */
 
 /** Wrappers */
+
 html {
 	height: 100%;
 }
@@ -12,12 +13,25 @@ body {
 }
 
 /** Special wrappers */
+
 .fullscreen-focus-wrapper {
     position: relative;
     top: 50vh;
     width: 100%;
     float: left;
     transform: translate(0, -50%);
+}
+
+.header-wrapper > h1 {
+    font-weight: bold;
+    padding-bottom: 10px;
+	border-bottom: 2px solid #fff;
+}
+
+/** Bootstrap Fix */
+
+*:last-child {
+	margin-bottom: 0;
 }
 
 

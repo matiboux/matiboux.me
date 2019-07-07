@@ -15,17 +15,32 @@ body {
 /** Special wrappers */
 
 .fullscreen-focus-wrapper {
-    position: relative;
-    top: 50vh;
-    width: 100%;
-    float: left;
-    transform: translate(0, -50%);
+	position: relative;
+	top: 50vh;
+	width: 100%;
+	float: left;
+	transform: translate(0, -50%);
 }
 
 .header-wrapper > h1 {
-    font-weight: bold;
-    padding-bottom: 10px;
+	font-weight: bold;
+	padding-bottom: 10px;
 	border-bottom: 2px solid #fff;
+}
+.header-wrapper > .social-icons {
+	list-style: none;
+	padding: 0;
+}
+.header-wrapper > .social-icons li {
+	display: inline;
+	font-size: 2em;
+}
+.header-wrapper > .social-icons li a {
+	color: #fff;
+	text-decoration: none;
+}
+.header-wrapper > .social-icons li a:hover, .header-wrapper > .social-icons li a:focus {
+	color: #4080c0;
 }
 
 /** Bootstrap Fix */

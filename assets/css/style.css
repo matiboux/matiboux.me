@@ -27,21 +27,43 @@ body {
 	padding-bottom: 10px;
 	border-bottom: 2px solid #fff;
 }
-.header-wrapper > .social-icons {
+
+.social-icons {
 	list-style: none;
 	padding: 0;
 }
-.header-wrapper > .social-icons li {
+.social-icons li {
 	display: inline;
 	font-size: 2em;
 }
-.header-wrapper > .social-icons li a {
+.social-icons li a {
 	color: #fff;
 	text-decoration: none;
 }
-.header-wrapper > .social-icons li a:hover, .header-wrapper > .social-icons li a:focus {
-	color: #4080c0;
+.social-icons li a:hover, .social-icons li a:focus {
+	color: #50a0c0;
 }
+
+
+.social-icons {
+	list-style: none;
+	padding: 0;
+}
+.social-icons li {
+	display: inline;
+	font-size: 2em;
+}
+.social-icons li a {
+	color: #fff;
+	text-decoration: none;
+}
+.social-icons li a:hover, .social-icons li a:focus {
+	color: #50a0c0;
+}
+
+
+
+
 
 /** Bootstrap Fix */
 

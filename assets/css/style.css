@@ -3,13 +3,19 @@
 /** Wrappers */
 
 html {
+	display: flex;
 	height: 100%;
+	justify-content: center;
+	box-sizing: border-box;
 }
 body {
+    display: flex;
 	min-height: 100%;
+	margin: 1em;
 }
 #main {
     display: block;
+    margin: auto;
 }
 
 /** Special wrappers */
@@ -279,7 +285,8 @@ footer ul > li .fab, footer ul > li .fas {
 	header {
 		width: 100%;
 	}
-	section, footer {
+	/*section, footer {*/
+	section {
 		border-top: 1px solid #808080;
 		padding: 20px 0;
 		margin: 0 0 20px

@@ -33,35 +33,31 @@ body {
 #footer {
 	display: flex;
 	margin: 2em 0 -2em;
-	padding: 1em 2em;
+	padding: .5em 1.5em;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	border-top: 2px solid #808080;
-    display: block;
-    margin: auto;
+}
+#footer > * {
+	margin: .5em;
+}
+#footer ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#footer ul > li .fab, #footer ul > li .fas {
+	margin-right: 5px;
 }
 
 /** Special wrappers */
 
-.fullscreen-focus-wrapper {
-	position: relative;
-	top: 50vh;
-	width: 100%;
-	float: left;
-	transform: translate(0, -50%);
-}
-.fullscreen-absolute-bottom {
-	position: absolute;
-	width: 100%;
-	bottom: 0;
-	border: 0;
-}
-
 .header-wrapper > h1 {
 	font-weight: bold;
-	padding-bottom: 10px;
-	border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+	border-bottom: 2px solid #808080;
 }
 
 .social-icons {

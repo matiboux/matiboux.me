@@ -2,13 +2,6 @@
 
 /** Wrappers */
 
-body {
-	background: #202020;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #f0f0f0;
-	font-size: 16px;
-	font-weight: 400;
-}
 html {
 	display: flex;
 	height: 100%;
@@ -55,11 +48,18 @@ body {
 
 h1.title {
 	font-weight: bold;
-    margin-bottom: 1rem;
-    padding-bottom: .5rem;
+	margin-bottom: 1rem;
+	padding-bottom: .5rem;
 	border-bottom: 2px solid #808080;
 }
+h1.title img {
+	width: 100px;
+	margin-right: 1rem;
+	vertical-align: bottom;
+	border: 2px solid #306090;
+	border-radius: 5px;
 
+}
 .social-icons {
 	list-style: none;
 	padding: 0;

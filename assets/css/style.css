@@ -81,20 +81,35 @@ body {
 
 /** Special wrappers */
 
-h1.title {
-	font-weight: bold;
+.title {
 	margin-bottom: 1rem;
 	padding-bottom: .5rem;
 	border-bottom: 2px solid #808080;
+	text-align: center;
 }
-h1.title img {
+.title h1 {
+	font-weight: bold;
+	margin-bottom: 0;
+}
+.title img {
+	display: block;
 	width: 100px;
+	margin: 0 auto;
 	margin-right: 1rem;
 	vertical-align: bottom;
 	border: 2px solid #306090;
 	border-radius: 5px;
 
 }
+@media (min-width: 576px) {
+	.title {
+		text-align: left;
+	}
+	.title img {
+		display: inline;
+	}
+}
+
 .social-icons {
 	list-style: none;
 	padding: 0;

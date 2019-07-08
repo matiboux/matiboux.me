@@ -104,9 +104,12 @@ body {
 	.title {
 		text-align: left;
 	}
+	.title img, .title h1 {
+		display: inline-block;
+	}
 	.title img {
-		display: inline;
 		margin-bottom: 0;
+		margin-right: 1rem;
 	}
 }
 

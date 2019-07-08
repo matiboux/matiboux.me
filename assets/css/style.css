@@ -94,8 +94,7 @@ body {
 .title img {
 	display: block;
 	width: 100px;
-	margin: 0 auto;
-	margin-right: 1rem;
+	margin: 0 auto .5rem;
 	vertical-align: bottom;
 	border: 2px solid #306090;
 	border-radius: 5px;
@@ -107,6 +106,7 @@ body {
 	}
 	.title img {
 		display: inline;
+		margin-bottom: 0;
 	}
 }
 

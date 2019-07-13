@@ -48,8 +48,12 @@ body {
 
 
 
-#main .timeline-items { position: relative; margin: 20px 0 40px; table-layout: fixed }
-#main .timeline-items > * > .icon .bullet {
+/*#main .timeline-items { position: relative; table-layout: fixed }*/
+#main .timeline-items > * > * { position: relative; display: table-cell; vertical-align: top }
+
+#main .timeline-items > * > .date { width: 90px; padding: 13px 5px; font-size: 12px; text-align: right; font-style: italic }
+#main .timeline-items > * > .misc { padding: 0 10px; }
+#main .timeline-items > * > .misc .bullet {
 	background: #f0f0f0;
 	width: 7px;
 	height: 7px;
@@ -57,6 +61,9 @@ body {
 	border: 1px solid #e0e0e0;
 	border-radius: 50%;
 }
+#main .timeline-items > * > .misc .line { position: absolute; height: 100%; top: 0; left: 31px; border-left: 1px solid #bbb; z-index: -1 }
+
+
 
 #main .career { position: relative; margin: 20px 0 40px; table-layout: fixed }
 #main .career > .item > .icon .box { background: #f1f1f1; width: 42px; height: 42px; padding: 10px 0; color: #333; font-size: 16px; text-align: center; border: 1px solid #bbb; border-radius: 50% }

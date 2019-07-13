@@ -48,6 +48,16 @@ body {
 
 
 
+#main .timeline-items { position: relative; margin: 20px 0 40px; table-layout: fixed }
+#main .timeline-items > * > .icon .bullet {
+	background: #f0f0f0;
+	width: 7px;
+	height: 7px;
+	margin-top: 13px;
+	border: 1px solid #e0e0e0;
+	border-radius: 50%;
+}
+
 #main .career { position: relative; margin: 20px 0 40px; table-layout: fixed }
 #main .career > .item > .icon .box { background: #f1f1f1; width: 42px; height: 42px; padding: 10px 0; color: #333; font-size: 16px; text-align: center; border: 1px solid #bbb; border-radius: 50% }
 
@@ -59,7 +69,6 @@ body {
 /* #main .career > .item > .icon .box .id { display: none; } */
 /* #main .career > .item > .icon .box:hover .fa { display: none; } */
 /* #main .career > .item > .icon .box:hover .id { display: block; } */
-#main .career > .item.item-small > .icon .box { width: 32px; height: 32px; margin: 5px; padding: 6px 0; color: #888; font-size: 14px }
 #main .career > .item > .icon .popup { position: absolute; display: none; width: 302px; height: 32px; top: 5px; left: 31px; font-size: 13px; z-index: 1 }
 #main .career > .item > .icon .box:hover + .popup, #main .career > .item > .icon .popup:hover { display: block; }
 #main .career > .item > .icon .box:hover + .popup, #main .career > .item > .icon .popup:hover { display: block; }

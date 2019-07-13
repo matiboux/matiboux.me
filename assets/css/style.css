@@ -49,19 +49,31 @@ body {
 
 
 /*#main .timeline-items { position: relative; table-layout: fixed }*/
-#main .timeline-items > * > * { position: relative; display: table-cell; vertical-align: top }
+#main .timeline-items > * + * { padding-top: 7px }
+#main .timeline-items > * > * { position: relative; display: table-cell; padding: 0 5px; vertical-align: top }
 
-#main .timeline-items > * > .date { width: 90px; padding: 13px 5px; font-size: 12px; text-align: right; font-style: italic }
-#main .timeline-items > * > .misc { padding: 0 10px; }
+#main .timeline-items > * > .date { width: 90px; padding-top: 3px; font-size: 12px; text-align: right; }
 #main .timeline-items > * > .misc .bullet {
 	background: #f0f0f0;
 	width: 7px;
 	height: 7px;
-	margin-top: 13px;
-	border: 1px solid #e0e0e0;
+	margin-top: 10px;
+	border: 1px solid #202020;
 	border-radius: 50%;
 }
-#main .timeline-items > * > .misc .line { position: absolute; height: 100%; top: 0; left: 31px; border-left: 1px solid #bbb; z-index: -1 }
+#main .timeline-items > * > .misc .line {
+	position: absolute;
+	height: 100%;
+	top: 17px;
+	left: 8px;
+	border-left: 1px solid #bbb;
+	z-index: -1;
+}
+#main .timeline-items > * > .content > * { margin-bottom: 5px }
+#main .timeline-items > * > .content h4 { font-size: 20px }
+#main .timeline-items > * > .content p { margin-top: 3px; font-size: 12px }
+#main .timeline-items > * > .content h4 + p { color: #c0c0c0 }
+#main .timeline-items > * > .content .tag { color: #808080 }
 
 
 

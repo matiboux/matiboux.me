@@ -5,8 +5,7 @@ layout: default
 <main id="main">
 	<div class="container">
 		<h1 class="title">Work Timeline</h1>
-		{% if include.items %}a{% endif %}
-		{% include loadtimeline.html items=data.timeline %}
+		{% include loadtimeline.html items=site.data.timeline %}
 		
 		<hr />
 		<div class="career">

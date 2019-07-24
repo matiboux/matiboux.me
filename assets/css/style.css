@@ -84,10 +84,10 @@ a:hover { color: #4080c0 }
 	border-left: 1px solid #bbb;
 	z-index: -1;
 }
-#main .timeline-items > * > .content > * { margin-bottom: 5px }
-#main .timeline-items > * > .content h4 { font-size: 20px }
-#main .timeline-items > * > .content p { margin-top: 3px; font-size: 12px }
-#main .timeline-items > * > .content h4 + p { color: #c0c0c0 }
+#main .timeline-items > * > .content > * { margin-top: 3px; margin-bottom: 5px; font-size: 12px }
+#main .timeline-items > * > .content h4 { margin-top: 0; font-size: 20px }
+#main .timeline-items > * > .content h4 ~ p { color: #c0c0c0 }
+#main .timeline-items > * > .content ul { padding-left: 20px }
 #main .timeline-items > * > .content .tag { color: #808080 }
 
 

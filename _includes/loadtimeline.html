@@ -6,17 +6,17 @@
 					<p>{{ item.date }}</p>
 					{% if item.category == 'active' %}
 						<p class="badge badge-pill badge-primary"><i class="fas fa-star fa-fw"></i> Active</p>
-					{% elsif customer.name == 'standby' %}
+					{% elsif item.category == 'standby' %}
 						<p class="badge badge-pill badge-success"><i class="fas fa-pause fa-fw"></i> Standby</p>
-					{% elsif customer.name == 'inactive' %}
+					{% elsif item.category == 'inactive' %}
 						<p class="badge badge-pill badge-warning"><i class="far fa-star fa-fw"></i> Inactive</p>
-					{% elsif customer.name == 'replaced' %}
+					{% elsif item.category == 'replaced' %}
 						<p class="badge badge-pill badge-secondary"><i class="fas fa-times fa-fw"></i> Replaced</p>
-					{% elsif customer.name == 'left' %}
+					{% elsif item.category == 'left' %}
 						<p class="badge badge-pill badge-danger"><i class="fas fa-sign-out-alt fa-fw"></i> Left</p>
-					{% elsif customer.name == 'dead' %}
+					{% elsif item.category == 'dead' %}
 						<p class="badge badge-pill badge-danger"><i class="fas fa-times fa-fw"></i> Dead</p>
-					{% elsif customer.name == 'knowledge' %}
+					{% elsif item.category == 'knowledge' %}
 						<p class="badge badge-pill badge-primary"><i class="fas fa-graduation-cap fa-fw"></i> Knowledge</p>
 					{% endif %}
 				</div>

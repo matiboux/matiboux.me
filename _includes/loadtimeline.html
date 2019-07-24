@@ -1,0 +1,33 @@
+{% if include.items %}
+	<div class="timeline-items">
+		{% for item in include.items %}
+			<div class="item">
+				<div class="date">
+					{{ item.date }}
+					<!--
+					<br /> <span class="text-primary small"><i class="fa fa-star fa-fw"></i> Active</span>
+					<br /> <span class="text-success small"><i class="fa fa-pause fa-fw"></i> Standby</span>
+					<br /> <span class="text-warning small"><i class="fa fa-star-o fa-fw"></i> Inactive</span>
+					<br /> <span class="text-muted small"><i class="fa fa-times fa-fw"></i> Replaced</span>
+					<br /> <span class="text-danger small"><i class="fa fa-sign-out fa-fw"></i> Left</span>
+					<br /> <span class="text-danger small"><i class="fa fa-times fa-fw"></i> Dead</span>
+					<br /> <span class="text-primary small"><i class="fa fa-graduation-cap fa-fw"></i> Knowledge</span>
+					-->
+				</div>
+				<div class="misc">
+					<div class="bullet"></div>
+					<div class="line"></div>
+				</div>
+				<div class="content">
+					<h4>{{ item.title }}</h4>
+					{% if item.description %}
+						<p class="description">{{ item.description }}</p>
+					{% endif %}
+					{% if item.tag %}
+						<p class="tag"><i class="fas fa-tag fa-fw"></i> {{ item.tag }}</p>
+					{% endif %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endif %}

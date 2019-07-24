@@ -2,3 +2,6 @@
   description: Description
   date: Someday
   tag: tagged
+- title: Another Title
+  date: Pastday
+  category: inactive

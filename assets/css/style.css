@@ -50,9 +50,20 @@ body {
 
 /*#main .timeline-items { position: relative; table-layout: fixed }*/
 #main .timeline-items > * + * { padding-top: 7px }
-#main .timeline-items > * > * { position: relative; display: table-cell; padding: 0 5px; vertical-align: top }
+#main .timeline-items > * > * {
+	position: relative;
+	display: table-cell;
+	padding: 0 5px;
+	vertical-align: top;
+}
 
-#main .timeline-items > * > .date { width: 90px; padding-top: 3px; font-size: 12px; text-align: right; }
+#main .timeline-items > * > .date {
+	width: 90px;
+	padding-top: 2px;
+	font-size: 13px;
+	text-align: right;
+}
+#main .timeline-items > * > .date > * { margin: 0; }
 #main .timeline-items > * > .misc .bullet {
 	background: #f0f0f0;
 	width: 7px;

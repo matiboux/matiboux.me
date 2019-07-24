@@ -84,6 +84,7 @@ a:hover { color: #4080c0 }
 	border-left: 1px solid #bbb;
 	z-index: -1;
 }
+#main .timeline-items > *:last-child > .misc .line { display: none }
 #main .timeline-items > * > .content > * { margin-top: 3px; margin-bottom: 5px; font-size: 12px }
 #main .timeline-items > * > .content h4 { margin-top: 0; font-size: 20px }
 #main .timeline-items > * > .content h4 ~ * { color: #c0c0c0 }

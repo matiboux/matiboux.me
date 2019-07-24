@@ -5,3 +5,6 @@
 - title: Another Title
   date: Pastday
   category: inactive
+  links:
+  - title: opensource.matiboux.com
+    href: https://opensource.matiboux.com/

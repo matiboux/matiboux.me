@@ -25,7 +25,9 @@
 					<div class="line"></div>
 				</div>
 				<div class="content">
-					<h4>{{ item.title }}</h4>
+					{% if item.title %}
+						<h4>{{ item.title }}</h4>
+					{% endif %}
 					
 					{% if item.description.first %}
 						{% for description in item.description %}

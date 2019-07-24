@@ -53,7 +53,7 @@ a:hover { color: #4080c0 }
 
 
 /*#main .timeline-items { position: relative; table-layout: fixed }*/
-#main .timeline-items > * + * { padding-top: 7px }
+#main .timeline-items > * + * { padding-top: 10px }
 #main .timeline-items > * > * {
 	position: relative;
 	display: table-cell;
@@ -78,7 +78,7 @@ a:hover { color: #4080c0 }
 }
 #main .timeline-items > * > .misc .line {
 	position: absolute;
-	height: 100%;
+	height: calc(100% + 3px);
 	top: 17px;
 	left: 8px;
 	border-left: 1px solid #bbb;

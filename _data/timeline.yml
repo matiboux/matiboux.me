@@ -2,18 +2,34 @@
   description: Description
   date: Someday
   tag: tagged
-  
+
 - title: Open-source Projects
   date: Now & Forever
   category: active
   links:
   - title: opensource.matiboux.com
     href: https://opensource.matiboux.com/
-    
+
+
+
+
+
+- title: Learned the <b>Processing</b> language
+  description:
+  - Created few programs and very small games.
+  - Some of them worked along with Arduino robots (for data interpretation).
+  date: 2012
+  category: knowledge
+
+- title: Learned the <b>Arduino</b> language
+  description: Worked on some Arduino robots in a club
+  date: 2012
+  category: knowledge
+
 - description: Learned the <b>C++</b> language – a little.
   date: Aug. 2011
   category: knowledge
-  
+
 - title: Learned the <b>C</b> language
   description: Mostly made terminal programs. Created a calculator and a script answering to things you type in.
   date: Aug. 2011

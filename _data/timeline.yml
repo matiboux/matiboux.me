@@ -15,6 +15,30 @@
 
 
 
+- title: Created and developed <b>KeyGen App</b>
+  description: KeyGen App was an offline password generator app for Windows 10 PC & Mobile. Created on my own.
+  links:
+  - title: <i class="fab fa-windows fa-fw"></i> Get it from the Windows Store
+    href: https://www.microsoft.com/en-us/store/p/keygen-app/9n1qncrnx6pb
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/matiboux/KeyGen-app
+  date: Jan. 1, 2017
+  category: standby
+  tag: project, keygen, app
+
+- description: Took a break from development. Stopped working on my projects for a while. Went into some kind of depression.
+  date: Oct. 16, 2016
+  tag: me
+
+- title: Opened my <b>Instagram @matiboux</b> account
+  description: My Instagram account is used to share the drawings I made and the photos I took.
+  links:
+  - title: <i class="fab fa-instagram fa-fw"></i> @matiboux
+    href: https://www.instagram.com/matiboux/
+  date: Sept. 10, 2016
+  category: active
+  tag: instagram
+
 - description: Got fired from <b>Natrox Games</b>. Stopped to work on <b>Natropic's</b> and <b>Natrox Cloud</b>.
   date: Aug. 26, 2016
   tag: project, natrox, natropics, cloud, games

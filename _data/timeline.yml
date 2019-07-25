@@ -15,6 +15,48 @@
 
 
 
+- description: Got fired from <b>Natrox Games</b>. Stopped to work on <b>Natropic's</b> and <b>Natrox Cloud</b>.
+  date: Aug. 26, 2016
+  tag: project, natrox, natropics, cloud, games
+
+- description: Created the <b>Oli</b> Github repository.
+  links:
+  - title: See the open source repository
+    href: https://github.com/OliFramework/Oli
+  date: May 22, 2016
+  tag: project, oli
+
+- description: Developed a ticket platform for <b>Matiboux Manager</b>.
+  date: May 17, 2016
+  tag: project, manager, tickets, support
+
+- title: Created and developed <b>Matiboux Health</b>
+  description: Matiboux Health was a platform hosting health-related tools. Created on my own.
+  date: May 10, 2016
+  category: dead
+  tag: project, health
+
+- title: Created and developed <b>Matiboux Website</b>
+  description: Matiboux Website was my personal showcase website. Later renamed to <b>Matiboux Showcase</b>.
+  date: April 14, 2016
+  category: replaced
+  tag: project, showcase
+
+- title: Worked on <b>Natrox Games</b>
+  description:
+  - Natrox Games was a game servers group. Worked as technical director and developer.
+  - <i class="fa fa-gamepad fa-fw"></i> Created Garry's Mod and Minecraft servers.
+  - Project related to <a href="https://natrox.net/">Natrox</a>.
+  date: Apr. 2016
+  category: left
+  tag: natrox, games
+
+- title: Created <b>Matiboux How</b>
+  description: Matiboux How was a platform hosting silly animated websites.
+  date: Mar. 19, 2016
+  category: inactive
+  tag: project, how
+
 - description: Left the <b>Fruinity</b> Team.
   date: Mar. 18, 2016
   tag: fruinity
@@ -209,7 +251,7 @@
 
 - description: Stopped to work on <b>MySurvivalAdventure</b>.
   date: Feb. 2013
-  tag: mysurvivaladventure
+  tag: mysurvivaladventure, games
 
 - title: Learned the <b>PHP</b> language
   description: 
@@ -220,7 +262,7 @@
   description: MySurvivalAdventure was a Minecraft servers group.
   date: June 2013
   category: dead
-  tag: mysurvivaladventure
+  tag: mysurvivaladventure, games
 
 - title: Worked on <b>Gaming-Actu</b>
   description: Gaming-Actu was a news blog about video games. Project created by <a href=\"https://twitter.com/glenntymen">@glenntymen</a>.

@@ -15,11 +15,179 @@
 
 
 
-- title: Joined the <b>CodeIt</b> Team
-  description: CodeIt was a developer team. Other members were <a href=\"https://twitter.com/JulienMalka\">@DrCinetik</a> and <a href=\"https://twitter.com/KindlyFire\">@KindlyFire</a>.
+- description: Left the <b>Fruinity</b> Team.
+  date: Mar. 18, 2016
+  tag: fruinity
+
+- title: Created and developed <b>Matiboux Social</b>
+  description: Matiboux Social was a social network. Created on my own.
+  #links:
+  #- title: <i class="fas fa-link fa-fw"></i> Matiboux Social
+  #  href: https://social.matiboux.com/
+  date: Mar. 6, 2016
+  category: inactive
+  tag: project, social
+
+- title: Created and developed <b>Url Shortener</b>
+  description: Url Shortener was an url shortening service. Created on my own.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the open source repository
+    href: https://github.com/matiboux/urlshortener
+  date: Feb. 29, 2016
+  category: inactive
+  tag: project, url-shortener
+
+- title: Created and developed <b>Matiboux Portal</b>
+  description:
+  - Matiboux Portal was a portal linking to all of my other projects.
+  - Replaced by <b>Matiboux Showcase</b>.
+  date: Jan. 19, 2016
+  category: replaced
+  tag: project, showcase
+
+- title: Created and developed <b>Matiboux Accounts</b>
+  description: Matiboux Accounts is an account management panel. Created on my own.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> Matiboux Accounts
+    href: https://accounts.matiboux.com/
+  date: Jan. 13, 2016
+  category: active
+  tag: project, accounts
+
+- title: Developed <b>Natrox Cloud</b>
+  description:
+  - Natrox Cloud was a file hosting service. Worked as technical director and developer.
+  - Succeeded to <b>Natropic's</b>. Project related to <a href="https://natrox.net/">Natrox</a>.
+  date: Nov. 27, 2015
+  category: dead
+  tag: project, natrox, cloud
+
+- title: Created <b>Matiboux APIs</b>
+  description: Matiboux APIs was a platform hosting all my public APIs.
+  date: Aug. 27, 2015
+  category: dead
+  tag: project, api
+
+- title: Worked on <b>Natropic's</b>
+  description:
+  - Natropic's was a image hosting service. Worked as technical director and developer.
+  - Succeeded by <b>Natrox Cloud</b>. Project related to <a href="https://natrox.net/">Natrox</a>.
+  date: Mar. 2015
+  category: dead
+  tag: project, natrox, natropics
+
+- title: Created the <b>Fruinity</b> Team
+  description:
+  - Fruinity was a gaming team. Created with friends.
+  - Initials members were <a href=\"http://steamcommunity.com/profiles/76561198087021304\">LeDav64</a>, <a href=\"http://steamcommunity.com/id/Reivaros\">TheKiller678</a>, <a href=\"http://steamcommunity.com/id/felixjules\">Felixjules</a> and me.
+  date: Apr. 21, 2014
+  category: left
+  tag: fruinity
+
+- title: Created and developed <b>Oli</b>
+  description: Oli is an open source PHP Framework.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the project website
+    href: https://olifw.net/
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/OliFramework/Oli
+  date: Feb. 6, 2015
+  category: active
+  tag: project, oli
+
+- title: Created and developed <b>Matiboux Manager</b>
+  description:
+  - Matiboux Manager was an admin management panel. Created on my own.
+  - Replaced by <b>Matiboux Accounts</b>.
+  #links:
+  #- title: <i class="fas fa-link fa-fw"></i> Matiboux Accounts
+  #  href: https://accounts.matiboux.com/
+  date: Jan. 27, 2015
+  category: replaced
+  tag: project, accounts
+
+- title: Created and developed <b>MaTap</b>
+  description:
+  - MaTap was a basic PHP framework. Created on my own.
+  - This project was later renamed to <b>Oli</b>.
+  #links:
+  #- title: <i class="fas fa-link fa-fw"></i> Oli
+  #  href: https://olifw.net/
+  date: Nov. 15, 2014
+  category: replaced
+  tag: project, oli
+
+- title: Created and developed <b>Twitter Game</b>
+  description: Twitter Game was a twitter profile ranking. Created on my own.
+  date: Oct. 30, 2014
+  category: dead
+  tag: project, twitter
+
+- title: Bought the <b>matiboux.com</b> web domain and a web platform
+  description:
+  - The matiboux.com web platform is used to host my personal projects and some of my data.
+  - Hosted <b>ImgShot</b>, <b>KeyGen</b> and <b>Random Number</b> on it since then.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> matiboux.com
+    href: https://matiboux.com/
+  date: Oct. 27, 2014
+  category: active
+  tag: domain
+
+- description:
+  - <b>CodeIt</b> Team dissolved.
+  - Backed up my projects hosted on its web platform: <b>ImgShot</b>, <b>KeyGen</b> and <b>Random Number</b>.
+  date: Sept. 2014
+  tag: codeit
+
+- title: Started to work on <b>Brains-Master</b>
+  description: Brains-Master was a web organization and web hosting service. Project created by <a href=\"https://twitter.com/glenntymen">@glenntymen</a>.
+  date: Aug. 2014
+  category: left
+  tag: brains-master
+
+- title: Created and developed <b>KeyGen</b>
+  description: KeyGen is an open source random password generator.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://keygen.matiboux.com/
+  - title: <i class="fab fa-github fa-fw"></i> See the original source code from its Github repository (v1)
+    href: https://github.com/matiboux/KeyGen-v1
+  - title: <i class="fab fa-archive fa-fw"></i> See the original version (v1)
+    href: https://archives.matiboux.com/keygen/
+  date: July 30, 2014
+  category: active
+  tag: project, keygen
+
+- title: Created and developed <b>ImgShot</b>
+  description: ImgShot is an online image hosting service.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://imgshot.eu/
+  - title: <i class="fab fa-github fa-fw"></i> See the original source code from its Github repository (v1)
+    href: https://github.com/matiboux/ImgShot-v1/
+  - title: <i class="fab fa-archive fa-fw"></i> See the original version (v1)
+    href: https://archives.matiboux.com/imgshot/
+  date: July 26, 2014
+  category: active
+  tag: project, imgshot
+
+- title: Created and developed <b>Random Number</b>
+  description: Random Number is a random number generator. Created on my own.
+  links:
+  - title: Random Number on KeyGen
+    href: https://keygen.matiboux.com/random/
+  date: July 12, 2014
+  category: dead
+  tag: project, random-number
+
+- title: Joined the <b>CodeIt</b> Team, and got access to its web platform
+  description: CodeIt was a developer team. Other members were <a href=\"https://twitter.com/JulienMalka">@DrCinetik</a> and <a href=\"https://twitter.com/KindlyFire">@KindlyFire</a>.
   links:
   - title: <i class="fab fa-twitter fa-fw"></i> @TeamCodeIt
     href: https://twitter.com/TeamCodeIt
+  - title: <i class="fas fa-link fa-fw"></i> codeit.fr
+    href: http://codeit.fr/
   date: July 2014
   category: dead
   tag: codeit
@@ -34,7 +202,7 @@
   category: knowledge
 
 - title: Worked on <b>StormRadio</b>
-  description: StormRadio was a webradio related to <b>Gaming-Actu</b>. Project created by <a href=\"https://twitter.com/glenntymen\">@glenntymen</a>.
+  description: StormRadio was a webradio related to <b>Gaming-Actu</b>. Project created by <a href=\"https://twitter.com/glenntymen">@glenntymen</a>.
   date: Apr. 2014
   category: dead
   tag: webradio
@@ -55,7 +223,7 @@
   tag: mysurvivaladventure
 
 - title: Worked on <b>Gaming-Actu</b>
-  description: Gaming-Actu was a news blog about video games. Project created by <a href=\"https://twitter.com/glenntymen\">@glenntymen</a>.
+  description: Gaming-Actu was a news blog about video games. Project created by <a href=\"https://twitter.com/glenntymen">@glenntymen</a>.
   date: Jan. 2013
   category: dead
   tag: gaming-actu

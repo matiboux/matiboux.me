@@ -14,6 +14,80 @@
 
 
 
+- title: 
+  description: 
+  links:
+  - title: 
+    href: 
+  date: 
+  category: 
+  tag: 
+
+- title: 
+  description: 
+  links:
+  - title: 
+    href: 
+  date: 
+  category: 
+  tag: 
+
+
+
+
+- description: Created the <b>ImgShot</b> v1 <a href="https://github.com/matiboux/ImgShot-v1">Github repository</a>.
+  date: Apr. 1, 2017
+  tag: project, imgshot, github
+
+- description: Created the <b>KeyGen</b> v1 <a href="https://github.com/matiboux/KeyGen-v1">Github repository</a>.
+  date: Mar. 31, 2017
+  tag: project, keygen, github
+
+- description: Created the <b>Matiboux Career</b> <a href="https://github.com/matiboux/Matiboux-Career">Github repository</a>.
+  date: Mar. 31, 2017
+  tag: project, career, github
+
+- title: Created and developed <b>Matiboux Career</b>
+  description:
+  - Matiboux Career is a showcase of my work timeline. Created on my own.
+  - Replaced by <b>Matiboux.me</b>.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://career.matiboux.com/
+  #- title: <i class="fab fa-github fa-fw"></i> See the open source repository
+  #  href: https://github.com/matiboux/Matiboux-Career
+  date: Mar. 26, 2017
+  category: replaced
+  tag: project, career
+
+- description: Contributed to the <b>DownloadSourceCode</b> addon for <a href="https://yoshilegris.wordpress.com/">Serris Code Editor</a>.
+  links:
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/YoshiGris/DownloadSourceCodeAddon
+  date: Mar. 21, 2017
+  tag: serris, addon, contributing
+
+- title: Developed <b>KeyGen Serris Addon</b>
+  description: KeyGen Serris Addon is the official <b>KeyGen</b> addon for <a href="https://yoshilegris.wordpress.com/">Serris Code Editor</a>. Created on my own.
+  links:
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/matiboux/KeyGen-Serris-Addon
+  date: Mar. 19, 2017
+  category: standby
+  tag: serris, keygen, addon
+
+- description: Bought the <b>urwebs.it</b> web domain.
+  date: Feb. 17, 2017
+  tag: domain
+
+- title: Created and developed <b>Matiboux Logs</b>
+  description: Matiboux Logs was a personal micro-blog. Created on my own.
+  links:
+  - title: 
+    href: 
+  date: Feb. 15, 2017
+  category: standby
+  tag: project, logs
 
 - title: Created and developed <b>LJV Web Portal</b>
   description: LJV Web Portal is the <b>ljv.fr</b> main website linking to the official high school website and to other student projects.
@@ -35,7 +109,7 @@
   links:
   #- title: <i class="fas fa-table fa-fw"></i> See the Google Sheets document
   #  href: https://docs.google.com/spreadsheets/d/1f000m1fy5lJKJs_Hvxv-srcpk_LLu8mU0MJ5D79O3u0/edit?usp=sharing
-  - title: <i class="fab fa-steam fa-fw"></i> See the CSGO game Steam page
+  - title: <i class="fab fa-steam fa-fw"></i> See the CSGO Steam page
     href: http://store.steampowered.com/app/730
   date: Jan. 23, 2017
   category: active

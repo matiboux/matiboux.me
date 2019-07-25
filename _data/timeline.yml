@@ -21,7 +21,7 @@
 
 - description: Created the <b>Oli</b> Github repository.
   links:
-  - title: See the open source repository
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/OliFramework/Oli
   date: May 22, 2016
   tag: project, oli
@@ -73,7 +73,7 @@
 - title: Created and developed <b>Url Shortener</b>
   description: Url Shortener was an url shortening service. Created on my own.
   links:
-  - title: <i class="fas fa-link fa-fw"></i> See the open source repository
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/urlshortener
   date: Feb. 29, 2016
   category: inactive

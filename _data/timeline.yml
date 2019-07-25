@@ -15,8 +15,52 @@
 
 
 
+- title: Created and developed <b>LJV Web Portal</b>
+  description: LJV Web Portal is the <b>ljv.fr</b> main website linking to the official high school website and to other student projects.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://ljv.fr/
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/MDL-JulesVerne/LJV-Web-Portal
+  date: Feb. 10, 2017
+  category: active
+  tag: project, ljv
+
+- description: Bought the <b>ljv.fr</b> web domain to host high school related projects
+  date: Feb. 7, 2017
+  tag: domain
+
+- title: Kept stats of all my <b>CSGO</b> competitive gameplays
+  description: CSGO is a FPS video game edited by Valve. Stats stored in a Google Sheets document.
+  links:
+  #- title: <i class="fas fa-table fa-fw"></i> See the Google Sheets document
+  #  href: https://docs.google.com/spreadsheets/d/1f000m1fy5lJKJs_Hvxv-srcpk_LLu8mU0MJ5D79O3u0/edit?usp=sharing
+  - title: <i class="fab fa-steam fa-fw"></i> See the CSGO game Steam page
+    href: http://store.steampowered.com/app/730
+  date: Jan. 23, 2017
+  category: active
+  tag: gaming, stats, csgo
+
+- title: Developed <b>Le Nautilus</b>
+  description: Le Nautilus is a online newspaper made by high school students.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://nautilus.ljv.fr/
+  date: Jan. 18, 2017
+  category: active
+  tag: project, ljv, le-nautilus
+
+- title: Created and developed <b>KeyGen JS Library</b>
+  description: KeyGen JS Library is the official KeyGen JavaScript library. Created on my own.
+  links:
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/matiboux/KeyGenJS-Lib
+  date: Jan. 12, 2017
+  category: standby
+  tag: project, keygen, library
+
 - title: Created and developed <b>KeyGen App</b>
-  description: KeyGen App was an offline password generator app for Windows 10 PC & Mobile. Created on my own.
+  description: KeyGen App was an offline password generator app for Windows 10 Desktop & Mobile. Created on my own.
   links:
   - title: <i class="fab fa-windows fa-fw"></i> Get it from the Windows Store
     href: https://www.microsoft.com/en-us/store/p/keygen-app/9n1qncrnx6pb

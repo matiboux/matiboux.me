@@ -2,7 +2,6 @@
   description: Description
   date: Someday
   tag: tagged
-
 - title: Open-source Projects
   date: Now & Forever
   category: active
@@ -14,6 +13,35 @@
 
 
 
+
+- description: Stopped to work on <b>MySurvivalAdventure</b>.
+  date: Feb. 2013
+  tag: mysurvivaladventure
+
+- title: Learned the <b>PHP</b> language
+  description: 
+  date: Aug. 2013
+  category: knowledge
+  tag: 
+
+- title: Created and worked on <b>MySurvivalAdventure</b>
+  description: MySurvivalAdventure was a Minecraft servers group.
+  date: June 2013
+  category: dead
+  tag: mysurvivaladventure
+
+- title: Worked on <b>Gaming-Actu</b>
+  description: Gaming-Actu was a news blog about video games. Project created by <a href=\"https://twitter.com/glenntymen\">@glenntymen</a>.
+  date: Jan. 2013
+  category: dead
+  tag: gaming-actu
+
+- title: Learned the <b>HTML & CSS</b> languages
+  date: Dec. 2012
+  category: knowledge
+
+
+
 - title: Learned the <b>Processing</b> language
   description:
   - Created few programs and very small games.
@@ -22,7 +50,7 @@
   category: knowledge
 
 - title: Learned the <b>Arduino</b> language
-  description: Worked on some Arduino robots in a club
+  description: Worked on some Arduino robots in a club.
   date: 2012
   category: knowledge
 

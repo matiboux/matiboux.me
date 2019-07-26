@@ -125,9 +125,9 @@
 
 - title: Created and developed <b>Matiboux Logs</b>
   description: Matiboux Logs was a personal micro-blog. Created on my own.
-  links:
-  - title: 
-    href: 
+  # links:
+  # - title: <i class="fas fa-link fa-fw"></i> See the website
+    # href: https://logs.matiboux.com/
   date: Feb. 15, 2017
   category: standby
   tag: project, logs
@@ -411,8 +411,8 @@
   links:
   - title: <i class="fab fa-twitter fa-fw"></i> @TeamCodeIt
     href: https://twitter.com/TeamCodeIt
-  - title: <i class="fas fa-link fa-fw"></i> codeit.fr
-    href: http://codeit.fr/
+  # - title: <i class="fas fa-link fa-fw"></i> codeit.fr
+    # href: http://codeit.fr/
   date: July 2014
   category: dead
   tag: codeit

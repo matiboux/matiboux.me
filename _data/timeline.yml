@@ -164,6 +164,34 @@
   category: domain
 
 
+- description: Open sourced the status API behind <b>matistat.us</b>.
+  links:
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/matiboux/matistat.us
+  date: July 30, 2018
+
+- title: Created the website for <b>matistat.us</b>
+  description: Matistat.us is the status website for all my web platforms. It's about ups and downs.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://matistat.us/
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/matiboux/matistat.us
+  date: July 7, 2018
+  category: personal
+  status: active
+  opensource: true
+  languages: PHP, HTML, CSS
+  tags: project, showcase
+
+- description: Bought the <b>matistat.us</b> web domain.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://matistat.us/
+  date: July 6, 2018
+  category: domain
+
+
 # (63, 'Created and developed <b>Polls</b>', 'Polls is a simple service for making straw polls. Worked on my own.\r\n<i>Started development on -?-.</i>\r\n<i class=\"fa fa-link fa-fw\"></i> <a href=\"https://polls.matiboux.com/\">See its website</a>.', 'polls', 'tasks', 'active', 'Jul. 12, 2017', '2017-07-12 00:11:19'),
 # (64, '', 'Developed a showcase website for <a href=\"https://twitter.com/Commander_Plays/\">Commander</a>.', 'commission', 'pencil', 'normal', 'Jul. 31, 2017', '2017-08-01 01:48:20');
 

@@ -62,7 +62,7 @@ a:hover { color: #4080c0 }
 }
 
 #main .timeline-items > * > .date {
-	width: 90px;
+	width: 100px;
 	padding-top: 2px;
 	font-size: 13px;
 	text-align: right;

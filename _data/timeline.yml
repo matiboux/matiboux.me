@@ -4,7 +4,7 @@
   # tags: tagged
 # - title: Open-source Projects
   # date: Now & Forever
-  # category: active
+  # status: active
   # links:
   # - title: opensource.matiboux.com
     # href: https://opensource.matiboux.com/
@@ -20,6 +20,7 @@
     # href: 
   # date: 
   # category: 
+  # status: 
   # languages: 
   # tools: 
   # tags: 
@@ -31,7 +32,12 @@
   - title: <i class="fas fa-link fa-fw"></i> See the website
     href: https://plannings.epidocs.eu/
   date: July 4, 2019
+  opensource: true
   tags: domain
+
+- description: Completed working on <b>MCQ Parser</b>.
+  date: June 3, 2019
+  tags: epita, mcq-parser
 
 - title: Created <b>Epidocs / Past-Exams</b> and developed its website.
   description: Past subjects and other files, for the benefit of EPITA students.
@@ -41,7 +47,8 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/Epidocs/Past-Exams
   date: June 3, 2019
-  category: active
+  status: active
+  opensource: true
   tags: project, epidocs, past-exams
 
 - title: Created the website for <b>epita.it</b>
@@ -52,7 +59,8 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/Epidocs/epita.it
   date: May 26, 2019
-  category: active
+  status: active
+  opensource: true
   tags: project, epidocs, epita.it
 
 - description: Bought the <a href="https://epita.it/">epita.it</a> web domain.
@@ -67,7 +75,8 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/Epidocs/epidocs.github.io
   date: May 25, 2019
-  category: active
+  status: active
+  opensource: true
   tags: project, epidocs
 
 - description: Bought the <a href="https://epidocs.eu/">epidocs.eu</a> web domain.
@@ -88,7 +97,8 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/Epidocs/Plannings
   date: Jan. 30, 2019
-  category: active
+  status: active
+  opensource: true
   tags: project, epidocs, plannings
 
 - title: Created <b>Epidocs</b>
@@ -99,7 +109,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the Github organization
     href: https://github.com/Epidocs/
   date: Jan. 30, 2019
-  category: active
+  status: active
   tags: project, epidocs
 
 
@@ -108,9 +118,10 @@
   - MCQ Parser is a program for which purpose is to parse answers at a MCQ test and to calculate grades for each student.
   - Originnaly developed for use in correcting the mock TOEIC tests at EPITA.
   date: Apr. 14, 2019
-  category: active
+  category: work
+  status: finished
   languages: Python
-  tags: epita, blast
+  tags: epita, mcq-parser
 
 
 - title: Started working on <b>Blast</b>
@@ -119,7 +130,8 @@
   - title: <i class="fas fa-link fa-fw"></i> See the website
     href: https://g00pix.github.io/ProjetBlast/
   date: Jan. 28, 2019
-  category: active
+  category: school
+  status: finished
   languages: C#
   tools: Unity
   tags: epita, blast
@@ -130,8 +142,12 @@
   links:
   - title: <i class="fas fa-link fa-fw"></i> See the website
     href: https://matiboux.me/
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/matiboux/matiboux.me
   date: Oct. 5, 2018
-  category: active
+  category: personal
+  status: active
+  opensource: true
   languages: HTML, CSS
   tags: project, showcase
 
@@ -151,7 +167,7 @@
 - title: Created <b>MatiOS</b>
   description: MatiOS is a JS application, imitating a linux console, for using Matiboux's projects using their API. Created on my own.
   date: May. 6, 2017
-  category: standby
+  status: standby
   tags: project, matios
 
 - title: Created and developed <b>Matiboux Time</b>
@@ -162,7 +178,7 @@
   - title: <i class="fas fa-link fa-fw"></i> See the website
     href: http://time.matiboux.com/
   date: Apr. 11, 2017
-  category: inactive
+  status: inactive
   tags: project, time
 
 - title: Created and developed <b>Host Error page</b>
@@ -175,7 +191,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/Host-error-page
   date: Apr. 9, 2017
-  category: standby
+  status: standby
   tags: webpage
 
 - description: Created the <b>Matiboux Showcase</b> <a href="https://github.com/matiboux/Matiboux-Showcase">Github repository</a>.
@@ -190,7 +206,7 @@
   # - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     # href: https://github.com/matiboux/Matiboux-Showcase
   date: Apr. 6, 2017
-  category: active
+  status: active
   tags: project, showcase
 
 - description: Created the <b>ImgShot</b> v1 <a href="https://github.com/matiboux/ImgShot-v1">Github repository</a>.
@@ -215,7 +231,7 @@
   # - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     # href: https://github.com/matiboux/Matiboux-Career
   date: Mar. 26, 2017
-  category: replaced
+  status: replaced
   tags: project, career
 
 - description: Contributed to the <b>DownloadSourceCode</b> addon for <a href="https://yoshilegris.wordpress.com/">Serris Code Editor</a>.
@@ -231,7 +247,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/KeyGen-Serris-Addon
   date: Mar. 19, 2017
-  category: standby
+  status: standby
   tags: serris, keygen, addon
 
 - description: Bought the <b>urwebs.it</b> web domain.
@@ -244,7 +260,7 @@
   # - title: <i class="fas fa-link fa-fw"></i> See the website
     # href: https://logs.matiboux.com/
   date: Feb. 15, 2017
-  category: standby
+  status: standby
   tags: project, logs
 
 - title: Created and developed <b>LJV Web Portal</b>
@@ -255,7 +271,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/MDL-JulesVerne/LJV-Web-Portal
   date: Feb. 10, 2017
-  category: active
+  status: active
   tags: project, ljv
 
 - description: Bought the <b>ljv.fr</b> web domain to host high school related projects
@@ -270,7 +286,7 @@
   - title: <i class="fab fa-steam fa-fw"></i> See the CSGO Steam page
     href: http://store.steampowered.com/app/730
   date: Jan. 23, 2017
-  category: active
+  status: active
   tags: gaming, stats, csgo
 
 - title: Developed <b>Le Nautilus</b>
@@ -279,7 +295,7 @@
   - title: <i class="fas fa-link fa-fw"></i> See the website
     href: https://nautilus.ljv.fr/
   date: Jan. 18, 2017
-  category: active
+  status: active
   tags: project, ljv, le-nautilus
 
 - title: Created and developed <b>KeyGen JS Library</b>
@@ -288,7 +304,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/KeyGenJS-Lib
   date: Jan. 12, 2017
-  category: standby
+  status: standby
   tags: project, keygen, library
 
 - title: Created and developed <b>KeyGen App</b>
@@ -299,7 +315,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/KeyGen-app
   date: Jan. 1, 2017
-  category: standby
+  status: standby
   tags: project, keygen, app
 
 - description: Took a break from development. Stopped working on my projects for a while. Went into some kind of depression.
@@ -312,7 +328,7 @@
   - title: <i class="fab fa-instagram fa-fw"></i> @matiboux
     href: https://www.instagram.com/matiboux/
   date: Sept. 10, 2016
-  category: active
+  status: active
   tags: instagram
 
 - description: Got fired from <b>Natrox Games</b>. Stopped to work on <b>Natropic's</b> and <b>Natrox Cloud</b>.
@@ -333,13 +349,13 @@
 - title: Created and developed <b>Matiboux Health</b>
   description: Matiboux Health was a platform hosting health-related tools. Created on my own.
   date: May 10, 2016
-  category: dead
+  status: dead
   tags: project, health
 
 - title: Created and developed <b>Matiboux Website</b>
   description: Matiboux Website was my personal showcase website. Later renamed to <b>Matiboux Showcase</b>.
   date: April 14, 2016
-  category: replaced
+  status: replaced
   tags: project, showcase
 
 - title: Worked on <b>Natrox Games</b>
@@ -348,13 +364,13 @@
   - <i class="fa fa-gamepad fa-fw"></i> Created Garry's Mod and Minecraft servers.
   - Project related to <a href="https://natrox.net/">Natrox</a>.
   date: Apr. 2016
-  category: left
+  status: left
   tags: natrox, games
 
 - title: Created <b>Matiboux How</b>
   description: Matiboux How was a platform hosting silly animated websites.
   date: Mar. 19, 2016
-  category: inactive
+  status: inactive
   tags: project, how
 
 - description: Left the <b>Fruinity</b> Team.
@@ -367,7 +383,7 @@
   # - title: <i class="fas fa-link fa-fw"></i> Matiboux Social
     # href: https://social.matiboux.com/
   date: Mar. 6, 2016
-  category: inactive
+  status: inactive
   tags: project, social
 
 - title: Created and developed <b>Url Shortener</b>
@@ -376,13 +392,13 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/urlshortener
   date: Feb. 29, 2016
-  category: inactive
+  status: inactive
   tags: project, url-shortener
 
 - title: Created and developed <b>Matiboux Portal</b>
   description: Matiboux Portal was a portal linking to all of my other projects. Replaced by <b>Matiboux Showcase</b>.
   date: Jan. 19, 2016
-  category: replaced
+  status: replaced
   tags: project, showcase
 
 - title: Created and developed <b>Matiboux Accounts</b>
@@ -391,7 +407,7 @@
   - title: <i class="fas fa-link fa-fw"></i> Matiboux Accounts
     href: https://accounts.matiboux.com/
   date: Jan. 13, 2016
-  category: active
+  status: active
   tags: project, accounts
 
 - title: Developed <b>Natrox Cloud</b>
@@ -399,13 +415,13 @@
   - Natrox Cloud was a file hosting service. Worked as technical director and developer.
   - Succeeded to <b>Natropic's</b>. Project related to <a href="https://natrox.net/">Natrox</a>.
   date: Nov. 27, 2015
-  category: dead
+  status: dead
   tags: project, natrox, cloud
 
 - title: Created <b>Matiboux APIs</b>
   description: Matiboux APIs was a platform hosting all my public APIs.
   date: Aug. 27, 2015
-  category: dead
+  status: dead
   tags: project, api
 
 - title: Worked on <b>Natropic's</b>
@@ -413,7 +429,7 @@
   - Natropic's was a image hosting service. Worked as technical director and developer.
   - Succeeded by <b>Natrox Cloud</b>. Project related to <a href="https://natrox.net/">Natrox</a>.
   date: Mar. 2015
-  category: dead
+  status: dead
   tags: project, natrox, natropics
 
 - title: Created the <b>Fruinity</b> Team
@@ -421,7 +437,7 @@
   - Fruinity was a gaming team. Created with friends.
   - Initials members were <a href=\"http://steamcommunity.com/profiles/76561198087021304\">LeDav64</a>, <a href=\"http://steamcommunity.com/id/Reivaros\">TheKiller678</a>, <a href=\"http://steamcommunity.com/id/felixjules\">Felixjules</a> and me.
   date: Apr. 21, 2014
-  category: left
+  status: left
   tags: fruinity
 
 - title: Created and developed <b>Oli</b>
@@ -432,7 +448,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/OliFramework/Oli
   date: Feb. 6, 2015
-  category: active
+  status: active
   languages: PHP, HTML
   tags: project, oli
 
@@ -444,7 +460,7 @@
   # - title: <i class="fas fa-link fa-fw"></i> Matiboux Accounts
     # href: https://accounts.matiboux.com/
   date: Jan. 27, 2015
-  category: replaced
+  status: replaced
   tags: project, accounts
 
 - title: Created and developed <b>MaTap</b>
@@ -455,13 +471,13 @@
   # - title: <i class="fas fa-link fa-fw"></i> Oli
     # href: https://olifw.net/
   date: Nov. 15, 2014
-  category: replaced
+  status: replaced
   tags: project, oli
 
 - title: Created and developed <b>Twitter Game</b>
   description: Twitter Game was a twitter profile ranking. Created on my own.
   date: Oct. 30, 2014
-  category: dead
+  status: dead
   tags: project, twitter
 
 - title: Bought the <b>matiboux.com</b> web domain and a web platform
@@ -472,7 +488,7 @@
   - title: <i class="fas fa-link fa-fw"></i> matiboux.com
     href: https://matiboux.com/
   date: Oct. 27, 2014
-  category: active
+  status: active
   tags: domain
 
 - description:
@@ -484,7 +500,7 @@
 - title: Started to work on <b>Brains-Master</b>
   description: Brains-Master was a web organization and web hosting service. Project created by <a href=\"https://twitter.com/glenntymen">@glenntymen</a>.
   date: Aug. 2014
-  category: left
+  status: left
   tags: brains-master
 
 - title: Created and developed <b>KeyGen</b>
@@ -497,7 +513,7 @@
   - title: <i class="fas fa-archive fa-fw"></i> See the original version (v1)
     href: https://archives.matiboux.com/keygen/
   date: July 30, 2014
-  category: active
+  status: active
   tags: project, keygen
 
 - title: Created and developed <b>ImgShot</b>
@@ -510,7 +526,7 @@
   - title: <i class="fas fa-archive fa-fw"></i> See the original version (v1)
     href: https://archives.matiboux.com/imgshot/
   date: July 26, 2014
-  category: active
+  status: active
   tags: project, imgshot
 
 - title: Created and developed <b>Random Number</b>
@@ -519,7 +535,7 @@
   - title: Random Number on KeyGen
     href: https://keygen.matiboux.com/random/
   date: July 12, 2014
-  category: dead
+  status: dead
   tags: project, random-number
 
 - title: Joined the <b>CodeIt</b> Team, and got access to its web platform
@@ -530,7 +546,7 @@
   # - title: <i class="fas fa-link fa-fw"></i> codeit.fr
     # href: http://codeit.fr/
   date: July 2014
-  category: dead
+  status: dead
   tags: codeit
 
 - description: Stopped to work on <b>Gaming-Actu</b>.
@@ -545,7 +561,7 @@
 - title: Worked on <b>StormRadio</b>
   description: StormRadio was a webradio related to <b>Gaming-Actu</b>. Project created by <a href=\"https://twitter.com/glenntymen">@glenntymen</a>.
   date: Apr. 2014
-  category: dead
+  status: dead
   tags: webradio
 
 - description: Stopped to work on <b>MySurvivalAdventure</b>.
@@ -560,13 +576,13 @@
 - title: Created and worked on <b>MySurvivalAdventure</b>
   description: MySurvivalAdventure was a Minecraft servers group.
   date: June 2013
-  category: dead
+  status: dead
   tags: mysurvivaladventure, games
 
 - title: Worked on <b>Gaming-Actu</b>
   description: Gaming-Actu was a news blog about video games. Project created by <a href=\"https://twitter.com/glenntymen">@glenntymen</a>.
   date: Jan. 2013
-  category: dead
+  status: dead
   tags: gaming-actu
 
 - title: Learned the <b>HTML & CSS</b> languages

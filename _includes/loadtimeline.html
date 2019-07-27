@@ -4,20 +4,35 @@
 			<div class="item">
 				<div class="date">
 					<p>{{ item.date }}</p>
-					{% if item.category == 'active' %}
-						<p class="badge badge-pill badge-primary"><i class="fas fa-star fa-fw"></i> Active</p>
-					{% elsif item.category == 'standby' %}
-						<p class="badge badge-pill badge-success"><i class="fas fa-pause fa-fw"></i> Standby</p>
-					{% elsif item.category == 'inactive' %}
-						<p class="badge badge-pill badge-warning"><i class="far fa-star fa-fw"></i> Inactive</p>
-					{% elsif item.category == 'replaced' %}
-						<p class="badge badge-pill badge-secondary"><i class="fas fa-times fa-fw"></i> Replaced</p>
-					{% elsif item.category == 'left' %}
-						<p class="badge badge-pill badge-danger"><i class="fas fa-sign-out-alt fa-fw"></i> Left</p>
-					{% elsif item.category == 'dead' %}
-						<p class="badge badge-pill badge-danger"><i class="fas fa-times fa-fw"></i> Dead</p>
+					
+					{% if item.type == 'personal' %}
+						<p class="badge badge-pill badge-active"><i class="fas fa-user fa-fw"></i> Personal</p>
+					{% elsif item.category == 'work' %}
+						<p class="badge badge-pill badge-success"><i class="fas fa-briefcase fa-fw"></i> Work</p>
+					{% elsif item.category == 'school' %}
+						<p class="badge badge-pill badge-warning"><i class="fas fa-university fa-fw"></i> School</p>
 					{% elsif item.category == 'knowledge' %}
 						<p class="badge badge-pill badge-info"><i class="fas fa-graduation-cap fa-fw"></i> Knowledge</p>
+					{% endif %}
+					
+					{% if item.status == 'active' %}
+						<p class="badge badge-pill badge-primary"><i class="fas fa-star fa-fw"></i> Active</p>
+					{% elsif item.status == 'finished' %}
+						<p class="badge badge-pill badge-success"><i class="fas fa-check fa-fw"></i> Finished</p>
+					{% elsif item.status == 'standby' %}
+						<p class="badge badge-pill badge-secondary"><i class="fas fa-pause fa-fw"></i> Standby</p>
+					{% elsif item.status == 'inactive' %}
+						<p class="badge badge-pill badge-warning"><i class="far fa-star fa-fw"></i> Inactive</p>
+					{% elsif item.status == 'replaced' %}
+						<p class="badge badge-pill badge-secondary"><i class="fas fa-times fa-fw"></i> Replaced</p>
+					{% elsif item.status == 'left' %}
+						<p class="badge badge-pill badge-danger"><i class="fas fa-sign-out-alt fa-fw"></i> Left</p>
+					{% elsif item.status == 'dead' %}
+						<p class="badge badge-pill badge-danger"><i class="fas fa-times fa-fw"></i> Dead</p>
+					{% endif %}
+					
+					{% if item.opensource %}
+						<p class="badge badge-pill badge-info"><i class="fas fa-code-branch fa-fw"></i> Open source</p>
 					{% endif %}
 				</div>
 				<div class="misc">

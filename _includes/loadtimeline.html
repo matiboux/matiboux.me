@@ -19,8 +19,8 @@
 					
 					{% if item.status == 'active' %}
 						<p class="badge badge-pill badge-primary"><i class="fas fa-star fa-fw"></i> Active</p>
-					{% elsif item.status == 'complete' %}
-						<p class="badge badge-pill badge-success"><i class="fas fa-check fa-fw"></i> Complete</p>
+					{% elsif item.status == 'finished' %}
+						<p class="badge badge-pill badge-success"><i class="fas fa-check fa-fw"></i> Finished</p>
 					{% elsif item.status == 'standby' %}
 						<p class="badge badge-pill badge-secondary"><i class="fas fa-pause fa-fw"></i> Standby</p>
 					{% elsif item.status == 'inactive' %}

@@ -33,7 +33,7 @@
     href: https://plannings.epidocs.eu/
   date: July 4, 2019
   opensource: true
-  tags: domain
+  category: domain
 
 - description: Completed working on <b>MCQ Parser</b>.
   date: June 3, 2019
@@ -65,7 +65,7 @@
 
 - description: Bought the <a href="https://epita.it/">epita.it</a> web domain.
   date: May 25, 2019
-  tags: domain
+  category: domain
 
 - title: Created the website for <b>epidocs.eu</b>
   description: epidocs.eu is the home page for Epidocs, linking to its projects.
@@ -81,7 +81,7 @@
 
 - description: Bought the <a href="https://epidocs.eu/">epidocs.eu</a> web domain.
   date: May 25, 2019
-  tags: domain
+  category: domain
 
 - description:
   - Started developement of a complex system for building website for Epidocs projects.
@@ -153,7 +153,7 @@
 
 - description: Bought the <a href="https://matiboux.me/">matiboux.me</a> web domain.
   date: Oct. 5, 2018
-  tags: domain
+  category: domain
 
 
 # (63, 'Created and developed <b>Polls</b>', 'Polls is a simple service for making straw polls. Worked on my own.\r\n<i>Started development on -?-.</i>\r\n<i class=\"fa fa-link fa-fw\"></i> <a href=\"https://polls.matiboux.com/\">See its website</a>.', 'polls', 'tasks', 'active', 'Jul. 12, 2017', '2017-07-12 00:11:19'),
@@ -252,7 +252,7 @@
 
 - description: Bought the <b>urwebs.it</b> web domain.
   date: Feb. 17, 2017
-  tags: domain
+  category: domain
 
 - title: Created and developed <b>Matiboux Logs</b>
   description: Matiboux Logs was a personal micro-blog. Created on my own.
@@ -276,7 +276,7 @@
 
 - description: Bought the <b>ljv.fr</b> web domain to host high school related projects
   date: Feb. 7, 2017
-  tags: domain
+  category: domain
 
 - title: Kept stats of all my <b>CSGO</b> competitive gameplays
   description: CSGO is a FPS video game edited by Valve. Stats stored in a Google Sheets document.
@@ -489,7 +489,7 @@
     href: https://matiboux.com/
   date: Oct. 27, 2014
   status: active
-  tags: domain
+  category: domain
 
 - description:
   - <b>CodeIt</b> Team dissolved.

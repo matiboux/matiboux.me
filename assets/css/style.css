@@ -67,7 +67,8 @@ a:hover { color: #4080c0 }
 	font-size: 13px;
 	text-align: right;
 }
-#main .timeline-items > * > .date > * { margin: 0; }
+#main .timeline-items > * > .date > * { margin: 0 }
+#main .timeline-items > * > .date .badge { font-weight: 500 }
 #main .timeline-items > * > .misc .bullet {
 	background: #f0f0f0;
 	width: 7px;

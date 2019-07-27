@@ -10,15 +10,17 @@
 					{% elsif item.category == 'work' %}
 						<p class="badge badge-pill badge-success"><i class="fas fa-briefcase fa-fw"></i> Work</p>
 					{% elsif item.category == 'school' %}
-						<p class="badge badge-pill badge-warning"><i class="fas fa-university fa-fw"></i> School</p>
+						<p class="badge badge-pill badge-info"><i class="fas fa-university fa-fw"></i> School</p>
 					{% elsif item.category == 'knowledge' %}
 						<p class="badge badge-pill badge-info"><i class="fas fa-graduation-cap fa-fw"></i> Knowledge</p>
+					{% elsif item.category == 'domain' %}
+						<p class="badge badge-pill badge-info"><i class="fas fa-globe fa-fw"></i> Domain</p>
 					{% endif %}
 					
 					{% if item.status == 'active' %}
 						<p class="badge badge-pill badge-primary"><i class="fas fa-star fa-fw"></i> Active</p>
-					{% elsif item.status == 'finished' %}
-						<p class="badge badge-pill badge-success"><i class="fas fa-check fa-fw"></i> Finished</p>
+					{% elsif item.status == 'complete' %}
+						<p class="badge badge-pill badge-success"><i class="fas fa-check fa-fw"></i> Complete</p>
 					{% elsif item.status == 'standby' %}
 						<p class="badge badge-pill badge-secondary"><i class="fas fa-pause fa-fw"></i> Standby</p>
 					{% elsif item.status == 'inactive' %}

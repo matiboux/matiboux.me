@@ -62,7 +62,10 @@
   opensource: true
   tags: project, epidocs, epita.it
 
-- description: Bought the <a href="https://epita.it/">epita.it</a> web domain.
+- description: Bought the <b>epita.it</b> web domain.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://epita.it/
   date: May 25, 2019
   category: domain
 
@@ -78,7 +81,10 @@
   opensource: true
   tags: project, epidocs
 
-- description: Bought the <a href="https://epidocs.eu/">epidocs.eu</a> web domain.
+- description: Bought the <b>epidocs.eu</b> web domain.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://epidocs.eu/
   date: May 25, 2019
   category: domain
 
@@ -150,7 +156,10 @@
   languages: HTML, CSS
   tags: project, showcase
 
-- description: Bought the <a href="https://matiboux.me/">matiboux.me</a> web domain.
+- description: Bought the <b>matiboux.me</b> web domain.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://matiboux.me/
   date: Oct. 5, 2018
   category: domain
 
@@ -249,7 +258,10 @@
   status: standby
   tags: serris, keygen, addon
 
-- description: Bought the <a href="https://urwebs.it/">urwebs.it</a> web domain.
+- description: Bought the <b>urwebs.it</b> web domain.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://urwebs.it/
   date: Feb. 17, 2017
   category: domain
 
@@ -273,7 +285,10 @@
   status: active
   tags: project, ljv
 
-- description: Bought the <a href="https://ljv.fr/">ljv.fr</a> web domain to host high school related projects.
+- description: Bought the <b>ljv.fr</b> web domain to host high school related projects.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://ljv.fr/
   date: Feb. 7, 2017
   category: domain
 

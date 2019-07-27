@@ -89,7 +89,7 @@
   category: domain
 
 - description:
-  - Started developement of a complex system for building website for Epidocs projects.
+  - Started developement of a script and structure for building website for Epidocs projects.
   - The system uses PHP and Travis CI for the build, Github Pages and Jekyll for the website deployment.
   date: Feb. 10, 2019
   tags: project, epidocs

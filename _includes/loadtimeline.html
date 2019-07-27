@@ -46,14 +46,23 @@
 					{% endif %}
 					
 					{% if item.languages %}
-						<p class="tag"><i class="fas fa-code fa-fw"></i> {{ item.languages }}</p>
+						<p class="languages">
+							<i class="fas fa-code fa-fw" data-toggle="tooltip" data-placement="bottom" title="Languages"></i>
+							{{ item.languages }}
+						</p>
 					{% endif %}
 					{% if item.tools %}
-						<p class="tag"><i class="fas fa-toolbox fa-fw"></i> {{ item.tools }}</p>
+						<p class="tools">
+							<i class="fas fa-toolbox fa-fw" data-toggle="tooltip" data-placement="bottom" title="Tools"></i>
+							{{ item.tools }}
+						</p>
 					{% endif %}
 					
-					{% if item.tag %}
-						<p class="tag"><i class="fas fa-tag fa-fw"></i> {{ item.tag }}</p>
+					{% if item.tags %}
+						<p class="tags">
+							<i class="fas fa-tag fa-fw" data-toggle="tooltip" data-placement="bottom" title="Tags"></i>
+							{{ item.tags }}
+						</p>
 					{% endif %}
 				</div>
 			</div>

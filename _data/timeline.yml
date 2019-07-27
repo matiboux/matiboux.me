@@ -9,10 +9,9 @@
   # - title: opensource.matiboux.com
     # href: https://opensource.matiboux.com/
 
-
-
-
-
+- description: Updated the website for <a href="https://matiboux.me/">matiboux.me</a>.
+  date: Oct. 5, 2018
+  tag: project, showcase
 
 # - title: 
   # description: 
@@ -25,13 +24,121 @@
 
 
 
+- description: Developed a website for <b>Epidocs / Plannings</b>.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://plannings.epidocs.eu/
+  date: July 4, 2019
+  tag: domain
+
+- title: Created <b>Epidocs / Past-Exams</b> and developed its website.
+  description: Past subjects and other files, for the benefit of EPITA students.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://past-exams.epidocs.eu/
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/Epidocs/Past-Exams
+  date: June 3, 2019
+  category: active
+  tag: project, epidocs, past-exams
+
+- title: Created the website for <b>epita.it</b>
+  description: epita.it is a web portal to services and projects related to EPITA, both from the school itself and from students.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://epita.it/
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/Epidocs/epita.it
+  date: May 26, 2019
+  category: active
+  tag: project, epidocs, epita.it
+
+- description: Bought the <a href="https://epita.it/">epita.it</a> web domain.
+  date: May 25, 2019
+  tag: domain
+
+- title: Created the website for <b>epidocs.eu</b>
+  description: epidocs.eu is the home page for Epidocs, linking to its projects.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://epidocs.eu/
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/Epidocs/epidocs.github.io
+  date: May 25, 2019
+  category: active
+  tag: project, epidocs
+
+- description: Bought the <a href="https://epidocs.eu/">epidocs.eu</a> web domain.
+  date: May 25, 2019
+  tag: domain
+
+- description:
+  - Started developement of a complex system for building website for Epidocs projects.
+  - The system uses PHP and Travis CI for the build, Github Pages and Jekyll for the website deployment.
+  date: Feb. 10, 2019
+  tag: project, epidocs
+
+- title: Created <b>Epidocs / Plannings/b>
+  description: Plannings and information for EPITA students.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: http://plannings.epidocs.eu/
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/Epidocs/Plannings
+  date: Jan. 30, 2019
+  category: active
+  tag: project, epidocs, plannings
+
+- title: Created <b>Epidocs</b>
+  description: Epidocs is a platform for projects related to EPITA and giving students an access to useful documents.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://epidocs.eu/
+  - title: <i class="fab fa-github fa-fw"></i> See the Github organization
+    href: https://github.com/Epidocs/
+  date: Jan. 30, 2019
+  category: active
+  tag: project, epidocs
+
+
+- title: Started working on <b>MCQ Parser</b>
+  description: MCQ Parser is a program for which purpose is to parse answers at a MCQ test and to calculate grades for each student.
+  date: Apr. 14, 2019
+  category: active
+  tag: epita, blast
+
+
+- title: Started working on <b>Blast</b>
+  description: Blast is a video game made using Unity as part of a school assignment in a group project.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://g00pix.github.io/ProjetBlast/
+  date: Jan. 28, 2019
+  category: active
+  tag: epita, blast
+
+
+- title: Created the website for <b>matiboux.me</b>
+  description: Matiboux.me is my new personal showcase website. It shows who I am and what I do.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://matiboux.me/
+  date: Oct. 5, 2018
+  category: active
+  tag: project, showcase
+
+- description: Bought the <a href="https://matiboux.me/">matiboux.me</a> web domain.
+  date: Oct. 5, 2018
+  tag: domain
+
+
 # (63, 'Created and developed <b>Polls</b>', 'Polls is a simple service for making straw polls. Worked on my own.\r\n<i>Started development on -?-.</i>\r\n<i class=\"fa fa-link fa-fw\"></i> <a href=\"https://polls.matiboux.com/\">See its website</a>.', 'polls', 'tasks', 'active', 'Jul. 12, 2017', '2017-07-12 00:11:19'),
 # (64, '', 'Developed a showcase website for <a href=\"https://twitter.com/Commander_Plays/\">Commander</a>.', 'commission', 'pencil', 'normal', 'Jul. 31, 2017', '2017-08-01 01:48:20');
 
 
-- description: Developed <b>ImgShot</b> v3. Started development on Jul. 4, 2017.
-  date: Jul. 8, 2017
-  tag: project, imgshot
+# - description: Developed <b>ImgShot</b> v3. Started development on Jul. 4, 2017.
+  # date: Jul. 8, 2017
+  # tag: project, imgshot
 
 - title: Created <b>MatiOS</b>
   description: MatiOS is a JS application, imitating a linux console, for using Matiboux's projects using their API. Created on my own.

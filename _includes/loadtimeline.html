@@ -45,6 +45,13 @@
 						</ul>
 					{% endif %}
 					
+					{% if item.languages %}
+						<p class="tag"><i class="fas fa-code fa-fw"></i> {{ item.languages }}</p>
+					{% endif %}
+					{% if item.tools %}
+						<p class="tag"><i class="fas fa-toolbox fa-fw"></i> {{ item.tools }}</p>
+					{% endif %}
+					
 					{% if item.tag %}
 						<p class="tag"><i class="fas fa-tag fa-fw"></i> {{ item.tag }}</p>
 					{% endif %}

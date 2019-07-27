@@ -20,6 +20,8 @@
     # href: 
   # date: 
   # category: 
+  # languages: 
+  # tools: 
   # tag: 
 
 
@@ -102,9 +104,12 @@
 
 
 - title: Started working on <b>MCQ Parser</b>
-  description: MCQ Parser is a program for which purpose is to parse answers at a MCQ test and to calculate grades for each student.
+  description:
+  - MCQ Parser is a program for which purpose is to parse answers at a MCQ test and to calculate grades for each student.
+  - Originnaly developed for use in correcting the mock TOEIC tests at EPITA.
   date: Apr. 14, 2019
   category: active
+  languages: Python
   tag: epita, blast
 
 
@@ -115,6 +120,8 @@
     href: https://g00pix.github.io/ProjetBlast/
   date: Jan. 28, 2019
   category: active
+  languages: C#
+  tools: Unity
   tag: epita, blast
 
 
@@ -125,6 +132,7 @@
     href: https://matiboux.me/
   date: Oct. 5, 2018
   category: active
+  languages: HTML, CSS
   tag: project, showcase
 
 - description: Bought the <a href="https://matiboux.me/">matiboux.me</a> web domain.
@@ -425,6 +433,7 @@
     href: https://github.com/OliFramework/Oli
   date: Feb. 6, 2015
   category: active
+  languages: PHP, HTML
   tag: project, oli
 
 - title: Created and developed <b>Matiboux Manager</b>

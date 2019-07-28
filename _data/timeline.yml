@@ -143,11 +143,13 @@
 
 
 - title: Learned the <b>C#</b> language
+  description: Used at school for practicals.
   date: Nov. 12, 2018
   languages: C#
   category: knowledge
 
 - title: Learned the <b>Python</b> language
+  description: Used at school for practicals.
   date: Nov. 2018
   languages: Python
   category: knowledge
@@ -176,6 +178,7 @@
 
 
 - title: Learned the <b>OCaml</b> language
+  description: Used at school for practicals.
   date: Sept. 10, 2018
   languages: OCaml
   category: knowledge

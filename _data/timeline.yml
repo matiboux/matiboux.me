@@ -142,6 +142,17 @@
   tags: epita, blast
 
 
+- title: Learned the <b>C#</b> language
+  date: Nov. 12, 2018
+  languages: C#
+  category: knowledge
+
+- title: Learned the <b>Python</b> language
+  date: Nov. 2018
+  languages: Python
+  category: knowledge
+
+
 - title: Created the website for <b>matiboux.me</b>
   description: Matiboux.me is my new personal showcase website. It shows who I am and what I do.
   links:
@@ -162,6 +173,12 @@
     href: https://matiboux.me/
   date: Oct. 5, 2018
   category: domain
+
+
+- title: Learned the <b>OCaml</b> language
+  date: Sept. 10, 2018
+  languages: OCaml
+  category: knowledge
 
 
 - description: Open sourced the status API behind <b>matistat.us</b>.

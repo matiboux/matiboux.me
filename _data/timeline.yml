@@ -250,9 +250,9 @@
   status: standby
   tags: webpage
 
-- description: Created the <b>Matiboux Showcase</b> <a href="https://github.com/matiboux/Matiboux-Showcase">Github repository</a>.
-  date: Apr. 8, 2017
-  tags: project, showcase, github
+# - description: Created the <b>Matiboux Showcase</b> <a href="https://github.com/matiboux/Matiboux-Showcase">Github repository</a>.
+  # date: Apr. 8, 2017
+  # tags: project, showcase, github
 
 - title: Created and developed <b>Matiboux Showcase</b>
   description: Matiboux Showcase is my personal showcase website.
@@ -273,9 +273,9 @@
   date: Mar. 31, 2017
   tags: project, keygen, github
 
-- description: Created the <b>Matiboux Career</b> <a href="https://github.com/matiboux/Matiboux-Career">Github repository</a>.
-  date: Mar. 31, 2017
-  tags: project, career, github
+# - description: Created the <b>Matiboux Career</b> <a href="https://github.com/matiboux/Matiboux-Career">Github repository</a>.
+  # date: Mar. 31, 2017
+  # tags: project, career, github
 
 - title: Created and developed <b>Matiboux Career</b>
   description:

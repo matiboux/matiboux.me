@@ -105,10 +105,10 @@ a:hover { color: #4080c0 }
 #main .cv-items > * > * > * { margin-bottom: 5px; font-size: 14px }
 #main .cv-items > * > .content h4 { margin-top: 0; font-size: 20px }
 #main .cv-items > * > .content .position { color: #c0c0c0; font-size: 16px; font-variant: small-caps }
-#main .cv-items > * > .content .award { color: #50a0f0; font-size: 16px; font-variant: small-caps }
+#main .cv-items > * > .content .award { color: #50a0f0; font-variant: small-caps }
 #main .cv-items > * > .content ul { padding-left: 20px }
 #main .cv-items > * > .meta { text-align: right }
-#main .cv-items > * > .meta > *:first-child { color: #50a0f0; font-size: 16px; font-weight: 500 }
+#main .cv-items > * > .meta > *:first-child { font-size: 16px; font-weight: 500 }
 
 
 

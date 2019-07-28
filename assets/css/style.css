@@ -51,8 +51,6 @@ a:hover { color: #4080c0 }
 }
 
 
-
-/*#main .timeline-items { position: relative; table-layout: fixed }*/
 #main .timeline-items > * + * { padding-top: 10px }
 #main .timeline-items > * > * {
 	position: relative;
@@ -93,36 +91,51 @@ a:hover { color: #4080c0 }
 #main .timeline-items > * > .content .tag { color: #808080 }
 
 
+#main .cv-items > * + * { padding-top: 10px }
+#main .cv-items > * {
+	display: flex;
+	align-items: start;
+	justify-content: space-between;
+}
+#main .cv-items > * > * {
+	position: relative;
+	display: table-cell;
+	padding-right: 10px;
+	vertical-align: top;
+}
 
-#main .career { position: relative; margin: 20px 0 40px; table-layout: fixed }
-#main .career > .item > .icon .box { background: #f1f1f1; width: 42px; height: 42px; padding: 10px 0; color: #333; font-size: 16px; text-align: center; border: 1px solid #bbb; border-radius: 50% }
+#main .cv-items > * > .date {
+	width: 100px;
+	padding-top: 2px;
+	font-size: 13px;
+	text-align: right;
+}
+#main .cv-items > * > .date > * { margin: 0 }
+#main .cv-items > * > .date .badge { font-weight: 500 }
+#main .cv-items > * > .misc .bullet {
+	background: #f0f0f0;
+	width: 7px;
+	height: 7px;
+	margin-top: 10px;
+	border: 1px solid #202020;
+	border-radius: 50%;
+}
+#main .cv-items > * > .misc .line {
+	position: absolute;
+	height: calc(100% + 3px);
+	top: 17px;
+	left: 3px;
+	border-left: 1px solid #bbb;
+	z-index: -1;
+}
+#main .cv-items > *:last-child > .misc .line { display: none }
+#main .cv-items > * > .content > * { margin-top: 3px; margin-bottom: 5px; font-size: 12px }
+#main .cv-items > * > .content h4 { margin-top: 0; font-size: 20px }
+#main .cv-items > * > .content h4 ~ *, #main .cv-items > * > .content p ~ * { color: #c0c0c0 }
+#main .cv-items > * > .content ul { padding-left: 20px }
+#main .cv-items > * > .content .tag { color: #808080 }
 
-#main .career > .item > * { position: relative; display: table-cell; vertical-align: top }
-#main .career > .item > .date { width: 90px; padding: 13px 5px; font-size: 12px; text-align: right; font-style: italic }
-#main .career > .item.item-small > .date { color: #888 }
-#main .career > .item > .icon { padding: 0 10px; }
-/* #main .career > .item > .icon .box .fa { display: block; } */
-/* #main .career > .item > .icon .box .id { display: none; } */
-/* #main .career > .item > .icon .box:hover .fa { display: none; } */
-/* #main .career > .item > .icon .box:hover .id { display: block; } */
-#main .career > .item > .icon .popup { position: absolute; display: none; width: 302px; height: 32px; top: 5px; left: 31px; font-size: 13px; z-index: 1 }
-#main .career > .item > .icon .box:hover + .popup, #main .career > .item > .icon .popup:hover { display: block; }
-#main .career > .item > .icon .box:hover + .popup, #main .career > .item > .icon .popup:hover { display: block; }
-#main .career > .item > .icon .popup > .content { background: #fff; line-height: 30px; top: 5px; left: 62px; margin-left: 31px; padding: 0 10px; box-shadow: 1px 1px 5px 0 #ddd; border: 1px solid #ddd; border-left: 1px solid #bbb; border-radius: 5px }
-#main .career > .item > .icon .popup > .content:before { content: ''; position: absolute; display: block; top: 10px;left: 26px; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-right: 5px solid #bbb }
-#main .career > .item > .icon .line { position: absolute; height: 100%; top: 0; left: 31px; border-left: 1px solid #bbb; z-index: -1 }
-#main .career > .item > .content { padding: 12px 5px 24px }
-#main .career > .item > .content > h4 { margin-bottom: 5px; font-size: 16px }
-#main .career > .item > .content > p { margin: 1px 0 5px !important; color: #888; font-size: 12px }
-#main .career > .item > .content > h4 + p { margin-top: 0; color: #333 }
-#main .career > .item > .content > p > b { cursor: pointer }
-#main .career > .item > .content > p > b:hover { text-decoration: underline }
-#main .career > .item > .content > .tag { color: #888 }
 
-#main .infos *:first-child, #main .career > .item > .content *:first-child { margin-top: 0 }
-#main .infos *:last-child, #main .career > .item > .content *:last-child { margin-bottom: 0 }
-
-#main .loader { text-align: center }
 
 /** Special wrappers */
 

@@ -26,7 +26,7 @@
 
 	<main id="main">
 		<div class="container {{ page.container_class }}">
-			{% unless home %}
+			{% unless page.home %}
 				<a href="{{ '/' | relative_url }}">&lsaquo; Back to home page</a>
 			{% endunless %}
 			

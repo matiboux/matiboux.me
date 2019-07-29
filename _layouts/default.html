@@ -26,7 +26,10 @@
 
 	<main id="main">
 		<div class="container {{ page.container_class }}">
-			<a href="{{ '/' | relative_url }}">&lsaquo; Back to home page</a>
+			{% unless home %}
+				<a href="{{ '/' | relative_url }}">&lsaquo; Back to home page</a>
+			{% endunless %}
+			
 			<div class="title">
 				{% if page.avatar %}
 					<img src="{{ page.avatar }}" {% if page.avatar_alt %}alt="{{ page.avatar_alt }}"{% endif %} />

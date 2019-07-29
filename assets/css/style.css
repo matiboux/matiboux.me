@@ -25,6 +25,11 @@ a:hover { color: #4080c0 }
 hr { 
 border-color: rgba(255, 255, 255, .1) }
 
+@media (min-width: 576px) { .mw-sm { max-width: 540px } }
+@media (min-width: 768px) { .mw-md { max-width: 720px } }
+@media (min-width: 992px) { .mw-lg { max-width: 960px } }
+@media (min-width: 1200px) { .mw-xl { max-width: 1140px } }
+
 
 #main {
     display: block;

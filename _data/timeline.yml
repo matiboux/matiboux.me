@@ -27,6 +27,20 @@
 
 
 
+- description: Finished my internship at the <b>Grand Chancery of the Legion of Honor</b>.
+  date: July 12, 2019
+
+- title: Started my internship at the <b>Grand Chancery of the Legion of Honor</b>
+  description:
+  - One-month internship in maintenance and computer park management.
+  - Quick behind the scenes discovery of computer parks in an office and schools.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://www.legiondhonneur.fr/
+  date: June 12, 2019
+  category: work
+  status: finished
+
 - description: Developed a website for <b>Epidocs / Plannings</b>.
   links:
   - title: <i class="fas fa-link fa-fw"></i> See the website

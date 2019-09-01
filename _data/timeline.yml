@@ -1,31 +1,21 @@
-# - title: Dynamic Title
-  # description: Description
-  # date: Someday
-  # tags: tagged
-# - title: Open-source Projects
-  # date: Now & Forever
-  # status: active
-  # links:
-  # - title: opensource.matiboux.com
-    # href: https://opensource.matiboux.com/
-
-- description: Updated the website for <a href="https://matiboux.me/">matiboux.me</a>.
-  date: Oct. 5, 2018
-  tags: project, showcase
-
 # - title: 
   # description: 
   # links:
   # - title: 
     # href: 
   # date: 
-  # category: 
-  # status: 
+  # category: personal / work / school / knowledge / domain
+  # status: active / finished / standby / inactive / replaced / left / dead
+  # opensource: true / false or omitted
   # languages: 
   # tools: 
   # tags: 
 
 
+
+- description: Updated the website for <a href="https://matiboux.me/">matiboux.me</a>.
+  date: Sept. 1, 2019
+  tags: project, showcase
 
 - description: Finished my internship at the <b>Grand Chancery of the Legion of Honor</b>.
   date: July 12, 2019

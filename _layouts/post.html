@@ -1,21 +1,22 @@
 ---
-layout: page
+layout: default
 ---
 
 <small>
 	{% if page.date %}
-	{{ page.date | date: "%B %e, %Y" }}
+		{{ page.date | date: "%B %e, %Y" }}
 	{% endif %}
 	
 	{% if page.date %}
-	by {{ page.author | default: site.author }}
+		by {{ page.author | default: site.author }}
 	{% endif %}
 </small>
-
-<h1>{{ page.title }}</h1>
 
 {{ content }}
 
 {% if page.tags %}
-<small>Tags: <em>{{ page.tags | join: "</em>, <em>" }}</em></small>
+	<small>
+		<i class="fas fa-tag fa-fw" data-toggle="tooltip" data-placement="left" title="Tags"></i>
+		Tags: <em>{{ page.tags | join: "</em>, <em>" }}</em>
+	</small>
 {% endif %}

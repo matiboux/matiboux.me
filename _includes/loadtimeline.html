@@ -1,0 +1,88 @@
+{% if include.items %}
+	<div class="timeline-items">
+		{% for item in include.items %}
+			<div class="item">
+				<div class="date">
+					<p>{{ item.date }}</p>
+					
+					{% if item.type == 'personal' %}
+						<p class="badge badge-pill badge-active"><i class="fas fa-user fa-fw"></i> Personal</p>
+					{% elsif item.category == 'work' %}
+						<p class="badge badge-pill badge-success"><i class="fas fa-briefcase fa-fw"></i> Work</p>
+					{% elsif item.category == 'school' %}
+						<p class="badge badge-pill badge-info"><i class="fas fa-university fa-fw"></i> School</p>
+					{% elsif item.category == 'knowledge' %}
+						<p class="badge badge-pill badge-secondary"><i class="fas fa-graduation-cap fa-fw"></i> Knowledge</p>
+					{% elsif item.category == 'domain' %}
+						<p class="badge badge-pill badge-secondary"><i class="fas fa-globe fa-fw"></i> Domain</p>
+					{% endif %}
+					
+					{% if item.status == 'active' %}
+						<p class="badge badge-pill badge-primary"><i class="fas fa-star fa-fw"></i> Active</p>
+					{% elsif item.status == 'finished' %}
+						<p class="badge badge-pill badge-success"><i class="fas fa-check fa-fw"></i> Finished</p>
+					{% elsif item.status == 'standby' %}
+						<p class="badge badge-pill badge-secondary"><i class="fas fa-pause fa-fw"></i> Standby</p>
+					{% elsif item.status == 'inactive' %}
+						<p class="badge badge-pill badge-warning"><i class="far fa-star fa-fw"></i> Inactive</p>
+					{% elsif item.status == 'replaced' %}
+						<p class="badge badge-pill badge-secondary"><i class="fas fa-times fa-fw"></i> Replaced</p>
+					{% elsif item.status == 'left' %}
+						<p class="badge badge-pill badge-danger"><i class="fas fa-sign-out-alt fa-fw"></i> Left</p>
+					{% elsif item.status == 'dead' %}
+						<p class="badge badge-pill badge-danger"><i class="fas fa-times fa-fw"></i> Dead</p>
+					{% endif %}
+					
+					{% if item.opensource %}
+						<p class="badge badge-pill badge-info"><i class="fas fa-code-branch fa-fw"></i> Open source</p>
+					{% endif %}
+				</div>
+				<div class="misc">
+					<div class="bullet"></div>
+					<div class="line"></div>
+				</div>
+				<div class="content">
+					{% if item.title %}
+						<h4>{{ item.title }}</h4>
+					{% endif %}
+					
+					{% if item.description.first %}
+						{% for description in item.description %}
+							<p class="description">{{ description }}</p>
+						{% endfor %}
+					{% else %}
+						<p class="description">{{ item.description }}</p>
+					{% endif %}
+					
+					{% if item.links %}
+						<ul class="links">
+							{% for link in item.links %}
+								<li><a href="{{ link.href }}">{{ link.title }}</a></li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+					
+					{% if item.languages %}
+						<p class="languages">
+							<i class="fas fa-code fa-fw" data-toggle="tooltip" data-placement="left" title="Languages"></i>
+							{{ item.languages }}
+						</p>
+					{% endif %}
+					{% if item.tools %}
+						<p class="tools">
+							<i class="fas fa-toolbox fa-fw" data-toggle="tooltip" data-placement="left" title="Tools"></i>
+							{{ item.tools }}
+						</p>
+					{% endif %}
+					
+					{% if item.tags %}
+						<p class="tags">
+							<i class="fas fa-tag fa-fw" data-toggle="tooltip" data-placement="left" title="Tags"></i>
+							{{ item.tags }}
+						</p>
+					{% endif %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endif %}

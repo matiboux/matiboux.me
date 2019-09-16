@@ -19,6 +19,8 @@ body {
 	color: #f0f0f0;
 }
 
+@media print { body { color: #000 } }
+
 a { color: #50a0f0 }
 a:hover { color: #4080c0 }
 

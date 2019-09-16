@@ -2,20 +2,18 @@
 
 Yet another Portfolio Website, but it's for Mati.
 
----
+## Build instructions
+
+```bash
+$ gem install jekyll
+$ jekyll serve
+```
 
 ## License
 
-MIT License
-Copyright (c) 2018 Mathieu Guérin (Matiboux)
+**MIT License**  
+Copyright (c) 2018-2019 Mathieu Guérin (Matiboux)
 
 *You can find a copy of the MIT License in the **LICENSE** file.*
 
----
-
-## About me
-
-Want to get in touch with me? Here's how:
- - **Email**: [matiboux@gmail.com](mailto:matiboux@gmail.com)
- - **Github**: [@matiboux](https://github.com/matiboux)
- - **Telegram**: [@Matiboux](https://t.me/Matiboux)
+Visit [my website](https://matiboux.me/) for knowing more about me or contacting me.

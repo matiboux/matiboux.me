@@ -50,12 +50,14 @@
   date: July 4, 2019
   opensource: true
 
-- description: Completed working on <b>MCQ Parser</b>.
+- description: Completed work on <b>MCQ Parser</b>.
   date: June 3, 2019
   tags: epita, mcq-parser
 
 - title: Created <b>Epidocs / Past-Exams</b> and developed its website
-  description: Past subjects and other files, for the benefit of EPITA students.
+  description:
+  - Past subjects and other files, for the benefit of EPITA students.
+  - Developed the website using the script and structure for building website for Epidocs projects.
   links:
   - title: <i class="fas fa-link fa-fw"></i> See the website
     href: https://past-exams.epidocs.eu/

@@ -13,7 +13,19 @@
 
 
 
-- description: Updated the website for <a href="https://matiboux.me/">matiboux.me</a>.
+- title: Created <b>Epidocs / Algostats</b>
+  description: Stats of algorithm homework at EPITA.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://algostats.epidocs.eu/
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/Epidocs/Algostats
+  date: Sept. 14, 2019
+  status: active
+  opensource: true
+  tags: project, epidocs, algostats
+
+- description: Released a major interface update of <a href="https://matiboux.me/">matiboux.me</a>.
   date: Sept. 1, 2019
   tags: project, showcase
 
@@ -23,7 +35,7 @@
 - title: Started my internship at the <b>Grand Chancery of the Legion of Honor</b>
   description:
   - One-month internship in maintenance and computer park management.
-  - Quick behind the scenes discovery of computer parks in an office and schools.
+  - Quick behind the scenes discovery of computer parks in an office and in schools.
   links:
   - title: <i class="fas fa-link fa-fw"></i> See the website
     href: https://www.legiondhonneur.fr/
@@ -42,7 +54,7 @@
   date: June 3, 2019
   tags: epita, mcq-parser
 
-- title: Created <b>Epidocs / Past-Exams</b> and developed its website.
+- title: Created <b>Epidocs / Past-Exams</b> and developed its website
   description: Past subjects and other files, for the benefit of EPITA students.
   links:
   - title: <i class="fas fa-link fa-fw"></i> See the website

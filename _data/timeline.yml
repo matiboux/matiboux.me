@@ -658,6 +658,10 @@
   date: Aug. 2013
   category: knowledge
 
+- description: Closed my wordpress.com blog
+  date: June 20, 2013
+  tags: blog
+
 - title: Created and worked on <b>MySurvivalAdventure</b>
   description: MySurvivalAdventure was a Minecraft servers group.
   date: June 2013
@@ -673,6 +677,15 @@
 - title: Learned the <b>HTML & CSS</b> languages
   date: Dec. 2012
   category: knowledge
+
+- title: Created a <b>Wordpress blog</b>
+  description: This was my first blog online and it was easily created on <a href="https://wordpress.com/">wordpress.com</a>.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://matiboux.wordpress.com/
+  date: Oct. 13, 2012
+  status: dead
+  tags: blog
 
 - title: Learned the <b>Processing</b> language
   description:

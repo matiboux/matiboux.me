@@ -47,6 +47,7 @@
   date: June 12, 2019
   category: work
   status: finished
+  tags: internship
 
 - description: Developed a website for <b>Epidocs / Plannings</b>.
   links:
@@ -516,6 +517,36 @@
   date: Mar. 2015
   status: dead
   tags: project, natrox, natropics
+
+- description: Finished my internship at <b>Gfi Informatique Ouest</b>.
+  date: Fev. 2015
+
+- title: Started my internship at <b>Gfi Informatique Ouest</b>
+  description:
+  - 2-days internship in an digital and IT service company.
+  - Done as part of the required intership during my last year of middle school.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the company website
+    href: https://gfi.world/
+  date: Fev. 2015
+  category: work
+  status: finished
+  tags: internship
+
+- description: Finished my internship at <b>Sensipode</b>.
+  date: Fev. 2015
+
+- title: Started my internship at <b>Sensipode</b>
+  description:
+  - 3-days internship in a webdesign startup.
+  - Done as part of the required intership during my last year of middle school.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the company website
+    href: https://www.sensipode.com/
+  date: Fev. 2015
+  category: work
+  status: finished
+  tags: internship
 
 - title: Created the <b>Fruinity</b> Team
   description:

@@ -12,6 +12,11 @@
   # tags: 
 
 
+- description:
+  - Archived <b>Epidocs / Algostats</b>.
+  - The project has helped highlight security or privacy issues about personal data on another service. Due to this, Algostats had no more purpose for the future.
+  date: Sept. 16, 2019
+  tags: project, showcase
 
 - title: Created <b>Epidocs / Algostats</b>
   description: Stats of algorithm homework at EPITA.
@@ -21,7 +26,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/Epidocs/Algostats
   date: Sept. 14, 2019
-  status: active
+  status: dead
   opensource: true
   tags: project, epidocs, algostats
 

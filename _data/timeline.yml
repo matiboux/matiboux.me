@@ -36,6 +36,7 @@
 
 - description: Finished my internship at the <b>Grand Chancery of the Legion of Honor</b>.
   date: July 12, 2019
+  tags: internship
 
 - title: Started my internship at the <b>Grand Chancery of the Legion of Honor</b>
   description:
@@ -520,6 +521,7 @@
 
 - description: Finished my internship at <b>Gfi Informatique Ouest</b>.
   date: Fev. 2015
+  tags: internship
 
 - title: Started my internship at <b>Gfi Informatique Ouest</b>
   description:
@@ -535,6 +537,7 @@
 
 - description: Finished my internship at <b>Sensipode</b>.
   date: Fev. 2015
+  tags: internship
 
 - title: Started my internship at <b>Sensipode</b>
   description:

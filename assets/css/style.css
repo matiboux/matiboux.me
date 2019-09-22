@@ -85,6 +85,12 @@ border-color: rgba(255, 255, 255, .1) }
 	border: 1px solid #202020;
 	border-radius: 50%;
 }
+#main .timeline-items > * > .misc .bullet.bullet-lg {
+	margin-top: 8px;
+	margin-left: -2px;
+	width: 11px;
+	height: 11px;
+}
 #main .timeline-items > * > .misc .line {
 	position: absolute;
 	height: calc(100% + 3px);

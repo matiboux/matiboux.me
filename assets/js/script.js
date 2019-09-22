@@ -31,3 +31,10 @@ $('#timelineSearch [name="searchTagsOnly"]').change(searchHandler);
 $('#timelineSearch [type="reset"]').click(function() {
 	searchHandler("");
 });
+
+$('.timeline-items .item .tags a').click(function(e) {
+	e.preventDefault();
+	var value = $(this).attr('href').substring(1);
+	$('#timelineSearch [name="searchField"]').val(value);
+	searchHandler(value);
+});

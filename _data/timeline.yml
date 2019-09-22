@@ -7,8 +7,8 @@
   # category: personal / work / school / knowledge / domain
   # status: active / finished / standby / inactive / replaced / left / dead
   # opensource: true / false or omitted
-  # languages: 
-  # tools: 
+  # languages: []
+  # tools: []
   # tags: []
 
 
@@ -28,6 +28,8 @@
   date: Sept. 14, 2019
   status: dead
   opensource: true
+  languages: [HTML, CSS]
+  tools: [Jekyll]
   tags: [project, epidocs, algostats]
 
 - description: Released a major interface update of <a href="https://matiboux.me/">matiboux.me</a>.
@@ -56,6 +58,9 @@
     href: https://plannings.epidocs.eu/
   date: July 4, 2019
   opensource: true
+  languages: [HTML, CSS, PHP]
+  tools: [Jekyll, Travis CI]
+  tags: [project, epidocs, plannings]
 
 - description: Completed work on <b>MCQ Parser</b>.
   date: June 3, 2019
@@ -73,6 +78,8 @@
   date: June 3, 2019
   status: active
   opensource: true
+  languages: [HTML, CSS, PHP]
+  tools: [Jekyll, Travis CI]
   tags: [project, epidocs, past-exams]
 
 - title: Created the website for <b>epita.it</b>
@@ -85,6 +92,8 @@
   date: May 26, 2019
   status: active
   opensource: true
+  languages: [HTML, CSS]
+  tools: [Jekyll]
   tags: [project, epidocs, epita.it]
 
 - description: Bought the <b>epita.it</b> web domain.
@@ -104,6 +113,8 @@
   date: May 25, 2019
   status: active
   opensource: true
+  languages: [HTML, CSS]
+  tools: [Jekyll]
   tags: [project, epidocs]
 
 - description: Bought the <b>epidocs.eu</b> web domain.
@@ -150,7 +161,7 @@
   date: Apr. 14, 2019
   category: work
   status: finished
-  languages: Python
+  languages: [Python]
   tags: [epita, mcq-parser]
 
 
@@ -162,21 +173,21 @@
   date: Jan. 28, 2019
   category: school
   status: finished
-  languages: C#
-  tools: Unity
+  languages: [C#]
+  tools: [Unity]
   tags: [epita, blast]
 
 
 - title: Learned the <b>C#</b> language
   description: Used at school for practicals.
   date: Nov. 12, 2018
-  languages: C#
+  languages: [C#]
   category: knowledge
 
 - title: Learned the <b>Python</b> language
   description: Used at school for practicals.
   date: Nov. 2018
-  languages: Python
+  languages: [Python]
   category: knowledge
 
 
@@ -191,7 +202,7 @@
   category: personal
   status: active
   opensource: true
-  languages: HTML, CSS
+  languages: [HTML, CSS]
   tags: [project, showcase]
 
 - description: Bought the <b>matiboux.me</b> web domain.
@@ -205,7 +216,7 @@
 - title: Learned the <b>OCaml</b> language
   description: Used at school for practicals.
   date: Sept. 10, 2018
-  languages: OCaml
+  languages: [OCaml]
   category: knowledge
 
 
@@ -226,7 +237,7 @@
   category: personal
   status: active
   opensource: true
-  languages: PHP, HTML, CSS
+  languages: [HTML, CSS, PHP]
   tags: [project, showcase]
 
 - description: Bought the <b>matistat.us</b> web domain.
@@ -568,7 +579,7 @@
     href: https://github.com/OliFramework/Oli
   date: Feb. 6, 2015
   status: active
-  languages: PHP, HTML
+  languages: [HTML, PHP]
   tags: [project, oli]
 
 - title: Created and developed <b>Matiboux Manager</b>

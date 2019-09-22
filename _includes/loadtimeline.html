@@ -65,13 +65,17 @@
 					{% if item.languages %}
 						<p class="languages">
 							<i class="fas fa-code fa-fw" data-toggle="tooltip" data-placement="left" title="Languages"></i>
-							{{ item.languages }}
+							{% for language in item.languages %}
+								{{ language }}{% unless forloop.last %},{% endunless %}
+							{% endfor %}
 						</p>
 					{% endif %}
 					{% if item.tools %}
 						<p class="tools">
 							<i class="fas fa-toolbox fa-fw" data-toggle="tooltip" data-placement="left" title="Tools"></i>
-							{{ item.tools }}
+							{% for tool in item.tools %}
+								{{ tool }}{% unless forloop.last %},{% endunless %}
+							{% endfor %}
 						</p>
 					{% endif %}
 					

@@ -104,6 +104,8 @@ border-color: rgba(255, 255, 255, .1) }
 #main .timeline-items > * > .content h4 { margin-top: 0; font-size: 20px }
 #main .timeline-items > * > .content h4 ~ *, #main .timeline-items > * > .content p ~ * { color: #c0c0c0 }
 #main .timeline-items > * > .content ul { padding-left: 20px }
+#main .timeline-items > * > .content .languages { color: #808080 }
+#main .timeline-items > * > .content .tools { color: #808080 }
 #main .timeline-items > * > .content .tags, #main .timeline-items > * > .content .tags a { color: #808080 }
 
 

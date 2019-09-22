@@ -3,6 +3,12 @@ $(function() {
 	$('[data-toggle="tooltip"]').tooltip();
 });
 
+$.expr[':'].icontains = $.expr.createPseudo(function(arg) {
+    return function(e) {
+        return $(e).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+    };
+});
+
 var searchHandler = function(value) {
 	$('.timeline-items .item').hide();
 	
@@ -10,9 +16,9 @@ var searchHandler = function(value) {
 	console.log(value);
 	if(value != "") {
 		if($('#timelineSearch [name="searchTagsOnly"]').prop('checked'))
-			$('.timeline-items .item .tags:contains("' + value + '")').parents('.item').show();
+			$('.timeline-items .item .tags:icontains("' + value + '")').parents('.item').show();
 		else
-			$('.timeline-items .item:contains("' + value + '")').show();
+			$('.timeline-items .item:icontains("' + value + '")').show();
 	}
 	else
 		$('.timeline-items .item').show();

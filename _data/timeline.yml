@@ -12,12 +12,6 @@
   # tags: []
 
 
-- title: Learned the <b>68000 Assembly</b> language
-  description: Started on my own, and studied later at school.
-  date: July 28, 2019
-  languages: [68000 Assembly]
-  category: knowledge
-
 - description:
   - Archived <b>Epidocs / Algostats</b>.
   - The project has helped highlight security or privacy issues about personal data on another service. Due to this, Algostats had no more purpose for the future.
@@ -41,6 +35,12 @@
 - description: Released a major interface update of <a href="https://matiboux.me/">matiboux.me</a>.
   date: Sept. 1, 2019
   tags: [project, showcase]
+
+- title: Learned the <b>68000 Assembly</b> language
+  description: Started on my own, and studied later at school.
+  date: July 28, 2019
+  languages: [68000 Assembly]
+  category: knowledge
 
 - description: Finished my internship at the <b>Grand Chancery of the Legion of Honor</b>.
   date: July 12, 2019

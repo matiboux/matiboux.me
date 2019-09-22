@@ -12,6 +12,12 @@
   # tags: []
 
 
+- title: Learned the <b>68000 Assembly</b> language
+  description: Started on my own, and studied later at school.
+  date: July 28, 2019
+  languages: [68000 Assembly]
+  category: knowledge
+
 - description:
   - Archived <b>Epidocs / Algostats</b>.
   - The project has helped highlight security or privacy issues about personal data on another service. Due to this, Algostats had no more purpose for the future.

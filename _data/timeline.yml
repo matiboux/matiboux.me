@@ -13,6 +13,20 @@
 
 
 
+- title: Created <b>Epidocs / Progstats</b>
+  description: Stats of programming practicals & exams at EPITA.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://progstats.epidocs.eu/
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/Epidocs/Progstats
+  date: Dec. 10, 2019
+  status: active
+  opensource: true
+  languages: [HTML, CSS]
+  tools: [Jekyll]
+  tags: [project, epidocs, progstats]
+
 - title: Created <b>Epidocs / Algostats</b>
   description: Stats of algorithm homework at EPITA.
   links:
@@ -21,7 +35,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/Epidocs/Algostats
   date: Sept. 14, 2019
-  status: dead
+  status: active
   opensource: true
   languages: [HTML, CSS]
   tools: [Jekyll]

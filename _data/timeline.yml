@@ -13,6 +13,12 @@
 
 
 
+- description:
+  - "Passed the <b>Erasmus OLS: First Language Assessment</b>"
+  - "Level Achieved: C1"
+  date: Dev. 13, 2019
+  tags: [test, erasmus]
+
 - title: Created <b>Epidocs / Progstats</b>
   description: Stats of programming practicals & exams at EPITA.
   links:
@@ -140,6 +146,12 @@
   category: domain
 
 - description:
+  - "Passed the <b>TOEIC Mock Test</b>"
+  - "Score: 925"
+  date: May 11, 2019
+  tags: [test, toeic]
+
+- description:
   - Started developement of a script and structure for building website for Epidocs projects.
   - The system uses PHP and Travis CI for the build, Github Pages and Jekyll for the website deployment.
   date: Feb. 10, 2019
@@ -233,6 +245,12 @@
   date: Sept. 10, 2018
   languages: [OCaml]
   category: knowledge
+
+- description:
+  - "Passed the <b>TOEIC Mock Test</b>"
+  - "Score: 900"
+  date: Sept. 6, 2018
+  tags: [test, toeic]
 
 
 - description: Open sourced the status API behind <b>matistat.us</b>.

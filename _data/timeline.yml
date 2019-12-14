@@ -4,7 +4,7 @@
   # - title: 
     # href: 
   # date: 
-  # category: personal / work / school / knowledge / domain
+  # category: personal / work / school / knowledge / award / domain
   # status: active / finished / standby / inactive / replaced / left / dead
   # opensource: true / false or omitted
   # languages: []
@@ -32,6 +32,7 @@
   - "Level Achieved: C1."
   - <i class="fas fa-info fa-fw"></i> More info in my Curriculum Vitae.
   date: Dev. 13, 2019
+  category: award
   tags: [test, erasmus]
 
 - title: Created <b>Epidocs / Progstats</b>
@@ -164,6 +165,7 @@
   - "Passed the <b>TOEIC Mock Test</b>"
   - "Score: 925"
   date: May 11, 2019
+  category: award
   tags: [test, toeic]
 
 - description:
@@ -270,6 +272,7 @@
   - "Passed the <b>TOEIC Mock Test</b>"
   - "Score: 900"
   date: Sept. 6, 2018
+  category: award
   tags: [test, toeic]
 
 

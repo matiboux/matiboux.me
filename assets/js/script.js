@@ -10,24 +10,39 @@ $.expr[':'].icontains = $.expr.createPseudo(function(arg) {
 });
 
 var searchHandler = function(value) {
-	$('.timeline-items .item').hide();
+	var $item = $('.timeline-items .item');
+	$item.hide();
 	
-	var value = (typeof(value) == "string") ? value : $('#timelineSearch [name="searchField"]').val();
-	console.log(value);
-	if(value != "") {
-		if($('#timelineSearch [name="searchTagsOnly"]').prop('checked'))
-			$('.timeline-items .item .tags:icontains("' + value + '")').parents('.item').show();
-		else
-			$('.timeline-items .item:icontains("' + value + '")').show();
-	}
+	if(typeof(value) != 'string' || value == '')
+		$item.show();
 	else
-		$('.timeline-items .item').show();
+	{
+		var colonindex = value.indexOf(':');
+		
+		var selector = value.slice(0, colonindex > 0 ? colonindex : 0);
+		var search = value.slice(colonindex + 1);
+		
+		if(selector == '' && $('#timelineSearch [name="searchTagsOnly"]').prop('checked'))
+			selector = 'tags';
+		
+		selector.replace(' ', '_');
+		
+		console.log(selector);
+		console.log(search);
+		
+		if(selector != '')
+			$item.find('.' + selector + ':icontains("' + value.slice(value.indexOf(':') + 1) + '")').parents('.item').show();
+		else
+			$item.filter(':icontains("' + search + '")').show();
+	}
 };
 
 $('#timelineSearch [name="searchField"]').keyup(function() {
 	searchHandler($(this).val());
 });
-$('#timelineSearch [name="searchTagsOnly"]').change(searchHandler);
+$('#timelineSearch [name="searchTagsOnly"]').change(function() {
+	searchHandler($('#timelineSearch [name="searchField"]').val());
+});
 $('#timelineSearch [type="reset"]').click(function() {
 	searchHandler("");
 });
@@ -35,6 +50,13 @@ $('#timelineSearch [type="reset"]').click(function() {
 $('.timeline-items .item .tags a').click(function(e) {
 	e.preventDefault();
 	var value = $(this).attr('href').substring(1);
+	$('#timelineSearch [name="searchField"]').val(value);
+	searchHandler(value);
+});
+
+$('.timeline-items .item a.badge').click(function(e) {
+	e.preventDefault();
+	var value = $(this).attr('class').split(' ', 1)[0] + ':' + $(this).text().trim().toLowerCase();
 	$('#timelineSearch [name="searchField"]').val(value);
 	searchHandler(value);
 });

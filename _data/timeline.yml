@@ -28,8 +28,9 @@
   tags: [project, epidocs, mcq-online]
 
 - description:
-  - "Passed the <b>Erasmus OLS: First Language Assessment</b>"
-  - "Level Achieved: C1"
+  - "Passed the <b>Erasmus OLS: First Language Assessment</b>."
+  - "Level Achieved: C1."
+  - <i class="fas fa-info fa-fw"></i> More info in my Curriculum Vitae.
   date: Dev. 13, 2019
   tags: [test, erasmus]
 
@@ -204,8 +205,13 @@
   status: finished
   languages: [Python]
   tags: [epita, mcq-parser]
-
-
+  
+- description:
+  - Started improving my knowledge of <b>C</b> language.
+  - Practiced on practicals and school projects.
+  date: Feb. 7, 2019
+  category: knowledge
+  
 - title: Started working on <b>Blast</b>
   description: Blast is a video game made using Unity as part of a school assignment in a group project.
   links:
@@ -220,13 +226,13 @@
 
 
 - title: Learned the <b>C#</b> language
-  description: Used at school for practicals.
+  description: Practiced on practicals at school.
   date: Nov. 12, 2018
   languages: [C#]
   category: knowledge
 
 - title: Learned the <b>Python</b> language
-  description: Used at school for practicals.
+  description: Practiced on exercises at school.
   date: Nov. 2018
   languages: [Python]
   category: knowledge
@@ -791,7 +797,7 @@
   date: 2012
   category: knowledge
 
-- description: Learned the <b>C++</b> language – a little.
+- description: Partly introduced to the <b>C++</b> language.
   date: Aug. 2011
   category: knowledge
 

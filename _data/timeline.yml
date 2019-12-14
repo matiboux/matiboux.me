@@ -13,6 +13,20 @@
 
 
 
+- title: Created <b>Epidocs / MCQ Online</b>
+  description: An online tool for practicing MCQ exams.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://mcq.epidocs.eu/
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/Epidocs/MCQ-Online
+  date: Dec. 14, 2019
+  status: active
+  opensource: true
+  languages: [HTML, CSS, JavaScript]
+  tools: [Jekyll, jQuery]
+  tags: [project, epidocs, mcq-online]
+
 - description:
   - "Passed the <b>Erasmus OLS: First Language Assessment</b>"
   - "Level Achieved: C1"
@@ -777,7 +791,7 @@
   date: 2012
   category: knowledge
 
-- description: Learned the <b>C++</b> language â€“ a little.
+- description: Learned the <b>C++</b> language – a little.
   date: Aug. 2011
   category: knowledge
 

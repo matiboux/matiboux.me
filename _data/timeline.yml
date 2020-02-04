@@ -13,6 +13,12 @@
 
 
 
+- title: Learned the <b>Java</b> language
+  description: Used at Griffith College for practicals.
+  date: Feb. 3, 2020
+  languages: [Java]
+  category: knowledge
+
 - title: Created <b>Epidocs / MCQ Online</b>
   description: An online tool for practicing MCQ exams.
   links:
@@ -210,7 +216,7 @@
   
 - description:
   - Started improving my knowledge of <b>C</b> language.
-  - Practiced on practicals and school projects.
+  - Used at EPITA for practicals and school projects.
   date: Feb. 7, 2019
   category: knowledge
   
@@ -228,13 +234,13 @@
 
 
 - title: Learned the <b>C#</b> language
-  description: Practiced on practicals at school.
+  description: Used at EPITA for practicals and school projects.
   date: Nov. 12, 2018
   languages: [C#]
   category: knowledge
 
 - title: Learned the <b>Python</b> language
-  description: Practiced on exercises at school.
+  description: Used at EPITA for practicals.
   date: Nov. 2018
   languages: [Python]
   category: knowledge
@@ -263,7 +269,7 @@
 
 
 - title: Learned the <b>OCaml</b> language
-  description: Used at school for practicals.
+  description: Used at EPITA for practicals.
   date: Sept. 10, 2018
   languages: [OCaml]
   category: knowledge

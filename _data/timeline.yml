@@ -311,6 +311,7 @@
   status: active
   opensource: true
   languages: [HTML, CSS]
+  tools: [Jekyll]
   tags: [project, showcase]
 
 - description: Bought the <b>matiboux.me</b> web domain.
@@ -353,6 +354,7 @@
   status: active
   opensource: true
   languages: [HTML, CSS, PHP]
+  tools: [Jekyll]
   tags: [project, showcase]
 
 - description: Bought the <b>matistat.us</b> web domain.
@@ -361,6 +363,12 @@
     href: https://matistat.us/
   date: July 6, 2018
   category: domain
+
+- title: <i class="fas fa-toolbox fa-fw"></i> Learned <b>Jekyll</b>
+  date: July 6, 2018
+  languages: [Liquid]
+  tools: [Jekyll]
+  category: knowledge
 
 
 # (63, 'Created and developed <b>Polls</b>', 'Polls is a simple service for making straw polls. Worked on my own.\r\n<i>Started development on -?-.</i>\r\n<i class=\"fa fa-link fa-fw\"></i> <a href=\"https://polls.matiboux.com/\">See its website</a>.', 'polls', 'tasks', 'active', 'Jul. 12, 2017', '2017-07-12 00:11:19'),

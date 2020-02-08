@@ -24,8 +24,7 @@ body {
 a { color: #50a0f0 }
 a:hover { color: #4080c0 }
 
-hr { 
-border-color: rgba(255, 255, 255, .1) }
+hr { border-color: rgba(255, 255, 255, .1) }
 
 @media (min-width: 576px) { .mw-sm { max-width: 540px } }
 @media (min-width: 768px) { .mw-md { max-width: 720px } }
@@ -100,13 +99,15 @@ border-color: rgba(255, 255, 255, .1) }
 	z-index: -1;
 }
 #main .timeline-items > *:last-child > .misc .line { display: none }
-#main .timeline-items > * > .content > * { margin-top: 3px; margin-bottom: 5px; font-size: 12px }
-#main .timeline-items > * > .content h4 { margin-top: 0; font-size: 20px }
-#main .timeline-items > * > .content h4 ~ *, #main .timeline-items > * > .content p ~ * { color: #c0c0c0 }
+#main .timeline-items > * > .content > * { margin-bottom: 5px; font-size: 12px }
+#main .timeline-items > * > .content h4 { font-size: 20px }
+#main .timeline-items > * > .content p, #main .timeline-items > * > .content p a { color: #808080 }
+#main .timeline-items > * > .content p { display: inline-block; vertical-align: top }
+#main .timeline-items > * > .content .description { display: block; margin-top: 3px; margin-left: 0; color: #c0c0c0 }
+#main .timeline-items > * > .content p:not(.description) + p { margin-left: 5px }
 #main .timeline-items > * > .content ul { padding-left: 20px }
-#main .timeline-items > * > .content .languages { color: #808080 }
-#main .timeline-items > * > .content .tools { color: #808080 }
-#main .timeline-items > * > .content .tags, #main .timeline-items > * > .content .tags a { color: #808080 }
+/* #main .timeline-items > * > .content .tools { color: #808080 } */
+/* #main .timeline-items > * > .content .tags, #main .timeline-items > * > .content .tags a { color: #808080 } */
 
 
 #main .cv-items {

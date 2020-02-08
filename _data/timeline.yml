@@ -16,8 +16,10 @@
 
 - description: Updated <b>KeyGenLib.js</b> and released it as a npm package.
   links:
-  - title: <i class="fab fa-github fa-fw"></i> See the npm package
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/KeyGenLib.js
+  - title: <i class="fas fa-cube fa-fw"></i> See the npm package
+    href: https://github.com/matiboux/KeyGenLib.js/packages/123276
   date: Feb. 7, 2020
   languages: [JS]
   tools: [npm]
@@ -69,6 +71,11 @@
   description: Used at Griffith College for practicals.
   date: Feb. 3, 2020
   languages: [Java]
+  category: knowledge
+
+- title: <i class="fas fa-toolbox fa-fw"></i> Learned <b>Docker</b>
+  date: Dec. 28, 2019
+  tools: [Docker]
   category: knowledge
 
 - title: Created <b>Epidocs / MCQ Online</b>
@@ -218,6 +225,11 @@
     href: https://epidocs.eu/
   date: May 25, 2019
   category: domain
+
+- description: <i class="fas fa-code fa-fw"></i> Introduced to the <b>Kotlin</b> language.
+  date: May 22, 2019
+  languages: [Kotlin]
+  category: knowledge
 
 - description:
   - "Passed the <b>TOEIC Mock Test</b>"
@@ -524,6 +536,8 @@
   links:
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/KeyGenLib.js
+  - title: <i class="fas fa-cube fa-fw"></i> See the npm package
+    href: https://github.com/matiboux/KeyGenLib.js/packages/123276
   date: Jan. 12, 2017
   status: standby
   languages: [JS]

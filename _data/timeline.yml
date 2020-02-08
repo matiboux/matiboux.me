@@ -6,14 +6,66 @@
   # date: 
   # category: personal / work / school / knowledge / award / domain
   # status: active / finished / standby / inactive / replaced / left / dead
-  # opensource: true / false or omitted
+  # opensource: true / false
   # languages: []
   # tools: []
+  # libraries: []
   # tags: []
 
 
 
-- title: Learned the <b>Java</b> language
+- description: Updated <b>KeyGenLib.js</b> and released it as a npm package.
+  links:
+  - title: <i class="fab fa-github fa-fw"></i> See the npm package
+    href: https://github.com/matiboux/KeyGenLib.js
+  date: Feb. 7, 2020
+  languages: [JS]
+  tools: [npm]
+  libraries: [KeyGenLib.js]
+  tags: [project, keygen, keygenlib, library]
+
+- description: Learned <b>deploying npm</b> with GitHub Packages.
+  date: Jan. 30, 2020
+  languages: [JS]
+  tools: [npm]
+  category: knowledge
+
+- description: Started developing <b>my first React Native app</b>.
+  links:
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/matiboux/My-first-React-Native-app
+  date: Feb. 6, 2020
+  status: active
+  languages: [JS]
+  tools: [React Native]
+  tags: [project, first, mobile, app]
+
+- title: <i class="fas fa-toolbox fa-fw"></i> Learned <b>React Native</b>
+  date: Feb. 6, 2020
+  languages: [JS]
+  tools: [React Native]
+  category: knowledge
+
+- description: Started developing <b>my first Discord.js bot</b>.
+  links:
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/matiboux/my-first-discord.js-bot
+  date: Feb. 6, 2020
+  status: active
+  languages: [JS]
+  tools: [Node.js]
+  libraries: [Discord.js]
+  tags: [project, first, discord, bot]
+
+- title: <i class="fas fa-book fa-fw"></i> Learned <b>Discord.js</b>
+  description: Used at Griffith College for practicals.
+  date: Feb. 6, 2020
+  languages: [JS]
+  tools: [Node.js]
+  libraries: [Discord.js]
+  category: knowledge
+
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>Java</b> language
   description: Used at Griffith College for practicals.
   date: Feb. 3, 2020
   languages: [Java]
@@ -73,7 +125,7 @@
   date: Sept. 1, 2019
   tags: [project, showcase]
 
-- title: Learned the <b>68000 Assembly</b> language
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>68000 Assembly</b> language
   description: Started on my own, and studied later at school.
   date: July 28, 2019
   languages: [68000 Assembly]
@@ -215,9 +267,10 @@
   tags: [epita, mcq-parser]
   
 - description:
-  - Started improving my knowledge of <b>C</b> language.
+  - Started improving my knowledge of the <b>C</b> language.
   - Used at EPITA for practicals and school projects.
   date: Feb. 7, 2019
+  languages: [C]
   category: knowledge
   
 - title: Started working on <b>Blast</b>
@@ -233,13 +286,13 @@
   tags: [epita, blast]
 
 
-- title: Learned the <b>C#</b> language
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>C#</b> language
   description: Used at EPITA for practicals and school projects.
   date: Nov. 12, 2018
   languages: [C#]
   category: knowledge
 
-- title: Learned the <b>Python</b> language
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>Python</b> language
   description: Used at EPITA for practicals.
   date: Nov. 2018
   languages: [Python]
@@ -268,7 +321,7 @@
   category: domain
 
 
-- title: Learned the <b>OCaml</b> language
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>OCaml</b> language
   description: Used at EPITA for practicals.
   date: Sept. 10, 2018
   languages: [OCaml]
@@ -458,14 +511,16 @@
   status: active
   tags: [project, ljv, le-nautilus]
 
-- title: Created and developed <b>KeyGen JS Library</b>
-  description: KeyGen JS Library is the official KeyGen JavaScript library. Created on my own.
+- title: Created and developed <b>KeyGenLib.js</b>
+  description: KeyGenLib.js is an open source password generator JavaScript library. Created on my own.
   links:
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
-    href: https://github.com/matiboux/KeyGenJS-Lib
+    href: https://github.com/matiboux/KeyGenLib.js
   date: Jan. 12, 2017
   status: standby
-  tags: [project, keygen, library]
+  languages: [JS]
+  libraries: [KeyGenLib.js]
+  tags: [project, keygen, keygenlib, library]
 
 - title: Created and developed <b>KeyGen App</b>
   description: KeyGen App was an offline password generator app for Windows 10 Desktop & Mobile. Created on my own.
@@ -745,9 +800,10 @@
   date: July 2014
   tags: [gaming-actu]
 
-- title: Learned the <b>JavaScript</b> language
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>JavaScript</b> language
   description: Learned how to use the <b>jQuery</b> library.
   date: May 2014
+  languages: [JS]
   category: knowledge
 
 - title: Worked on <b>StormRadio</b>
@@ -760,9 +816,10 @@
   date: Feb. 2013
   tags: [mysurvivaladventure, games]
 
-- title: Learned the <b>PHP</b> language
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>PHP</b> language
   description: 
   date: Aug. 2013
+  languages: [PHP]
   category: knowledge
 
 - description: Closed my wordpress.com blog
@@ -781,8 +838,9 @@
   status: dead
   tags: [gaming-actu]
 
-- title: Learned the <b>HTML & CSS</b> languages
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>HTML & CSS</b> languages
   date: Dec. 2012
+  languages: [HTML, CSS]
   category: knowledge
 
 - title: Created a <b>Wordpress blog</b>
@@ -794,23 +852,27 @@
   status: dead
   tags: [blog]
 
-- title: Learned the <b>Processing</b> language
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>Processing</b> language
   description:
   - Created few programs and very small games.
   - Some of them worked along with Arduino robots (for data interpretation).
   date: 2012
+  languages: [Processing]
   category: knowledge
 
-- title: Learned the <b>Arduino</b> language
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>Arduino</b> language
   description: Worked on some Arduino robots in a club.
   date: 2012
+  languages: [Android]
   category: knowledge
 
-- description: Partly introduced to the <b>C++</b> language.
+- description: <i class="fas fa-code fa-fw"></i> Partly introduced to the <b>C++</b> language.
   date: Aug. 2011
+  languages: [C++]
   category: knowledge
 
-- title: Learned the <b>C</b> language
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>C</b> language
   description: Mostly made terminal programs. Created a calculator and a script answering to things you type in.
   date: Aug. 2011
+  languages: [C]
   category: knowledge

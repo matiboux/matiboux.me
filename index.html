@@ -10,11 +10,12 @@ home: true
 	<div class="col-lg-4 mb-4 mb-lg-0">
 		<p>Hey I'm Mati, an EPITA student and developer. I have been working on projects since the age of 14 and I've been coding since the age of 10.</p>
 		<ul class="social-icons">
-			<li><a href="https://t.me/Matiboux" class="fab fa-telegram fa-fw"></a></li>
-			<li><a href="https://twitter.com/Matiboux" class="fab fa-twitter fa-fw"></a></li>
-			<li><a href="https://github.com/matiboux" class="fab fa-github fa-fw"></a></li>
-			<li><a href="https://www.linkedin.com/in/matiboux" class="fab fa-linkedin fa-fw"></a></li>
-			<li><a href="https://steamcommunity.com/id/matiboux" class="fab fa-steam fa-fw"></a></li>
+			{% assign services = 'telegram,twitter,github,linkedin,steam' | split: ',' %}
+			{% for service in services %}
+				{% if site.data.about.social[service] %}
+					<li class="{{ service }}"><a href="{{ site.data.about.social[service].href }}" class="{{ site.data.about.social[service].icon }} fa-fw"></a></li>
+				{% endif %}
+			{% endfor %}
 		</ul>
 	</div>
 	<div class="col-lg-8">

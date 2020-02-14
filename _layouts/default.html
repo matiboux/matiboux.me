@@ -4,12 +4,9 @@
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	{% if site.title %}
-		<meta name="title" content="{{ site.title }}" />
-	{% endif %}
-	{% if site.description %}
-		<meta name="description" content="{{ site.description }}" />
-	{% endif %}
+	<meta name="title" content="{{ site.title }}" />
+	{% if site.description %}<meta name="description" content="{{ site.description }}" />{% endif %}
+	<meta name="author" content="{{ site.author }}" />
 	
 	<meta name="theme-color" content="#202020" />
 

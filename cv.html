@@ -4,6 +4,29 @@ title: Curriculum Vitae
 container_class: mw-lg
 ---
 
+<h2>About me</h2>
+
+<div class="cv-about pb-2">
+	<div class="media">
+		{% if site.data.about.avatar %}
+			<img src="{{ site.data.about.avatar }}" class="about-avatar mr-3" alt="{{ site.data.about.name }}" />
+		{% endif %}
+		
+		<div class="media-body">
+			<h5 class="mt-0">{{ site.data.about.name }}</h5>
+			<p class="mb-2">{{ site.data.about.biography }}</p>
+			<ul class="about-social-links">
+				{% assign services = 'linkedin,github' | split: ',' %}
+				{% for service in services %}
+					{% if site.data.about.social[service] %}
+						<li class="{{ service }}"><a href="{{ site.data.about.social[service].href }}"><i class="{{ site.data.about.social[service].icon }}"></i></a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+
 <h2>Education</h2>
 <div class="cv-items">
 	<div class="item">

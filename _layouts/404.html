@@ -2,38 +2,16 @@
 layout: bodyless
 ---
 
-<body>
+<body class="page-error">
 
 	<main id="main">
 		<div class="container {{ page.container_class }}">
-			{% unless page.home %}
-				<a href="{{ '/' | relative_url }}">&lsaquo; Back to home page</a>
-			{% endunless %}
-			
-			<div class="title">
-				{% if page.avatar %}
-					<img src="{{ page.avatar }}" {% if page.avatar_alt %}alt="{{ page.avatar_alt }}"{% endif %} />
-				{% endif %}
-				<h1>{{ page.title }}</h1>
-			</div>
+			<a href="{{ '/' | relative_url }}">&lsaquo; Back to home page</a>
+			<h1>{{ page.title }}</h1>
 			
 			{{ content }}
 		</div>
 	</main>
-
-	<footer id="footer">
-		<div>
-			<ul>
-				<li><i class="fab fa-github fa-fw"></i> <a href="{{ site.github.repository_url }}">Open-Source repository</a></li>
-				<li><i class="fas fa-fire-alt fa-fw"></i> Powered by <b>GitHub Pages</b></li>
-			</ul>
-		</div>
-		<div>
-			<ul>
-				<li>Made with love by <a href="https://matiboux.me/">Matiboux</a>. <i class="fas fa-heart fa-fw" style="color: #c04040"></i></li>
-			</ul>
-		</div>
-	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

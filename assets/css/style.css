@@ -18,6 +18,7 @@ body {
 	flex-direction: column;
 	color: #f0f0f0;
 }
+body.page-error { background: #903030 }
 
 @media print { body { color: #000 } }
 

@@ -1,17 +1,14 @@
 ---
-layout: bodyless
+layout: bodyfull
 title: 404 Not Found
-container_class: mw-md
+body_class: page-error
+noscript: true
 ---
 
-<body class="page-error">
-
-	<main id="main">
-		<div class="container {{ page.container_class }}">
-			<a href="{{ '/' | relative_url }}" class="btn btn-dark btn-sm mb-2">&lsaquo; Back to home page</a>
-			<h1>{{ page.title }}</h1>
-			<p>We did not find that page you were looking for.</p>
-		</div>
-	</main>
-	
-</body>
+<main id="main">
+	<div class="container mw-md">
+		<a href="{{ '/' | relative_url }}" class="btn btn-dark btn-sm mb-2">&lsaquo; Back to home page</a>
+		<h1>{{ page.title }}</h1>
+		<p>We did not find that page you were looking for.</p>
+	</div>
+</main>

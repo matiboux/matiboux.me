@@ -1,7 +1,17 @@
 ---
-layout: 404
+layout: bodyless
 title: 404 Not Found
 container_class: mw-md
 ---
 
-<p>We did not find that page you were looking for.</p>
+<body class="page-error">
+
+	<main id="main">
+		<div class="container {{ page.container_class }}">
+			<a href="{{ '/' | relative_url }}" class="btn btn-dark btn-sm mb-2">&lsaquo; Back to home page</a>
+			<h1>{{ page.title }}</h1>
+			<p>We did not find that page you were looking for.</p>
+		</div>
+	</main>
+	
+</body>

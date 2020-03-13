@@ -14,6 +14,11 @@
 
 
 
+- title: <i class="fas fa-toolbox fa-fw"></i> Learned <b>ElectronJS</b>
+  date: March 19, 2019
+  tools: [ElectronJS]
+  category: knowledge
+
 - description: Updated <b>KeyGenLib.js</b> and released it as a npm package.
   links:
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository

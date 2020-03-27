@@ -24,6 +24,10 @@ social:
     icon: fab fa-github
     href: https://github.com/matiboux/
 
+  keybase:
+    icon: fab fa-keybase
+    href: https://keybase.io/matiboux
+
   steam:
     icon: fab fa-steam
     href: https://steamcommunity.com/id/matiboux

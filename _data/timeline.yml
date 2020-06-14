@@ -13,6 +13,19 @@
   # tags: []
 
 
+- title: Started developing <b>Svetlana</b>, a Discord bot.
+  description:
+  - Private Discord bot for the CM5 Forever community server.
+  - General purpose bot that understands phrases instead of commands.
+  # links:
+  # - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    # href: https://github.com/matiboux/Svetlana
+  date: Feb. 6, 2020
+  status: active
+  languages: [JavaScript]
+  tools: [Node.js]
+  libraries: [Discord.js]
+  tags: [project, cm5, svetlana, discord, bot]
 
 - title: <i class="fas fa-toolbox fa-fw"></i> Learned <b>ElectronJS</b>
   date: March 19, 2019
@@ -26,14 +39,14 @@
   - title: <i class="fas fa-cube fa-fw"></i> See the npm package
     href: https://github.com/matiboux/KeyGenLib.js/packages/123276
   date: Feb. 7, 2020
-  languages: [JS]
+  languages: [JavaScript]
   tools: [npm]
   libraries: [KeyGenLib.js]
   tags: [project, keygen, keygenlib, library]
 
 - description: Learned <b>deploying npm</b> with GitHub Packages.
   date: Jan. 30, 2020
-  languages: [JS]
+  languages: [JavaScript]
   tools: [npm]
   category: knowledge
 
@@ -43,13 +56,13 @@
     href: https://github.com/matiboux/My-first-React-Native-app
   date: Feb. 6, 2020
   status: active
-  languages: [JS]
+  languages: [JavaScript]
   tools: [React Native]
   tags: [project, first, mobile, app]
 
 - title: <i class="fas fa-toolbox fa-fw"></i> Learned <b>React Native</b>
   date: Feb. 6, 2020
-  languages: [JS]
+  languages: [JavaScript]
   tools: [React Native]
   category: knowledge
 
@@ -59,7 +72,7 @@
     href: https://github.com/matiboux/my-first-discord.js-bot
   date: Feb. 6, 2020
   status: active
-  languages: [JS]
+  languages: [JavaScript]
   tools: [Node.js]
   libraries: [Discord.js]
   tags: [project, first, discord, bot]
@@ -67,7 +80,7 @@
 - title: <i class="fas fa-book fa-fw"></i> Learned <b>Discord.js</b>
   description: Used at Griffith College for practicals.
   date: Feb. 6, 2020
-  languages: [JS]
+  languages: [JavaScript]
   tools: [Node.js]
   libraries: [Discord.js]
   category: knowledge
@@ -545,7 +558,7 @@
     href: https://github.com/matiboux/KeyGenLib.js/packages/123276
   date: Jan. 12, 2017
   status: standby
-  languages: [JS]
+  languages: [JavaScript]
   libraries: [KeyGenLib.js]
   tags: [project, keygen, keygenlib, library]
 
@@ -830,7 +843,7 @@
 - title: <i class="fas fa-code fa-fw"></i> Learned the <b>JavaScript</b> language
   description: Learned how to use the <b>jQuery</b> library.
   date: May 2014
-  languages: [JS]
+  languages: [JavaScript]
   category: knowledge
 
 - title: Worked on <b>StormRadio</b>

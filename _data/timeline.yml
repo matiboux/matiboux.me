@@ -28,7 +28,7 @@
   tags: [project, cm5, svetlana, discord, bot]
 
 - description:
-  - "Passed the <b>Erasmus OLS: First Language Assessment</b>."
+  - "Passed the <b>Erasmus OLS: Final Language Assessment</b>."
   - "Level Achieved: C1."
   - <i class="fas fa-info fa-fw"></i> More info in my Curriculum Vitae.
   date: May 17, 2020
@@ -55,7 +55,14 @@
 - description: Learned <b>deploying npm</b> with GitHub Packages.
   date: Jan. 30, 2020
   languages: [JavaScript]
-  tools: [npm]
+  tools: [npm, GitHub Packages]
+  category: knowledge
+
+- title: <i class="fas fa-toolbox fa-fw"></i> Learned to make native <b>Android apps</b>
+  description: Started to learn at Griffith College.
+  date: Feb. 10, 2020
+  languages: [Java]
+  tools: [Android Studio]
   category: knowledge
 
 - description: Started developing <b>my first React Native app</b>.

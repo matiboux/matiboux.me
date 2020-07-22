@@ -17,6 +17,7 @@ container_class: mw-lg
 			<h5 class="mt-0">{{ site.data.about.name }}</h5>
 			<p class="mb-2">{{ site.data.about.biography }}</p>
 			<ul class="about-social-links">
+				<li class="about_me"><a href="{{ '/about' | relative_url }}"><i class="fas fa-info-circle fa-fw"></i></a></li>
 				{% assign services = 'linkedin,github' | split: ',' %}
 				{% for service in services %}
 					{% if site.data.about.social[service] %}
@@ -30,6 +31,27 @@ container_class: mw-lg
 
 <h2>Education</h2>
 <div class="cv-items">
+	<div class="item">
+		<div class="content">
+			<h4>
+				EPITA
+				<small class="d-print-none"><a href="https://www.epita.fr/"><i class="fas fa-external-link-alt fa-fw"></i></a></small>
+			</h4>
+			<p class="position">Engineering cycle – Computer Science</p>
+			<div class="description">
+				<p><i class="fas fa-info-circle fa-fw"></i> Admitted!</p>
+				<!-- <h6><i class="fas fa-university fa-fw"></i> Curriculum:</h6> -->
+				<!-- <ul> -->
+					<!-- <li>Computing: Programming</li> -->
+					<!-- <li>Humanities: French, English, Cultural opening</li> -->
+				<!-- </ul> -->
+			</div>
+		</div>
+		<div class="meta">
+			<p class="location">Paris, France</p>
+			<p class="date">Sept. 2020 – Today</p>
+		</div>
+	</div>
 	<div class="item">
 		<div class="content">
 			<h4>
@@ -130,7 +152,7 @@ container_class: mw-lg
 				<h6><i class="fas fa-book fa-fw"></i> Personal and/or extracurricular projects:</h6>
 				<ul>
 					<li><a href="https://ljv.fr/">LJV.fr</a> – a web portail with links to the school official website and other student projects.</li>
-					<li>Le Nautilus – a blog managed by a group of students.</li>
+					<li>Le Nautilus – an online blog and newspaper managed by a group of students.</li>
 				</ul>
 			</div>
 		</div>
@@ -327,7 +349,7 @@ container_class: mw-lg
 		</div>
 		<div class="meta">
 			<p class="location">EPITA, Paris</p>
-			<p class="date">Avril 2019 – Mai 2019</p>
+			<p class="date">April 2019 – May 2019</p>
 		</div>
 	</div>
 	<div class="item">

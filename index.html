@@ -8,7 +8,16 @@ home: true
 
 <div class="row">
 	<div class="col-lg-4 mb-4 mb-lg-0">
-		<p>Hey I'm Mati, an EPITA student and developer. I have been working on projects since the age of 14 and I've been coding since the age of 10.</p>
+		<p>
+			Hey I'm Mati, an EPITA student and developer.
+			I have been working on projects since the age of 14 and I've been coding since the age of 10.
+		</p>
+		<p>
+			On this website you can find information about me, my curriculum vitae, and things I did (including this website, yes).
+		</p>
+		<p>
+			You can also find me or contact me on the following social networks:
+		</p>
 		<ul class="social-icons">
 			{% assign services = 'telegram,twitter,github,linkedin,steam,keybase' | split: ',' %}
 			{% for service in services %}
@@ -22,7 +31,7 @@ home: true
 		<div class="list-group list-group-dark ">
 			<a href="https://matiboux.com/" class="list-group-item list-group-item-action">
 				<i class="fas fa-archive fa-fw"></i> Projects Platform</a>
-			<a href="https://opensource.matiboux.com/" class="list-group-item list-group-item-action">
+			<a href="{{ '/opensource' | relative_url }}" class="list-group-item list-group-item-action">
 				<i class="fab fa-github fa-fw"></i> Open-Source Projects</a>
 			<a href="{{ '/cv' | relative_url }}" class="list-group-item list-group-item-action">
 				<i class="fas fa-id-card fa-fw"></i> Curriculum Vitae</a>

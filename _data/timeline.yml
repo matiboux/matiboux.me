@@ -13,19 +13,77 @@
   # tags: []
 
 
-- title: Started developing <b>Svetlana</b>, a Discord bot.
+- description:
+  - <b>Librubix</b> – Implemented a Rubix cube manipulator and solver in C++
+  date: Jan. 31, 2021
+  category: school
+  tags: [epita]
+
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>C++</b> language
+  description: Used at EPITA for practicals and school projects.
+  date: Jan. 25, 2021
+  languages: [C++]
+  category: knowledge
+
+- description: <i class="fas fa-toolbox fa-fw"></i> Learned how to use the <b>PostgreSQL</b> database management system.
+  date: Jan. 5, 2021
+  languages: [SQL]
+  tools: [PostgreSQL]
+  category: knowledge
+
+- title: Co-founded <b>2GETHER</b>, an association and Discord community.
+  description:
+  - Non-profit association under the French law of July 1, 1901.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://2gether-asso.fr/
+  date: Dec. 23, 2020
+  status: active
+  tags: [association, 2gether]
+
+- description: Renamed the <b>A.M.E.L.I.E</b> Discord bot
+  date: Nov. 20, 2020
+  tags: [project, cm5, amelie, discord, bot]
+
+- description:
+  - <b>Malloc</b> – Reimplemented the malloc C functions
+  date: Nov. 8, 2020
+  category: school
+  tags: [epita]
+
+- description:
+  - <b>MyFind</b> – Reimplemented the find Linux program using Libstream
+  date: Nov. 2, 2020
+  category: school
+  tags: [epita]
+
+- description:
+  - <b>Minimake</b> – Reimplemented the make Linux program using Libstream
+  date: Oct. 25, 2020
+  category: school
+  tags: [epita]
+
+- description:
+  - <b>Libstream</b> – Implemented a library with buffered I/O functions
+  - <b>Minicat</b> – Reimplemented the cat Linux program using Libstream
+  date: Oct. 17, 2020
+  category: school
+  tags: [epita]
+
+- title: Started developing <b>A.M.E.L.I.E</b>, a Discord bot.
   description:
   - Private Discord bot for the CM5 Forever community server.
-  - General purpose bot that understands phrases instead of commands.
+  - General purpose bot that understands phrases instead of plain commands.
+  - Originally named <b>Svetlana</b>, later renamed during developement.
   # links:
   # - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     # href: https://github.com/matiboux/Svetlana
   date: May 25, 2020
-  status: active
+  status: standby
   languages: [JavaScript]
   tools: [Node.js]
   libraries: [Discord.js]
-  tags: [project, cm5, svetlana, discord, bot]
+  tags: [project, cm5, amelie, discord, bot]
 
 - description:
   - "Passed the <b>Erasmus OLS: Final Language Assessment</b>."
@@ -35,7 +93,13 @@
   category: award
   tags: [test, erasmus]
 
-- title: <i class="fas fa-toolbox fa-fw"></i> Learned <b>ElectronJS</b>
+- description:
+  - Stopped keeping stats of my <b>CSGO</b> competitive plays.
+  - Recorded 280 games in 2017, only 5 in 2018 and 19 in 2019.
+  date: March 30, 2019
+  tags: [gaming, stats, csgo]
+
+- title: <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>ElectronJS</b>
   date: March 19, 2019
   tools: [ElectronJS]
   category: knowledge
@@ -75,7 +139,7 @@
   tools: [React Native]
   tags: [project, first, mobile, app]
 
-- title: <i class="fas fa-toolbox fa-fw"></i> Learned <b>React Native</b>
+- description: <i class="fas fa-toolbox fa-fw"></i> Introduced to <b>React Native</b>
   date: Feb. 6, 2020
   languages: [JavaScript]
   tools: [React Native]
@@ -92,7 +156,7 @@
   libraries: [Discord.js]
   tags: [project, first, discord, bot]
 
-- title: <i class="fas fa-book fa-fw"></i> Learned <b>Discord.js</b>
+- title: <i class="fas fa-book fa-fw"></i> Learned to use <b>Discord.js</b>
   description: Used at Griffith College for practicals.
   date: Feb. 6, 2020
   languages: [JavaScript]
@@ -106,7 +170,7 @@
   languages: [Java]
   category: knowledge
 
-- title: <i class="fas fa-toolbox fa-fw"></i> Learned <b>Docker</b>
+- title: <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Docker</b>
   date: Dec. 28, 2019
   tools: [Docker]
   category: knowledge
@@ -133,6 +197,13 @@
   category: award
   tags: [test, erasmus]
 
+- description:
+  - Delivered the <b>OCR</b> project, a group school project.
+  - Project was selected to be presented among others during school open house days.
+  date: Dec. 12, 2019
+  category: school
+  tags: [epita, ocr]
+
 - title: Created <b>Epidocs / Progstats</b>
   description: Stats of programming practicals & exams at EPITA.
   links:
@@ -146,6 +217,17 @@
   languages: [HTML, CSS]
   tools: [Jekyll]
   tags: [project, epidocs, progstats]
+
+- title: Started working on an <b>OCR</b> project
+  description: Blast is a video game made using Unity as part of a school assignment in a group project.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://g00pix.github.io/ProjetBlast/
+  date: Oct. 2, 2019
+  category: school
+  status: finished
+  languages: [C]
+  tags: [epita, ocr]
 
 - title: Created <b>Epidocs / Algostats</b>
   description: Stats of algorithm homework at EPITA.
@@ -199,7 +281,14 @@
 
 - description: Completed work on <b>MCQ Parser</b>.
   date: June 3, 2019
+  category: work
   tags: [epita, mcq-parser]
+
+- description:
+  - Delivered <b>Blast</b>, a group school project.
+  date: June 7, 2019
+  category: school
+  tags: [epita, blast]
 
 - title: Created <b>Epidocs / Past-Exams</b> and developed its website
   description:
@@ -310,14 +399,14 @@
   status: finished
   languages: [Python]
   tags: [epita, mcq-parser]
-  
+
 - description:
-  - Started improving my knowledge of the <b>C</b> language.
+  - <i class="fas fa-code fa-fw"></i> Started improving my knowledge of the <b>C</b> language.
   - Used at EPITA for practicals and school projects.
   date: Feb. 7, 2019
   languages: [C]
   category: knowledge
-  
+
 - title: Started working on <b>Blast</b>
   description: Blast is a video game made using Unity as part of a school assignment in a group project.
   links:
@@ -409,7 +498,7 @@
   date: July 6, 2018
   category: domain
 
-- title: <i class="fas fa-toolbox fa-fw"></i> Learned <b>Jekyll</b>
+- title: <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Jekyll</b>
   date: July 6, 2018
   languages: [Liquid]
   tools: [Jekyll]
@@ -544,15 +633,13 @@
   date: Feb. 7, 2017
   category: domain
 
-- title: Kept stats of all my <b>CSGO</b> competitive gameplays
+- title: Kept stats of all my <b>CSGO</b> competitive plays
   description: CSGO is a FPS video game edited by Valve. Stats stored in a Google Sheets document.
   links:
-  # - title: <i class="fas fa-table fa-fw"></i> See the Google Sheets document
-    # href: https://docs.google.com/spreadsheets/d/1f000m1fy5lJKJs_Hvxv-srcpk_LLu8mU0MJ5D79O3u0/edit?usp=sharing
   - title: <i class="fab fa-steam fa-fw"></i> See the CSGO Steam page
     href: http://store.steampowered.com/app/730
   date: Jan. 23, 2017
-  status: active
+  status: dead
   tags: [gaming, stats, csgo]
 
 - title: Developed <b>Le Nautilus</b>
@@ -867,6 +954,13 @@
   status: dead
   tags: [webradio]
 
+- title: <i class="fas fa-code fa-fw"></i> Learned the <b>SQL</b> language
+  description: Learned how to use the <b>MySQL</b> database management system.
+  date: 2014
+  languages: [SQL]
+  tools: [MySQL]
+  category: knowledge
+
 - description: Stopped to work on <b>MySurvivalAdventure</b>.
   date: Feb. 2013
   tags: [mysurvivaladventure, games]
@@ -921,7 +1015,7 @@
   languages: [Android]
   category: knowledge
 
-- description: <i class="fas fa-code fa-fw"></i> Partly introduced to the <b>C++</b> language.
+- description: <i class="fas fa-code fa-fw"></i> Partially introduced to the <b>C++</b> language.
   date: Aug. 2011
   languages: [C++]
   category: knowledge

@@ -141,14 +141,20 @@ hr { border-color: rgba(255, 255, 255, .1) }
 #main .cv-items > * > * > * { margin-bottom: 5px; font-size: 14px }
 #main .cv-items > * > .content h4 { margin-top: 0; font-size: 20px }
 #main .cv-items > * > .content .position { color: #c0c0c0; font-size: 16px; font-variant: small-caps }
+#main .cv-items > *:hover > .content .position, #main .cv-items > *:focus > .content .position { color: #d0d0d0 }
 #main .cv-items > * > .content .award { color: #50a0f0; font-variant: small-caps }
 #main .cv-items > * > .content .position ~ .award { margin-top: -5px }
 #main .cv-items > * > .content .description, #main .cv-items > * > .content > ul { margin-top: 10px; color: #a0a0a0 }
+#main .cv-items > *:hover > .content .description, #main .cv-items > *:focus > .content .description,
+#main .cv-items > *:hover > .content > ul, #main .cv-items > *:focus > .content > ul { color: #c0c0c0 }
 #main .cv-items > * > .content .description > * { margin-bottom: 5px }
 #main .cv-items > * > .content .description h6 { font-variant: small-caps }
 #main .cv-items > * > .content .description ul { margin-bottom: 10px }
 #main .cv-items > * > .content .description a { color: #4080c0 }
-#main .cv-items > * > .content .description a:hover { color: #306090 }
+#main .cv-items > * > .content .description a:hover, #main .cv-items > * > .content .description a:focus { color: #306090 }
+#main .cv-items > *:hover > .content .description a, #main .cv-items > *:focus > .content .description a { color: #50a0f0 }
+#main .cv-items > *:hover > .content .description a:hover, #main .cv-items > *:focus > .content .description a:hover,
+#main .cv-items > *:hover > .content .description a:focus, #main .cv-items > *:focus > .content .description a:focus { color: #4080c0 }
 #main .cv-items > * > .content ul { padding-left: 20px }
 #main .cv-items > * > .meta { text-align: right }
 #main .cv-items > * > .meta .location { font-size: 16px; font-weight: 500 }

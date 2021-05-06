@@ -14,8 +14,85 @@
 
 
 - description:
-  - <b>Librubix</b> – Implemented a Rubix cube manipulator and solver in C++
-  date: Jan. 31, 2021
+  - <b>Java WebService</b> – a backend web service with multiple REST endpoints in Java
+  - "Project duration: 1 week."
+  date: Apr. 12, 2021
+  languages: [Java]
+  category: school
+  tags: [epita, jws]
+
+- description:
+  - <b>Creeps</b> – a bot program playing a multiplayer strategy game via requests to a REST API, in Java
+  - "Project duration: 48 hours (rush)."
+  date: Apr. 9, 2021
+  languages: [Java]
+  category: school
+  tags: [epita, creeps]
+
+- description:
+  - <b>Java Workshop</b> – 29 exercises in Java
+  date: Apr. 6, 2021
+  languages: [Java]
+  category: school
+  tags: [epita]
+
+- description:
+  - Delivered the <b>Spider</b> school project.
+  date: Apr. 4, 2021
+  category: school
+  tags: [epita, spider]
+
+- description:
+  - Delivered the <b>Chess</b> school project.
+  date: Mar. 28, 2021
+  category: school
+  tags: [epita, chess]
+
+- title: Started working on the <b>Chess</b> school project
+  description:
+  - "Developed a chess engine and AI, in a group of 4 students, in C++."
+  - "Project duration: 4 weeks (Mar. 1, 2021 – Mar. 28, 2021)."
+  date: Mar. 1, 2021
+  languages: [Java]
+  category: school
+  tags: [epita, chess]
+
+- title: Started working on the <b>Spider</b> school project
+  description:
+  - "Developed a web and reverse proxy HTTP server, in a group of 4 students, in C++."
+  - "Project duration: 7 weeks (Feb. 15, 2021 – Apr. 4, 2021)."
+  date: Feb. 15, 2021
+  languages: [Java]
+  category: school
+  tags: [epita, spider]
+
+- description:
+  - <b>Spidou</b> – 3 exercises on HTTP sockets (server and client) in C++
+  date: Feb. 1, 2021
+  languages: [Java]
+  category: school
+  tags: [epita]
+
+- description:
+  - <i class="fas fa-code fa-fw"></i> Continued to learn the <b>Java</b> language
+  - Used at EPITA for practicals and school projects.
+  date: Apr. 6, 2020
+  languages: [Java]
+  category: knowledge
+  tags: [epita]
+
+- description:
+  - <b>Librubix</b> – a Rubix cube manipulator and solver in C++
+  - "Project duration: 48 hours (rush)."
+  date: Jan. 29, 2021
+  languages: [C++]
+  category: school
+  tags: [epita]
+
+- description:
+  - <b>C++ Workshop</b> – 47 exercises in C++
+  date: Jan. 25, 2021
+  languages: [C++]
   category: school
   tags: [epita]
 
@@ -24,6 +101,15 @@
   date: Jan. 25, 2021
   languages: [C++]
   category: knowledge
+  tags: [epita]
+
+- description:
+  - <b>SQL Workshop</b> – 8 exercises in SQL on a PostgreSQL database
+  date: Jan. 25, 2021
+  languages: [SQL]
+  tools: [PostgreSQL]
+  category: school
+  tags: [epita]
 
 - description: <i class="fas fa-toolbox fa-fw"></i> Learned how to use the <b>PostgreSQL</b> database management system.
   date: Jan. 5, 2021
@@ -31,7 +117,7 @@
   tools: [PostgreSQL]
   category: knowledge
 
-- title: Co-founded <b>2GETHER</b>, an association and Discord community.
+- title: Co-founded <b>2GETHER</b>, an association and Discord community
   description:
   - Non-profit association under the French law of July 1, 1901.
   links:
@@ -41,32 +127,69 @@
   status: active
   tags: [association, 2gether]
 
-- description: Renamed the <b>A.M.E.L.I.E</b> Discord bot
+- description:
+  - Delivered the <b>42sh</b> school project.
+  date: Dec. 20, 2020
+  category: school
+  tags: [epita]
+
+- title: Started working on the <b>42sh</b> school project
+  description:
+  - "Developed a POSIX shell, in a group of 4 students, in C."
+  - "Project duration: 4 weeks (Nov. 23, 2020 – Dec. 20, 2020)."
+  date: Nov. 23, 2020
+  languages: [C]
+  category: school
+  tags: [epita]
+
+- description: Renamed <b>Svetlana</b>, a Discord bot, to <b>A.M.E.L.I.E</b>
   date: Nov. 20, 2020
   tags: [project, cm5, amelie, discord, bot]
 
 - description:
-  - <b>Malloc</b> – Reimplemented the malloc C functions
-  date: Nov. 8, 2020
+  - <b>Malloc</b> – Reimplemented the malloc-family C functions
+  - "Project duration: 1 week."
+  date: Nov. 2, 2020
+  languages: [C]
+  category: school
+  tags: [epita]
+
+- description:
+  - <b>Shell Workshop</b> – 28 exercises in Shell
+  date: Oct. 26, 2020
+  languages: [C]
   category: school
   tags: [epita]
 
 - description:
   - <b>MyFind</b> – Reimplemented the find Linux program using Libstream
-  date: Nov. 2, 2020
+  - "Project duration: 1 week."
+  date: Oct. 26, 2020
+  languages: [C]
   category: school
   tags: [epita]
 
 - description:
   - <b>Minimake</b> – Reimplemented the make Linux program using Libstream
-  date: Oct. 25, 2020
+  - "Project duration: 1 week."
+  date: Oct. 19, 2020
+  languages: [C]
   category: school
   tags: [epita]
 
 - description:
   - <b>Libstream</b> – Implemented a library with buffered I/O functions
   - <b>Minicat</b> – Reimplemented the cat Linux program using Libstream
+  - "Project duration: 48 hours (rush)."
   date: Oct. 17, 2020
+  languages: [C]
+  category: school
+  tags: [epita]
+
+- description:
+  - <b>Piscine C</b> – 120 exercises in C
+  date: Sept. 29, 2020
+  languages: [C]
   category: school
   tags: [epita]
 
@@ -116,7 +239,7 @@
   libraries: [KeyGenLib.js]
   tags: [project, keygen, keygenlib, library]
 
-- description: Learned <b>deploying npm</b> with GitHub Packages.
+- description: Learned <b>deploying npm packages</b> with GitHub Packages.
   date: Jan. 30, 2020
   languages: [JavaScript]
   tools: [npm, GitHub Packages]

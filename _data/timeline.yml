@@ -16,7 +16,7 @@
 - description:
   - <b>Java WebService</b> – a backend web service with multiple REST endpoints in Java
   - "Project duration: 1 week."
-  date: Apr. 12, 2021
+  date: April 12, 2021
   languages: [Java]
   category: school
   tags: [epita, jws]
@@ -24,35 +24,35 @@
 - description:
   - <b>Creeps</b> – a bot program playing a multiplayer strategy game via requests to a REST API, in Java
   - "Project duration: 48 hours (rush)."
-  date: Apr. 9, 2021
+  date: April 9, 2021
   languages: [Java]
   category: school
   tags: [epita, creeps]
 
 - description:
   - <b>Java Workshop</b> – 29 exercises in Java
-  date: Apr. 6, 2021
+  date: April 6, 2021
   languages: [Java]
   category: school
   tags: [epita]
 
 - description:
   - Delivered the <b>Spider</b> school project.
-  date: Apr. 4, 2021
+  date: April 4, 2021
   category: school
   tags: [epita, spider]
 
 - description:
   - Delivered the <b>Chess</b> school project.
-  date: Mar. 28, 2021
+  date: March 28, 2021
   category: school
   tags: [epita, chess]
 
 - title: Started working on the <b>Chess</b> school project
   description:
   - "Developed a chess engine and AI, in a group of 4 students, in C++."
-  - "Project duration: 4 weeks (Mar. 1, 2021 – Mar. 28, 2021)."
-  date: Mar. 1, 2021
+  - "Project duration: 4 weeks (March 1, 2021 – March 28, 2021)."
+  date: March 1, 2021
   languages: [Java]
   category: school
   tags: [epita, chess]
@@ -60,7 +60,7 @@
 - title: Started working on the <b>Spider</b> school project
   description:
   - "Developed a web and reverse proxy HTTP server, in a group of 4 students, in C++."
-  - "Project duration: 7 weeks (Feb. 15, 2021 – Apr. 4, 2021)."
+  - "Project duration: 7 weeks (Feb. 15, 2021 – April 4, 2021)."
   date: Feb. 15, 2021
   languages: [Java]
   category: school
@@ -76,7 +76,7 @@
 - description:
   - <i class="fas fa-code fa-fw"></i> Continued to learn the <b>Java</b> language
   - Used at EPITA for practicals and school projects.
-  date: Apr. 6, 2020
+  date: April 6, 2020
   languages: [Java]
   category: knowledge
   tags: [epita]
@@ -517,7 +517,7 @@
   description:
   - MCQ Parser is a program for which purpose is to parse answers at a MCQ test and to calculate grades for each student.
   - Originnaly developed for use in correcting the mock TOEIC tests at EPITA.
-  date: Apr. 14, 2019
+  date: April 14, 2019
   category: work
   status: finished
   languages: [Python]
@@ -649,7 +649,7 @@
   links:
   - title: <i class="fas fa-link fa-fw"></i> See the website
     href: http://time.matiboux.com/
-  date: Apr. 11, 2017
+  date: April 11, 2017
   status: inactive
   tags: [project, time]
 
@@ -662,12 +662,12 @@
     # href: https://archives.matiboux.com/host-error.html
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/Host-error-page
-  date: Apr. 9, 2017
+  date: April 9, 2017
   status: standby
   tags: [webpage]
 
 # - description: Created the <b>Matiboux Showcase</b> <a href="https://github.com/matiboux/Matiboux-Showcase">Github repository</a>.
-  # date: Apr. 8, 2017
+  # date: April 8, 2017
   # tags: [project, showcase, github]
 
 - title: Created and developed <b>Matiboux Showcase</b>
@@ -677,20 +677,20 @@
     href: https://matiboux.com/
   # - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     # href: https://github.com/matiboux/Matiboux-Showcase
-  date: Apr. 6, 2017
+  date: April 6, 2017
   status: active
   tags: [project, showcase]
 
 - description: Created the <b>ImgShot</b> v1 <a href="https://github.com/matiboux/ImgShot-v1">Github repository</a>.
-  date: Apr. 1, 2017
+  date: April 1, 2017
   tags: [project, imgshot, github]
 
 - description: Created the <b>KeyGen</b> v1 <a href="https://github.com/matiboux/KeyGen-v1">Github repository</a>.
-  date: Mar. 31, 2017
+  date: March 31, 2017
   tags: [project, keygen, github]
 
 # - description: Created the <b>Matiboux Career</b> <a href="https://github.com/matiboux/Matiboux-Career">Github repository</a>.
-  # date: Mar. 31, 2017
+  # date: March 31, 2017
   # tags: [project, career, github]
 
 - title: Created and developed <b>Matiboux Career</b>
@@ -702,7 +702,7 @@
     href: https://career.matiboux.com/
   # - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     # href: https://github.com/matiboux/Matiboux-Career
-  date: Mar. 26, 2017
+  date: March 26, 2017
   status: replaced
   tags: [project, career]
 
@@ -710,7 +710,7 @@
   links:
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/YoshiGris/DownloadSourceCodeAddon
-  date: Mar. 21, 2017
+  date: March 21, 2017
   tags: [serris, addon, contributing]
 
 - title: Developed <b>KeyGen Serris Addon</b>
@@ -718,7 +718,7 @@
   links:
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/KeyGen-Serris-Addon
-  date: Mar. 19, 2017
+  date: March 19, 2017
   status: standby
   tags: [serris, keygen, addon]
 
@@ -843,18 +843,18 @@
   - Natrox Games was a game servers group. Worked as technical director and developer.
   - <i class="fa fa-gamepad fa-fw"></i> Created Garry's Mod and Minecraft servers.
   - Project related to <a href="https://natrox.net/">Natrox</a>.
-  date: Apr. 2016
+  date: April 2016
   status: left
   tags: [natrox, games]
 
 - title: Created <b>Matiboux How</b>
   description: Matiboux How was a platform hosting silly animated websites.
-  date: Mar. 19, 2016
+  date: March 19, 2016
   status: inactive
   tags: [project, how]
 
 - description: Left the <b>Fruinity</b> Team.
-  date: Mar. 18, 2016
+  date: March 18, 2016
   tags: [fruinity]
 
 - title: Created and developed <b>Matiboux Social</b>
@@ -862,7 +862,7 @@
   # links:
   # - title: <i class="fas fa-link fa-fw"></i> Matiboux Social
     # href: https://social.matiboux.com/
-  date: Mar. 6, 2016
+  date: March 6, 2016
   status: inactive
   tags: [project, social]
 
@@ -908,7 +908,7 @@
   description:
   - Natropic's was a image hosting service. Worked as technical director and developer.
   - Succeeded by <b>Natrox Cloud</b>. Project related to <a href="https://natrox.net/">Natrox</a>.
-  date: Mar. 2015
+  date: March 2015
   status: dead
   tags: [project, natrox, natropics]
 
@@ -948,7 +948,7 @@
   description:
   - Fruinity was a gaming team. Created with friends.
   - Initials members were <a href=\"http://steamcommunity.com/profiles/76561198087021304\">LeDav64</a>, <a href=\"http://steamcommunity.com/id/Reivaros\">TheKiller678</a>, <a href=\"http://steamcommunity.com/id/felixjules\">Felixjules</a> and me.
-  date: Apr. 21, 2014
+  date: April 21, 2014
   status: left
   tags: [fruinity]
 
@@ -1073,7 +1073,7 @@
 
 - title: Worked on <b>StormRadio</b>
   description: StormRadio was a webradio related to <b>Gaming-Actu</b>. Project created by <a href=\"https://twitter.com/glenntymen">@glenntymen</a>.
-  date: Apr. 2014
+  date: April 2014
   status: dead
   tags: [webradio]
 

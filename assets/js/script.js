@@ -56,4 +56,10 @@ $(function() {
 	$('.timeline-items .item a.tool').click(tagLinkHandler);
 	$('.timeline-items .item a.library').click(tagLinkHandler);
 	$('.timeline-items .item a.tag').click(tagLinkHandler);
+	
+	if (document.location.hash) {
+		const value = document.location.hash.substring(1);
+		$('#timelineSearch [name="searchField"]').val(value);
+		searchHandler(value);
+	}
 });

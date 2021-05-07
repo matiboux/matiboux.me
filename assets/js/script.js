@@ -13,9 +13,14 @@ $(function() {
 		const $item = $('.timeline-items .item');
 		$item.hide();
 		
-		if (typeof(value) != 'string' || value == '')
+		if (typeof(value) != 'string' || value == '') {
+			window.history.replaceState(null, document.title, document.location.pathname)
+			
 			$item.show();
+		}
 		else {
+			window.history.replaceState(null, document.title, document.location.pathname + "#" + value)
+			
 			const colonindex = value.indexOf(':');
 			
 			let selector = value.slice(0, colonindex > 0 ? colonindex : 0);

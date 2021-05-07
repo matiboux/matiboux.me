@@ -37,6 +37,14 @@
   tags: [epita]
 
 - description:
+  - <i class="fas fa-code fa-fw"></i> Continued to learn the <b>Java</b> language
+  - Used at EPITA for practicals and school projects.
+  date: April 6, 2020
+  languages: [Java]
+  category: knowledge
+  tags: [epita]
+
+- description:
   - Delivered the <b>Spider</b> school project.
   date: April 4, 2021
   category: school
@@ -53,7 +61,7 @@
   - "Developed a chess engine and AI, in a group of 4 students, in C++."
   - "Project duration: 4 weeks (March 1, 2021 – March 28, 2021)."
   date: March 1, 2021
-  languages: [Java]
+  languages: [C++]
   category: school
   tags: [epita, chess]
 
@@ -62,23 +70,15 @@
   - "Developed a web and reverse proxy HTTP server, in a group of 4 students, in C++."
   - "Project duration: 7 weeks (Feb. 15, 2021 – April 4, 2021)."
   date: Feb. 15, 2021
-  languages: [Java]
+  languages: [C++]
   category: school
   tags: [epita, spider]
 
 - description:
   - <b>Spidou</b> – 3 exercises on HTTP sockets (server and client) in C++
   date: Feb. 1, 2021
-  languages: [Java]
+  languages: [C++]
   category: school
-  tags: [epita]
-
-- description:
-  - <i class="fas fa-code fa-fw"></i> Continued to learn the <b>Java</b> language
-  - Used at EPITA for practicals and school projects.
-  date: April 6, 2020
-  languages: [Java]
-  category: knowledge
   tags: [epita]
 
 - description:

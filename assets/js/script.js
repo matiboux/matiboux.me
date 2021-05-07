@@ -3,7 +3,10 @@ $(function() {
 	$('[data-toggle="tooltip"]').tooltip();
 	
 	$.expr[':'].icontains = $.expr.createPseudo(function(arg) {
-		return e => $(e).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+		return e => $(e).text().toLowerCase().indexOf(arg.toLowerCase()) >= 0;
+	});
+	$.expr[':'].iequals = $.expr.createPseudo(function(arg) {
+		return e => $(e).text().toLowerCase() == arg.toLowerCase();
 	});
 
 	const searchHandler = function(value) {
@@ -23,10 +26,12 @@ $(function() {
 			
 			selector.replace(' ', '_');
 			
-			if (selector != '')
-				$item.find('.' + selector + ':icontains("' + value.slice(value.indexOf(':') + 1) + '")').parents('.item').show();
-			else
+			if (!selector)
 				$item.filter(':icontains("' + search + '")').show();
+			else if (selector == 'language')
+				$item.find('.' + selector + ':iequals("' + value.slice(value.indexOf(':') + 1) + '")').parents('.item').show();
+			else
+				$item.find('.' + selector + ':icontains("' + value.slice(value.indexOf(':') + 1) + '")').parents('.item').show();
 		}
 	};
 

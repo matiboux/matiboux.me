@@ -38,7 +38,7 @@
 
 - description:
   - <i class="fas fa-code fa-fw"></i> Continued to learn the <b>Java</b> language
-  - Used at EPITA for practicals and school projects.
+  - Studied at EPITA for practicals and school projects.
   date: April 6, 2020
   languages: [Java]
   category: knowledge
@@ -96,8 +96,9 @@
   category: school
   tags: [epita]
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>C++</b> language
-  description: Used at EPITA for practicals and school projects.
+- description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>C++</b> language
+  - Studied at EPITA for practicals and school projects.
   date: Jan. 25, 2021
   languages: [C++]
   category: knowledge
@@ -111,11 +112,14 @@
   category: school
   tags: [epita]
 
-- description: <i class="fas fa-toolbox fa-fw"></i> Learned how to use the <b>PostgreSQL</b> database management system.
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned how to use the <b>PostgreSQL</b> database management system
+  - Studied at EPITA for practicals.
   date: Jan. 5, 2021
   languages: [SQL]
   tools: [PostgreSQL]
   category: knowledge
+  tags: [epita]
 
 - title: Co-founded <b>2GETHER</b>, an association and Discord community
   description:
@@ -222,8 +226,9 @@
   date: March 30, 2019
   tags: [gaming, stats, csgo]
 
-- title: <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>ElectronJS</b>
+- description: <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>ElectronJS</b>
   date: March 19, 2019
+  languages: [JavaScript]
   tools: [ElectronJS]
   category: knowledge
 
@@ -245,12 +250,14 @@
   tools: [npm, GitHub Packages]
   category: knowledge
 
-- title: <i class="fas fa-toolbox fa-fw"></i> Learned to make native <b>Android apps</b>
-  description: Started to learn at Griffith College.
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned to make native <b>Android apps</b>
+  - Started to learn at Griffith College.
   date: Feb. 10, 2020
   languages: [Java]
   tools: [Android Studio]
   category: knowledge
+  tags: [griffith]
 
 - description: Started developing <b>my first React Native app</b>.
   links:
@@ -279,21 +286,23 @@
   libraries: [Discord.js]
   tags: [project, first, discord, bot]
 
-- title: <i class="fas fa-book fa-fw"></i> Learned to use <b>Discord.js</b>
-  description: Used at Griffith College for practicals.
+- description:
+  - <i class="fas fa-book fa-fw"></i> Learned to use <b>Discord.js</b>
   date: Feb. 6, 2020
   languages: [JavaScript]
   tools: [Node.js]
   libraries: [Discord.js]
   category: knowledge
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>Java</b> language
-  description: Used at Griffith College for practicals.
+- description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>Java</b> language
+  - Studied at Griffith College for practicals.
   date: Feb. 3, 2020
   languages: [Java]
   category: knowledge
+  tags: [griffith]
 
-- title: <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Docker</b>
+- description: <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Docker</b>
   date: Dec. 28, 2019
   tools: [Docker]
   category: knowledge
@@ -370,11 +379,13 @@
   date: Sept. 1, 2019
   tags: [project, showcase]
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>68000 Assembly</b> language
-  description: Started on my own, and studied later at school.
+- description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>68000 Assembly</b> language
+  - Started on my own, and studied later at EPITA for practicals.
   date: July 28, 2019
   languages: [68000 Assembly]
   category: knowledge
+  tags: [epita]
 
 - description: Finished my internship at the <b>Grand Chancery of the Legion of Honor</b>.
   date: July 12, 2019
@@ -471,7 +482,7 @@
   date: May 25, 2019
   category: domain
 
-- description: <i class="fas fa-code fa-fw"></i> Introduced to the <b>Kotlin</b> language.
+- description: <i class="fas fa-code fa-fw"></i> Introduced to the <b>Kotlin</b> language
   date: May 22, 2019
   languages: [Kotlin]
   category: knowledge
@@ -524,11 +535,12 @@
   tags: [epita, mcq-parser]
 
 - description:
-  - <i class="fas fa-code fa-fw"></i> Started improving my knowledge of the <b>C</b> language.
-  - Used at EPITA for practicals and school projects.
+  - <i class="fas fa-code fa-fw"></i> Improved my knowledge of the <b>C</b> language
+  - Studied at EPITA for practicals and school projects.
   date: Feb. 7, 2019
   languages: [C]
   category: knowledge
+  tags: [epita]
 
 - title: Started working on <b>Blast</b>
   description: Blast is a video game made using Unity as part of a school assignment in a group project.
@@ -543,17 +555,21 @@
   tags: [epita, blast]
 
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>C#</b> language
-  description: Used at EPITA for practicals and school projects.
+- description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>C#</b> language
+  - Studied at EPITA for practicals and school projects.
   date: Nov. 12, 2018
   languages: [C#]
   category: knowledge
+  tags: [epita]
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>Python</b> language
-  description: Used at EPITA for practicals.
+- description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>Python</b> language
+  - Studied at EPITA for practicals and school projects.
   date: Nov. 2018
   languages: [Python]
   category: knowledge
+  tags: [epita]
 
 
 - title: Created the website for <b>matiboux.me</b>
@@ -579,11 +595,13 @@
   category: domain
 
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>OCaml</b> language
-  description: Used at EPITA for practicals.
+- description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>OCaml</b> language
+  - Studied at EPITA for practicals.
   date: Sept. 10, 2018
   languages: [OCaml]
   category: knowledge
+  tags: [epita]
 
 - description:
   - "Passed the <b>TOEIC Mock Test</b>"
@@ -621,10 +639,12 @@
   date: July 6, 2018
   category: domain
 
-- title: <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Jekyll</b>
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Jekyll</b>
+  - Used for deploying static websites with Github.
   date: July 6, 2018
   languages: [Liquid]
-  tools: [Jekyll]
+  tools: [Jekyll, Github]
   category: knowledge
 
 
@@ -1065,10 +1085,12 @@
   date: July 2014
   tags: [gaming-actu]
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>JavaScript</b> language
-  description: Learned how to use the <b>jQuery</b> library.
+- description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>JavaScript</b> language
+  - <i class="fas fa-book fa-fw"></i> Learned how to use the <b>jQuery</b> library.
   date: May 2014
   languages: [JavaScript]
+  libraries: [jQuery]
   category: knowledge
 
 - title: Worked on <b>StormRadio</b>
@@ -1077,8 +1099,9 @@
   status: dead
   tags: [webradio]
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>SQL</b> language
-  description: Learned how to use the <b>MySQL</b> database management system.
+- description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>SQL</b> language
+  - <i class="fas fa-toolbox fa-fw"></i> Learned how to use the <b>MySQL</b> database management system
   date: 2014
   languages: [SQL]
   tools: [MySQL]
@@ -1088,8 +1111,7 @@
   date: Feb. 2013
   tags: [mysurvivaladventure, games]
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>PHP</b> language
-  description: 
+- description: <i class="fas fa-code fa-fw"></i> Learned the <b>PHP</b> language
   date: Aug. 2013
   languages: [PHP]
   category: knowledge
@@ -1110,7 +1132,7 @@
   status: dead
   tags: [gaming-actu]
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>HTML & CSS</b> languages
+- description: <i class="fas fa-code fa-fw"></i> Learned the <b>HTML</b> & <b>CSS</b> languages
   date: Dec. 2012
   languages: [HTML, CSS]
   category: knowledge
@@ -1124,27 +1146,31 @@
   status: dead
   tags: [blog]
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>Processing</b> language
-  description:
-  - Created few programs and very small games.
-  - Some of them worked along with Arduino robots (for data interpretation).
+- description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>Processing</b> language
+  - Created some programs and very small games.
+  - Some programs worked along with Arduino robots (for data interpretation).
   date: 2012
   languages: [Processing]
   category: knowledge
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>Arduino</b> language
-  description: Worked on some Arduino robots in a club.
+- description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>Arduino</b> language
+  - Worked on some Arduino robots in a club.
   date: 2012
-  languages: [Android]
+  languages: [Arduino]
   category: knowledge
 
-- description: <i class="fas fa-code fa-fw"></i> Partially introduced to the <b>C++</b> language.
+- description:
+  - <i class="fas fa-code fa-fw"></i> Introduced to the <b>C++</b> language.
+  - Created console applications.
   date: Aug. 2011
   languages: [C++]
   category: knowledge
 
-- title: <i class="fas fa-code fa-fw"></i> Learned the <b>C</b> language
-  description: Mostly made terminal programs. Created a calculator and a script answering to things you type in.
+- description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>C</b> language
+  - "Created console applications: a calculator, a script answering to user input, ..."
   date: Aug. 2011
   languages: [C]
   category: knowledge

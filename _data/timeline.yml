@@ -339,7 +339,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/My-first-React-Native-app
   date: Feb. 6, 2020
-  status: active
+  # status: active
   languages: [JavaScript]
   tools: [React Native]
   tags: [project, first, mobile, app]
@@ -355,7 +355,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/my-first-discord.js-bot
   date: Feb. 6, 2020
-  status: active
+  # status: active
   languages: [JavaScript]
   tools: [Node.js]
   libraries: [Discord.js]

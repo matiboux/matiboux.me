@@ -113,7 +113,7 @@ hr { border-color: rgba(255, 255, 255, .1) }
 	border-left: 1px solid #bbb;
 	z-index: -1;
 }
-#main .timeline-items > *:last-child > .misc .line { display: none }
+/* #main .timeline-items > *:last-child > .misc .line { display: none } */
 #main .timeline-items > * > .content > * { margin-bottom: 5px; font-size: 12px }
 #main .timeline-items > * > .content h4 { font-size: 20px }
 #main .timeline-items > * > .content p, #main .timeline-items > * > .content p a { color: #808080 }
@@ -121,8 +121,15 @@ hr { border-color: rgba(255, 255, 255, .1) }
 #main .timeline-items > * > .content .description { display: block; margin-top: 3px; margin-left: 0; color: #c0c0c0 }
 #main .timeline-items > * > .content p:not(.description) + p { margin-left: 5px }
 #main .timeline-items > * > .content ul { padding-left: 20px }
-/* #main .timeline-items > * > .content .tools { color: #808080 } */
-/* #main .timeline-items > * > .content .tags, #main .timeline-items > * > .content .tags a { color: #808080 } */
+#main .timeline-items:after {
+	position: absolute;
+	display: block;
+	width: 9px;
+	margin-top: 20px;
+	margin-left: 99px;
+	content: "";
+	border-top: 1px solid #bbb;
+}
 
 
 #main .cv-about, #main .cv-items {

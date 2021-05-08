@@ -527,8 +527,7 @@
   category: knowledge
 
 - description:
-  - "Passed the <b>TOEIC Mock Test</b>"
-  - "Score: 925"
+  - "Passed the <b>TOEIC Mock Test</b>: 925 / 990"
   date: May 11, 2019
   category: award
   tags: [test, toeic]
@@ -643,8 +642,7 @@
   tags: [epita]
 
 - description:
-  - "Passed the <b>TOEIC Mock Test</b>"
-  - "Score: 900"
+  - "Passed the <b>TOEIC Mock Test</b>: 900 / 990"
   date: Sept. 6, 2018
   category: award
   tags: [test, toeic]
@@ -703,8 +701,8 @@
 
 - title: Created and developed <b>Matiboux Time</b>
   description:
-  - Matiboux Time is a live clock tracking the CEST, PHT and CDT timezones.
-  - Project requested by <a href="https://twitter.com/Commander_Plays">Commander</a>.
+  - Matiboux Time is a live clock tracking a few timezones.
+  # - Project requested by <a href="https://twitter.com/Commander_Plays">Commander</a>.
   links:
   - title: <i class="fas fa-link fa-fw"></i> See the website
     href: http://time.matiboux.com/
@@ -798,7 +796,7 @@
   tags: [project, logs]
 
 - title: Created and developed <b>LJV Web Portal</b>
-  description: LJV Web Portal is the <b>ljv.fr</b> main website linking to the official high school website and to other student projects.
+  description: This is an unofficial portal linking to the official high school website and to other student projects.
   links:
   - title: <i class="fas fa-link fa-fw"></i> See the website
     href: https://ljv.fr/
@@ -838,8 +836,8 @@
   links:
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/KeyGenLib.js
-  - title: <i class="fas fa-cube fa-fw"></i> See the npm package
-    href: https://github.com/matiboux/KeyGenLib.js/packages/123276
+  # - title: <i class="fas fa-cube fa-fw"></i> See the npm package
+    # href: https://github.com/matiboux/KeyGenLib.js/packages/123276
   date: Jan. 12, 2017
   status: standby
   languages: [JavaScript]
@@ -861,8 +859,8 @@
   date: Oct. 16, 2016
   tags: [me]
 
-- title: Opened my <b>Instagram @matiboux</b> account
-  description: My Instagram account is used to share the drawings I made and the photos I took.
+- title: Created my <b>Instagram @matiboux</b> account
+  description: I use my Instagram account to share the drawings I made and the photos I took.
   links:
   - title: <i class="fab fa-instagram fa-fw"></i> @matiboux
     href: https://www.instagram.com/matiboux/
@@ -972,11 +970,11 @@
 
 - description: Finished my internship at <b>Gfi Informatique Ouest</b>.
   date: Fev. 2015
-  tags: [internship]
+  tags: [internship, gfi]
 
 - title: Started my internship at <b>Gfi Informatique Ouest</b>
   description:
-  - 2-days internship in an digital and IT service company.
+  - 2-days internship at a digital and IT service company.
   - Done as part of the required intership during my last year of middle school.
   links:
   - title: <i class="fas fa-link fa-fw"></i> See the company website
@@ -984,15 +982,15 @@
   date: Fev. 2015
   category: work
   status: finished
-  tags: [internship]
+  tags: [internship, gfi]
 
 - description: Finished my internship at <b>Sensipode</b>.
   date: Fev. 2015
-  tags: [internship]
+  tags: [internship, sensipode]
 
 - title: Started my internship at <b>Sensipode</b>
   description:
-  - 3-days internship in a webdesign startup.
+  - 3-days internship at a webdesign startup.
   - Done as part of the required intership during my last year of middle school.
   links:
   - title: <i class="fas fa-link fa-fw"></i> See the company website
@@ -1000,12 +998,12 @@
   date: Fev. 2015
   category: work
   status: finished
-  tags: [internship]
+  tags: [internship, sensipode]
 
-- title: Created the <b>Fruinity</b> Team
+- title: Created the <b>Fruinity</b> team
   description:
   - Fruinity was a gaming team. Created with friends.
-  - Initials members were <a href=\"http://steamcommunity.com/profiles/76561198087021304\">LeDav64</a>, <a href=\"http://steamcommunity.com/id/Reivaros\">TheKiller678</a>, <a href=\"http://steamcommunity.com/id/felixjules\">Felixjules</a> and me.
+  - Initials members were <a href="http://steamcommunity.com/profiles/76561198087021304">LeDav64</a>, <a href="http://steamcommunity.com/id/Reivaros">TheKiller678</a>, <a href="http://steamcommunity.com/id/felixjules">Felixjules</a> and me.
   date: April 21, 2014
   status: left
   tags: [fruinity]
@@ -1016,7 +1014,7 @@
   - title: <i class="fas fa-link fa-fw"></i> See the project website
     href: https://olifw.net/
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
-    href: https://github.com/OliFramework/Oli
+    href: https://github.com/matiboux/Oli
   date: Feb. 6, 2015
   status: active
   languages: [HTML, PHP]
@@ -1036,13 +1034,13 @@
 - title: Created and developed <b>MaTap</b>
   description:
   - MaTap was a basic PHP framework. Created on my own.
-  - This project was later renamed to <b>Oli</b>.
+  - This project was later replaced by <b>Oli</b>.
   # links:
   # - title: <i class="fas fa-link fa-fw"></i> Oli
     # href: https://olifw.net/
   date: Nov. 15, 2014
   status: replaced
-  tags: [project, oli]
+  tags: [project, matap, oli]
 
 - title: Created and developed <b>Twitter Game</b>
   description: Twitter Game was a twitter profile ranking. Created on my own.
@@ -1050,20 +1048,26 @@
   status: dead
   tags: [project, twitter]
 
-- title: Bought the <b>matiboux.com</b> web domain and a web platform
+- description:
+  - "Restored my projects on my new web platform: <b>ImgShot</b>, <b>KeyGen</b> and <b>Random Number</b>."
+  date: Oct. 27, 2014
+  tags: [project, imgshot, keygen, random-number]
+
+- title: Bought the <b>matiboux.com</b> web domain and web platform
   description:
-  - The matiboux.com web platform is used to host my personal projects and some of my data.
-  - Hosted <b>ImgShot</b>, <b>KeyGen</b> and <b>Random Number</b> on it since then.
+  - The web platform is used to host my personal projects and some of my data.
+  # - Hosted <b>ImgShot</b>, <b>KeyGen</b> and <b>Random Number</b> on it since then.
   links:
   - title: <i class="fas fa-link fa-fw"></i> See the website
     href: https://matiboux.com/
   date: Oct. 27, 2014
-  status: active
+  # status: active
   category: domain
+  tags: [project]
 
 - description:
   - <b>CodeIt</b> Team dissolved.
-  - Backed up my projects hosted on its web platform: <b>ImgShot</b>, <b>KeyGen</b> and <b>Random Number</b>.
+  - "Backed up my projects from its web platform: <b>ImgShot</b>, <b>KeyGen</b> and <b>Random Number</b>."
   date: Sept. 2014
   tags: [codeit]
 
@@ -1074,9 +1078,9 @@
   tags: [brains-master]
 
 - title: Created and developed <b>KeyGen</b>
-  description: KeyGen is an open source random password generator.
+  description: KeyGen is an open source random password generator. # Created on my own.
   links:
-  - title: <i class="fas fa-link fa-fw"></i> See the website
+  - title: <i class="fas fa-link fa-fw"></i> See the website (latest version)
     href: https://keygen.matiboux.com/
   - title: <i class="fab fa-github fa-fw"></i> See the original source code from its Github repository (v1)
     href: https://github.com/matiboux/KeyGen-v1
@@ -1084,12 +1088,13 @@
     href: https://archives.matiboux.com/keygen/
   date: July 30, 2014
   status: active
+  languages: [HTML, CSS, PHP]
   tags: [project, keygen]
 
 - title: Created and developed <b>ImgShot</b>
-  description: ImgShot is an online image hosting service.
+  description: ImgShot is an online image hosting service. # Created on my own.
   links:
-  - title: <i class="fas fa-link fa-fw"></i> See the website
+  - title: <i class="fas fa-link fa-fw"></i> See the website (latest version)
     href: https://imgshot.eu/
   - title: <i class="fab fa-github fa-fw"></i> See the original source code from its Github repository (v1)
     href: https://github.com/matiboux/ImgShot-v1/
@@ -1097,19 +1102,22 @@
     href: https://archives.matiboux.com/imgshot/
   date: July 26, 2014
   status: active
+  languages: [HTML, CSS, PHP]
   tags: [project, imgshot]
 
 - title: Created and developed <b>Random Number</b>
-  description: Random Number is a random number generator. Created on my own.
+  description: Random Number is a random number generator. # Created on my own.
   links:
-  - title: Random Number on KeyGen
+  - title: <i class="fas fa-link fa-fw"></i> Random Number on KeyGen
     href: https://keygen.matiboux.com/random/
   date: July 12, 2014
-  status: dead
+  status: replaced
+  languages: [HTML, CSS, PHP]
   tags: [project, random-number]
 
 - title: Joined the <b>CodeIt</b> Team, and got access to its web platform
-  description: CodeIt was a developer team. Other members were <a href=\"https://twitter.com/JulienMalka">@DrCinetik</a> and <a href=\"https://twitter.com/KindlyFire">@KindlyFire</a>.
+  description:
+  - CodeIt was a team of developers. # Other members were <a href="https://twitter.com/DrCinetik">@DrCinetik</a> and <a href="https://twitter.com/KindlyFire">@KindlyFire</a>.
   links:
   - title: <i class="fab fa-twitter fa-fw"></i> @TeamCodeIt
     href: https://twitter.com/TeamCodeIt

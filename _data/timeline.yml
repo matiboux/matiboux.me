@@ -86,6 +86,12 @@
   tags: [epita, spider]
 
 - description:
+  - "Passed a <b>TOEIC Mock Test</b>: 945 / 990"
+  date: Feb. 2, 2021
+  category: award
+  tags: [test, toeic]
+
+- description:
   - <b>Spidou</b> – 3 exercises on HTTP sockets (server and client) in C++
   date: Feb. 1, 2021
   languages: [C++]
@@ -527,7 +533,7 @@
   category: knowledge
 
 - description:
-  - "Passed the <b>TOEIC Mock Test</b>: 925 / 990"
+  - "Passed a <b>TOEIC Mock Test</b>: 925 / 990"
   date: May 11, 2019
   category: award
   tags: [test, toeic]
@@ -642,7 +648,7 @@
   tags: [epita]
 
 - description:
-  - "Passed the <b>TOEIC Mock Test</b>: 900 / 990"
+  - "Passed a <b>TOEIC Mock Test</b>: 900 / 990"
   date: Sept. 6, 2018
   category: award
   tags: [test, toeic]

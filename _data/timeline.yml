@@ -67,6 +67,13 @@
   category: knowledge
   tags: [epita, chess]
 
+- description: Bought the <b>paucard.fr</b> web domain.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://paucard.fr/
+  date: March 3, 2021
+  category: domain
+
 - title: Started working on the <b>Chess</b> school project
   description:
   - "Developed a chess engine and AI, in a group of 4 students, in C++."
@@ -154,6 +161,14 @@
   category: school
   tags: [epita]
 
+- description: Bought the <b>2gether-asso.fr</b> web domain.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://2gether-asso.fr/
+  date: Dec. 18, 2020
+  category: domain
+  tags: [2gether]
+
 - title: Started working on the <b>42sh</b> school project
   description:
   - "Developed a POSIX shell, in a group of 4 students, in C."
@@ -177,6 +192,14 @@
   tools: [Jekyll]
   category: school
   tags: [project, cm5forever]
+
+- description: Bought the <b>cm5forever.fr</b> web domain.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://cm5forever.fr/
+  date: Nov. 7, 2020
+  category: domain
+  tags: [cm5forever]
 
 - description:
   - <b>Malloc</b> – Reimplemented the malloc-family C functions
@@ -233,6 +256,13 @@
   languages: [C]
   category: school
   tags: [epita]
+
+- description: Bought the <b>mati.gay</b> web domain.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://mati.gay/
+  date: Sept. 26, 2020
+  category: domain
 
 - title: Started developing <b>A.M.E.L.I.E</b>, a Discord bot.
   description:
@@ -422,7 +452,7 @@
 
 - description: Released a major interface update of <a href="https://matiboux.me/">matiboux.me</a>.
   date: Sept. 1, 2019
-  tags: [project, showcase]
+  tags: [project, matiboux.me]
 
 - description:
   - <i class="fas fa-code fa-fw"></i> Learned the <b>68000 Assembly</b> language
@@ -505,6 +535,7 @@
     href: https://epita.it/
   date: May 25, 2019
   category: domain
+  tags: [epita.it]
 
 - title: Created the website for <b>epidocs.eu</b>
   description: epidocs.eu is the home page for Epidocs, linking to its projects.
@@ -526,6 +557,7 @@
     href: https://epidocs.eu/
   date: May 25, 2019
   category: domain
+  tags: [epidocs]
 
 - description: <i class="fas fa-code fa-fw"></i> Introduced to the <b>Kotlin</b> language
   date: May 22, 2019
@@ -616,6 +648,13 @@
   tags: [epita]
 
 
+- description: Bought the <b>mtbx.it</b> web domain.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://mtbx.it/
+  date: Oct. 24, 2018
+  category: domain
+
 - title: Created the website for <b>matiboux.me</b>
   description: Matiboux.me is my new personal showcase website. It shows who I am and what I do.
   links:
@@ -629,7 +668,14 @@
   opensource: true
   languages: [HTML, CSS]
   tools: [Jekyll]
-  tags: [project, showcase]
+  tags: [project, matiboux.me]
+
+# - description: Bought the <b>chisana.me</b> web domain.
+  # links:
+  # - title: <i class="fas fa-link fa-fw"></i> See the website
+    # href: https://chisana.me/
+  # date: Oct. 5, 2018
+  # category: domain
 
 - description: Bought the <b>matiboux.me</b> web domain.
   links:
@@ -637,6 +683,7 @@
     href: https://matiboux.me/
   date: Oct. 5, 2018
   category: domain
+  tags: [matiboux.me]
 
 
 - description:
@@ -659,6 +706,7 @@
   - title: <i class="fab fa-github fa-fw"></i> See the open source repository
     href: https://github.com/matiboux/matistat.us
   date: July 30, 2018
+  tags: [project, matistat.us]
 
 - title: Created the website for <b>matistat.us</b>
   description: Matistat.us is the status website for all my web platforms. It's about ups and downs.
@@ -673,7 +721,7 @@
   opensource: true
   languages: [HTML, CSS, PHP]
   tools: [Jekyll]
-  tags: [project, showcase]
+  tags: [project, matistat.us]
 
 - description: Bought the <b>matistat.us</b> web domain.
   links:
@@ -681,6 +729,7 @@
     href: https://matistat.us/
   date: July 6, 2018
   category: domain
+  tags: [matistat.us]
 
 - description:
   - <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Jekyll</b>
@@ -689,6 +738,14 @@
   languages: [Liquid]
   tools: [Jekyll, Github]
   category: knowledge
+
+- description: Bought the <b>imgshot.eu</b> web domain.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: https://imgshot.eu/
+  date: July 3, 2017
+  category: domain
+  tags: [imgshot]
 
 
 # (63, 'Created and developed <b>Polls</b>', 'Polls is a simple service for making straw polls. Worked on my own.\r\n<i>Started development on -?-.</i>\r\n<i class=\"fa fa-link fa-fw\"></i> <a href=\"https://polls.matiboux.com/\">See its website</a>.', 'polls', 'tasks', 'active', 'Jul. 12, 2017', '2017-07-12 00:11:19'),
@@ -818,6 +875,7 @@
     href: https://ljv.fr/
   date: Feb. 7, 2017
   category: domain
+  tags: [ljv]
 
 - title: Kept stats of all my <b>CSGO</b> competitive plays
   description: CSGO is a FPS video game edited by Valve. Stats stored in a Google Sheets document.

@@ -63,7 +63,7 @@ $(function() {
 	$('.timeline-items .item a.tag').click(tagLinkHandler);
 	
 	if (document.location.hash) {
-		const value = document.location.hash.substring(1);
+		const value = decodeURIComponent(document.location.hash.substring(1));
 		$('#timelineSearch [name="searchField"]').val(value);
 		searchHandler(value);
 	}

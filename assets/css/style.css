@@ -27,6 +27,8 @@ a:hover { color: #4080c0 }
 
 hr { border-color: rgba(255, 255, 255, .1) }
 
+*:last-child { margin-bottom: 0 }
+
 @media (min-width: 576px) { .mw-sm { max-width: 540px } }
 @media (min-width: 768px) { .mw-md { max-width: 720px } }
 @media (min-width: 992px) { .mw-lg { max-width: 960px } }
@@ -75,6 +77,7 @@ hr { border-color: rgba(255, 255, 255, .1) }
 #main .cv-about .about-social-links a { color: #fff }
 #main .cv-about .about-social-links a:hover { color: #eee }
 
+#main .timeline-items { margin-bottom: 30px }
 #main .timeline-items > * + * { padding-top: 10px }
 #main .timeline-items > * > * {
 	position: relative;
@@ -129,6 +132,11 @@ hr { border-color: rgba(255, 255, 255, .1) }
 	margin-left: 99px;
 	content: "";
 	border-top: 1px solid #bbb;
+}
+
+#main .legend {
+	color: #c0c0c0;
+	font-size: .8em;
 }
 
 
@@ -233,13 +241,6 @@ hr { border-color: rgba(255, 255, 255, .1) }
 .list-group-dark .list-group-item-action:active {
 	color: #f0f0f0;
 	background-color: #383838;
-}
-
-
-/** Bootstrap Fix */
-
-*:last-child {
-	margin-bottom: 0;
 }
 
 

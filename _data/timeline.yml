@@ -14,6 +14,29 @@
 
 
 - description:
+  - <i class="fas fa-cog fa-fw"></i> Learned setting up <b>CD pipelines</b> with GitHub Actions
+  - Configured Docker packages deployment after successful a CI pipeline.
+  date: June 15, 2021
+  tools: [Docker, CI/CD, GitHub Actions]
+  category: knowledge
+  tags: [docker]
+
+- description:
+  - <i class="fas fa-cube fa-fw"></i> Learned <b>deploying Docker packages</b> with GitHub Packages
+  date: June 15, 2021
+  tools: [Docker, GitHub Packages]
+  category: knowledge
+  tags: [docker]
+
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Improved my knowledge of <b>Docker</b>
+  - Mentioned at EPITA in a course.
+  date: June 15, 2021
+  tools: [Docker]
+  category: knowledge
+  tags: [docker, epita]
+
+- description:
   - <b>Java WebService</b> – a backend web service with multiple REST endpoints in Java
   - "Project duration: 1 week."
   date: April 12, 2021
@@ -377,7 +400,7 @@
   category: knowledge
   tags: [griffith]
 
-- description: <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Docker</b>
+- description: <i class="fas fa-toolbox fa-fw"></i> Introduced to <b>Docker</b>
   date: Dec. 28, 2019
   tools: [Docker]
   category: knowledge

@@ -14,12 +14,14 @@ $(function() {
 		$item.hide();
 		
 		if (typeof(value) != 'string' || value == '') {
-			window.history.replaceState(null, document.title, document.location.pathname)
+			// window.history.replaceState(null, document.title, document.location.pathname)
+			window.history.pushState(null, document.title, document.location.pathname)
 			
 			$item.show();
 		}
 		else {
-			window.history.replaceState(null, document.title, document.location.pathname + "#" + value)
+			// window.history.replaceState(null, document.title, document.location.pathname + "#" + value)
+			window.history.pushState(null, document.title, document.location.pathname + "#" + value)
 			
 			const colonindex = value.indexOf(':');
 			
@@ -62,9 +64,14 @@ $(function() {
 	$('.timeline-items .item a.library').click(tagLinkHandler);
 	$('.timeline-items .item a.tag').click(tagLinkHandler);
 	
-	if (document.location.hash) {
-		const value = decodeURIComponent(document.location.hash.substring(1));
-		$('#timelineSearch [name="searchField"]').val(value);
-		searchHandler(value);
-	}
+	const checkLocation = function() {
+		if (document.location.hash) {
+			const value = decodeURIComponent(document.location.hash.substring(1));
+			$('#timelineSearch [name="searchField"]').val(value);
+			searchHandler(value);
+		}
+	};
+	
+	window.addEventListener('popstate', checkLocation);
+	checkLocation();
 });

@@ -14,6 +14,12 @@
 
 
 - description:
+  - "Passed the <b>TOEIC Test</b>: 985 / 990"
+  date: June 28, 2021
+  category: award
+  tags: [test, toeic]
+
+- description:
   - <b>PING</b> – a fullstack IDE application in Java
   - "Project duration: 6 weeks (2 weeks backend, 4 weeks fullstack)."
   date: July 10, 2021

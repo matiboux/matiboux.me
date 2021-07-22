@@ -14,6 +14,14 @@
 
 
 - description:
+  - <b>PING</b> – a fullstack IDE application in Java
+  - "Project duration: 6 weeks (2 weeks backend, 4 weeks fullstack)."
+  date: July 10, 2021
+  languages: [Java]
+  category: school
+  tags: [epita, ping]
+
+- description:
   - <i class="fas fa-cog fa-fw"></i> Learned setting up <b>CD pipelines</b> with GitHub Actions
   - Configured Docker packages deployment after successful a CI pipeline.
   date: June 15, 2021

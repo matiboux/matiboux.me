@@ -13,6 +13,18 @@
   # tags: []
 
 
+- title: Started my internship at <b>Brainsonic</b>
+  description:
+  - Five-months internship as back-end developer.
+  # - Quick behind the scenes discovery of computer parks in an office and in schools.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> See the website
+    href: http://www.brainsonic.com/
+  date: Sept. 6, 2021
+  category: work
+  status: active
+  tags: [internship]
+
 - description:
   - "Passed the <b>TOEIC Test</b>: 985 / 990"
   date: June 28, 2021

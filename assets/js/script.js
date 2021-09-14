@@ -75,7 +75,7 @@ $(function() {
 	window.addEventListener('popstate', checkLocation);
 	checkLocation();
 	
-	const $toggleBtn = $('.cv-items .item .description .toggle-btn');
+	const $toggleBtn = $('.cv-items .toggle-btn');
 	$toggleBtn.html($toggleBtn.attr('data-text-toggle-on'));
 	$toggleBtn.css({ cursor: 'pointer' });
 	$toggleBtn.click(function(e) {

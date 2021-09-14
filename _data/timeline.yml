@@ -45,7 +45,7 @@
   date: June 15, 2021
   tools: [Docker, CI/CD, GitHub Actions]
   category: knowledge
-  tags: [docker]
+  tags: [github, docker]
 
 - description:
   - <i class="fas fa-cube fa-fw"></i> Learned <b>deploying Docker packages</b> with GitHub Packages
@@ -217,6 +217,14 @@
   date: Dec. 18, 2020
   category: domain
   tags: [2gether]
+
+- description:
+  - <i class="fas fa-cog fa-fw"></i> Learned setting up <b>CI pipelines</b> with GitHub Actions
+  - Configured workflows for testing coding style, compiling and running testsuites.
+  date: Dec. 18, 2020
+  tools: [CI/CD, GitHub Actions]
+  category: knowledge
+  tags: [github]
 
 - title: Started working on the <b>42sh</b> school project
   description:
@@ -537,16 +545,24 @@
   tools: [Jekyll, Travis CI]
   tags: [project, epidocs, plannings]
 
+- description:
+  - Delivered <b>Blast</b>, a group school project.
+  date: June 7, 2019
+  category: school
+  tags: [epita, blast]
+
 - description: Completed work on <b>MCQ Parser</b>.
   date: June 3, 2019
   category: work
   tags: [epita, mcq-parser]
 
 - description:
-  - Delivered <b>Blast</b>, a group school project.
-  date: June 7, 2019
-  category: school
-  tags: [epita, blast]
+  - <i class="fas fa-cog fa-fw"></i> Learned <b>CD pipelines</b> with Travis CI
+  - Configured a workflow to build a static website and deploy it on Github Pages.
+  date: June 3, 2019
+  tools: [CI/CD, Travis CI, Github Pages]
+  category: knowledge
+  tags: [github]
 
 - title: Created <b>Epidocs / Past-Exams</b> and developed its website
   description:
@@ -678,6 +694,14 @@
   languages: [C#]
   tools: [Unity]
   tags: [epita, blast]
+
+- description:
+  - <i class="fas fa-cog fa-fw"></i> Learned setting up <b>CI pipelines</b> with Travis CI
+  - Configured a workflow to run a script and test code.
+  date: Jan. 14, 2019
+  tools: [CI/CD, Travis CI]
+  category: knowledge
+  tags: [github]
 
 
 - description:

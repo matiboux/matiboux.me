@@ -74,4 +74,20 @@ $(function() {
 	
 	window.addEventListener('popstate', checkLocation);
 	checkLocation();
+	
+	const $toggleBtn = $('.cv-items .item .description .toggle-btn');
+	$toggleBtn.html($toggleBtn.attr('data-text-toggle-on'));
+	$toggleBtn.css({ cursor: 'pointer' });
+	$toggleBtn.click(function(e) {
+		e.preventDefault();
+		const $this = $(this);
+		const $toggle = $this.parent().children('.toggle')
+		if ($toggle.css('display') === 'none') {
+			$toggle.show();
+			$this.html($toggleBtn.attr('data-text-toggle-off'));
+		} else {
+			$toggle.hide();
+			$this.html($toggleBtn.attr('data-text-toggle-on'));
+		}
+	});
 });

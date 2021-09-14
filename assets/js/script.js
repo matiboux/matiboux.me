@@ -74,20 +74,23 @@ $(function() {
 	
 	window.addEventListener('popstate', checkLocation);
 	checkLocation();
-	
+
 	const $toggleBtn = $('.cv-items .toggle-btn');
-	$toggleBtn.html($toggleBtn.attr('data-text-toggle-on'));
-	$toggleBtn.css({ cursor: 'pointer' });
+	$toggleBtn.each(function() {
+		const $this = $(this);
+		$this.html($this.attr('data-text-toggle-on'));
+		$this.css({ cursor: 'pointer' });
+	});
 	$toggleBtn.click(function(e) {
 		e.preventDefault();
 		const $this = $(this);
 		const $toggle = $this.parent().children('.toggle')
 		if ($toggle.css('display') === 'none') {
 			$toggle.show();
-			$this.html($toggleBtn.attr('data-text-toggle-off'));
+			$this.html($this.attr('data-text-toggle-off'));
 		} else {
 			$toggle.hide();
-			$this.html($toggleBtn.attr('data-text-toggle-on'));
+			$this.html($this.attr('data-text-toggle-on'));
 		}
 	});
 });

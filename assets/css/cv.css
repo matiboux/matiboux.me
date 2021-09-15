@@ -1,10 +1,9 @@
 #main .cv-about,
-#main .cv-items {
-	margin-bottom: 1rem;
-	padding-top: .5rem;
-	padding-left: 1rem;
-	border-left: 2px solid #f0f0f0;
-}
+#main .cv-items
+	{ margin-bottom: 1rem; padding-top: .5rem; padding-left: 0; border-left: 0 }
+@media (min-width: 576px) {
+	#main .cv-about,
+	#main .cv-items { padding-left: 1rem; border-left: 2px solid #f0f0f0 } }
 
 #main .cv-about .media > * { align-self: center }
 #main .cv-about .media img { border: 2px solid #4080c0; border-radius: .5rem }
@@ -32,6 +31,7 @@
 #main .cv-items .item { display: flex; margin-bottom: 1rem; align-items: start; justify-content: space-between }
 @media print { #main .cv-items .item { page-break-inside: avoid } }
 #main .cv-items .item > * > * { margin-bottom: 5px; font-size: 14px }
+
 #main .cv-items .item > .content h4 { margin-top: 0; font-size: 20px }
 @media not print {
 	#main .cv-items .item.toggle > .content h4 { color: #c0c0c0 }
@@ -67,6 +67,7 @@
 #main .cv-items .item:focus > .content .description a:focus
 	{ color: #4080c0 }
 #main .cv-items .item > .content ul { padding-left: 20px }
+
 #main .cv-items .item > .meta { text-align: right }
 #main .cv-items .item > .meta .location { font-size: 16px; font-weight: 500 }
 @media not print {

@@ -9,14 +9,8 @@
 #main .cv-about .media img { border: 2px solid #4080c0; border-radius: .5rem }
 #main .cv-about .about-social-links { padding-left: 0; list-style: none }
 #main .cv-about .about-social-links > *,
-#main .cv-about .about-social-links a {
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	line-height: 30px;
-	text-align: center;
-	font-size: 20px;
-}
+#main .cv-about .about-social-links a
+	{ display: inline-block; width: 30px; height: 30px; line-height: 30px; text-align: center; font-size: 20px }
 #main .cv-about .about-social-links a { color: #fff }
 #main .cv-about .about-social-links a:hover { color: #eee }
 

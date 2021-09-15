@@ -86,10 +86,10 @@ $(function() {
 		const $this = $(this);
 		const $toggle = $this.parent().children('.toggle')
 		if ($toggle.css('display') === 'none') {
-			$toggle.show();
+			$toggle.css('display', '');
 			$this.html($this.attr('data-text-toggle-off'));
 		} else {
-			$toggle.hide();
+			$toggle.css('display', 'none');
 			$this.html($this.attr('data-text-toggle-on'));
 		}
 	});

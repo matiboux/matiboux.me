@@ -147,10 +147,9 @@ hr { border-color: rgba(255, 255, 255, .1) }
 #main .cv-items .toggle-btn { display: block; color: #c0c0c0 !important; font-size: 14px }
 @media print { #main .cv-items .toggle-btn { display: none } }
 #main .cv-items .toggle-btn:hover { color: #a0a0a0 !important; text-decoration: none }
-#main .cv-items .toggle { display: none }
 @media not print {
 	#main .cv-items .toggle-btn + .toggle { margin-top: 5px } 
-	#main .cv-items .toggle { margin-left: 8px; padding-left: 1rem; border-left: 2px solid #a0a0a0 } }
+	#main .cv-items .item > .content .toggle { margin-left: 8px; padding-left: 1rem; border-left: 2px solid #a0a0a0 } }
 
 #main .cv-items .item {
 	display: flex;

@@ -15,14 +15,24 @@ $(function()
 		const $this = $(this);
 		const $toggle = $this.parent().children('.toggle');
 
-		if ($toggle.css('display') === 'none')
+		let isVisible = true;
+		$toggle.each(function()
 		{
-			$toggle.css('display', '');
+			if ($(this).css('display') === 'none')
+			{
+				isVisible = false;
+				return false; // Break
+			}
+		})
+
+		if (!isVisible)
+		{
+			$toggle.css('display', ''); // Toggle on
 			$this.html($this.attr('data-text-toggle-off'));
 		}
 		else
 		{
-			$toggle.css('display', 'none');
+			$toggle.css('display', 'none'); // Toggle off
 			$this.html($this.attr('data-text-toggle-on'));
 		}
 	});

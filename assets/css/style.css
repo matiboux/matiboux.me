@@ -1,5 +1,3 @@
-/** matiboux.me CSS stylesheet */
-
 html {
 	display: flex;
 	height: 100%;
@@ -16,9 +14,8 @@ body {
 	flex-direction: column;
 	color: #f0f0f0;
 }
-body.page-error { background: #903030 }
-
 @media print { body { color: #000 } }
+body.page-error { background: #903030 }
 
 a { color: #50a0f0 }
 a:hover { color: #4080c0 }
@@ -33,11 +30,16 @@ hr { border-color: rgba(255, 255, 255, .1) }
 @media (min-width: 1200px) { .mw-xl { max-width: 1140px } }
 
 
+/** Main wrapper */
+
 #main {
     display: block;
 	width: 100%;
     margin: auto;
 }
+
+
+/** Footer wrapper */
 
 #footer {
 	display: flex;
@@ -48,17 +50,9 @@ hr { border-color: rgba(255, 255, 255, .1) }
 	align-items: center;
 	border-top: 2px solid #808080;
 }
-#footer > * {
-	margin: .5em;
-}
-#footer ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-#footer ul > li .fab, #footer ul > li .fas {
-	margin-right: 5px;
-}
+#footer > * { margin: .5em }
+#footer ul { margin: 0; padding: 0; list-style: none }
+#footer ul > li .fab, #footer ul > li .fas { margin-right: 5px }
 
 
 /** Special wrappers */
@@ -69,61 +63,28 @@ hr { border-color: rgba(255, 255, 255, .1) }
 	border-bottom: 2px solid #808080;
 	text-align: center;
 }
-.title h1 {
-	font-weight: bold;
-	margin-bottom: 0;
-}
+.title h1 { font-weight: bold; margin-bottom: 0 }
 .title img {
 	display: block;
 	width: 100px;
 	margin: 0 auto .5rem;
 	border: 2px solid #306090;
 	border-radius: 5px;
-
 }
+
 @media (min-width: 576px) {
-	.title {
-		text-align: left;
-	}
-	.title img, .title h1 {
-		display: inline-block;
-		vertical-align: bottom;
-	}
-	.title img {
-		margin-bottom: 0;
-		margin-right: 1rem;
-	}
-}
+	.title { text-align: left }
+	.title img, .title h1 { display: inline-block; vertical-align: bottom }
+	.title img { margin-bottom: 0; margin-right: 1rem } }
 
-.social-icons {
-	list-style: none;
-	padding: 0;
-}
-.social-icons li {
-	display: inline;
-	font-size: 2em;
-}
-.social-icons li a {
-	color: #f0f0f0;
-	text-decoration: none;
-}
-.social-icons li a:hover, .social-icons li a:focus {
-	color: #50a0f0;
-}
+.social-icons { list-style: none; padding: 0 }
+.social-icons li { display: inline; font-size: 2em }
+.social-icons li a { color: #f0f0f0; text-decoration: none }
+.social-icons li a:hover, .social-icons li a:focus { color: #50a0f0 }
 
-
-.list-group-dark .list-group-item {
-	background-color: #404040;
-}
-.list-group-dark .list-group-item-action {
-	color: #f0f0f0;
-}
+.list-group-dark .list-group-item { background-color: #404040 }
+.list-group-dark .list-group-item-action { color: #f0f0f0 }
 .list-group-dark .list-group-item-action:hover,
-.list-group-dark .list-group-item-action:focus {
-	color: #f0f0f0;
-	background-color: #3c3c3c;
-}
-.list-group-dark .list-group-item-action:active {
-	color: #f0f0f0;
-	background-color: #383838;
-}
+.list-group-dark .list-group-item-action:focus
+	{ color: #f0f0f0; background-color: #3c3c3c }
+.list-group-dark .list-group-item-action:active { color: #f0f0f0; background-color: #383838 }

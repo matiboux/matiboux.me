@@ -69,3 +69,8 @@
 #main .cv-items .item > .content ul { padding-left: 20px }
 #main .cv-items .item > .meta { text-align: right }
 #main .cv-items .item > .meta .location { font-size: 16px; font-weight: 500 }
+@media not print {
+	#main .cv-items .item.toggle > .meta .location { color: #c0c0c0 }
+	#main .cv-items .item.toggle:hover > .meta .location,
+	#main .cv-items .item.toggle:focus > .meta .location
+		{ color: #d0d0d0 } }

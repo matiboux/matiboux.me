@@ -1,0 +1,56 @@
+#main .cv-about, #main .cv-items {
+	margin-bottom: 1rem;
+	padding-top: .5rem;
+	padding-left: 1rem;
+	border-left: 2px solid #f0f0f0;
+}
+
+#main .cv-about .media > * { align-self: center }
+#main .cv-about .media img { border: 2px solid #4080c0; border-radius: .5rem }
+#main .cv-about .about-social-links { padding-left: 0; list-style: none }
+#main .cv-about .about-social-links > *, #main .cv-about .about-social-links a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 20px;
+}
+#main .cv-about .about-social-links a { color: #fff }
+#main .cv-about .about-social-links a:hover { color: #eee }
+
+#main .cv-items .toggle-btn { display: block; color: #c0c0c0 !important; font-size: 14px }
+#main .cv-items > .toggle-btn { margin-bottom: .5rem }
+@media print { #main .cv-items .toggle-btn { display: none } }
+#main .cv-items .toggle-btn:hover { color: #a0a0a0 !important; text-decoration: none }
+@media not print {
+	#main .cv-items .toggle-btn + .toggle { margin-top: 5px } 
+	#main .cv-items .item > .content .toggle { margin-left: 8px; padding-left: 1rem; border-left: 2px solid #a0a0a0 } }
+
+#main .cv-items .item {
+	display: flex;
+	margin-bottom: 1rem;
+	align-items: start;
+	justify-content: space-between;
+}
+@media print { #main .cv-items .item { page-break-inside: avoid } }
+#main .cv-items .item > * > * { margin-bottom: 5px; font-size: 14px }
+#main .cv-items .item > .content h4 { margin-top: 0; font-size: 20px }
+#main .cv-items .item > .content .position { color: #c0c0c0; font-size: 16px; font-variant: small-caps }
+#main .cv-items .item:hover > .content .position, #main .cv-items .item:focus > .content .position { color: #d0d0d0 }
+#main .cv-items .item > .content .award { color: #50a0f0; font-variant: small-caps }
+#main .cv-items .item > .content .position ~ .award { margin-top: -5px }
+#main .cv-items .item > .content .description, #main .cv-items .item > .content > ul { margin-top: 10px; color: #a0a0a0 }
+#main .cv-items .item:hover > .content .description, #main .cv-items .item:focus > .content .description,
+#main .cv-items .item:hover > .content > ul, #main .cv-items .item:focus > .content > ul { color: #c0c0c0 }
+#main .cv-items .item > .content .description > * { margin-bottom: 5px }
+#main .cv-items .item > .content .description h6 { font-variant: small-caps }
+#main .cv-items .item > .content .description ul { margin-bottom: 10px }
+#main .cv-items .item > .content .description a { color: #4080c0 }
+#main .cv-items .item > .content .description a:hover, #main .cv-items .item > .content .description a:focus { color: #306090 }
+#main .cv-items .item:hover > .content .description a, #main .cv-items .item:focus > .content .description a { color: #50a0f0 }
+#main .cv-items .item:hover > .content .description a:hover, #main .cv-items .item:focus > .content .description a:hover,
+#main .cv-items .item:hover > .content .description a:focus, #main .cv-items .item:focus > .content .description a:focus { color: #4080c0 }
+#main .cv-items .item > .content ul { padding-left: 20px }
+#main .cv-items .item > .meta { text-align: right }
+#main .cv-items .item > .meta .location { font-size: 16px; font-weight: 500 }

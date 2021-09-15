@@ -26,13 +26,18 @@
 @media print { #main .cv-items .toggle-btn { display: none } }
 #main .cv-items .toggle-btn:hover { color: #a0a0a0 !important; text-decoration: none }
 @media not print {
-	#main .cv-items .toggle-btn + .toggle { margin-top: 5px } 
+	#main .cv-items .toggle-btn + .toggle { margin-top: 5px }
 	#main .cv-items .item > .content .toggle { margin-left: 8px; padding-left: 1rem; border-left: 2px solid #a0a0a0 } }
 
 #main .cv-items .item { display: flex; margin-bottom: 1rem; align-items: start; justify-content: space-between }
 @media print { #main .cv-items .item { page-break-inside: avoid } }
 #main .cv-items .item > * > * { margin-bottom: 5px; font-size: 14px }
 #main .cv-items .item > .content h4 { margin-top: 0; font-size: 20px }
+@media not print {
+	#main .cv-items .item.toggle > .content h4 { color: #c0c0c0 }
+	#main .cv-items .item.toggle:hover > .content h4,
+	#main .cv-items .item.toggle:focus > .content h4
+		{ color: #d0d0d0 } }
 #main .cv-items .item > .content .position { color: #c0c0c0; font-size: 16px; font-variant: small-caps }
 #main .cv-items .item:hover > .content .position,
 #main .cv-items .item:focus > .content .position { color: #d0d0d0 }

@@ -31,15 +31,6 @@
   category: knowledge
   tags: [composer, brainsonic]
 
-- description:
-  - <i class="fas fa-toolbox fa-fw"></i> Improved my knowledge of <b>Docker</b>
-  - Mentioned at EPITA in a course.
-  date: June 15, 2021
-  tools: [Docker]
-  languages: [PHP]
-  category: knowledge
-  tags: [symfony, brainsonic]
-
 - title: Started my internship at <b>Brainsonic</b>
   description:
   - Five-months internship as back-end developer.

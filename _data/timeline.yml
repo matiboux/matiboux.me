@@ -1,9 +1,9 @@
-# - title: 
-  # description: 
+# - title:
+  # description:
   # links:
-  # - title: 
-    # href: 
-  # date: 
+  # - title:
+    # href:
+  # date:
   # category: personal / work / school / knowledge / award / domain
   # status: active / finished / standby / inactive / replaced / left / dead
   # opensource: true / false
@@ -12,6 +12,48 @@
   # libraries: []
   # tags: []
 
+
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned to use the Wordpress plugin <b>Elementor</b>
+  - Used for work at Brainsonic.
+  date: Nov. 16, 2021
+  tools: [Wordpress, Elementor]
+  category: knowledge
+  tags: [wordpress, brainsonic]
+
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned to use the Wordpress plugin <b>Advanced Custom Fields</b>
+  - Used for work at Brainsonic.
+  date: Oct. 2021
+  tools: [Wordpress, ACF]
+  category: knowledge
+  tags: [wordpress, brainsonic]
+
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned to use the Wordpress plugin <b>Custom Post Type UI</b>
+  - Used for work at Brainsonic.
+  date: Oct. 2021
+  tools: [Wordpress, CPTUI]
+  category: knowledge
+  tags: [wordpress, brainsonic]
+
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned to code <b>Wordpress themes</b>
+  - Used for work at Brainsonic.
+  date: Oct. 2021
+  tools: [Wordpress]
+  languages: [PHP]
+  category: knowledge
+  tags: [wordpress, brainsonic]
+
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Doctirne</b>
+  - Used for work at Brainsonic.
+  date: Sept. 2021
+  tools: [Symfony]
+  languages: [PHP]
+  category: knowledge
+  tags: [symfony, brainsonic]
 
 - description:
   - <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Symfony</b>
@@ -1344,6 +1386,13 @@
   date: Dec. 2012
   languages: [HTML, CSS]
   category: knowledge
+
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Wordpress</b>
+  date: Oct. 13, 2012
+  tools: [Wordpress]
+  category: knowledge
+  tags: [wordpress]
 
 - title: Created a <b>Wordpress blog</b>
   description: This was my first blog online and it was easily created on <a href="https://wordpress.com/">wordpress.com</a>.

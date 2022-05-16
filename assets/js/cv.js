@@ -23,11 +23,17 @@ $(function()
 		const $this = $(this);
 		const $toggle = $this.parent().children('.toggle');
 
+		$this.attr('data-text-toggle-on', $this.attr('data-text-toggle-on') + ' <small>(' + ($toggle.text().trim().match(/[\t\r\n\v\f]+/g).length + 1) + ' lines)</small>');
+
 		const isVisible = isToggleVisible($toggle);
 		if (isVisible)
+		{
 			$this.html($this.attr('data-text-toggle-off'));
+		}
 		else
+		{
 			$this.html($this.attr('data-text-toggle-on'));
+		}
 	});
 
 	$toggleBtn.click(function(e)

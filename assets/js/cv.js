@@ -23,7 +23,8 @@ $(function()
 		const $this = $(this);
 		const $toggle = $this.parent().children('.toggle');
 
-		$this.attr('data-text-toggle-on', $this.attr('data-text-toggle-on') + ' <small>(' + ($toggle.text().trim().match(/[\t\r\n\v\f]+/g).length + 1) + ' lines)</small>');
+		const newlineMatches = $toggle.text().trim().match(/[\t\r\n\v\f]+/g) || [];
+		$this.attr('data-text-toggle-on', $this.attr('data-text-toggle-on') + ' <small>(' + (newlineMatches.length + 1) + ' lines)</small>');
 
 		const isVisible = isToggleVisible($toggle);
 		if (isVisible)

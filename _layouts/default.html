@@ -4,17 +4,10 @@ layout: bodyfull
 
 <main id="main">
 	<div class="container {{ page.container_class }}">
-		{% unless page.home %}
+		{% unless layout.home or page.home %}
 			<a href="{{ '/' | relative_url }}">&lsaquo; Back to home page</a>
 		{% endunless %}
-		
-		<div class="title">
-			{% if page.avatar %}
-				<img src="{{ page.avatar }}" {% if page.avatar_alt %}alt="{{ page.avatar_alt }}"{% endif %} />
-			{% endif %}
-			<h1>{{ page.title }}</h1>
-		</div>
-		
+
 		{{ content }}
 	</div>
 </main>

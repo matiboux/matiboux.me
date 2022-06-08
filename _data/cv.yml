@@ -360,8 +360,7 @@ skills:
     description:
     - items:
       - Git, Github
-      - Heroku, WP Engine
-      - Azure
+      - Heroku, WP Engine, Microsoft Azure
       - LaTeX, Office Suite
       - FOG Project
 
@@ -375,18 +374,22 @@ languages:
   items:
   - title: French
     position: Native language
+    visible: true
 
   - title: English
     position: Advanced (C1)
     awards:
     - "Erasmus Language Assessment: C1"
     - "TOEIC: 985"
+    visible: true
 
   - title: Spanish
     position: Elementary (A2)
+    visible: false
 
   - title: German
     position: Begginer (A1)
+    visible: false
 
 # This should show a link to matiboux.com, which would display a list of my projets
 # Otherwise, the list would get too long for this page
@@ -398,7 +401,8 @@ projects:
     position: Developer – Extra-curricular project
     location: EPITA, Paris
     date: April 2019 – May 2019
-    visible: true
+    visible: false
+    detailed: false
     description:
     - items:
       - "Coded in Python."
@@ -410,7 +414,8 @@ projects:
     position: Developer – School group project
     location: EPITA, Paris
     date: Dec. 2019 – June 2019
-    visible: true
+    visible: false
+    detailed: false
     description:
     - items:
       - "Made with Unity in C#."
@@ -419,9 +424,9 @@ projects:
   - title: Oli
     link: https://olifw.net/
     position: Creator & Developer – Personal project
-    #location:
     date: Nov. 2014 – Today
-    visible: true
+    visible: false
+    detailed: false
     description:
     - items:
       - "An open source PHP framework designed to help creating websites apps."
@@ -429,9 +434,9 @@ projects:
 
   - title: Personal projects (Matiboux.com)
     position: Creator & Developer
-    #location:
     date: July 2014 – Today
-    visible: true
+    visible: false
+    detailed: false
     description:
     - items:
       - "Juil. 2014 – ImgShot: Image hosting service."

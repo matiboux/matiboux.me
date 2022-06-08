@@ -22,9 +22,10 @@ education:
       # - "Management: Financial management, ..."
       # - "Humanities: Soft skills, Copyright Law, ..."
     - icon: fas fa-code fa-fw
-      title: "Prog. languages: Python, R"
+      title: "Prog. languages: Python, R, Scala"
       items:
       - "Data Science projects, in Python or R."
+      - "Apache Spark projects, in Python or Scala."
       - "<small>More soon...</small>"
     # - icon: fas fa-graduation-cap fa-fw
     #   title: "School projects:"
@@ -41,7 +42,7 @@ education:
     info: Mostly distance learning, because of the COVID-19 pandemic.
     description:
     - icon: fas fa-university
-      title: Curriculum
+      title: "Curriculum:"
       items:
       - "Computing: Algorithms, Programming, Computer Architecture, Databases, Networking"
       - "Scientific: Maths (integrals, series, functions, probabilities, signals, ...)"
@@ -51,11 +52,11 @@ education:
       title: "Prog. languages: C, C++, Java, Python, Shell, SQL"
       items:
       - "Piscine C – 120 exercises, in C."
-      - "Shell Workshop – 28 exercises, in Shell."
-      - "SQL Workshop – 8 exercises, in SQL."
       - "C++ Workshop – 47 exercises, in C++."
       - "Java Workshop – 29 exercises, in Java."
-      - "Unit testing in C, C++, Java + Functional testing in Python, Shell."
+      - "Shell Workshop – 28 exercises, in Shell."
+      - "SQL Workshop – 8 exercises, in SQL."
+      - "Unit testing in C, C++, Java & Functional testing in Python, Shell."
     - icon: fas fa-graduation-cap fa-fw
       title: "School projects:"
       items:
@@ -76,7 +77,7 @@ education:
     info: Reduced and mandatory curriculum replacing studies abroad, because of the COVID-19 pandemic.
     description:
     - icon: fas fa-university
-      title: Curriculum
+      title: "Curriculum:"
       items:
       - "Computing: Programming"
       - "Humanities: French, English, Cultural opening"
@@ -93,7 +94,7 @@ education:
     info: Semester fully completed despite EPITA's decision to replace it with their own curriculum (see above).
     description:
     - icon: fas fa-university
-      title: Curriculum
+      title: "Curriculum:"
       items:
       - "Algorithms, Maths, Mobile Development, Operating System Design"
     - icon: fas fa-code fa-fw
@@ -101,6 +102,8 @@ education:
       items:
       - "Algorithm practicals in Java."
       - "Android applications in Java using Android Studio."
+    - icon: fas fa-user-graduate
+      title: "Grade: 90%"
 
   - title: EPITA
     link: https://www.epita.fr/
@@ -156,41 +159,71 @@ education:
       items:
       - text: "LJV.fr – a web portail with links to the school official website and other student projects."
         link: https://ljv.fr/
-      - "Le Nautilus – an online blog and newspaper managed by a group of students."
+      - "Le Nautilus – an online blog managed by a group of students."
 
 work:
   title: Work experience
   items:
+  - title: Freelance
+    position: Developer
+    location: Paris, France
+    date: Dec. 2021 – Today
+    visible: true
+    detailed: false
+    description:
+    - icon: fas fa-briefcase
+      title: "Work:"
+      items:
+      - Development and maintenance of websites.
+      - Installation and configuration of a new computer with Windows.
+    - icon: fas fa-file-pen
+      title: "Administrative:"
+      items:
+      - Registration to the auto-entrepreneur regime.
+
   - title: Brainsonic
     link: https://www.brainsonic.com/
-    position: Intern Back-end Developer
+    position: Intern Back-end Web Developer
     location: Paris, France
     date: Sept. 2021 – Jan. 2022
     visible: true
     detailed: true
     info: 80% remote working, because of the COVID-19 pandemic.
     description:
-    - items:
+    - icon: fas fa-briefcase
+      title: "Work:"
+      items:
+      - "Contributed to 5 major projects and 18 projects in total."
+      - "Collaborated with projet managers, developpers, UI/UX designers."
+    - icon: fas fa-laptop-code
+      title: "Technologies:"
+      items:
       - Back-end PHP development with Symfony, Composer, Wordpress.
-      - Back-end JavaScript development with NodeJS, Vue.js, Nuxt.js.
-      - Front-end CSS development with SASS, LESS, Tailwind CSS.
-      - Web application deployments on Heroku and WP Engine.
+      - Full-stack JavaScript development with Vue.js, Nuxt.js (Node.js).
+      - Front-end development with SCSS, LESS, Tailwind CSS.
+      - Application deployment on Heroku, WP Engine and Microsoft Azure.
+    - First internship for the validation of the engineering cycle at EPITA.
 
   - title: Grand Chancery of the Legion of Honor
     link: https://www.legiondhonneur.fr/
-    position: Intern (as part of the required internship in engineering school)
+    position: Intern
     location: Paris, France
     date: June 2019 – July 2019
     visible: true
     detailed: false
     description:
-    - items:
-      - Discovery of the IT sector at work and the maintenance of IT equipment.
-      - Discovery of IT in offices and schools, and challenges associated with it.
-      - System image copying and deployment on new machines using FOG Project.
+    - icon: fas fa-briefcase
+      title: "Work:"
+      items:
+      - Work in the IT service, computer park maintenance.
+      - Computer infrastructure management in offices and schools.
+      - System image cloning and deployment on new machines using FOG Project.
+      - Development of automation scripts for data processing.
+      - Inventory of computer equipment.
+    - Internship for the validation of the preparatory cycle at EPITA.
 
   - title: Natrox Group
-    position: Technical Director & Developer on projects
+    position: Technical Director & Projects Developer
     date: March 2015 – 2016
     visible: false
     detailed: false
@@ -201,7 +234,7 @@ work:
       - "April 2016 – Natrox Games: Group of game servers."
 
   - title: Gfi Informatique Ouest
-    position: Intern (as part of the required internship in middle school)
+    position: Intern
     location: Nantes, France
     date: Fev. 2015
     visible: false
@@ -210,9 +243,10 @@ work:
     - items:
       - Discovery of a large company in the digital sector.
       - Discovery of its administrative, commercial and IT services.
+    - Internship required during middle school at Jules Verne High School.
 
   - title: Sensipode
-    position: Intern (as part of the required internship in middle school)
+    position: Intern
     location: Nantes, France
     date: Fev. 2015
     visible: false
@@ -221,6 +255,7 @@ work:
     - items:
       - Discovery of a start-up specialized in web design.
       - Development of HTML/JavaScript animation modules.
+    - Internship required during middle school at Jules Verne High School.
 
 associative:
   title: Associative experience

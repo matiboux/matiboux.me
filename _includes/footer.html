@@ -1,7 +1,10 @@
 <footer id="footer">
 	<div>
 		<ul>
-			<li><i class="fab fa-github fa-fw"></i> <a href="{{ site.github.repository_url }}">Open-Source repository</a></li>
+			<li>
+				<i class="fab fa-github fa-fw"></i> <a href="{{ site.github.repository_url }}">Open-Source repository</a>
+				<small>(v. {{ site.github.build_revision | slice: 0, 7 | default: 'dev' }})</small>
+			</li>
 			<li><i class="fas fa-fire-alt fa-fw"></i> Powered by <b>GitHub Pages</b></li>
 		</ul>
 	</div>

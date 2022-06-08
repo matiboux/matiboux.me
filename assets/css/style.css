@@ -52,6 +52,7 @@ hr { border-color: rgba(255, 255, 255, .1) }
 }
 #footer > * { margin: .5em }
 #footer ul { margin: 0; padding: 0; list-style: none }
+#footer ul > li small { color: #808080; font-size: 70% }
 #footer ul > li .fab, #footer ul > li .fas { margin-right: 5px }
 
 

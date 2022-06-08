@@ -121,14 +121,17 @@ education:
     - icon: fas fa-graduation-cap fa-fw
       title: "School projects:"
       items:
-      - "<a href=\"https://g00pix.github.io/ProjetBlast/\">Blast</a> – a video game made in group with the Unity game engine."
+      - text: Blast – a video game made in group with the Unity game engine.
+        link: https://g00pix.github.io/ProjetBlast/
       - "OCR Gang – an OCR program made in a group, coded in C."
     - icon: fas fa-book fa-fw
       title: "Personal and/or extracurricular projects:"
       items:
       - "MCQ Parser – a program for correcting data from MCQs."
-      - "<a href=\"https://epita.it/\">EPITA.it</a> – a web portal to links related to the school."
-      - "<a href=\"https://epidocs.eu/\">Epidocs</a> – useful projects and archives for students (past exam papers, etc..)"
+      - text: "EPITA.it – a web portal to links related to the school."
+        link: https://epita.it/
+      - text: "Epidocs – useful projects and archives for students (past exam papers, etc..)"
+        link: https://epidocs.eu/
 
   - title: Jules Verne High School
     link: https://jules-verne.paysdelaloire.e-lyco.fr/
@@ -151,7 +154,8 @@ education:
     - icon: fas fa-book
       title: "Personal and/or extracurricular projects:"
       items:
-      - "<a href=\"https://ljv.fr/\">LJV.fr</a> – a web portail with links to the school official website and other student projects."
+      - text: "LJV.fr – a web portail with links to the school official website and other student projects."
+        link: https://ljv.fr/
       - "Le Nautilus – an online blog and newspaper managed by a group of students."
 
 work:

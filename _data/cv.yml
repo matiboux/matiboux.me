@@ -1,0 +1,461 @@
+about:
+  title:
+
+education:
+  title: Education
+  items:
+  - title: EPITA
+    link: https://www.epita.fr/
+    position: 2<sup>nd</sup> & 3<sup>rd</sup> year Engineering cycle – Computer Science
+    location: Paris, France
+    date: Sept. 2021 – Today
+    info: Mostly on-site learning.
+    visible: true
+    detailed: true
+    description:
+    - icon: fas fa-university
+      title: "Curriculum: Data Science & Artificial Intelligence"
+      items:
+      - "Computing: Big data, Cloud services, AI security, ..."
+      - "Scientific: Maths (probabilities, ...), Machine learning theory, ..."
+      - "Other: Financial management, Soft skills, Copyright Law, ..."
+      # - "Management: Financial management, ..."
+      # - "Humanities: Soft skills, Copyright Law, ..."
+    - icon: fas fa-code fa-fw
+      title: "Prog. languages: Python, R"
+      items:
+      - "Data Science projects, in Python or R."
+      - "<small>More soon...</small>"
+    # - icon: fas fa-graduation-cap fa-fw
+    #   title: "School projects:"
+    #   items:
+    #   - "<small>More soon...</small>"
+
+  - title: EPITA
+    link: https://www.epita.fr/
+    position: 1<sup>st</sup> year Engineering cycle – Computer Science
+    location: Paris, France
+    date: Sept. 2020 – June 2021
+    visible: true
+    detailed: false
+    info: Mostly distance learning, because of the COVID-19 pandemic.
+    description:
+    - icon: fas fa-university
+      title: Curriculum
+      items:
+      - "Computing: Algorithms, Programming, Computer Architecture, Databases, Networking"
+      - "Scientific: Maths (integrals, series, functions, probabilities, signals, ...)"
+      - "Humanities: Business history, Society and equality"
+      - "Electives: General French Law, Security"
+    - icon: fas fa-code fa-fw
+      title: "Prog. languages: C, C++, Java, Python, Shell, SQL"
+      items:
+      - "Piscine C – 120 exercises, in C."
+      - "Shell Workshop – 28 exercises, in Shell."
+      - "SQL Workshop – 8 exercises, in SQL."
+      - "C++ Workshop – 47 exercises, in C++."
+      - "Java Workshop – 29 exercises, in Java."
+      - "Unit testing in C, C++, Java + Functional testing in Python, Shell."
+    - icon: fas fa-graduation-cap fa-fw
+      title: "School projects:"
+      items:
+      - "Malloc – a re-implementation of the malloc-family functions, in C."
+      - "42sh – a POSIX shell developed, in a group, in C."
+      - "Spider – a web and reverse proxy HTTP server developed, in a group, in C++."
+      - "Chess – a chess engine and AI developed, in a group, in C++."
+      - "Java WebService – a backend web service with multiple REST endpoints, in Java."
+      - "Ping – a Java-oriented IDE, compatible with Maven and Git."
+
+  - title: EPITA
+    link: https://www.epita.fr/
+    position: Preparatory cycle – Computer Science
+    location: Paris, France
+    date: March 2020 – June 2020
+    visible: true
+    detailed: false
+    info: Reduced and mandatory curriculum replacing studies abroad, because of the COVID-19 pandemic.
+    description:
+    - icon: fas fa-university
+      title: Curriculum
+      items:
+      - "Computing: Programming"
+      - "Humanities: French, English, Cultural opening"
+    - icon: fas fa-code fa-fw
+      title: "Prog. languages: C, Rust"
+
+  - title: Griffith College
+    link: https://www.griffith.ie/
+    position: Study Abroad – Computer Science
+    location: Dublin, Ireland
+    date: Jan. 2020 – May 2020
+    visible: true
+    detailed: false
+    info: Semester fully completed despite EPITA's decision to replace it with their own curriculum (see above).
+    description:
+    - icon: fas fa-university
+      title: Curriculum
+      items:
+      - "Algorithms, Maths, Mobile Development, Operating System Design"
+    - icon: fas fa-code fa-fw
+      title: "Prog. languages: Java"
+      items:
+      - "Algorithm practicals in Java."
+      - "Android applications in Java using Android Studio."
+
+  - title: EPITA
+    link: https://www.epita.fr/
+    position: Preparatory cycle – Computer Science
+    location: Paris, France
+    date: Sept. 2018 – Dec. 2019
+    visible: true
+    detailed: false
+    description:
+    - icon: fas fa-university
+      title: "Curriculum:"
+      items:
+      - "Computing: Algorithms, Programming, Computer Architecture"
+      - "Engineering: Maths, Physics, Electronics"
+      - "Humanities: French, English, Cultural opening"
+    - icon: fas fa-code fa-fw
+      title: "Prog. languages: C, C#, Python, oCaml"
+    - icon: fas fa-graduation-cap fa-fw
+      title: "School projects:"
+      items:
+      - "<a href=\"https://g00pix.github.io/ProjetBlast/\">Blast</a> – a video game made in group with the Unity game engine."
+      - "OCR Gang – an OCR program made in a group, coded in C."
+    - icon: fas fa-book fa-fw
+      title: "Personal and/or extracurricular projects:"
+      items:
+      - "MCQ Parser – a program for correcting data from MCQs."
+      - "<a href=\"https://epita.it/\">EPITA.it</a> – a web portal to links related to the school."
+      - "<a href=\"https://epidocs.eu/\">Epidocs</a> – useful projects and archives for students (past exam papers, etc..)"
+
+  - title: Jules Verne High School
+    link: https://jules-verne.paysdelaloire.e-lyco.fr/
+    position: General Scientific Studies, Specialization in Maths
+    award: "Scientific Baccalaureate (Honours: Fairly Good)"
+    location: Nantes, France
+    date: Sept. 2015 – July 2018
+    visible: true
+    detailed: false
+    description:
+    - icon: fas fa-university
+      title: "Curriculum:"
+      items:
+      - "Scientific studies: Maths, Physics, Chemistry, Biology"
+      - "Languages: French, English, Spanish"
+    - icon: fas fa-hands-helping
+      title: "Associative life:"
+      items:
+      - "Communication Officer at the Maison des Lycéens (2017-2018)."
+    - icon: fas fa-book
+      title: "Personal and/or extracurricular projects:"
+      items:
+      - "<a href=\"https://ljv.fr/\">LJV.fr</a> – a web portail with links to the school official website and other student projects."
+      - "Le Nautilus – an online blog and newspaper managed by a group of students."
+
+work:
+  title: Work experience
+  items:
+  - title: Brainsonic
+    link: https://www.brainsonic.com/
+    position: Intern Back-end Developer
+    location: Paris, France
+    date: Sept. 2021 – Jan. 2022
+    visible: true
+    detailed: true
+    info: 80% remote working, because of the COVID-19 pandemic.
+    description:
+    - items:
+      - Back-end PHP development with Symfony, Composer, Wordpress.
+      - Back-end JavaScript development with NodeJS, Vue.js, Nuxt.js.
+      - Front-end CSS development with SASS, LESS, Tailwind CSS.
+      - Web application deployments on Heroku and WP Engine.
+
+  - title: Grand Chancery of the Legion of Honor
+    link: https://www.legiondhonneur.fr/
+    position: Intern (as part of the required internship in engineering school)
+    location: Paris, France
+    date: June 2019 – July 2019
+    visible: true
+    detailed: false
+    description:
+    - items:
+      - Discovery of the IT sector at work and the maintenance of IT equipment.
+      - Discovery of IT in offices and schools, and challenges associated with it.
+      - System image copying and deployment on new machines using FOG Project.
+
+  - title: Natrox Group
+    position: Technical Director & Developer on projects
+    date: March 2015 – 2016
+    visible: false
+    detailed: false
+    description:
+    - items:
+      - "March 2015 – Natropic's: Image hosting service."
+      - "Nov. 2015 – Natrox Cloud: File hosting service."
+      - "April 2016 – Natrox Games: Group of game servers."
+
+  - title: Gfi Informatique Ouest
+    position: Intern (as part of the required internship in middle school)
+    location: Nantes, France
+    date: Fev. 2015
+    visible: false
+    detailed: false
+    description:
+    - items:
+      - Discovery of a large company in the digital sector.
+      - Discovery of its administrative, commercial and IT services.
+
+  - title: Sensipode
+    position: Intern (as part of the required internship in middle school)
+    location: Nantes, France
+    date: Fev. 2015
+    visible: false
+    detailed: false
+    description:
+    - items:
+      - Discovery of a start-up specialized in web design.
+      - Development of HTML/JavaScript animation modules.
+
+associative:
+  title: Associative experience
+  items:
+  - title: 2GETHER
+    link: https://2gether-asso.fr/
+    position: Co-president
+    date: Jan. 2020 – Today
+    visible: true
+    detailed: null
+    description:
+    - items:
+      - Jan. 2020 – Co-founded the association under the French law of July 1, 1901.
+
+  - title: Associative Life – Jules Verne High School
+    position: Communication Officer (at the Maison des Lycéens)
+    location: Nantes, France
+    date: Sept. 2017 – July 2018
+    visible: true
+    detailed: false
+    description:
+    - items:
+      - text: "Feb. 2017 – Development of an unofficial portal and web platform: LJV.fr"
+        link: https://ljv.fr/
+      - "Feb. 2017 – Creation of an online high school newspaper with classmates: \"Le Nautilus\""
+      - text: Jan. 2018 – Registered the Maison des Lycéens on Google Maps
+        link: https://goo.gl/maps/97cHZgS2BYHYnVSd7
+      - text: Feb. 2018 – Development of a showcase website for the Maison des Lycéens
+        link: https://mdl.ljv.fr/
+
+skills:
+  title: Skills
+  items:
+  - title: Programming languages
+    description:
+    - items:
+      - "Web: PHP, JavaScript, HTML, CSS"
+      - "Database: SQL (MySQL, PostgreSQL)"
+      - "Software: C, C#, Python, Java, Rust, OCaml, Processing"
+      - "Robotics: Arduino"
+
+      # PHP, JavaScript, HTML, CSS, SQL, C, C#, Python, Java, R
+
+      # <h6><i class="fas fa-globe fa-fw"></i> Web:</h6>
+      # <div class="skills-table">
+      #   <div class="item">
+      #     <div class="header">
+      #       <div>PHP</div>
+      #       <div class="skill-bar">
+      #         <div class="usage-score" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><i class="fas fa-bolt fa-fw"></i></div>
+      #         <div class="knowledge-score" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><i class="fas fa-star fa-fw"></i></div>
+      #       </div>
+      #     </div>
+      #     <div class="description">
+      #       Description
+      #     </div>
+      #   </div>
+      #   <div class="item">
+      #     <div class="header">
+      #       <div>JavaScript</div>
+      #       <div class="skill-bar">
+      #         <div class="usage-score" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><i class="fas fa-bolt fa-fw"></i></div>
+      #         <div class="knowledge-score" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><i class="fas fa-star fa-fw"></i></div>
+      #       </div>
+      #     </div>
+      #   </div>
+      #   <div class="item">
+      #     <div class="header">
+      #       <div>HTML</div>
+      #       <div class="skill-bar">
+      #         <div class="usage-score" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><i class="fas fa-bolt fa-fw"></i></div>
+      #         <div class="knowledge-score" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><i class="fas fa-star fa-fw"></i></div>
+      #       </div>
+      #     </div>
+      #   </div>
+      #   <div class="item">
+      #     <div class="header">
+      #       <div>CSS</div>
+      #       <div class="skill-bar">
+      #         <div class="usage-score" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><i class="fas fa-bolt fa-fw"></i></div>
+      #         <div class="knowledge-score" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><i class="fas fa-star fa-fw"></i></div>
+      #       </div>
+      #     </div>
+      #   </div>
+      # </div>
+
+  - title: Frameworks
+    description:
+    - items:
+      - "Web Apps: Symfony, Composer, Wordpress, Vue.js, Nuxt.js"
+      - "Desktop Apps: ElectronJS"
+      - "Mobile Apps: Android Studio"
+      - "Game Engines: Unity"
+
+  - title: Librairies
+    description:
+    - items:
+      - "Web Design: Bootstrap, FontAwesome, Tailwind CSS"
+      - "Web Scripting: jQuery"
+
+  - title: Tools
+    description:
+    - items:
+      - Git, Github
+      - Heroku, WP Engine
+      - Azure
+      - LaTeX, Office Suite
+      - FOG Project
+
+  - title: Administrative
+    description:
+    - items:
+      - Drafting of the articles of association, under the French law
+
+languages:
+  title: Languages
+  items:
+  - title: French
+    position: Native language
+
+  - title: English
+    position: Advanced (C1)
+    awards:
+    - "Erasmus Language Assessment: C1"
+    - "TOEIC: 985"
+
+  - title: Spanish
+    position: Elementary (A2)
+
+  - title: German
+    position: Begginer (A1)
+
+# This should show a link to matiboux.com, which would display a list of my projets
+# Otherwise, the list would get too long for this page
+# DO IT ALREADY GDMIT
+projects:
+  title: Projects
+  items:
+  - title: MCQ Parser
+    position: Developer – Extra-curricular project
+    location: EPITA, Paris
+    date: April 2019 – May 2019
+    visible: true
+    description:
+    - items:
+      - "Coded in Python."
+      - "Correct students' answers at the MCQ test and calculate their grade."
+      - "Extra-curricular project assigned by an EPITA professor."
+
+  - title: Blast
+    link: https://g00pix.github.io/ProjetBlast/
+    position: Developer – School group project
+    location: EPITA, Paris
+    date: Dec. 2019 – June 2019
+    visible: true
+    description:
+    - items:
+      - "Made with Unity in C#."
+      - "Group student project realized as part of my studies at EPITA."
+
+  - title: Oli
+    link: https://olifw.net/
+    position: Creator & Developer – Personal project
+    #location:
+    date: Nov. 2014 – Today
+    visible: true
+    description:
+    - items:
+      - "An open source PHP framework designed to help creating websites apps."
+      - "Easy integration with a MySQL database and built-in user management."
+
+  - title: Personal projects (Matiboux.com)
+    position: Creator & Developer
+    #location:
+    date: July 2014 – Today
+    visible: true
+    description:
+    - items:
+      - "Juil. 2014 – ImgShot: Image hosting service."
+      - "Juil. 2014 – KeyGen: Random password generation service."
+      - "Feb. 2016 – UrlShortener: Web link shortning service."
+
+accomplishments:
+  title: Accomplishments
+  items:
+  - title: TOEIC Test
+    award: "Score: 985"
+    location: EPITA, Paris
+    date: June 28, 2021
+    visible: true
+
+  - title: TOEIC Mock Test
+    award: "Score: 945"
+    location: EPITA, Paris
+    date: Feb. 2, 2021
+    visible: false
+
+  - title: Final Language Assessment
+    award: "Level achieved: C1"
+    location: Erasmus OLS
+    date: May 17, 2020
+    visible: true
+    description:
+    - icon: fas fa-award
+      title: "Results by skill:"
+      items:
+      - "Grammar: B2"
+      - "Vocabulary: C1"
+      - "Reading comprehension: C2"
+      - "Listening comprehension: C2"
+
+  - title: First Language Assessment
+    award: "Level achieved: C1"
+    location: Erasmus OLS
+    date: Dec. 13, 2019
+    visible: false
+    description:
+    - icon: fas fa-award
+      title: "Results by skill:"
+      items:
+      - "Grammar: B2"
+      - "Vocabulary: B2"
+      - "Reading comprehension: C2"
+      - "Listening comprehension: C2"
+
+  - title: TOEIC Mock Test
+    award: "Score: 925"
+    location: EPITA, Paris
+    date: May 11, 2019
+    visible: false
+
+  - title: TOEIC Mock Test
+    award: "Score: 900"
+    location: EPITA, Paris
+    date: Sept. 6, 2018
+    visible: false
+
+  - title: Scientific Baccalaureate
+    award: "Honours: Fairly Good"
+    location: Jules Verne High School, Nantes
+    date: June 2018
+    visible: false

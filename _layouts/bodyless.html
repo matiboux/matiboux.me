@@ -9,9 +9,16 @@
 	{% if page.description or site.description %}
 		<meta name="description" content="{{ page.description | default: site.description }}" />
 	{% endif %}
-	<meta name="author" content="{{ site.author }}" />
+	{% if page.author or site.author %}
+		<meta name="author" content="{{ page.author | default: site.author }}" />
+	{% endif %}
+	{% if page.keywords or site.keywords %}
+		<meta name="keywords" content="{{ page.keywords | default: site.keywords }}" />
+	{% endif %}
 
-	<meta name="theme-color" content="#202020" />
+	{% if page.theme_color or site.theme_color %}
+		<meta name="theme-color" content="{{ page.theme_color | default: site.theme_color }}" />
+	{% endif %}
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.0/css/all.css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

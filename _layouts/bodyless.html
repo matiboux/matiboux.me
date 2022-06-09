@@ -30,15 +30,16 @@
 
 	<title>{% if page.title and page.title != site.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53429285-6"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-53429285-6');
-	</script>
+	{% if site.gtag %}
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.gtag }}"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', '{{ site.gtag }}');
+		</script>
+	{% endif %}
 
 </head>
 {{ content }}

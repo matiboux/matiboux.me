@@ -4,7 +4,8 @@
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}" />
+
+	<meta name="title" content="{% if page.title and page.title != site.title %}{{ page.title }} – {% endif %}{{ site.title }}" />
 	{% if page.description or site.description %}
 		<meta name="description" content="{{ page.description | default: site.description }}" />
 	{% endif %}
@@ -20,7 +21,7 @@
 		<link rel="stylesheet" href="{{ '/assets/css/' | append: style | append: '?v=' | append: site.github.build_revision | relative_url }}" />
 	{% endfor %}
 
-	<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+	<title>{% if page.title and page.title != site.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53429285-6"></script>

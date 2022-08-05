@@ -13,6 +13,22 @@
   # tags: []
 
 
+- title: Created <b>Instant Commit</b> VS Code Extension
+  description:
+  - "Description: \"Instant commit your changes with a single click, auto generating a commit message based on selected file changes for you.\""
+  - Released Instant Commit v0.0.1 on Jul. 21, 2022.
+  links:
+  - title: <i class="fas fa-code fa-fw"></i> See the extension on VS Code Marketplace
+    href: https://marketplace.visualstudio.com/items?itemName=Matiboux.instant-commit
+  - title: <i class="fab fa-github fa-fw"></i> See the open source repository
+    href: https://github.com/matiboux/vscode-instant-commit
+  date: Jul. 31, 2022
+  languages: [JavaScript]
+  tools: [VS Code]
+  status: active
+  opensource: true
+  tags: [epita, scia]
+
 - description:
   - <i class="fas fa-toolbox fa-fw"></i> Learned to use the Wordpress plugin <b>Elementor</b>
   - Used for work at Brainsonic.

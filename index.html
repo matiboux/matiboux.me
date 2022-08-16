@@ -18,7 +18,7 @@ avatar_alt: Matiboux
 			You can also find me or contact me on the following social networks:
 		</p>
 		<ul class="social-icons">
-			{% assign services = 'twitter,github,linkedin,steam,keybase' | split: ',' %}
+			{% assign services = 'twitter,github,linkedin' | split: ',' %}
 			{% for service in services %}
 				{% if site.data.about.social[service] %}
 					<li class="{{ service }}"><a href="{{ site.data.about.social[service].href }}" class="{{ site.data.about.social[service].icon }} fa-fw"></a></li>

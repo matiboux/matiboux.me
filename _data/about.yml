@@ -40,3 +40,7 @@ social:
   email:
     icon: fas fa-envelope
     href: mailto:matiboux@gmail.com
+
+  proemail:
+    icon: fas fa-envelope
+    href: mailto:pro@mtbx.it

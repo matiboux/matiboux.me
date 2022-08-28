@@ -66,6 +66,16 @@
 													{{ description_item.title }}
 												</h6>
 											{% endif %}
+											{% if description_item.text %}
+												<p>
+													{% unless description_item.title %}
+														{% if description_item.icon %}
+															<i class="{{ description_item.icon }} fa-fw"></i>
+														{% endif %}
+													{% endunless %}
+													{{ description_item.text }}
+												</p>
+											{% endif %}
 											{% if description_item.items %}
 												<ul>
 													{% for item in description_item.items %}

@@ -6,15 +6,20 @@ education:
   items:
   - title: EPITA
     link: https://www.epita.fr/
-    position: 2<sup>nd</sup> & 3<sup>rd</sup> year Engineering cycle – Computer Science
+    position: "2<sup>nd</sup> & 3<sup>rd</sup> year Engineering cycle – Computer Science: Data & AI"
     location: Paris, France
     date: Sept. 2021 – Today
     info: Mostly on-site learning.
     visible: true
     detailed: true
     description:
+    - icon: fas fa-star
+      title: "Major: Data Science & Artificial Intelligence"
+      items:
+      - "Option: GPGPU & MLOps"
+      # - "Minor: Finance / Tech For Good"
     - icon: fas fa-university
-      title: "Curriculum: Data Science & Artificial Intelligence"
+      title: "Curriculum"
       items:
       - "Computing: Big data, Cloud services, AI security, ..."
       - "Scientific: Maths (probabilities, ...), Machine learning theory, ..."
@@ -41,6 +46,8 @@ education:
     detailed: false
     info: Mostly distance learning, because of the COVID-19 pandemic.
     description:
+    - icon: fas fa-user-graduate
+      title: "Grade: 71%"
     - icon: fas fa-university
       title: "Curriculum:"
       items:
@@ -76,6 +83,8 @@ education:
     detailed: false
     info: Reduced and mandatory curriculum replacing studies abroad, because of the COVID-19 pandemic.
     description:
+    - icon: fas fa-user-graduate
+      title: "Grade: 74%"
     - icon: fas fa-university
       title: "Curriculum:"
       items:
@@ -93,6 +102,8 @@ education:
     detailed: false
     info: Semester fully completed despite EPITA's decision to replace it with their own curriculum (see above).
     description:
+    - icon: fas fa-user-graduate
+      title: "Grade: 90%"
     - icon: fas fa-university
       title: "Curriculum:"
       items:
@@ -102,8 +113,14 @@ education:
       items:
       - "Algorithm practicals in Java."
       - "Android applications in Java using Android Studio."
-    - icon: fas fa-user-graduate
-      title: "Grade: 90%"
+    - icon: fas fa-graduation-cap fa-fw
+      title: "School projects:"
+      items:
+      - |
+        Android applications: <br />
+        • ContactManager – App for managing contacts with a local unsynced database. <br />
+        • MineSweeper – Small minesweeper game. <br />
+        • TrackMaster – GPS tracking app for running.
 
   - title: EPITA
     link: https://www.epita.fr/
@@ -113,6 +130,8 @@ education:
     visible: true
     detailed: false
     description:
+    - icon: fas fa-user-graduate
+      title: "Grade: 74%"
     - icon: fas fa-university
       title: "Curriculum:"
       items:
@@ -145,6 +164,8 @@ education:
     visible: true
     detailed: false
     description:
+    - icon: fas fa-user-graduate
+      title: "Grade: 64% (baccalaureate)"
     - icon: fas fa-university
       title: "Curriculum:"
       items:
@@ -202,7 +223,8 @@ work:
       - Full-stack JavaScript development with Vue.js, Nuxt.js (Node.js).
       - Front-end development with SCSS, LESS, Tailwind CSS.
       - Application deployment on Heroku, WP Engine and Microsoft Azure.
-    - First internship for the validation of the engineering cycle at EPITA.
+    - icon: fas fa-question
+      text: "Context: First internship for the validation of the engineering cycle at EPITA."
 
   - title: Grand Chancery of the Legion of Honor
     link: https://www.legiondhonneur.fr/
@@ -220,7 +242,8 @@ work:
       - System image cloning and deployment on new machines using FOG Project.
       - Development of automation scripts for data processing.
       - Inventory of computer equipment.
-    - Internship for the validation of the preparatory cycle at EPITA.
+    - icon: fas fa-question
+      text: "Context: Internship for the validation of the preparatory cycle at EPITA."
 
   - title: Natrox Group
     position: Technical Director & Projects Developer

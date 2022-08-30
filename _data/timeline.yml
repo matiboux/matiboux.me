@@ -29,6 +29,20 @@
   opensource: true
   tags: [epita, scia]
 
+- title: "Started PFEE at EPITA: Chatbot – AXI Technologies"
+  description:
+  - Chatbot for the AXI Technologies' e-learning platform.
+  links:
+  - title: <i class="fas fa-globe fa-fw"></i> AXI Academy
+    href: https://axiacademy.fr/
+  date: May 18, 2022
+  languages: [Python]
+  tools: [Rasa]
+  category: school
+  status: active
+  opensource: false
+  tags: [epita, scia, pfee]
+
 - description:
   - <i class="fas fa-toolbox fa-fw"></i> Learned to use the Wordpress plugin <b>Elementor</b>
   - Used for work at Brainsonic.

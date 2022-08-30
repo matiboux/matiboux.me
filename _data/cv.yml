@@ -223,7 +223,7 @@ work:
       - Full-stack JavaScript development with Vue.js, Nuxt.js (Node.js).
       - Front-end development with SCSS, LESS, Tailwind CSS.
       - Application deployment on Heroku, WP Engine and Microsoft Azure.
-    - icon: fas fa-question
+    - icon: fas fa-circle-question
       text: "Context: First internship for the validation of the engineering cycle at EPITA."
 
   - title: Grand Chancery of the Legion of Honor
@@ -242,7 +242,7 @@ work:
       - System image cloning and deployment on new machines using FOG Project.
       - Development of automation scripts for data processing.
       - Inventory of computer equipment.
-    - icon: fas fa-question
+    - icon: fas fa-circle-question
       text: "Context: Internship for the validation of the preparatory cycle at EPITA."
 
   - title: Natrox Group

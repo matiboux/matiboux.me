@@ -8,17 +8,20 @@ avatar_alt: Matiboux
 <div class="row">
 	<div class="col-lg-5 mb-4 mb-lg-0 text-center text-sm-left">
 		<p>
-			Hey I'm Mati, an <a href="https://www.epita.fr/">EPITA</a> student in Data Science and Artificial Intelligence.
+			Currently in my final year as an IT engineer student at <a href="https://www.epita.fr/">EPITA</a> in Data Science and Artificial Intelligence.
 			I'm also skilled as a back-end developer, leaning full-stack in web development.
+			I am involved in various projects both as part of my curriculum, and as a hobby.
 		</p>
 		<p>
-			On this website you can find information about me, my curriculum vitae, and things I did (including this website, yes).
+			I am currently looking for a job or internship starting in February 2022.
+			I would welcome any opportunity to grow my expertise in fields such as Data Science, Artificial Intelligence or Big Data.
 		</p>
 		<p>
-			You can also find me or contact me on the following social networks:
+			On this website you can find information about me and my projects.
+			You can also find me on the following platforms:
 		</p>
 		<ul class="social-icons">
-			{% assign services = 'github,linkedin,twitter' | split: ',' %}
+			{% assign services = 'github,linkedin' | split: ',' %}
 			{% for service in services %}
 				{% if site.data.about.social[service] %}
 					<li class="{{ service }}"><a href="{{ site.data.about.social[service].href }}" class="{{ site.data.about.social[service].icon }} fa-fw"></a></li>
@@ -28,12 +31,12 @@ avatar_alt: Matiboux
 		<p>
 			You can contact me via: <br />
 			<i class="{{ site.data.about.social.telegram.icon }} fa-fw"></i> <a href="{{ site.data.about.social.telegram.href }}">Telegram</a>, or <br />
-			<i class="{{ site.data.about.social.discord.icon }} fa-fw"></i> <a href="{{ site.data.about.social.discord.href }}">Discord ({{ site.data.about.social.discord.handle }})</a>, or <br />
+			<i class="{{ site.data.about.social.discord.icon }} fa-fw"></i> <a href="{{ site.data.about.social.discord.href }}">Discord</a> ({{ site.data.about.social.discord.handle }}), or <br />
 			<i class="{{ site.data.about.social.proemail.icon }} fa-fw"></i> <a href="{{ site.data.about.social.proemail.href }}">Email</a>, for professional inquiries
 		</p>
 	</div>
 	<div class="col-lg-7">
-		<div class="list-group list-group-dark ">
+		<div class="list-group list-group-dark">
 			<a href="https://matiboux.com/" class="list-group-item list-group-item-action">
 				<i class="fas fa-archive fa-fw"></i> Projects Platform</a>
 			<a href="https://opensource.matiboux.com/" class="list-group-item list-group-item-action">

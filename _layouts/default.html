@@ -9,7 +9,7 @@ layout: bodyfull
 		{% endunless %}
 
 		<div class="title">
-			{% if site.data.about.avatar %}
+			{% if page.avatar and site.data.about.avatar %}
 				{% if site.data.about.avatar.src %}
 					<img src="{{ site.data.about.avatar.src }}" {% if site.data.about.avatar.alt %}alt="{{ site.data.about.avatar.alt }}"{% endif %} />
 				{% elsif site.data.about.avatar.file %}

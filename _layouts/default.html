@@ -12,6 +12,8 @@ layout: bodyfull
 			{% if page.avatar %}
 				{% if page.avatar.src %}
 					<img src="{{ page.avatar.src }}" {% if page.avatar.alt %}alt="{{ page.avatar.alt }}"{% endif %} />
+				{% elsif page.avatar.file %}
+					<img src="{{ page.avatar.file | relative_url }}" {% if page.avatar.alt %}alt="{{ page.avatar.alt }}"{% endif %} />
 				{% else %}
 					<img src="{{ page.avatar }}" />
 				{% endif %}

@@ -74,7 +74,7 @@ hr { border-color: rgba(255, 255, 255, .1) }
 .title h1 { font-weight: bold; margin-bottom: 0 }
 .title img {
 	display: block;
-	width: 100px;
+	max-height: 120px;
 	margin: 0 auto .5rem;
 	border: 2px solid #306090;
 	border-radius: 5px;

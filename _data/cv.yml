@@ -6,7 +6,7 @@ education:
   items:
   - title: EPITA
     link: https://www.epita.fr/
-    position: "2<sup>nd</sup> & 3<sup>rd</sup> year Engineering cycle – Computer Science: Data & AI"
+    position: "2<sup>nd</sup> & 3<sup>rd</sup> year Engineering cycle – Data Science & Artificial Intelligence"
     location: Paris, France
     date: Sept. 2021 – Today
     info: Mostly on-site learning.
@@ -16,8 +16,8 @@ education:
     - icon: fas fa-star
       title: "Major: Data Science & Artificial Intelligence"
       items:
-      - "Option: GPGPU & MLOps"
-      # - "Minor: Finance / Tech For Good"
+      - "Option: Dev on GPU, MLOps"
+      - "Minor: Creation of a company"
     - icon: fas fa-university
       title: "Curriculum"
       items:
@@ -27,15 +27,27 @@ education:
       # - "Management: Financial management, ..."
       # - "Humanities: Soft skills, Copyright Law, ..."
     - icon: fas fa-code fa-fw
-      title: "Prog. languages: Python, R, Scala"
+      title: "Prog. languages: Python, R, C++, Go, Scala"
       items:
-      - "Data Science projects, in Python or R."
-      - "Apache Spark projects, in Python or Scala."
-      - "<small>More soon...</small>"
-    # - icon: fas fa-graduation-cap fa-fw
-    #   title: "School projects:"
-    #   items:
-    #   - "<small>More soon...</small>"
+      - "Data Science and DataViz – Matplotlib, Plotly, Numpy – Python, R"
+      - "Machine Learning models – Tensorflow, PyTorch, Scikit-Learn – Python"
+      - "Distributed computing – Apache Spark – Python, Scala"
+      - "GPU development – CUDA – C++"
+    - icon: fas fa-graduation-cap fa-fw
+      title: "School projects:"
+      items:
+      - "Cloud concepts manipulation for AI, with Azure."
+      - "Anomaly detection for tracking network attacks, with Scikit Learn."
+      - "Building a distributed computing system, with Apache Spark / Kafka."
+      - "Building convolutional neural networks for image classification, with Tensorflow."
+      - "Recommendation algorithms on past traffic, for the Recsys Challenge 2022."
+      - "Re-implementation of gradient descent algorithms."
+    - icon: fas fa-briefcase
+      title: "End of studies project: Chatbot (AXI Technologies)"
+      items:
+      - Chatbot creation with Rasa Open Source, a machine learning framework for automated conversations.
+      - Python back-end development with Rasa SDK for the chatbot API.
+      - Use machine learning models with Hugging Face.
 
   - title: EPITA
     link: https://www.epita.fr/
@@ -56,23 +68,23 @@ education:
       - "Humanities: Business history, Society and equality"
       - "Electives: General French Law, Security"
     - icon: fas fa-code fa-fw
-      title: "Prog. languages: C, C++, Java, Python, Shell, SQL"
+      title: "Prog. languages: C, C++, Java, Python, C#, SQL, Shell"
       items:
-      - "Piscine C – 120 exercises, in C."
-      - "C++ Workshop – 47 exercises, in C++."
-      - "Java Workshop – 29 exercises, in Java."
-      - "Shell Workshop – 28 exercises, in Shell."
-      - "SQL Workshop – 8 exercises, in SQL."
+      - "Piscine C – 120 exercises (C)."
+      - "C++ Workshop – 47 exercises (C++)."
+      - "Java Workshop – 29 exercises (Java)."
+      - "Shell Workshop – 28 exercises (Shell)."
+      - "SQL Workshop – 8 exercises (SQL)."
       - "Unit testing in C, C++, Java & Functional testing in Python, Shell."
     - icon: fas fa-graduation-cap fa-fw
       title: "School projects:"
       items:
-      - "Malloc – a re-implementation of the malloc-family functions, in C."
-      - "42sh – a POSIX shell developed, in a group, in C."
-      - "Spider – a web and reverse proxy HTTP server developed, in a group, in C++."
-      - "Chess – a chess engine and AI developed, in a group, in C++."
-      - "Java WebService – a backend web service with multiple REST endpoints, in Java."
-      - "Ping – a Java-oriented IDE, compatible with Maven and Git."
+      - "Malloc – a re-implementation of the malloc-family functions (C)."
+      - "42sh – a POSIX shell developed (C, group project)."
+      - "Spider – a web and reverse proxy HTTP server developed (C++, group project)."
+      - "Chess – a chess engine and AI developed (C++, group project)."
+      - "Java WebService – a backend web service with multiple REST endpoints (Java, Spark Java)."
+      - "Ping – a Java-oriented IDE, compatible with Maven and Git (Java, group project)."
 
   - title: EPITA
     link: https://www.epita.fr/
@@ -92,6 +104,8 @@ education:
       - "Humanities: French, English, Cultural opening"
     - icon: fas fa-code fa-fw
       title: "Prog. languages: C, Rust"
+      items:
+      - "Programming practicals – C, Rust."
 
   - title: Griffith College
     link: https://www.griffith.ie/
@@ -111,8 +125,8 @@ education:
     - icon: fas fa-code fa-fw
       title: "Prog. languages: Java"
       items:
-      - "Algorithm practicals in Java."
-      - "Android applications in Java using Android Studio."
+      - "Algorithmic practicals – Java."
+      - "Android applications development – Java, Android Studio."
     - icon: fas fa-graduation-cap fa-fw
       title: "School projects:"
       items:
@@ -135,17 +149,20 @@ education:
     - icon: fas fa-university
       title: "Curriculum:"
       items:
-      - "Computing: Algorithms, Programming, Computer Architecture"
+      - "Computing: Algorithmics, Programming, Computer Architecture"
       - "Engineering: Maths, Physics, Electronics"
       - "Humanities: French, English, Cultural opening"
     - icon: fas fa-code fa-fw
-      title: "Prog. languages: C, C#, Python, oCaml"
+      title: "Prog. languages: C, Python, C#, OCaml"
+      items:
+      - "Programming practicals – C, C#, OCaml."
+      - "Algorithmic practicals – Python."
     - icon: fas fa-graduation-cap fa-fw
       title: "School projects:"
       items:
-      - text: Blast – a video game made in group with the Unity game engine.
+      - text: Blast – a multiplayer video game (C#, Unity, group project).
         link: https://g00pix.github.io/ProjetBlast/
-      - "OCR Gang – an OCR program made in a group, coded in C."
+      - "OCR Gang – an OCR program (C, group project)."
     - icon: fas fa-book fa-fw
       title: "Personal and/or extracurricular projects:"
       items:
@@ -202,6 +219,25 @@ work:
       items:
       - Registration to the auto-entrepreneur regime.
 
+  - title: 2GETHER
+    position: Copresident & Lead Web DeveloperCopresident
+    # location: Paris, France
+    date: Dec. 2020 – Today
+    visible: true
+    detailed: false
+    description:
+    - icon: fas fa-file-lines
+      title: "Projects:"
+      items:
+      - Website development (static HTML, NodeJS, Astro).
+      - Discord community bot development (Discord.js + custom framework).
+      - Upcoming back-end API development (PHP).
+    - icon: fas fa-file-pen
+      title: "Administrative:"
+      items:
+      - Writing of the association's statutes and bylaws at its creation.
+      - Writing of the reports and tracking of the financial accounts.
+
   - title: Brainsonic
     link: https://www.brainsonic.com/
     position: Intern Back-end Web Developer
@@ -223,6 +259,11 @@ work:
       - Full-stack JavaScript development with Vue.js, Nuxt.js (Node.js).
       - Front-end development with SCSS, LESS, Tailwind CSS.
       - Application deployment on Heroku, WP Engine and Microsoft Azure.
+    - icon: fas fa-bolt
+      title: "Organization:"
+      items:
+      - Reporting of hours worked and tasks completed on projects each day.
+      - Extremely detailed personal reporting in preparation of the internship report.
     - icon: fas fa-circle-question
       text: "Context: First internship for the validation of the engineering cycle at EPITA."
 
@@ -285,13 +326,13 @@ associative:
   items:
   - title: 2GETHER
     link: https://2gether-asso.fr/
-    position: Co-president
-    date: Jan. 2020 – Today
+    position: Copresident
+    date: Dec. 2020 – Today
     visible: true
     detailed: null
     description:
     - items:
-      - Jan. 2020 – Co-founded the association under the French law of July 1, 1901.
+      - Jan. 2021 – Co-founded the association under the French law of July 1, 1901.
 
   - title: Associative Life – Jules Verne High School
     position: Communication Officer (at the Maison des Lycéens)

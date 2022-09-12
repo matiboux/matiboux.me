@@ -14,7 +14,13 @@ scripts:
 	<div class="cv-about pb-2">
 		<div class="media">
 			{% if site.data.about.avatar %}
-				<img src="{{ site.data.about.avatar }}" class="about-avatar mr-3" alt="{{ site.data.about.name }}" />
+				{% if site.data.about.avatar.src %}
+					<img src="{{ site.data.about.avatar.src }}" class="about-avatar mr-3" {% if site.data.about.avatar.alt %}alt="{{ site.data.about.avatar.alt }}"{% endif %} />
+				{% elsif site.data.about.avatar.file %}
+					<img src="{{ site.data.about.avatar.file | relative_url }}" class="about-avatar mr-3" {% if site.data.about.avatar.alt %}alt="{{ site.data.about.avatar.alt }}"{% endif %} />
+				{% else %}
+					<img src="{{ site.data.about.avatar }}" class="about-avatar mr-3" />
+				{% endif %}
 			{% endif %}
 
 			<div class="media-body">

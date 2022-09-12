@@ -6,7 +6,7 @@
 	#main .cv-items { padding-left: 1rem; border-left: 2px solid #f0f0f0 } }
 
 #main .cv-about .media > * { align-self: center }
-#main .cv-about .media img { border: 2px solid #4080c0; border-radius: .5rem }
+#main .cv-about .media img { max-height: 100px; border: 2px solid #4080c0; border-radius: .5rem }
 #main .cv-about .about-social-links { padding-left: 0; list-style: none }
 #main .cv-about .about-social-links > *,
 #main .cv-about .about-social-links a

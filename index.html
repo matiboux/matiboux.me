@@ -20,7 +20,7 @@ avatar: true
 			You can also find me on the following platforms:
 		</p>
 		<ul class="social-icons">
-			{% assign services = 'github,linkedin' | split: ',' %}
+			{% assign services = 'linkedin,github' | split: ',' %}
 			{% for service in services %}
 				{% if site.data.about.social[service] %}
 					<li class="{{ service }}"><a href="{{ site.data.about.social[service].href }}" class="{{ site.data.about.social[service].icon }} fa-fw"></a></li>

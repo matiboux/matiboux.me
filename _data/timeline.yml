@@ -13,6 +13,18 @@
   # tags: []
 
 
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Svelte</b>
+  - Used in the front-end website for 2GETHER.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> svelte.dev
+    href: https://svelte.dev/
+  date: Oct. 24, 2022
+  tools: [Svelte]
+  languages: [HTML, CSS, JavaScript]
+  category: knowledge
+  tags: [svelte, 2gether]
+
 - title: Created <b>Instant Commit</b> VS Code Extension
   description:
   - "Description: \"Instant commit your changes with a single click, auto generating a commit message based on selected file changes for you.\""

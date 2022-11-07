@@ -14,6 +14,17 @@
 
 
 - description:
+  - <i class="fas fa-code fa-fw"></i> Learned the <b>Go</b> language
+  - Studied at EPITA for school projects.
+  links:
+  - title: <i class="fas fa-link fa-fw"></i> go.dev
+    href: https://go.dev/
+  date: Oct. 28, 2022
+  languages: [Go]
+  category: knowledge
+  tags: [go, epita]
+
+- description:
   - <i class="fas fa-toolbox fa-fw"></i> Learned to use <b>Svelte</b>
   - Used in the front-end website for 2GETHER.
   links:
@@ -54,6 +65,22 @@
   status: active
   opensource: false
   tags: [epita, scia, pfee]
+
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned to use the Python library <b>Pandas</b>
+  date: ???
+  languages: [Python]
+  tools: [Pandas]
+  category: knowledge
+  tags: [python, epita, scia]
+
+- description:
+  - <i class="fas fa-toolbox fa-fw"></i> Learned to use the Python library <b>Numpy</b>
+  date: ???
+  languages: [Python]
+  tools: [Numpy]
+  category: knowledge
+  tags: [python, epita, scia]
 
 - description:
   - <i class="fas fa-toolbox fa-fw"></i> Learned to use the Wordpress plugin <b>Elementor</b>

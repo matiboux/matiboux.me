@@ -1,5 +1,8 @@
 ---
 import '@fontsource-variable/inter'
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import bootstrapJs from 'bootstrap/dist/js/bootstrap.bundle.min.js?url'
 
 import Base from '~/layouts/Base.astro'
 import type { Props as BaseProps } from '~/layouts/Base.astro'
@@ -40,6 +43,13 @@ const baseProps: BaseProps = {
 ---
 
 <Base {...baseProps}>
-	<slot slot="head" name="head" />
+
+	<Fragment slot="head">
+		<script src={bootstrapJs} defer></script>
+
+		<slot name="head" />
+	</Fragment>
+
 	<slot />
+
 </Base>

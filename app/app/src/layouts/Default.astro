@@ -4,6 +4,7 @@ import { getAbsoluteLocaleUrl } from 'astro:i18n'
 import yaml from 'js-yaml'
 
 import Layout from '~/layouts/Layout.astro'
+import type { Props as BaseProps } from '~/layouts/Layout.astro'
 import Footer from '~/components/Footer.astro'
 
 import avatar from '~/assets/avatar.jpg'
@@ -14,23 +15,22 @@ const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defa
 import aboutYml from '~/data/about.yml?raw'
 const about = yaml.load(aboutYml) as any
 
-export interface Props
+export interface Props extends BaseProps
 {
+	title: NonNullable<BaseProps['title']>
 	containerClass?: string
 	isHome?: boolean
 	showAvatar?: boolean
-	title: string
 }
 
 const {
 	isHome = false,
 	showAvatar = false,
-	title,
 } = Astro.props
 ---
 
 <Layout
-	title={title}
+	{...Astro.props}
 	socialUrl={Astro.site}
 >
 
@@ -51,7 +51,7 @@ const {
 					/>
 				)}
 
-				<h1>{title}</h1>
+				<h1>{Astro.props.title}</h1>
 			</div>
 
 			<slot />

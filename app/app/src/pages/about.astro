@@ -1,0 +1,65 @@
+---
+import { getAbsoluteLocaleUrl } from 'astro:i18n'
+import yaml from 'js-yaml'
+
+import Default from '~/layouts/Default.astro'
+
+import { defaultLocale } from '~/i18n'
+const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defaultLocale, path)
+
+import aboutYml from '~/data/about.yml?raw'
+const about = yaml.load(aboutYml) as any
+
+const title = 'About me'
+---
+
+<Default
+	title={title}
+	containerClass='mw-md'
+>
+
+	<p>
+		My name is Mathieu GUÉRIN.
+		I'm {about.age}-years-old and currently in my final year as an IT engineer student.
+		I'm studying Data Science and Artificial Intelligence in a Master's degree  at <a href="https://www.epita.fr/">EPITA</a>.
+		I'm also skilled as a back-end developer, leaning full-stack in web development.
+	</p>
+	<p>
+		I first got into IT technologies in 2010, approximately, by learning programming with the C language.
+		I wrote some basic console programs and tried to fiddle with the SDL library.
+		Later on, I started to learn web development with HTML, CSS, PHP and JavaScript.
+		Since 2012, I created many projects for my own account and a few more for others.
+		I also explored and fiddled a bit with Arduino projects.
+		As years passed, I kept learning about more tech tools and concepts, programming languages and paradigms, and machine learning.
+	</p>
+
+	<p>
+		Today, I'm able to work with a variety of technologies and languages.
+		I find myself comfortable working with web apps and much more. I have experience with many back-end languages such as PHP, JavaScript, Python, Java, C#, C++.
+		I'm also familiar with some front-end languages and frameworks for the web.
+		Of course, I know how to work with databases and ORMs.
+	</p>
+
+	<p>
+		I'm an open-source enthusiast and some of my projects are available on my <a href="https://github.com/matiboux">Github account</a>.
+		Since 2018 after high school, I focus more on my studies and my work, but I still keep some time for my personal projects.
+	</p>
+	<p>
+		If you want to know more about me and my projects, please see my detailed <a href={_url('/cv')}>Curriculum Vitae</a>,
+		my <a href={_url('/timeline')}>Work Timeline</a>.
+		<!-- or the home page of my projects platform: <a href="https://matiboux.com/">matiboux.com</a>. -->
+	</p>
+	<hr />
+
+	<p><b>Want to contact me?</b> Here's how:</p>
+	<p>
+		<a href={about.social.email.href} class="btn btn-secondary btn-sm"><i class={`${about.social.email.icon} fa-fw`}></i> Personal Email</a>
+		<a href={about.social.proemail.href} class="btn btn-secondary btn-sm"><i class={`${about.social.proemail.icon} fa-fw`}></i> Professional Email</a>
+		<br />
+		<span class="d-block mt-1"></span>
+		<a href={about.social.telegram.href} class="btn btn-primary btn-sm"><i class={`${about.social.telegram.icon} fa-fw`}></i> Telegram</a>
+		<a href={about.social.discord.href} class="btn btn-dark btn-sm"><i class={`${about.social.discord.icon} fa-fw`}></i> Discord ({about.social.discord.handle})</a>
+		<a href={about.social.linkedin.href} class="btn btn-primary btn-sm"><i class={`${about.social.linkedin.icon} fa-fw`}></i> LinkedIn</a>
+	</p>
+
+</Default>

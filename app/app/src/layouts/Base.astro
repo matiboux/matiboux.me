@@ -17,8 +17,8 @@ export interface Props
 	themeColor?: string | undefined
 	viewportScale?: number
 	favicon?: ImageMetadata | string | undefined
-	socialTitle?: string | undefined
-	socialDescription?: string | undefined
+	socialTitle?: string | true | undefined
+	socialDescription?: string | true | undefined
 	socialImage?: URL | undefined
 	socialUrl?: URL | undefined
 	socialType?: string | undefined
@@ -41,8 +41,8 @@ const {
 	themeColor = undefined,
 	viewportScale = 1,
 	favicon = undefined,
-	socialTitle = title,
-	socialDescription = description,
+	socialTitle = true,
+	socialDescription = true,
 	socialImage = undefined,
 	socialUrl = undefined,
 	socialType = 'website',
@@ -90,8 +90,8 @@ const formatsToType = {
 		{themeColor && <meta name="theme-color" content={themeColor} />}
 
 		<!-- social media -->
-		{socialTitle && <meta property="og:title" content={socialTitle} />}
-		{socialDescription && <meta property="og:description" content={socialDescription} />}
+		{socialTitle && <meta property="og:title" content={typeof socialTitle === 'string' ? socialTitle : title} />}
+		{socialDescription && <meta property="og:description" content={typeof socialDescription === 'string' ? socialDescription : description} />}
 		{socialImage && <meta property="og:image" content={socialImage} />}
 		{socialUrl && <meta property="og:url" content={socialUrl} />}
 		{socialType && <meta property="og:type" content={socialType} />}

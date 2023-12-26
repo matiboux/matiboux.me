@@ -6,10 +6,21 @@ import avatar from '~/assets/avatar.jpg'
 
 import aboutYml from '~/data/about.yml?raw'
 const about = yaml.load(aboutYml) as any
+
+export interface Props
+{
+	width?: number
+	height?: number
+}
 ---
 
 <Image
 	src={avatar}
 	alt={about.avatar.alt || undefined}
-	width={120}
+	{...(Astro.props.width || !Astro.props.height) ? {
+		width: Astro.props.width || 120,
+	} : {}}
+	{...(Astro.props.height ? {
+		height: Astro.props.height,
+	} : {})}
 />

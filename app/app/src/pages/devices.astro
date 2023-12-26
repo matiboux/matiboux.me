@@ -1,0 +1,201 @@
+---
+import Default from '~/layouts/Default.astro'
+
+const title = 'Devices'
+const description = 'My devices'
+---
+
+<Default
+	title={title}
+	description={description}
+	containerClass='mw-lg'
+>
+
+	<p>The computer devices I had in my life: desktop computers, laptops, and smartphones.</p>
+
+	<h2>Computers</h2>
+
+	<div class="devices-items">
+		<div class="item">
+			<div class="type">
+				<i class="fas fa-desktop fa-fw"></i>
+			</div>
+			<div class="content">
+				<p class="date">Oct. 1, 2021 – Today</p>
+				<ul>
+					<li><i class="icon fab fa-windows fa-fw"></i> <small>OS:</small> Windows 11 Pro (64 bits)</li>
+					<li><i class="icon fas fa-microchip fa-fw"></i> <small>CPU:</small> AMD Ryzen 3700X <small>@ 3.60GHz – 8 cores, 16 threads</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>Motherboard:</small> ASRock B550M Phantom Gaming 4</li>
+					<li><i class="icon fas fa-fw"></i> <small>RAM:</small> Corsair Vengeance LPX 16GB <small>(2× 8GB) DDR4 @ 3200MHz</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>GPU:</small> MSI Nvidia GeForce GTX 1660 Ti <small>(6GB VRAM)</small></li>
+					<li><i class="icon fas fa-hdd fa-fw"></i> <small>SATA SSD:</small> ~120GB <small>(System, Apps)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~500GB <small>(Apps) (old, only 320GB usable)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~1TB <small>(Games, Temporary files) (old, damaged)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~2TB <small>(Data)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>NVMe SDD:</small> ~1TB <small>(Games)</small></li>
+				</ul>
+			</div>
+		</div>
+		<div class="item">
+			<div class="type">
+				<i class="fas fa-laptop fa-fw"></i>
+			</div>
+			<div class="content">
+				<p class="date">??? – Today</p>
+				<ul>
+					<li><i class="icon fab fa-windows fa-fw"></i> <small>OS:</small> Windows 11 Home (64 bits)</li>
+					<li><i class="icon fas fa-microchip fa-fw"></i> <small>CPU:</small> Intel Core i5-8250U <small>@ 1.60GHz – 4 cores, 8 threads</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>RAM:</small> 8GB <small>(2× 4GB) DDR4 @ 2400MHz</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>GPU:</small> Nvidia Geforce GTX 1050 <small>(6GB VRAM)</small></li>
+					<li><i class="icon fas fa-hdd fa-fw"></i> <small>SATA SSD:</small> ~250GB <small>(System, Apps)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~1TB partition <small>(Data, Games)</small></li>
+				</ul>
+			</div>
+		</div>
+		<div class="item">
+			<div class="type">
+				<i class="fas fa-desktop fa-fw"></i>
+			</div>
+			<div class="content">
+				<p class="date">??? – Sept. 25, 2021 (7 years ?)</p>
+				<ul>
+					<li><i class="icon fab fa-windows fa-fw"></i> <small>OS:</small> Windows 10 Home (64 bits)</li>
+					<li><i class="icon fas fa-microchip fa-fw"></i> <small>CPU:</small> Intel Core i7-4790K <small>@ 4.00GHz – 4 cores, 8 threads</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>Motherboard:</small> Asus Z97 Pro</li>
+					<li><i class="icon fas fa-fw"></i> <small>RAM:</small> 16GB <small>(2× 8GB) DDR3</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>GPU:</small> Nvidia GeForce GTX 770 <small>(2GB VRAM)</small></li>
+					<li><i class="icon fas fa-hdd fa-fw"></i> <small>SATA SSD:</small> ~120GB <small>(System, Apps)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~500GB <small>(Apps) (old, only 320GB usable)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~1TB <small>(Games, Temporary files) (old, damaged)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~2TB <small>(Data)</small></li>
+				</ul>
+			</div>
+		</div>
+		<div class="item">
+			<div class="type">
+				<i class="fas fa-laptop fa-fw"></i>
+			</div>
+			<div class="content">
+				<p class="date">??? – ???</p>
+				<ul>
+					<li><i class="icon fab fa-windows fa-fw"></i> <small>OS:</small> Windows 10 Home (64 bits)</li>
+					<li><i class="icon fas fa-microchip fa-fw"></i> <small>CPU:</small> Intel Core i5-2450M <small>@ 2.50GHz – 2 cores, 4 threads</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>RAM:</small> 4GB</li>
+					<li><i class="icon fas fa-fw"></i> <small>GPU:</small> Nvidia Geforce GTX 410M</li>
+					<li><i class="icon fas fa-hdd fa-fw"></i> <small>SATA SSD:</small> ~100GB <small>(System, Apps)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~300GB <small>(Apps, Data, Games)</small></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<h2>Phones</h2>
+
+	<div class="devices-items">
+		<div class="item">
+			<div class="type">
+				<i class="fas fa-mobile-alt fa-fw"></i>
+			</div>
+			<div class="content">
+				<p class="date">Aug. 1, 2021 – Today</p>
+				<ul>
+					<li><i class="icon fas fa-mobile-alt fa-fw"></i> <small>Device:</small> OnePlus 7 Pro</li>
+					<li><i class="icon fab fa-android fa-fw"></i> <small>OS:</small> Android 9 <small>to</small> Android 10</li>
+					<li><i class="icon fas fa-mobile-alt fa-fw"></i> <small>Screen:</small> 6.67" 19.5:9 <small>AMOLED 1440p 90Hz</small></li>
+					<li><i class="icon fas fa-broadcast-tower fa-fw"></i> <small>Network:</small> LTE-A Cat18, 5G</li>
+					<li><i class="icon fas fa-microchip fa-fw"></i> <small>CPU:</small> Qualcomm Snapdragon 855 <small>(octa-core)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>RAM:</small> 8GB <small>LPDDR4X</small></li>
+					<li><i class="icon fas fa-hdd fa-fw"></i> <small>Storage:</small> 256GB</li>
+				</ul>
+			</div>
+		</div>
+		<div class="item">
+			<div class="type">
+				<i class="fas fa-mobile-alt fa-fw"></i>
+			</div>
+			<div class="content">
+				<p class="date">July 2016 (?) – July 31, 2021 (5 years)</p>
+				<ul>
+					<li><i class="icon fas fa-mobile-alt fa-fw"></i> <small>Device:</small> OnePlus 3</li>
+					<li><i class="icon fab fa-android fa-fw"></i> <small>OS:</small> Android 6 <small>to</small> Android 9</li>
+					<li><i class="icon fas fa-mobile-alt fa-fw"></i> <small>Screen:</small> 5.5" 16:9 <small>AMOLED 1080p 60Hz</small></li>
+					<li><i class="icon fas fa-broadcast-tower fa-fw"></i> <small>Network:</small> LTE-A Cat6</li>
+					<li><i class="icon fas fa-microchip fa-fw"></i> <small>CPU:</small> Qualcomm Snapdragon 820 <small>(quad-core)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>RAM:</small> 6GB <small>LPDDR4</small></li>
+					<li><i class="icon fas fa-hdd fa-fw"></i> <small>Storage:</small> 64GB</li>
+				</ul>
+			</div>
+		</div>
+		<div class="item">
+			<div class="type">
+				<i class="fas fa-mobile-alt fa-fw"></i>
+			</div>
+			<div class="content">
+				<p class="date">Apr. 2014 (?) – July 2016 (?) (2 years)</p>
+				<ul>
+					<li><i class="icon fas fa-mobile-alt fa-fw"></i> <small>Device:</small> Wiko Wax 4G</li>
+					<li><i class="icon fab fa-android fa-fw"></i> <small>OS:</small> Android 4.3 <small>to</small> Android 4.4</li>
+					<li><i class="icon fas fa-mobile-alt fa-fw"></i> <small>Screen:</small> 4.7" 16:9 <small>LCD 720p</small></li>
+					<li><i class="icon fas fa-broadcast-tower fa-fw"></i> <small>Network:</small> LTE Cat3</li>
+					<li><i class="icon fas fa-microchip fa-fw"></i> <small>CPU:</small> Nvidia Tegra 4i <small>(quad-core)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>RAM:</small> 1GB</li>
+					<li><i class="icon fas fa-hdd fa-fw"></i> <small>Storage:</small> 4GB <small>+ microSDHC</small></li>
+				</ul>
+			</div>
+		</div>
+		<div class="item">
+			<div class="type">
+				<i class="fas fa-mobile-alt fa-fw"></i>
+			</div>
+			<div class="content">
+				<p class="date">??? – ???</p>
+				<ul>
+					<li><i class="icon fas fa-mobile-alt fa-fw"></i> <small>Device:</small> Samsung Galaxy Y</li>
+					<li><i class="icon fab fa-android fa-fw"></i> <small>OS:</small> Android 2.3</li>
+					<li><i class="icon fas fa-mobile-alt fa-fw"></i> <small>Screen:</small> 3.0" 4:3 <small>TFT 240p</small></li>
+					<li><i class="icon fas fa-broadcast-tower fa-fw"></i> <small>Network:</small> HSPA</li>
+					<li><i class="icon fas fa-microchip fa-fw"></i> <small>CPU:</small> ARMv6 <small>@ 830MHz – 1 core</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>RAM:</small> 384MB</li>
+					<li><i class="icon fas fa-hdd fa-fw"></i> <small>Storage:</small> 512MB <small>+ microSDHC</small></li>
+				</ul>
+			</div>
+		</div>
+		<div class="item">
+			<div class="type">
+				<i class="fas fa-mobile-alt fa-fw"></i>
+			</div>
+			<div class="content">
+				<p class="date">??? – ???</p>
+				<ul>
+					<li><i class="icon fas fa-mobile-alt fa-fw"></i> <small>Device:</small> Samsung ...</li>
+					<li><i class="icon fas fa-fw"></i> <small>OS:</small> Not Android</li>
+					<li><i class="icon fas fa-mobile-alt fa-fw"></i> <small>Screen:</small> ?</li>
+					<li><i class="icon fas fa-microchip fa-fw"></i> <small>CPU:</small> ?</li>
+					<li><i class="icon fas fa-fw"></i> <small>RAM:</small> ?</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</Default>
+
+<style>
+	.devices-items { margin-bottom: 1rem; padding-top: .5rem; padding-left: 0; border-left: 0 }
+
+	.devices-items .item { display: flex; margin-bottom: 1rem; align-items: start; justify-content: left }
+	@media print {
+		.devices-items .item { page-break-inside: avoid } }
+
+	.devices-items .item > .type { background-color: #f0f0f0; width: 60px; line-height: 60px; color: #202020; font-size: 1.5em; text-align: center; border-radius: 50%; }
+
+	.devices-items .item > .content { margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #f0f0f0 }
+	.devices-items .item > .content > * { margin-bottom: 5px; font-size: 14px }
+	.devices-items .item > .content .date { font-weight: 500 }
+	@media not print {
+		.devices-items .item > .content .date { color: #c0c0c0 }
+		.devices-items .item.toggle:hover > .meta .date,
+		.devices-items .item.toggle:focus > .meta .date
+			{ color: #d0d0d0 } }
+	.devices-items .item > .content ul .icon { margin-top: 4px; margin-left: -40px; position: absolute }
+	.devices-items .item > .content ul small { color: #c0c0c0; font-size: .9em; }
+</style>

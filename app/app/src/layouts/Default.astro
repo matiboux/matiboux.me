@@ -14,14 +14,14 @@ const about = yaml.load(aboutYml) as any
 export interface Props
 {
 	containerClass?: string
-	home?: boolean
-	avatar?: boolean
+	isHome?: boolean
+	showAvatar?: boolean
 	title: string
 }
 
 const {
-	home = false,
-	avatar = false,
+	isHome = false,
+	showAvatar = false,
 	title,
 } = Astro.props
 ---
@@ -33,14 +33,14 @@ const {
 
 	<main id="main">
 		<div class:list={['container', Astro.props.containerClass]}>
-			{!home &&
+			{!isHome &&
 				<a href={_url('/')}>
 					&lsaquo; Back to home page
 				</a>
 			}
 
 			<div class="title">
-				{avatar && about.avatar && (
+				{showAvatar && about.avatar && (
 					(
 						about.avatar.src &&
 						<img src={about.avatar.src} alt={about.avatar.alt || undefined} />

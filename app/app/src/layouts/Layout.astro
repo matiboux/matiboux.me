@@ -10,7 +10,13 @@ import type { Props as BaseProps } from '~/layouts/Base.astro'
 export interface Props extends Omit<BaseProps, 'title'>
 {
 	title?: BaseProps['title']
+	noScripts?: boolean
 }
+
+const {
+	title,
+	noScripts = false,
+} = Astro.props
 
 interface Site
 {
@@ -31,10 +37,10 @@ if (site.title === undefined && Astro.props.title === undefined)
 
 const baseProps: BaseProps = {
 	...Astro.props,
-	title: Astro.props.title
+	title: title
 		? (site.title
-			? `${Astro.props.title} – ${site.title}`
-			: Astro.props.title
+			? `${title} – ${site.title}`
+			: title
 		)
 		: (site.title || ''),
 	description: Astro.props.description || site.description,
@@ -45,7 +51,11 @@ const baseProps: BaseProps = {
 <Base {...baseProps}>
 
 	<Fragment slot="head">
-		<script src={bootstrapJs} defer></script>
+		{!noScripts &&
+			<Fragment>
+				<script src={bootstrapJs} defer></script>
+			</Fragment>
+		}
 
 		<slot name="head" />
 	</Fragment>
@@ -53,3 +63,43 @@ const baseProps: BaseProps = {
 	<slot />
 
 </Base>
+
+<style>
+	:global(html) {
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		box-sizing: border-box;
+	}
+
+	:global(body) {
+		display: flex;
+		background: #202020;
+		width: 100%;
+		min-height: 100%;
+		padding: 2em 1em;
+		flex-direction: column;
+		color: #f0f0f0;
+	}
+	@media print { :global(body) { color: #000 } }
+	:global(body.page-error) { background: #903030 }
+
+	:global(a) { color: #50a0f0 }
+	:global(a):hover { color: #4080c0 }
+
+	:global(hr) { border-color: rgba(255, 255, 255, .1) }
+
+	@media (min-width: 576px) { :global(.mw-sm) { max-width: 540px } }
+	@media (min-width: 768px) { :global(.mw-md) { max-width: 720px } }
+	@media (min-width: 992px) { :global(.mw-lg) { max-width: 960px } }
+	@media (min-width: 1200px) { :global(.mw-xl) { max-width: 1140px } }
+
+
+	/** Main wrapper */
+
+	:global(#main) {
+		display: block;
+		width: 100%;
+		margin: auto;
+	}
+</style>

@@ -14,6 +14,7 @@ export interface Props
 	description?: string | undefined
 	author?: string | undefined
 	keywords?: string | undefined
+	generator?: boolean
 	themeColor?: string | undefined
 	viewportScale?: number
 	favicon?: ImageMetadata | string | undefined
@@ -38,6 +39,7 @@ const {
 	description = undefined,
 	author = undefined,
 	keywords = undefined,
+	generator = true,
 	themeColor = undefined,
 	viewportScale = 1,
 	favicon = undefined,
@@ -86,7 +88,7 @@ const formatsToType = {
 		{description && <meta name="description" content={description} />}
 		{author && <meta name="author" content={author} />}
 		{keywords && <meta name="keywords" content={keywords} />}
-		<meta name="generator" content={Astro.generator} />
+		{generator && <meta name="generator" content={Astro.generator} />}
 		{themeColor && <meta name="theme-color" content={themeColor} />}
 
 		<!-- social media -->

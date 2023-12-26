@@ -1,0 +1,318 @@
+---
+export interface Props
+{
+	group: {
+		title: string
+		items: {
+			title: string
+			link?: string
+			position?: string
+			award?: string
+			awards?: string[]
+			info?: string
+			description?: string | ({
+				title?: string
+				icon?: string
+				text?: string
+				items?: ({
+					text?: string
+					link?: string
+				} | string)[]
+			} | string)[]
+			location?: string
+			date?: string
+			visible?: boolean
+			detailed?: boolean
+		}[]
+	}
+}
+
+const {
+	group,
+} = Astro.props
+---
+
+{group && (
+	<h2>{group.title}</h2>
+	<Fragment>
+		{group.items &&
+			<div class="cv-items">
+				{group.items.some(item => !item.visible) &&
+					<div class="toggle-btn"
+							data-text-toggle-on="<i class=&quot;fas fa-plus fa-fw&quot;></i> Show hidden items"
+							data-text-toggle-off="<i class=&quot;fas fa-minus fa-fw&quot;></i> Hide items back">
+						<i class="fas fa-ellipsis-h fa-fw"></i> Loading...
+					</div>
+				}
+
+				{group.items.map(item =>
+					<div class:list={['item', !item.visible ? 'toggle' : undefined]} style={!item.visible ? 'display: none' : undefined}>
+						<div class="content">
+							<h4>
+								{item.title}
+								{item.link &&
+									<small class="d-print-none"><a href={item.link} target="_blank" rel="noopener"><i class="fas fa-external-link-alt fa-fw"></i></a></small>
+								}
+							</h4>
+							{item.position &&
+								<p class="position"><Fragment set:html={item.position} /></p>
+							}
+
+							{item.award &&
+								<p class="award">{item.award}</p>
+							}
+							{item.awards && item.awards.map(award =>
+								<p class="award">{award}</p>
+							)}
+
+							{item.detailed != null &&
+								<div class="toggle-btn"
+										data-text-toggle-on="<i class=&quot;fas fa-angle-right fa-fw&quot;></i> Show details"
+										data-text-toggle-off="<i class=&quot;fas fa-angle-down fa-fw&quot;></i> Hide details">
+									<i class="fas fa-ellipsis-h fa-fw"></i> Loading...
+								</div>
+							}
+
+							<div class:list={['description', item.detailed != null ? 'toggle' : undefined]} style={!item.detailed ? 'display: none' : undefined}>
+								{item.info &&
+									<p>
+										<i class="fas fa-info-circle fa-fw"></i>
+										<Fragment set:html={' '} />
+										<Fragment set:html={item.info} />
+									</p>
+								}
+
+								{item.description && (
+									typeof item.description === 'string'
+										? <p>{item.description}</p>
+										: item.description.map(description_item => (
+											typeof description_item === 'string'
+												? <p>{description_item }</p>
+												: <Fragment>
+													{description_item.title &&
+														<h6>
+															{description_item.icon &&
+																<i class:list={[description_item.icon, 'fa-fw']}></i>
+															}
+															<Fragment set:html={' '} />
+															<Fragment set:html={description_item.title} />
+														</h6>
+													}
+													{description_item.text &&
+														<p>
+															{!description_item.title && description_item.icon &&
+																<i class:list={[description_item.icon, 'fa-fw']}></i>
+															}
+															<Fragment set:html={' '} />
+															<Fragment set:html={description_item.text} />
+														</p>
+													}
+													{description_item.items &&
+														<ul>
+															{description_item.items.map(item =>
+																typeof item === 'string'
+																	? <li>
+																		<Fragment set:html={item} />
+																	</li>
+																	: <li>
+																		<Fragment set:html={item.text} />
+																		{item.link &&
+																			<small class="d-print-none"><a href={item.link}><i class="fas fa-external-link-alt fa-fw"></i></a></small>
+																		}
+																	</li>
+															)}
+														</ul>
+													}
+												</Fragment>
+										))
+								)}
+							</div>
+						</div>
+
+						{(item.location || item.date) &&
+							<div class="meta">
+								{item.location &&
+									<p class="location">{item.location}</p>
+								}
+								{item.date &&
+									<p class="date">{item.date}</p>
+								}
+							</div>
+						}
+					</div>
+				)}
+			</div>
+		}
+	</Fragment>
+)}
+
+<script>
+	function isToggleVisible(toggles: NodeListOf<HTMLElement>)
+	{
+		let isVisible = true
+		for (let toggle of toggles)
+		{
+			if (toggle.style.display === 'none')
+			{
+				isVisible = false
+				break
+			}
+		}
+
+		return isVisible
+	}
+
+	const toggleButtons = document.querySelectorAll<HTMLElement>('.cv-items .toggle-btn')
+	for (let toggleBtn of toggleButtons)
+	{
+		toggleBtn.style.cursor = 'pointer'
+
+		const toggles = toggleBtn.parentElement?.querySelectorAll<HTMLElement>(':scope > .toggle')
+		if (toggles)
+		{
+			for (let toggle of toggles)
+			{
+				const newlineMatches = toggle.innerText.trim().match(/[\t\r\n\v\f]+/g) || []
+				toggle.setAttribute(
+					'data-text-toggle-on',
+					`${toggle.getAttribute('data-text-toggle-on')} <small>(${newlineMatches.length + 1} lines)</small>`,
+				)
+			}
+
+			const isVisible = isToggleVisible(toggles)
+			if (isVisible)
+			{
+				toggleBtn.innerHTML = toggleBtn.getAttribute('data-text-toggle-off') || ''
+			}
+			else
+			{
+				toggleBtn.innerHTML = toggleBtn.getAttribute('data-text-toggle-on') || ''
+			}
+		}
+
+		toggleBtn.addEventListener('click', (event: MouseEvent) =>
+			{
+				event.preventDefault()
+				const toggles = (event.currentTarget as HTMLElement | null)?.parentElement?.querySelectorAll<HTMLElement>(':scope > .toggle')
+				if (toggles)
+				{
+					const isVisible = isToggleVisible(toggles)
+					if (!isVisible)
+					{
+						toggles.forEach(toggle => toggle.style.removeProperty('display')) // Toggle on
+						toggleBtn.innerHTML = toggleBtn.getAttribute('data-text-toggle-off') || ''
+					}
+					else
+					{
+						toggles.forEach(toggle => toggle.style.display = 'none') // Toggle off
+						toggleBtn.innerHTML = toggleBtn.getAttribute('data-text-toggle-on') || ''
+					}
+				}
+			})
+	}
+</script>
+
+<style>
+	.cv-items { margin-bottom: 1rem; padding-top: .5rem; padding-left: 0; border-left: 0 }
+	@media (min-width: 576px) {
+		.cv-items { padding-left: 1rem; border-left: 2px solid #f0f0f0 } }
+
+	.cv-items .toggle-btn { display: block; color: #c0c0c0 !important; font-size: 14px }
+	.cv-items > .toggle-btn { margin-bottom: .5rem }
+	@media print { .cv-items .toggle-btn { display: none } }
+	.cv-items .toggle-btn:hover { color: #a0a0a0 !important; text-decoration: none }
+	@media not print {
+		.cv-items .toggle-btn + .toggle { margin-top: 5px !important }
+		.cv-items > .item > .content .toggle { margin-left: 8px; padding-left: 1rem; border-left: 2px solid #a0a0a0 } }
+
+	.cv-items > .item { display: flex; margin-bottom: 1rem; align-items: start; justify-content: space-between }
+	@media print { .cv-items > .item { page-break-inside: avoid } }
+	.cv-items > .item > * > * { margin-bottom: 5px; font-size: 14px }
+
+	.cv-items > .item > .content h4 { margin-top: 0; font-size: 20px }
+	@media not print {
+		.cv-items > .item.toggle > .content h4 { color: #c0c0c0 }
+		.cv-items > .item.toggle:hover > .content h4,
+		.cv-items > .item.toggle:focus > .content h4
+			{ color: #d0d0d0 } }
+	.cv-items > .item > .content .position { color: #c0c0c0; font-size: 16px; font-variant: small-caps }
+	.cv-items > .item:hover > .content .position,
+	.cv-items > .item:focus > .content .position { color: #d0d0d0 }
+	.cv-items > .item > .content .award { color: #50a0f0; font-variant: small-caps }
+	.cv-items > .item > .content .position ~ .award { margin-top: -5px }
+	.cv-items > .item > .content .description,
+	.cv-items > .item > .content > ul
+		{ margin-top: 10px; color: #a0a0a0 }
+	.cv-items > .item:hover > .content .description,
+	.cv-items > .item:focus > .content .description,
+	.cv-items > .item:hover > .content > ul,
+	.cv-items > .item:focus > .content > ul
+		{ color: #c0c0c0 }
+	.cv-items > .item > .content .description > * { margin-bottom: 5px }
+	.cv-items > .item > .content .description h6 { margin-top: 10px; font-variant: small-caps }
+	.cv-items > .item > .content .description ul { margin-bottom: 10px }
+	.cv-items > .item > .content .description a { color: #4080c0 }
+	.cv-items > .item > .content .description a:hover,
+	.cv-items > .item > .content .description a:focus
+		{ color: #306090 }
+	.cv-items > .item:hover > .content .description a,
+	.cv-items > .item:focus > .content .description a
+		{ color: #50a0f0 }
+	.cv-items > .item:hover > .content .description a:hover,
+	.cv-items > .item:focus > .content .description a:hover,
+	.cv-items > .item:hover > .content .description a:focus,
+	.cv-items > .item:focus > .content .description a:focus
+		{ color: #4080c0 }
+	.cv-items > .item > .content ul { padding-left: 20px }
+
+	.cv-items > .item > .meta { text-align: right }
+	.cv-items > .item > .meta .location { font-size: 16px; font-weight: 500 }
+	@media not print {
+		.cv-items > .item.toggle > .meta .location { color: #c0c0c0 }
+		.cv-items > .item.toggle:hover > .meta .location,
+		.cv-items > .item.toggle:focus > .meta .location
+			{ color: #d0d0d0 } }
+
+	.cv-items > .item .skills-table > * .header { display: grid; grid-template-columns: minmax(min-content, 30%) auto; column-gap: 10px; row-gap: 5px; text-align: center }
+
+	.cv-items > .item .skills-table > * .header .skill-bar {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		height: 100%
+		overflow: hidden;
+		background-color: #303030;
+		border-radius: 0.25rem;
+	}
+
+	.cv-items > .item .skills-table > * .header .skill-bar > * {
+		/* position: absolute; */
+		background-color: #0d6efd;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: center;
+		width: attr(aria-valuenow);
+		line-height: 100%;
+		/* padding: 0 10px; */
+		color: #c0c0c0;
+		font-size: .55em;
+		text-align: center;
+		white-space: nowrap;
+		overflow: hidden;
+		transition: width .6s ease;
+	}
+	.cv-items > .item .skills-table > * .header .skill-bar > *::after { content: "  " attr(aria-valuenow) " %"; line-height: 100%; font-size: 1.15em }
+
+	.cv-items > .item .skills-table > * .header .skill-bar > .usage-score { background-color: #906030 }
+	.cv-items > .item .skills-table > * .header .skill-bar > .knowledge-score { background-color: #306090 }
+
+	.cv-items > .item:hover .skills-table > * .header .skill-bar > *,
+	.cv-items > .item:focus .skills-table > * .header .skill-bar > * { color: #e0e0e0 }
+	.cv-items > .item:hover .skills-table > * .header .skill-bar > .usage-score,
+	.cv-items > .item:focus .skills-table > * .header .skill-bar > .usage-score { background-color: #a87038 }
+	.cv-items > .item:hover .skills-table > * .header .skill-bar > .knowledge-score,
+	.cv-items > .item:focus .skills-table > * .header .skill-bar > .knowledge-score { background-color: #3870a8 }
+
+	.cv-items > .item .skills-table > * .description { margin-top: 5px; font-size: .75em; }
+	.cv-items > .item .skills-table > * { margin-bottom: 5px }
+</style>

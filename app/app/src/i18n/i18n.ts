@@ -10,7 +10,7 @@ function i18n(
 	...args: string[]
 )
 {
-	const value = (locales[locale][key] ?? key) as I18n[keyof I18n]
+	const value = (locales[locale]?.[key] ?? key) as I18n[keyof I18n]
 
 	if (typeof value !== 'string')
 	{

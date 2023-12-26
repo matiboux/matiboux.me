@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets'
+import yaml from 'js-yaml'
+
+import avatar from '~/assets/avatar.jpg'
+
+import aboutYml from '~/data/about.yml?raw'
+const about = yaml.load(aboutYml) as any
+---
+
+<Image
+	src={avatar}
+	alt={about.avatar.alt || undefined}
+	width={120}
+/>

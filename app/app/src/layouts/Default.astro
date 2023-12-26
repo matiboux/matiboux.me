@@ -1,0 +1,67 @@
+---
+import { getAbsoluteLocaleUrl } from 'astro:i18n'
+import yaml from 'js-yaml'
+
+import Layout from '~/layouts/Layout.astro'
+import Footer from '~/components/Footer.astro'
+
+import { defaultLocale } from '~/i18n'
+
+import aboutYml from '~/data/about.yml?raw'
+const about = yaml.load(aboutYml)
+
+const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defaultLocale, path)
+
+export interface Props
+{
+	containerClass?: string
+	home?: boolean
+	avatar?: boolean
+	title: string
+}
+
+const {
+	home = false,
+	avatar = false,
+	title,
+} = Astro.props
+---
+
+<Layout
+	title={title}
+	socialUrl={Astro.site}
+>
+
+	<main id="main">
+		<div class:list={['container', Astro.props.containerClass]}>
+			{!home &&
+				<a href={_url('/')}>
+					&lsaquo; Back to home page
+				</a>
+			}
+
+			<div class="title">
+				{avatar && about.avatar && (
+					(
+						about.avatar.src &&
+						<img src={about.avatar.src} alt={about.avatar.alt || undefined} />
+					) ||
+					(
+						about.avatar.file &&
+						<img src={_url(about.avatar.file)} alt={about.avatar.alt || undefined} />
+					) ||
+					(
+						<img src={about.avatar} />
+					)
+				)}
+
+				<h1>{title}</h1>
+			</div>
+
+			<slot />
+		</div>
+	</main>
+
+	<Footer />
+
+</Layout>

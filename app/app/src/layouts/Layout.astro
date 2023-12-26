@@ -9,15 +9,33 @@ export interface Props extends Omit<BaseProps, 'title'>
 	title?: BaseProps['title']
 }
 
-const siteTitle = 'Matiboux.me'
-const siteDescription = 'The best way to build faster websites with JavaScript'
-const siteAuthor = 'Matiboux'
+interface Site
+{
+	title?: string
+	description?: string
+	author?: string
+}
+
+const site: Site = {
+	title: 'Matiboux.me',
+	author: 'Matiboux',
+}
+
+if (site.title === undefined && Astro.props.title === undefined)
+{
+	throw new Error('Title is undefined')
+}
 
 const baseProps: BaseProps = {
 	...Astro.props,
-	title: Astro.props.title ? `${Astro.props.title} – ${siteTitle}` : siteTitle,
-	description: Astro.props.description || siteDescription,
-	author: Astro.props.author || siteAuthor,
+	title: Astro.props.title
+		? (site.title
+			? `${Astro.props.title} – ${site.title}`
+			: Astro.props.title
+		)
+		: (site.title || ''),
+	description: Astro.props.description || site.description,
+	author: Astro.props.author || site.author,
 }
 ---
 

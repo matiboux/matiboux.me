@@ -1,5 +1,5 @@
 ---
-
+const githubRepositoryUrl = null as string | null // site.github.repository_url
 const githubBuildRevision = null as string | null // site.github.build_revision
 const build = githubBuildRevision ? githubBuildRevision.slice(0, 7) : 'dev'
 ---
@@ -8,7 +8,7 @@ const build = githubBuildRevision ? githubBuildRevision.slice(0, 7) : 'dev'
 	<div>
 		<ul>
 			<li>
-				<i class="fab fa-github fa-fw"></i> <a href="{{ site.github.repository_url }}">Open-Source repository</a>
+				<i class="fab fa-github fa-fw"></i> <a href={githubRepositoryUrl}>Open-Source repository</a>
 				<small>(v. {build})</small>
 			</li>
 			<li><i class="fas fa-fire-alt fa-fw"></i> Powered by <b>GitHub Pages</b></li>

@@ -17,8 +17,12 @@ export interface Props
 	themeColor?: string | undefined
 	viewportScale?: number
 	favicon?: ImageMetadata | string | undefined
+	socialTitle?: string | undefined
+	socialDescription?: string | undefined
 	socialImage?: URL | undefined
 	socialUrl?: URL | undefined
+	socialType?: string | undefined
+	socialTwitterCard?: string | undefined
 	// Body attributes
 	bodyClass?: string | undefined
 	bodyAttributes?: { [key: string]: string }
@@ -37,8 +41,12 @@ const {
 	themeColor = undefined,
 	viewportScale = 1,
 	favicon = undefined,
+	socialTitle = title,
+	socialDescription = description,
 	socialImage = undefined,
 	socialUrl = undefined,
+	socialType = 'website',
+	socialTwitterCard = 'summary_large_image',
 	// Body attributes
 	bodyClass = undefined,
 	bodyAttributes = {},
@@ -63,7 +71,7 @@ const formatsToType = {
 		<meta charset="utf-8" />
 		<meta name="viewport" content={`width=device-width, initial-scale=${viewportScale}`} />
 
-		{favicon && (
+		{favicon &&
 			<link rel="icon"
 				href={typeof favicon === 'string' ? favicon : favicon.src}
 				type={
@@ -71,7 +79,7 @@ const formatsToType = {
 					[typeof favicon === 'string' ? favicon.split('.').pop()! : favicon.format]
 				}
 			/>
-		)}
+		}
 
 		<title>{title}</title>
 		<meta name="title" content={title} />
@@ -82,12 +90,12 @@ const formatsToType = {
 		{themeColor && <meta name="theme-color" content={themeColor} />}
 
 		<!-- social media -->
-		<meta property="og:title" content={title} />
-		{description && (<meta property="og:description" content={description} />)}
-		{socialImage && (<meta property="og:image" content={socialImage} />)}
-		{socialUrl && (<meta property="og:url" content={socialUrl} />)}
-		<meta property="og:type" content="website" />
-		<meta name="twitter:card" content="summary_large_image" />
+		{socialTitle && <meta property="og:title" content={socialTitle} />}
+		{socialDescription && <meta property="og:description" content={socialDescription} />}
+		{socialImage && <meta property="og:image" content={socialImage} />}
+		{socialUrl && <meta property="og:url" content={socialUrl} />}
+		{socialType && <meta property="og:type" content={socialType} />}
+		{socialTwitterCard && <meta name="twitter:card" content={socialTwitterCard} />}
 
 		<slot name="head" />
 	</head>

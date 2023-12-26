@@ -13,6 +13,10 @@ export interface Props
 	// Meta tags
 	title: string
 	description?: string | undefined
+	author?: string | undefined
+	keywords?: string | undefined
+	themeColor?: string | undefined
+	viewportScale?: number
 	favicon?: ImageMetadata | string | undefined
 	socialImage?: URL | undefined
 	socialUrl?: URL | undefined
@@ -29,6 +33,10 @@ const {
 	// Meta tags
 	title,
 	description = undefined,
+	author = undefined,
+	keywords = undefined,
+	themeColor = undefined,
+	viewportScale = 1,
 	favicon = undefined,
 	socialImage = undefined,
 	socialUrl = undefined,
@@ -54,7 +62,7 @@ const formatsToType = {
 <html lang={lang} class={htmlClass} {...htmlAttributes}>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<meta name="viewport" content={`width=device-width, initial-scale=${viewportScale}`} />
 
 		{favicon && (
 			<link rel="icon"
@@ -67,8 +75,12 @@ const formatsToType = {
 		)}
 
 		<title>{title}</title>
+		<meta name="title" content={title} />
 		{description && <meta name="description" content={description} />}
+		{author && <meta name="author" content={author} />}
+		{keywords && <meta name="keywords" content={keywords} />}
 		<meta name="generator" content={Astro.generator} />
+		{themeColor && <meta name="theme-color" content={themeColor} />}
 
 		<!-- social media -->
 		<meta property="og:title" content={title} />

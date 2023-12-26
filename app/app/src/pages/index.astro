@@ -1,0 +1,28 @@
+---
+import Layout from '~/layouts/Layout.astro'
+
+import { i18nFactory, getLocaleUrlList } from '~/i18n'
+const _ = i18nFactory(Astro.currentLocale as any)
+
+const title = 'Matiboux.me'
+---
+
+<Layout
+	title={title}
+	lang="en"
+	socialUrl={Astro.site}
+>
+
+	<main>
+		<h1>{title}</h1>
+		<p>{_('Hello, world!')}</p>
+
+		<ul>
+			{getLocaleUrlList(Astro.url, Astro.currentLocale).map(({ locale, url }) =>
+				(
+					<li><a href={url}>{locale}</a></li>
+				))}
+		</ul>
+	</main>
+
+</Layout>

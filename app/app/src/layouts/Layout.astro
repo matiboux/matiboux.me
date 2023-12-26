@@ -1,0 +1,63 @@
+---
+import '@fontsource-variable/inter'
+import '~/styles/style.scss'
+
+export interface Props
+{
+	// HTML attributes
+	lang?: string
+	htmlClass?: string | undefined
+	htmlAttributes?: { [key: string]: string }
+	// Meta tags
+	title: string
+	description?: string | undefined
+	socialImage?: URL | undefined
+	socialUrl?: URL | undefined
+	// Body attributes
+	bodyClass?: string | undefined
+	bodyAttributes?: { [key: string]: string }
+}
+
+const {
+	// HTML attributes
+	lang = Astro.currentLocale,
+	htmlClass = undefined,
+	htmlAttributes = {},
+	// Meta tags
+	title,
+	description = undefined,
+	socialImage = undefined,
+	socialUrl = undefined,
+	// Body attributes
+	bodyClass = undefined,
+	bodyAttributes = {},
+} = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang={lang} class={htmlClass} {...htmlAttributes}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<!-- <link rel="icon" href={icon} type="image/png+xml" /> -->
+
+		<title>{title}</title>
+		{description && <meta name="description" content={description} />}
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- social media -->
+		<meta property="og:title" content={title} />
+		{description && (<meta property="og:description" content={description} />)}
+		{socialImage && (<meta property="og:image" content={socialImage} />)}
+		{socialUrl && (<meta property="og:url" content={socialUrl} />)}
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<slot name="head" />
+	</head>
+
+	<body class={bodyClass} {...bodyAttributes}>
+		<slot />
+	</body>
+</html>

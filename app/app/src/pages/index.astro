@@ -1,28 +1,76 @@
 ---
-import Layout from '~/layouts/Layout.astro'
+import { getAbsoluteLocaleUrl } from 'astro:i18n'
+import yaml from 'js-yaml'
 
-import { i18nFactory, getLocaleUrlList } from '~/i18n'
+import Default from '~/layouts/Default.astro'
+
+import { defaultLocale, i18nFactory } from '~/i18n'
+const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defaultLocale, path)
 const _ = i18nFactory(Astro.currentLocale as any)
 
-const title = 'Matiboux.me'
+import aboutYml from '~/data/about.yml?raw'
+const about = yaml.load(aboutYml) as any
+
+const title = 'Mathieu GUÉRIN'
 ---
 
-<Layout
+<Default
+	home={true}
+	avatar={true}
 	title={title}
-	lang="en"
-	socialUrl={Astro.site}
 >
 
-	<main>
-		<h1>{title}</h1>
-		<p>{_('Hello, world!')}</p>
+	<div class="row">
+		<div class="col-lg-5 mb-4 mb-lg-0 text-center text-sm-left">
+			<p>
+				Currently in my final year as an IT engineer student at <a href="https://www.epita.fr/">EPITA</a> in Data Science and Artificial Intelligence.
+				I'm also skilled as a back-end developer, leaning full-stack in web development.
+				I am involved in various projects both as part of my curriculum, and as a hobby.
+			</p>
+			<p>
+				I am currently looking for a job or internship starting in February 2023.
+				I would welcome any opportunity to grow my expertise in fields such as Data Science, Artificial Intelligence or Big Data.
+			</p>
+			<p>
+				On this website you can find information about me and my projects.
+				You can also find me on the following platforms:
+			</p>
+			<ul class="social-icons">
+				{['linkedin', 'github'].map(service =>
+					about.social[service]
+						? <li class={service}>
+							<a href={about.social[service].href} class={about.social[service].icon}></a>
+						</li>
+						: undefined
+				)}
+			</ul>
+			<p>
+				You can contact me via: <br />
+				<i class={about.social.telegram.icon}></i> <a href={about.social.telegram.href}>Telegram</a>, or <br />
+				<i class={about.social.discord.icon}></i> <a href={about.social.discord.href}>Discord</a> ({about.social.discord.handle}), or <br />
+				<i class={about.social.proemail.icon}></i> <a href={about.social.proemail.href}>Email</a>, for professional inquiries
+			</p>
+		</div>
+		<div class="col-lg-7">
+			<div class="list-group list-group-dark">
+				<!-- <a href="https://matiboux.com/" class="list-group-item list-group-item-action">
+					<i class="fas fa-archive fa-fw"></i> Projects Platform</a> -->
+				<a href="https://opensource.matiboux.com/" class="list-group-item list-group-item-action">
+					<i class="fab fa-github fa-fw"></i> Open-Source Repositories</a>
+				<a href={_url('/cv')} class="list-group-item list-group-item-action">
+					<i class="fas fa-id-card fa-fw"></i> Curriculum Vitae (detailed)</a>
+				<a href="https://resume.matiboux.me/" class="list-group-item list-group-item-action">
+					<i class="fas fa-file-lines fa-fw"></i> Resume (printable PDF)</a>
+				<a href={_url('/timeline')} class="list-group-item list-group-item-action">
+					<i class="fas fa-stream fa-fw"></i> Work timeline</a>
+				<a href={_url('/about')} class="list-group-item list-group-item-action">
+					<i class="fas fa-user fa-fw"></i> About me</a>
+				<a href={_url('/donate')} class="list-group-item list-group-item-action">
+					<i class="far fa-heart fa-fw"></i> Donate</a>
+				<a href={_url('/legal')} class="list-group-item list-group-item-action">
+					<i class="fas fa-balance-scale fa-fw"></i> Legal</a>
+			</div>
+		</div>
+	</div>
 
-		<ul>
-			{getLocaleUrlList(Astro.url, Astro.currentLocale).map(({ locale, url }) =>
-				(
-					<li><a href={url}>{locale}</a></li>
-				))}
-		</ul>
-	</main>
-
-</Layout>
+</Default>

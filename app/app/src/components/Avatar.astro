@@ -9,18 +9,22 @@ const about = yaml.load(aboutYml) as any
 
 export interface Props
 {
+	class?: string
 	width?: number
 	height?: number
+	alt?: string
 }
 ---
 
 <Image
 	src={avatar}
 	alt={about.avatar.alt || undefined}
+	class={Astro.props.class}
 	{...(Astro.props.width || !Astro.props.height) ? {
 		width: Astro.props.width || 120,
 	} : {}}
 	{...(Astro.props.height ? {
 		height: Astro.props.height,
 	} : {})}
+	alt={Astro.props.alt || about.avatar.alt || undefined}
 />

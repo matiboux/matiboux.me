@@ -1,9 +1,12 @@
 ---
+import { Image } from 'astro:assets'
 import { getAbsoluteLocaleUrl } from 'astro:i18n'
 import yaml from 'js-yaml'
 
 import Layout from '~/layouts/Layout.astro'
 import Footer from '~/components/Footer.astro'
+
+import avatar from '~/assets/avatar.jpg'
 
 import { defaultLocale } from '~/i18n'
 const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defaultLocale, path)
@@ -40,18 +43,12 @@ const {
 			}
 
 			<div class="title">
-				{showAvatar && about.avatar && (
-					(
-						about.avatar.src &&
-						<img src={about.avatar.src} alt={about.avatar.alt || undefined} />
-					) ||
-					(
-						about.avatar.file &&
-						<img src={_url(about.avatar.file)} alt={about.avatar.alt || undefined} />
-					) ||
-					(
-						<img src={about.avatar} />
-					)
+				{showAvatar && (
+					<Image
+						src={avatar}
+						alt={about.avatar.alt || undefined}
+						width={120}
+					/>
 				)}
 
 				<h1>{title}</h1>

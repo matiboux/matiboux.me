@@ -40,7 +40,7 @@ const defaultAuthor = 'Matiboux'
 	{Astro.props.frontmatter.tags &&
 		<small>
 			<i class="fas fa-tag fa-fw" data-toggle="tooltip" data-placement="left" title="Tags"></i>
-			Tags: <em>{Astro.props.frontmatter.tags.join('</em>, <em>')}</em>
+			Tags: <em><Fragment set:html={Astro.props.frontmatter.tags.join('</em>, <em>')} /></em>
 		</small>
 	}
 

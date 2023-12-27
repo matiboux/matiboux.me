@@ -38,6 +38,12 @@ jobs:
     - name: Copy application files
       run: docker compose -f docker-compose.yml -f docker-compose.cicd.yml run --rm app
 
+    - name: Copy v1 application files
+      run: |
+        docker compose -f docker-compose-v1.yml -f docker-compose-v1.cicd.yml run --rm app &&
+        mkdir -p ./app/dist/v1 &&
+        cp -r ./v1/dist/* ./app/dist/v1
+
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:

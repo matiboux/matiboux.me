@@ -91,27 +91,32 @@ const {
 				</div>
 
 				<div class="misc">
-					<div class="bullet{% if item.title %} bullet-lg{% endif %}"></div>
+					<div class:list={['bullet', item.title ? 'bullet-lg' : undefined]}></div>
 					<div class="line"></div>
 				</div>
 
 				<div class="content">
 					{item.title &&
-						<h4>{item.title}</h4>
+						<h4>
+							<Fragment set:html={item.title} />
+						</h4>
 					}
 
-					{item.description && (
-						typeof item.description == 'string'
-							? <p class="description">{item.description}</p>
-							: item.description.map(description =>
-								<p class="description">{description}</p>
-							)
+					{item.description &&
+						(typeof item.description == 'string' ? [item.description] : item.description).map(description =>
+							<p class="description">
+								<Fragment set:html={description} />
+							</p>
 					)}
 
 					{item.links &&
 						<ul class="links">
 							{item.links.map(link =>
-								<li><a href={link.href}>{link.title}</a></li>
+								<li>
+									<a href={link.href}>
+										<Fragment set:html={link.title} />
+									</a>
+								</li>
 							)}
 						</ul>
 					}
@@ -119,6 +124,7 @@ const {
 					{item.languages &&
 						<p class="languages">
 							<i class="fas fa-code fa-fw" data-toggle="tooltip" data-placement="bottom" title="Languages"></i>
+							<Fragment set:html={' '} />
 							{item.languages.map((language, index) =>
 								<Fragment>
 									{index > 0 && ', '}
@@ -130,6 +136,7 @@ const {
 					{item.tools &&
 						<p class="tools">
 							<i class="fas fa-toolbox fa-fw" data-toggle="tooltip" data-placement="bottom" title="Tools"></i>
+							<Fragment set:html={' '} />
 							{item.tools.map((tool, index) =>
 								<Fragment>
 									{index > 0 && ', '}
@@ -141,6 +148,7 @@ const {
 					{item.libraries &&
 						<p class="libraries">
 							<i class="fas fa-book fa-fw" data-toggle="tooltip" data-placement="bottom" title="Libraries"></i>
+							<Fragment set:html={' '} />
 							{item.libraries.map((library, index) =>
 								<Fragment>
 									{index > 0 && ', '}
@@ -153,6 +161,7 @@ const {
 					{item.tags &&
 						<p class="tags">
 							<i class="fas fa-tag fa-fw" data-toggle="tooltip" data-placement="bottom" title="Tags"></i>
+							<Fragment set:html={' '} />
 							{item.tags.map((tag, index) =>
 								<Fragment>
 									{index > 0 && ', '}

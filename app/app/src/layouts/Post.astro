@@ -1,0 +1,47 @@
+---
+import Default from '~/layouts/Default.astro'
+import type { Props as BaseProps } from '~/layouts/Default.astro'
+
+export interface Props extends BaseProps
+{
+	frontmatter: {
+		title: string
+		date?: string
+		author?: string
+		tags?: string[]
+	}
+}
+
+Astro.props.title = Astro.props.frontmatter.title
+
+const defaultAuthor = 'Matiboux'
+---
+
+<Default
+	{...Astro.props}
+>
+
+	<small>
+		{Astro.props.frontmatter.date &&
+			<Fragment set:html={
+				(new Date(Astro.props.frontmatter.date))
+				.toLocaleDateString(Astro.currentLocale, { year: 'numeric', month: 'long', day: 'numeric' })
+			} />
+		}
+
+		{Astro.props.frontmatter.author &&
+			<Fragment set:html={`by ${Astro.props.frontmatter.author}`} /> ||
+			<Fragment set:html={`by ${defaultAuthor}`} />
+		}
+	</small>
+
+	<slot />
+
+	{Astro.props.frontmatter.tags &&
+		<small>
+			<i class="fas fa-tag fa-fw" data-toggle="tooltip" data-placement="left" title="Tags"></i>
+			Tags: <em>{Astro.props.frontmatter.tags.join('</em>, <em>')}</em>
+		</small>
+	}
+
+</Default>

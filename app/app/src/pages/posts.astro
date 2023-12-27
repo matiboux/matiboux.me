@@ -1,0 +1,24 @@
+---
+import { getAbsoluteLocaleUrl } from 'astro:i18n'
+
+import Default from '~/layouts/Default.astro'
+
+import { defaultLocale } from '~/i18n'
+const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defaultLocale, path)
+
+const title = 'Posts'
+
+const posts = await Astro.glob('../pages/posts/*.md')
+---
+
+<Default
+	title={title}
+	containerClass='mw-lg'
+>
+
+	{posts.map(post => (
+		<h3><a href={_url(post.url)}>{post.frontmatter.title}</a></h3>
+		<p>Posted in {(new Date(post.frontmatter.date)).toLocaleDateString(Astro.currentLocale, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+	))}
+
+</Default>

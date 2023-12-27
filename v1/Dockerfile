@@ -23,7 +23,6 @@ RUN apk add --no-cache \
 		build-base \
 		&& \
 	# Install Jekyll
-	# gem update --system && \
 	gem install jekyll && \
 	# Clean up
 	gem cleanup && \
@@ -41,7 +40,7 @@ FROM app_base AS app_prod_build
 ENV APP_ENV=prod
 ENV NODE_ENV=production
 
-# Download source code
+# Download source code for v1 from GitHub
 RUN wget -O app.tar.gz https://github.com/matiboux/matiboux.me/archive/refs/heads/v1.tar.gz && \
 	tar -xzf app.tar.gz --strip-components=1 && \
 	rm app.tar.gz

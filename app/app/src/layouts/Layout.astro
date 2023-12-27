@@ -50,19 +50,20 @@ const baseProps: BaseProps = {
 
 <Base {...baseProps}>
 
-	<Fragment slot="head">
-		{!noScripts &&
-			<Fragment>
-				<script src={bootstrapJs} defer></script>
-			</Fragment>
-		}
-
-		<slot name="head" />
-	</Fragment>
+	<slot slot="head" name="head" />
 
 	<slot />
 
 </Base>
+
+{!noScripts && (
+	<script src={bootstrapJs}></script>
+	// <script>
+	// 	$('[data-toggle="popover"]').popover()
+	// 	$('[data-toggle="tooltip"]').tooltip()
+	// </script>
+)}
+
 
 <style>
 	:global(html) {

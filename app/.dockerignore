@@ -33,8 +33,15 @@
 **/_site/
 **/.jekyll-cache/
 
-# -- Specific to gitignore:
+# -- Specific to dockerignore:
 
-# Build configuration files (allow)
-!**/Dockerfile
-!**/Makefile
+# Docker configuration files
+**/Dockerfile
+**/docker-compose.yml
+**/docker-compose.*.yml
+
+# Dotfiles
+**/.editorconfig
+**/.gitattributes
+**/.gitignore
+**/.gitmodules

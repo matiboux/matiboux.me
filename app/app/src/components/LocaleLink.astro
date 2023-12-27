@@ -7,12 +7,7 @@ const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defa
 export interface Props
 {
 	url: string
-	text?: string
 }
 ---
 
-<a href={_url(Astro.props.url)}>
-	<slot>
-		{Astro.props.text || ''}
-	</slot>
-</a>
+<a href={_url(Astro.props.url)}><slot /></a>

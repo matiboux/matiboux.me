@@ -1,19 +1,19 @@
-# matiboux.me
+# Matiboux.me
 
 Yet another Portfolio Website, but it's for Mati.
 
-## Build instructions
+## Run locally
 
 ```bash
-$ gem install jekyll
-$ jekyll serve
+docker compose up --build -d
 ```
+
 
 ## License
 
 **MIT License**  
-Copyright (c) 2018-2019 Mathieu Guérin (Matiboux)
+Copyright (c) 2018-2024 Mathieu Guérin (Matiboux)
 
 *You can find a copy of the MIT License in the **LICENSE** file.*
 
-Visit [my website](https://matiboux.me/) for knowing more about me or contacting me.
+Visit [my website](https://matiboux.me) to know more about me and to contact me.

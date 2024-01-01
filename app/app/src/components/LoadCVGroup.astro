@@ -37,7 +37,7 @@ const {
 	<Fragment>
 		{group.items &&
 			<div class="cv-items">
-				{group.items.some(item => !item.visible) &&
+				{group.items.some(item => item.visible === false) &&
 					<div class="toggle-btn"
 							data-text-toggle-on="<i class=&quot;fas fa-plus fa-fw&quot;></i> Show hidden items"
 							data-text-toggle-off="<i class=&quot;fas fa-minus fa-fw&quot;></i> Hide items back">
@@ -46,7 +46,7 @@ const {
 				}
 
 				{group.items.map(item =>
-					<div class:list={['item', !item.visible ? 'toggle' : undefined]} style={!item.visible ? 'display: none' : undefined}>
+					<div class:list={['item', item.visible === false ? 'toggle' : undefined]} style={item.visible === false ? 'display: none' : undefined}>
 						<div class="content">
 							<h4>
 								{item.title}
@@ -65,7 +65,7 @@ const {
 								<p class="award">{award}</p>
 							)}
 
-							{item.detailed != null &&
+							{item.detailed !== undefined &&
 								<div class="toggle-btn"
 										data-text-toggle-on="<i class=&quot;fas fa-angle-right fa-fw&quot;></i> Show details"
 										data-text-toggle-off="<i class=&quot;fas fa-angle-down fa-fw&quot;></i> Hide details">
@@ -73,7 +73,7 @@ const {
 								</div>
 							}
 
-							<div class:list={['description', item.detailed != null ? 'toggle' : undefined]} style={!item.detailed ? 'display: none' : undefined}>
+							<div class:list={['description', item.detailed !== undefined ? 'toggle' : undefined]} style={item.detailed === false ? 'display: none' : undefined}>
 								{item.info &&
 									<p>
 										<i class="fas fa-info-circle fa-fw"></i>
@@ -87,7 +87,7 @@ const {
 										? <p>{item.description}</p>
 										: item.description.map(description_item => (
 											typeof description_item === 'string'
-												? <p>{description_item }</p>
+												? <p>{description_item}</p>
 												: <Fragment>
 													{description_item.title &&
 														<h6>

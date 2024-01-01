@@ -1,7 +1,7 @@
 ---
-const githubRepositoryUrl = null as string | null // site.github.repository_url
-const githubBuildRevision = null as string | null // site.github.build_revision
-const build = githubBuildRevision ? githubBuildRevision.slice(0, 7) : 'dev'
+const githubRepositoryUrl = process.env.GITHUB_REPOSITORY_URL || null as string | null
+const githubSha = process.env.GITHUB_SHA || null as string | null
+const build = githubSha ? githubSha.slice(0, 7) : 'dev'
 ---
 
 <footer id="footer">

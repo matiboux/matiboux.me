@@ -59,11 +59,14 @@ const description = 'My curriculum vitae'
 						</li>
 						{['linkedin', 'github'].map(service =>
 							about.social[service]
-								? <li class={service}>
-									<a href={about.social[service].href}>
-										<i class={`${about.social[service].icon} fa-fw`}></i>
-									</a>
-								</li>
+								? <Fragment>
+									<li class={service}>
+										<a href={about.social[service].href}>
+											<i class={`${about.social[service].icon} fa-fw`}></i>
+										</a>
+									</li>
+									{' '}
+								</Fragment>
 								: undefined
 						)}
 					</ul>

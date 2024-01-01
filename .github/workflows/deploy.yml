@@ -1,17 +1,17 @@
-name: Deploy Astro site to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
-  # Runs on push events on primary branches
+  # Run on push events on primary branches
   push:
     branches:
       - main
     paths:
       - 'app/**'
 
-  # Runs on manual triggers
+  # Run on manual triggers
   workflow_dispatch:
 
-# Sets permissions for the GITHUB_TOKEN
+# Set GITHUB_TOKEN permissions
 permissions:
   contents: read
 

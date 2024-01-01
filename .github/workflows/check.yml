@@ -1,7 +1,7 @@
-name: Check Astro site
+name: Check CI
 
 on:
-  # Runs on pull requests events on primary branches
+  # Run on pull requests events on primary branches
   pull_request:
     branches:
       - main
@@ -9,7 +9,7 @@ on:
     paths:
       - 'app/**'
 
-# Sets permissions for the GITHUB_TOKEN
+# Set GITHUB_TOKEN permissions
 permissions:
   contents: read
 

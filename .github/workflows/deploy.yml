@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - 'app/**'
+      - 'v1/**'
 
   # Run on manual triggers
   workflow_dispatch:

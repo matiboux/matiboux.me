@@ -12,4 +12,4 @@ services:
     # Deploy override
     volumes:
       - ./v1/dist:/tmp/dist
-    command: [ "sh", "-c", "rm -rf /tmp/dist/* && cp -r /app/dist/* /tmp/dist" ]
+    command: [ "sh", "-c", "rm -rf /tmp/dist/* && cp -r /app/_site/* /tmp/dist" ]

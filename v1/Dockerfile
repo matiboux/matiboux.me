@@ -25,6 +25,7 @@ RUN apk add --no-cache \
 	# Install Jekyll
 	gem install jekyll -v 3.9.4 && \
 	gem install kramdown-parser-gfm && \
+	gem install jekyll-theme-minimal -v 0.1.1 && \
 	# Clean up
 	gem cleanup && \
 	apk del --no-cache \
@@ -53,8 +54,10 @@ RUN if grep -q '^baseurl:.*$' _config.yml; then \
 		echo "baseurl: /v1" >> _config.yml; \
 	fi
 
-# Remove import from 'style.scss'
-RUN sed -i '/@import "{{ site.theme }}";/d' assets/css/style.scss
+# Set theme to 'jekyll-theme-minimal'
+RUN if ! grep -q '^theme:.*$' _config.yml; then \
+		echo "theme: jekyll-theme-minimal" >> _config.yml; \
+	fi
 
 # Build application
 RUN jekyll build

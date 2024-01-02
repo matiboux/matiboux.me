@@ -1,0 +1,107 @@
+---
+import { getAbsoluteLocaleUrl } from 'astro:i18n'
+import yaml from 'js-yaml'
+
+import Default from '~/layouts/Default.astro'
+import LoadCVGroup from '~/components/LoadCVGroup.astro'
+
+import { defaultLocale } from '~/i18n'
+const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defaultLocale, path)
+
+import aboutYml from '~/data/about.yml?raw'
+import cvYml from '~/data/cv.yml?raw'
+import Avatar from '../components/Avatar.astro'
+const about = yaml.load(aboutYml) as any
+const cv = yaml.load(cvYml) as any
+
+const title = 'Curriculum Vitae'
+const description = 'My curriculum vitae'
+---
+
+<Default
+	title={title}
+	description={description}
+	containerClass='mw-lg'
+>
+
+	{about && (
+		<h2>About me</h2>
+		<div class="cv-about pb-2">
+			<div class="media">
+				{about.avatar &&
+					(
+						about.avatar.src &&
+						<img src={about.avatar.src} class="about-avatar mr-3" alt={about.avatar.alt || undefined} />
+					) ||
+					(
+						about.avatar.file &&
+						<Avatar class="about-avatar mr-3" />
+					) ||
+					(
+						about.avatar &&
+						<img src={about.avatar} class="about-avatar mr-3" />
+					)
+				}
+
+				<div class="media-body">
+
+					{about.name &&
+						<h5 class="mt-0">{about.name}</h5>
+					}
+					{about.biography &&
+						<p class="mb-2">{about.biography}</p>
+					}
+					<ul class="about-social-links">
+						<li class="about_me">
+							<a href={_url('/about')}>
+								<i class="fas fa-info-circle fa-fw"></i>
+							</a>
+						</li>
+						{['linkedin', 'github'].map(service =>
+							about.social[service]
+								? <Fragment>
+									<li class={service}>
+										<a href={about.social[service].href}>
+											<i class={`${about.social[service].icon} fa-fw`}></i>
+										</a>
+									</li>
+									{' '}
+								</Fragment>
+								: undefined
+						)}
+					</ul>
+				</div>
+			</div>
+		</div>
+	)}
+
+	<LoadCVGroup group={cv.education} />
+
+	<LoadCVGroup group={cv.work} />
+
+	<LoadCVGroup group={cv.associative} />
+
+	<LoadCVGroup group={cv.skills} />
+
+	<LoadCVGroup group={cv.languages} />
+
+	<LoadCVGroup group={cv.projects} />
+
+	<LoadCVGroup group={cv.accomplishments} />
+
+</Default>
+
+<style>
+	.cv-about { margin-bottom: 1rem; padding-top: .5rem; padding-left: 0; border-left: 0 }
+	@media (min-width: 576px) {
+		.cv-about { padding-left: 1rem; border-left: 2px solid #f0f0f0 } }
+
+	.cv-about .media > * { align-self: center }
+	.cv-about .media :global(img) { max-height: 120px; border: 2px solid #4080c0; border-radius: .5rem }
+	.cv-about .about-social-links { padding-left: 0; list-style: none }
+	.cv-about .about-social-links > *,
+	.cv-about .about-social-links a
+		{ display: inline-block; width: 30px; height: 30px; line-height: 30px; text-align: center; font-size: 20px }
+	.cv-about .about-social-links a { color: #fff }
+	.cv-about .about-social-links a:hover { color: #eee }
+</style>

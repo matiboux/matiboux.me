@@ -1,0 +1,222 @@
+---
+export interface Props
+{
+	items: {
+		date: string
+		category: string
+		status: string
+		opensource: boolean
+		title?: string
+		description?: string | string[]
+		links?: {
+			href: string
+			title: string
+		}[]
+		languages?: string[]
+		tools?: string[]
+		libraries?: string[]
+		tags?: string[]
+	}[]
+}
+
+const {
+	items,
+} = Astro.props
+---
+
+{items &&
+	<div class="timeline-items">
+		{items.map(item =>
+			<div class="item">
+				<div class="date">
+					<p>{item.date}</p>
+
+					{(
+						item.category == 'personal' &&
+						<a class="badge badge-pill badge-primary" href="#"><i class="fas fa-user fa-fw"></i> Personal</a>
+					) ||
+					(
+						item.category == 'work' &&
+						<a class="badge badge-pill badge-success" href="#"><i class="fas fa-briefcase fa-fw"></i> Work</a>
+					) ||
+					(
+						item.category == 'school' &&
+						<a class="badge badge-pill badge-info" href="#"><i class="fas fa-university fa-fw"></i> School</a>
+					) ||
+					(
+						item.category == 'knowledge' &&
+						<a class="badge badge-pill badge-secondary" href="#"><i class="fas fa-graduation-cap fa-fw"></i> Knowledge</a>
+					) ||
+					(
+						item.category == 'award' &&
+						<a class="category badge badge-pill badge-primary" href="#"><i class="fas fa-award fa-fw"></i> Award</a>
+					) ||
+					(
+						item.category == 'domain' &&
+						<a class="category badge badge-pill badge-secondary" href="#"><i class="fas fa-globe fa-fw"></i> Domain</a>
+					)}
+
+					{(
+						item.status == 'active' &&
+						<a class="badge badge-pill badge-primary" href="#"><i class="fas fa-star fa-fw"></i> Active</a>
+					) ||
+					(
+						item.status == 'finished' &&
+						<a class="badge badge-pill badge-success" href="#"><i class="fas fa-check fa-fw"></i> Finished</a>
+					) ||
+					(
+						item.status == 'standby' &&
+						<a class="badge badge-pill badge-secondary" href="#"><i class="fas fa-pause fa-fw"></i> Standby</a>
+					) ||
+					(
+						item.status == 'inactive' &&
+						<a class="badge badge-pill badge-warning" href="#"><i class="far fa-star fa-fw"></i> Inactive</a>
+					) ||
+					(
+						item.status == 'replaced' &&
+						<a class="badge badge-pill badge-secondary" href="#"><i class="fas fa-times fa-fw"></i> Replaced</a>
+					) ||
+					(
+						item.status == 'left' &&
+						<a class="badge badge-pill badge-danger" href="#"><i class="fas fa-sign-out-alt fa-fw"></i> Left</a>
+					) ||
+					(
+						item.status == 'dead' &&
+						<a class="badge badge-pill badge-danger" href="#"><i class="fas fa-times fa-fw"></i> Dead</a>
+					)}
+
+					{item.opensource &&
+						<a class="badge badge-pill badge-info" href="#"><i class="fas fa-code-branch fa-fw"></i> Open source</a>
+					}
+				</div>
+
+				<div class="misc">
+					<div class:list={['bullet', item.title ? 'bullet-lg' : undefined]}></div>
+					<div class="line"></div>
+				</div>
+
+				<div class="content">
+					{item.title &&
+						<h4>
+							<Fragment set:html={item.title} />
+						</h4>
+					}
+
+					{item.description &&
+						(typeof item.description == 'string' ? [item.description] : item.description).map(description =>
+							<p class="description">
+								<Fragment set:html={description} />
+							</p>
+					)}
+
+					{item.links &&
+						<ul class="links">
+							{item.links.map(link =>
+								<li>
+									<a href={link.href}>
+										<Fragment set:html={link.title} />
+									</a>
+								</li>
+							)}
+						</ul>
+					}
+
+					{item.languages &&
+						<p class="languages">
+							<i class="fas fa-code fa-fw" data-toggle="tooltip" data-placement="bottom" title="Languages"></i>
+							<Fragment set:html={' '} />
+							{item.languages.map((language, index) =>
+								<Fragment>
+									{index > 0 && ', '}
+									<a class="language" href={`#${language}`}>{language}</a>
+								</Fragment>
+							)}
+						</p>
+					}
+					{item.tools &&
+						<p class="tools">
+							<i class="fas fa-toolbox fa-fw" data-toggle="tooltip" data-placement="bottom" title="Tools"></i>
+							<Fragment set:html={' '} />
+							{item.tools.map((tool, index) =>
+								<Fragment>
+									{index > 0 && ', '}
+									<a class="tool" href={`#${tool}`}>{tool}</a>
+								</Fragment>
+							)}
+						</p>
+					}
+					{item.libraries &&
+						<p class="libraries">
+							<i class="fas fa-book fa-fw" data-toggle="tooltip" data-placement="bottom" title="Libraries"></i>
+							<Fragment set:html={' '} />
+							{item.libraries.map((library, index) =>
+								<Fragment>
+									{index > 0 && ', '}
+									<a class="library" href={`#${library}`}>{library}</a>
+								</Fragment>
+							)}
+						</p>
+					}
+
+					{item.tags &&
+						<p class="tags">
+							<i class="fas fa-tag fa-fw" data-toggle="tooltip" data-placement="bottom" title="Tags"></i>
+							<Fragment set:html={' '} />
+							{item.tags.map((tag, index) =>
+								<Fragment>
+									{index > 0 && ', '}
+									<a class="tag" href={`#${tag}`}>{tag}</a>
+								</Fragment>
+							)}
+						</p>
+					}
+				</div>
+			</div>
+		)}
+	</div>
+}
+
+<style>
+	.timeline-items { margin-bottom: 30px }
+	.timeline-items > * + * { padding-top: 10px }
+	.timeline-items > * > * { position: relative; display: table-cell; padding-right: 10px; vertical-align: top }
+
+	.timeline-items > * > .date { width: 100px; padding-top: 2px; font-size: 13px; text-align: right }
+	.timeline-items > * > .date > * { margin: 0 }
+	.timeline-items > * > .date .badge { font-weight: 500 }
+	.timeline-items > * > .misc .bullet {
+		background: #f0f0f0;
+		width: 7px;
+		height: 7px;
+		margin-top: 10px;
+		border: 1px solid #202020;
+		border-radius: 50%;
+	}
+	.timeline-items > * > .misc .bullet.bullet-lg { margin-top: 8px; margin-left: -2px; width: 11px; height: 11px }
+	.timeline-items > * > .misc .line {
+		position: absolute;
+		height: calc(100% + 3px);
+		top: 17px;
+		left: 3px;
+		border-left: 1px solid #bbb;
+		z-index: -1;
+	}
+	.timeline-items > * > .content > * { margin-bottom: 5px; font-size: 12px }
+	.timeline-items > * > .content h4 { font-size: 20px }
+	.timeline-items > * > .content p,
+	.timeline-items > * > .content p a
+		{ color: #808080 }
+	.timeline-items > * > .content p { display: inline-block; vertical-align: top }
+	.timeline-items > * > .content .description { display: block; margin-top: 3px; margin-left: 0; color: #c0c0c0 }
+	.timeline-items > * > .content p:not(.description) + p { margin-left: 5px }
+	.timeline-items > * > .content ul { padding-left: 20px }
+	.timeline-items:after {
+		position: absolute;
+		display: block;
+		width: 9px;
+		margin-top: 20px;
+		margin-left: 99px;
+		content: "";
+		border-top: 1px solid #bbb;
+	}
+</style>

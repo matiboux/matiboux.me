@@ -45,6 +45,12 @@ jobs:
         mkdir -p ./app/dist/v1 &&
         cp -r ./v1/dist/* ./app/dist/v1
 
+    - name: Copy v2 application files
+      run: |
+        docker compose -f docker-compose-v2.yml -f docker-compose-v2.cicd.yml run --rm app &&
+        mkdir -p ./app/dist/v2 &&
+        cp -r ./v2/dist/* ./app/dist/v2
+
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:

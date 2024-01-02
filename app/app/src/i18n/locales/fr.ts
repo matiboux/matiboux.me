@@ -6,6 +6,7 @@ const locale =
 
 	// Global
 	'Back to home page': 'Retour à la page d\'accueil',
+	'and': 'et',
 
 	// Footer
 	'Open-source repository': 'Dépôt open-source',

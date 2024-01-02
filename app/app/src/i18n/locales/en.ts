@@ -1,6 +1,20 @@
 const defaultLocale =
 [
 	'Hello, world!',
+
+	// Global
+	'Back to home page',
+	'and',
+
+	// Footer
+	'Open-source repository',
+	'Powered by',
+	'Made with love by',
+
+	// Legal
+	'Legal',
+	'Owner & Webmaster',
+	'Hosting provider',
 ] as const
 
 type Keys = typeof defaultLocale[number]

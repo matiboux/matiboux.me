@@ -3,8 +3,9 @@ import { getAbsoluteLocaleUrl } from 'astro:i18n'
 
 import Layout from '~/layouts/Layout.astro'
 
-import { defaultLocale } from '~/i18n'
+import { defaultLocale, i18nFactory } from '~/i18n'
 const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defaultLocale, path)
+const _ = i18nFactory(Astro.currentLocale as any)
 
 const title = '404 Not Found'
 ---
@@ -17,7 +18,7 @@ const title = '404 Not Found'
 
 	<main id="main">
 		<div class="container mw-md">
-			<a href={_url('/')} class="btn btn-dark btn-sm mb-2">&lsaquo; Back to home page</a>
+			<a href={_url('/')} class="btn btn-dark btn-sm mb-2">&lsaquo; {_('Back to home page')}</a>
 			<h1>{title}</h1>
 			<p>We did not find that page you were looking for.</p>
 		</div>

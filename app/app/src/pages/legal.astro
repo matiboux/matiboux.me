@@ -1,7 +1,10 @@
 ---
 import Default from '~/layouts/Default.astro'
 
-const title = 'Legal'
+import { i18nFactory } from '~/i18n'
+const _ = i18nFactory(Astro.currentLocale as any)
+
+const title = _('Legal')
 ---
 
 <Default
@@ -10,12 +13,12 @@ const title = 'Legal'
 >
 
 	<p>
-		<u>Owner & Webmaster:</u> <b>Mathieu Guérin</b> (Matiboux) <br />
+		<u>{_('Owner & Webmaster')}:</u> <b>Mathieu Guérin</b> (Matiboux) <br />
 		<a href="https://matiboux.me/">matiboux.me</a>
 	</p>
 
 	<p>
-		<u>Hosting provider:</u> <b>Github Pages</b> <br />
+		<u>{_('Hosting provider')}:</u> <b>Github Pages</b> <br />
 		88 Colin P Kelly Jr St, San Francisco, CA 94107, United States <br />
 		<a href="https://pages.github.com/">pages.github.com</a>
 	</upl>

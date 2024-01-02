@@ -7,6 +7,11 @@ const locale =
 	// Global
 	'Back to home page': 'Retour à la page d\'accueil',
 
+	// Footer
+	'Open-source repository': 'Dépôt open-source',
+	'Powered by': 'Propulsé par',
+	'Made with love by': 'Fait avec amour par',
+
 	// Legal
 	'Legal': 'Mentions légales',
 	'Owner & Webmaster': 'Propriétaire & Webmaster',

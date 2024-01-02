@@ -23,7 +23,8 @@ RUN apk add --no-cache \
 		build-base \
 		&& \
 	# Install Jekyll
-	gem install jekyll && \
+	gem install jekyll -v 3.9.4 && \
+	gem install kramdown-parser-gfm && \
 	# Clean up
 	gem cleanup && \
 	apk del --no-cache \
@@ -51,6 +52,9 @@ RUN if grep -q '^baseurl:.*$' _config.yml; then \
 	else \
 		echo "baseurl: /v1" >> _config.yml; \
 	fi
+
+# Remove import from 'style.scss'
+RUN sed -i '/@import "{{ site.theme }}";/d' assets/css/style.scss
 
 # Build application
 RUN jekyll build

@@ -32,6 +32,12 @@ CMD [ "--help" ]
 
 FROM node_upstream AS app_base
 
+# GitHub context environment variables
+ARG GITHUB_REPOSITORY_URL=""
+ENV GITHUB_REPOSITORY_URL=${GITHUB_REPOSITORY_URL}
+ARG GITHUB_SHA=""
+ENV GITHUB_SHA=${GITHUB_SHA}
+
 # Create app directory
 WORKDIR /app
 

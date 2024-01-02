@@ -11,6 +11,9 @@ services:
       context: ./app
       dockerfile: ./Dockerfile
       target: app_prod
+      args:
+        GITHUB_REPOSITORY_URL: ${GITHUB_REPOSITORY_URL:-}
+        GITHUB_SHA: ${GITHUB_SHA:-}
     # Deploy
     ports:
       # HTTP

@@ -6,7 +6,7 @@ services:
 
   app:
     # Build
-    image: ${IMAGES_PREFIX:-app}-v1:${DOCKER_TAG:-latest}
+    image: ${IMAGES_PREFIX:-app}-v2:${DOCKER_TAG:-latest}
     build:
       context: ./v2
       dockerfile: ./Dockerfile

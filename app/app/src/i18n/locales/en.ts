@@ -1,6 +1,9 @@
 const defaultLocale =
 [
 	'Hello, world!',
+
+	// Global
+	'Back to home page',
 ] as const
 
 type Keys = typeof defaultLocale[number]

@@ -3,6 +3,9 @@ import type { I18n, Diff } from '../type'
 const locale =
 {
 	'Hello, world!': 'Bonjour, monde !',
+
+	// Global
+	'Back to home page': 'Retour à la page d\'accueil',
 } as const
 
 // Static type check

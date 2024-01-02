@@ -39,6 +39,9 @@ jobs:
     - name: Copy application files
       run: docker compose -f docker-compose.yml -f docker-compose.cicd.yml run --rm app
 
+    - name: Chown dist folder to $USER
+      run: sudo chown -R $USER:$USER ./app/dist
+
     - name: Copy v1 application files
       run: |
         docker compose -f docker-compose-v1.yml -f docker-compose-v1.cicd.yml run --rm app &&

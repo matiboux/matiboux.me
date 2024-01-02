@@ -11,5 +11,5 @@ services:
       target: app_prod_build
     # Deploy override
     volumes:
-      - ./v1/dist:/tmp/dist
-    command: [ "sh", "-c", "rm -rf /tmp/dist/* && cp -r /app/dist/* /tmp/dist" ]
+      - ./v2/dist:/tmp/dist
+    command: [ "sh", "-c", "rm -rf /tmp/dist/* && cp -r /app/_site/* /tmp/dist" ]

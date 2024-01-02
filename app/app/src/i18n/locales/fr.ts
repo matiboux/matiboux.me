@@ -6,6 +6,11 @@ const locale =
 
 	// Global
 	'Back to home page': 'Retour à la page d\'accueil',
+
+	// Legal
+	'Legal': 'Mentions légales',
+	'Owner & Webmaster': 'Propriétaire & Webmaster',
+	'Hosting provider': 'Hébergeur',
 } as const
 
 // Static type check

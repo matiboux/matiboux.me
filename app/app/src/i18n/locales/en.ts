@@ -4,6 +4,11 @@ const defaultLocale =
 
 	// Global
 	'Back to home page',
+
+	// Legal
+	'Legal',
+	'Owner & Webmaster',
+	'Hosting provider',
 ] as const
 
 type Keys = typeof defaultLocale[number]

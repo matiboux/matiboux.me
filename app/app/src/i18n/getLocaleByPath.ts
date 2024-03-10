@@ -1,8 +1,9 @@
 import i18nConfig from '/config/i18n'
+import type { I18nConfig } from '/config/i18n'
 
 function getLocaleByPath(path: string): string | undefined
 {
-	for (const locale of i18nConfig.locales)
+	for (const locale of (i18nConfig.locales satisfies I18nConfig['locales'] as I18nConfig['locales']))
 	{
 		if (typeof locale !== 'string')
 		{

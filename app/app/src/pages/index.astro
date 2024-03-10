@@ -4,7 +4,8 @@ import yaml from 'js-yaml'
 
 import Default from '~/layouts/Default.astro'
 
-import { defaultLocale } from '~/i18n'
+import { i18nFactory, defaultLocale } from '~/i18n'
+const _ = i18nFactory(Astro.currentLocale as any)
 const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defaultLocale, path)
 
 import aboutYml from '~/data/about.yml?raw'
@@ -49,10 +50,19 @@ const title = 'Mathieu GUÉRIN'
 				)}
 			</ul>
 			<p>
-				You can contact me via: <br />
-				<i class={about.social.telegram.icon}></i> <a href={about.social.telegram.href}>Telegram</a>, or <br />
-				<i class={about.social.discord.icon}></i> <a href={about.social.discord.href}>Discord</a> ({about.social.discord.handle}), or <br />
-				<i class={about.social.proemail.icon}></i> <a href={about.social.proemail.href}>Email</a>, for professional inquiries
+				<Fragment set:html={_({
+					en: `You can contact me via:`,
+					fr: `Vous pouvez me contacter via :`,
+				})} /> <br />
+				<i class={about.social.telegram.icon}></i> <a href={about.social.telegram.href}>Telegram</a>,
+				<Fragment set:html={_('or')} /> <br />
+				<i class={about.social.discord.icon}></i> <a href={about.social.discord.href}>Discord</a> ({about.social.discord.handle}),
+				<Fragment set:html={_('or')} /> <br />
+				<i class={about.social.proemail.icon}></i> <a href={about.social.proemail.href}>Email</a>
+				(<Fragment set:html={_({
+					en: `for professional inquiries`,
+					fr: `pour les demandes professionnelles`,
+				})} />)
 			</p>
 		</div>
 		<div class="col-lg-7">

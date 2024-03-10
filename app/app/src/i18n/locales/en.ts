@@ -5,6 +5,7 @@ const defaultLocale =
 	// Global
 	'Back to home page',
 	'and',
+	'or',
 
 	// Footer
 	'Open-source repository',

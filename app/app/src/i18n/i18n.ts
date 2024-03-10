@@ -26,8 +26,16 @@ function i18n(
 {
 	const value =
 		typeof data === 'object'
-			? data[locale]
-			: (globalDictionary[locale]?.[data] ?? data) satisfies I18n[keyof I18n]
+			? (
+				data[locale]
+				?? data[defaultLocale]
+				?? Object.values(data)[0] // Actually unordered
+				?? ''
+			) satisfies string
+			: (
+				globalDictionary[locale]?.[data]
+				?? data
+			) satisfies I18n[keyof I18n] satisfies string
 
 	return value.replace(/{(\d+)}/g, (match, number) =>
 		{

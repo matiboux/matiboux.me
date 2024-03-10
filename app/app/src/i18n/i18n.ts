@@ -29,12 +29,6 @@ function i18n(
 			? data[locale]
 			: (globalDictionary[locale]?.[data] ?? data) satisfies I18n[keyof I18n]
 
-	if (typeof value !== 'string')
-	{
-		// Failsafe
-		return value
-	}
-
 	return value.replace(/{(\d+)}/g, (match, number) =>
 		{
 			const index = Number.parseInt(number)

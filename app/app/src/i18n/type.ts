@@ -5,7 +5,7 @@ import defaultLocaleData from './locales/en'
 const defaultLocale = i18nConfig.defaultLocale
 
 const locales = i18nConfig.locales
-	.flatMap(locale => typeof locale === 'string' ? [locale] : locale.codes)
+	.map(locale => typeof locale === 'string' ? locale : locale.codes[0])
 
 type I18n = Readonly<Record<keyof typeof defaultLocaleData, string>>
 

@@ -1,6 +1,6 @@
 import en from './locales/en'
 import fr from './locales/fr'
-import { defaultLocaleKey, type I18n } from './type'
+import { defaultLocale, type I18n } from './type'
 
 const locales = { en, fr } as const
 
@@ -42,7 +42,7 @@ type Tail<T extends any[]> = ((...args: T) => any) extends (arg: any, ...tail: i
 
 function i18nFactory(locale: Parameters<typeof i18n>[0] | undefined)
 {
-	return (...args: Tail<Parameters<typeof i18n>>) => i18n(locale ?? defaultLocaleKey, ...args)
+	return (...args: Tail<Parameters<typeof i18n>>) => i18n(locale ?? defaultLocale, ...args)
 }
 
 export default i18n

@@ -1,14 +1,4 @@
-const i18n =
-{
-	defaultLocale: 'en',
-	locales: [
-		'en',
-		'fr',
-	],
-	routing: {
-		prefixDefaultLocale: false,
-	},
-} as {
+type I18nConfig = {
 	readonly defaultLocale: string,
 	readonly locales: readonly (
 		| string
@@ -22,4 +12,20 @@ const i18n =
 	}
 }
 
-export default i18n
+const i18n =
+{
+	defaultLocale: 'en',
+	locales: [
+		'en',
+		'fr',
+	],
+	routing: {
+		prefixDefaultLocale: false,
+	},
+} as const satisfies I18nConfig
+
+type I18nConfigExport =
+	Omit<I18nConfig, 'defaultLocale'> &
+	Pick<typeof i18n, 'defaultLocale'>
+
+export default i18n as I18nConfigExport

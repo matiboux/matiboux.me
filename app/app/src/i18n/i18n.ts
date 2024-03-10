@@ -1,29 +1,33 @@
 import en from './locales/en'
 import fr from './locales/fr'
 import { defaultLocale, type I18n } from './type'
+import type { Locales } from './type'
 
-const locales = { en, fr } as const
+const globalDictionary = {
+	'en': en,
+	'fr': fr,
+} as const satisfies Partial<Record<Locales, I18n>>
 
 function i18n(
-	locale: keyof typeof locales,
+	locale: Locales,
 	key: keyof I18n,
 	...args: string[]
 )
 function i18n(
-	locale: keyof typeof locales,
-	dict: Record<keyof typeof locales, string>,
+	locale: Locales,
+	dict: Partial<Record<Locales, string>>,
 	...args: string[]
 )
 function i18n(
-	locale: keyof typeof locales,
-	data: keyof I18n | Record<keyof typeof locales, string>,
+	locale: Locales,
+	data: keyof I18n | Partial<Record<Locales, string>>,
 	...args: string[]
 )
 {
 	const value =
 		typeof data === 'object'
 			? data[locale]
-			: (locales[locale]?.[data] ?? data) satisfies I18n[keyof I18n]
+			: (globalDictionary[locale]?.[data] ?? data) satisfies I18n[keyof I18n]
 
 	if (typeof value !== 'string')
 	{

@@ -7,11 +7,15 @@ type I18n = Readonly<Record<keyof typeof defaultLocaleData, string>>
 
 type Diff<T, U> = T extends U ? never : T
 
-// Inspired from `ToTuple<Union>`: https://stackoverflow.com/a/70061272
 type DeepWriteable<T> = { -readonly [P in keyof T]: DeepWriteable<T[P]> }
-type LocalesToUnionRec<Locales extends any[], Rslt> =
-	Locales extends [infer Head, ...infer Tail]
-	? LocalesToUnionRec<
+
+// Inspired from `ToTuple<Union>`: https://stackoverflow.com/a/70061272
+type LocalesToUnion<
+	Locales extends any[] | readonly any[],
+	Rslt extends any = never,
+> =
+	DeepWriteable<Locales> extends [infer Head, ...infer Tail]
+	? LocalesToUnion<
 		Tail,
 		Rslt | (
 			DeepWriteable<Head> extends { codes: string[] }
@@ -20,13 +24,15 @@ type LocalesToUnionRec<Locales extends any[], Rslt> =
 		)
 	>
 	: Rslt
-type LocalesToUnion<Locales extends any[] | readonly any[]> = LocalesToUnionRec<DeepWriteable<Locales>, never>;
 
 type Locales = LocalesToUnion<typeof i18nConfig.locales>
 
-type LocalesToListRec<Locales extends any[], Rslt extends readonly any[]> =
-	Locales extends [infer Head, ...infer Tail]
-	? LocalesToListRec<
+type LocalesToList<
+	Locales extends any[] | readonly any[],
+	Rslt extends readonly any[] = [],
+> =
+	DeepWriteable<Locales> extends [infer Head, ...infer Tail]
+	? LocalesToList<
 		Tail,
 		[
 			...Rslt,
@@ -38,7 +44,6 @@ type LocalesToListRec<Locales extends any[], Rslt extends readonly any[]> =
 		]
 	>
 	: Rslt
-type LocalesToList<Locales extends any[] | readonly any[]> = LocalesToListRec<DeepWriteable<Locales>, []>
 
 type LocalesList = LocalesToList<typeof i18nConfig.locales>
 

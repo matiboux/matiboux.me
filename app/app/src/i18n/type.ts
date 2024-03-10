@@ -1,4 +1,5 @@
 import i18nConfig from '/config/i18n'
+import type { I18nConfig } from '/config/i18n'
 
 import defaultLocaleData from './locales/en'
 
@@ -42,9 +43,10 @@ type LocalesToList<Locales extends any[] | readonly any[]> = LocalesToListRec<De
 type LocalesList = LocalesToList<typeof i18nConfig.locales>
 
 const locales: LocalesList =
-	i18nConfig.locales.map(
+	(i18nConfig.locales satisfies I18nConfig['locales'] as I18nConfig['locales'])
+	.map(
 		locale => typeof locale === 'string' ? locale : locale.codes[0]
-	) satisfies Locales[] as LocalesList
+	) satisfies string[] as LocalesList
 
 type DefaultLocale = Locales & typeof i18nConfig.defaultLocale
 

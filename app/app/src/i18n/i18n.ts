@@ -79,7 +79,7 @@ type UnionRecursiveTail<Union, Rslt extends any[] = []> =
 function i18nFactory(locale: OverloadedParameters<typeof i18n>[0] | undefined)
 {
 	return (...args: UnionRecursiveTail<OverloadedParameters<typeof i18n>>) =>
-		i18n.apply(i18n, [locale ?? defaultLocale, ...args])
+		i18n.apply(i18n, [locale ?? defaultLocale, ...args] as any)
 }
 
 export default i18n

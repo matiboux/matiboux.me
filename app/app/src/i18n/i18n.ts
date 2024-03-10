@@ -12,27 +12,30 @@ function i18n(
 	locale: Locales,
 	key: keyof I18n,
 	...args: string[]
-)
+): string
 function i18n(
 	locale: Locales,
 	dict: Partial<Record<Locales, string>>,
 	...args: string[]
-)
+): string
 function i18n(
 	locale: Locales,
 	data: keyof I18n | Partial<Record<Locales, string>>,
 	...args: string[]
-)
+): string
 {
 	const value =
 		typeof data === 'object'
-			? data[locale]
-			: (globalDictionary[locale]?.[data] ?? data) satisfies I18n[keyof I18n]
-
-	if (typeof value !== 'string')
-	{
-		return value
-	}
+			? (
+				data[locale]
+				?? data[defaultLocale]
+				?? Object.values(data)[0] // Actually unordered
+				?? ''
+			) satisfies string
+			: (
+				globalDictionary[locale]?.[data]
+				?? data
+			) satisfies I18n[keyof I18n] satisfies string
 
 	return value.replace(/{(\d+)}/g, (match, number) =>
 		{
@@ -76,7 +79,7 @@ type UnionRecursiveTail<Union, Rslt extends any[] = []> =
 function i18nFactory(locale: OverloadedParameters<typeof i18n>[0] | undefined)
 {
 	return (...args: UnionRecursiveTail<OverloadedParameters<typeof i18n>>) =>
-		i18n.apply(i18n, [locale ?? defaultLocale, ...args])
+		i18n.apply(i18n, [locale ?? defaultLocale, ...args] as any)
 }
 
 export default i18n

@@ -50,7 +50,9 @@ type LocalesList = LocalesToList<typeof i18nConfig.locales>
 const locales: LocalesList =
 	(i18nConfig.locales satisfies I18nConfig['locales'] as I18nConfig['locales'])
 	.map(
-		locale => typeof locale === 'string' ? locale : locale.codes[0]
+		locale => typeof locale === 'string'
+			? locale
+			: (locale.codes[0] as string)
 	) satisfies string[] as LocalesList
 
 type DefaultLocale = Locales & typeof i18nConfig.defaultLocale

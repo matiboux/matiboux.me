@@ -12,17 +12,17 @@ function i18n(
 	locale: Locales,
 	key: keyof I18n,
 	...args: string[]
-)
+): string
 function i18n(
 	locale: Locales,
 	dict: Partial<Record<Locales, string>>,
 	...args: string[]
-)
+): string
 function i18n(
 	locale: Locales,
 	data: keyof I18n | Partial<Record<Locales, string>>,
 	...args: string[]
-)
+): string
 {
 	const value =
 		typeof data === 'object'
@@ -31,6 +31,7 @@ function i18n(
 
 	if (typeof value !== 'string')
 	{
+		// Failsafe
 		return value
 	}
 

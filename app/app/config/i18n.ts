@@ -24,8 +24,8 @@ const i18n =
 	},
 } as const satisfies I18nConfig
 
-type I18nConfigExport =
-	Omit<I18nConfig, 'defaultLocale'> &
-	Pick<typeof i18n, 'defaultLocale'>
+export default i18n
 
-export default i18n as I18nConfigExport
+export type {
+	I18nConfig,
+}

@@ -9,8 +9,21 @@ function i18n(
 	key: keyof I18n,
 	...args: string[]
 )
+function i18n(
+	locale: keyof typeof locales,
+	dict: Record<keyof typeof locales, string>,
+	...args: string[]
+)
+function i18n(
+	locale: keyof typeof locales,
+	data: keyof I18n | Record<keyof typeof locales, string>,
+	...args: string[]
+)
 {
-	const value = (locales[locale]?.[key] ?? key) as I18n[keyof I18n]
+	const value =
+		typeof data === 'object'
+			? data[locale]
+			: (locales[locale]?.[data] ?? data) satisfies I18n[keyof I18n]
 
 	if (typeof value !== 'string')
 	{

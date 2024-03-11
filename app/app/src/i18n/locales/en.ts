@@ -10,6 +10,7 @@ const defaultLocale =
 	// Footer
 	'Open-source repository',
 	'Powered by',
+	'Change language:',
 	'Made with love by',
 
 	// Legal

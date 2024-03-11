@@ -12,6 +12,7 @@ const locale =
 	// Footer
 	'Open-source repository': 'Dépôt open-source',
 	'Powered by': 'Propulsé par',
+	'Change language:': 'Changer de langue :',
 	'Made with love by': 'Fait avec amour par',
 
 	// Legal

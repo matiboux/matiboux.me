@@ -1,4 +1,6 @@
 ---
+import LocalePicker from '~/components/LocalePicker.astro'
+
 import { i18nFactory } from '~/i18n'
 const _ = i18nFactory(Astro.currentLocale as any)
 
@@ -21,6 +23,7 @@ const build = githubSha ? githubSha.slice(0, 7) : 'dev'
 		<ul>
 			<!-- <li>We use cookies for analytics purposes.</li> -->
 			<li>{_('Made with love by')} <a href="https://matiboux.me/">Matiboux</a>. <i class="fas fa-heart fa-fw" style="color: #c04040"></i></li>
+			<li>{_('Change language:')} <LocalePicker /></li>
 		</ul>
 	</div>
 </footer>

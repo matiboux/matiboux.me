@@ -11,7 +11,10 @@ const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defa
 import aboutYml from '~/data/about.yml?raw'
 const about = yaml.load(aboutYml) as any
 
-const title = 'About me'
+const title = _({
+	en: 'About me',
+	fr: 'À propos de moi',
+})
 ---
 
 <Default

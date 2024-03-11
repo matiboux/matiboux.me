@@ -4,7 +4,10 @@ import Default from '~/layouts/Default.astro'
 import { i18nFactory } from '~/i18n'
 const _ = i18nFactory(Astro.currentLocale as any)
 
-const title = 'Donate'
+const title = _({
+	en: 'Donate',
+	fr: 'Faire un don',
+})
 ---
 
 <Default

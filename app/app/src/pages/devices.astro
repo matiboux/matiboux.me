@@ -4,8 +4,14 @@ import Default from '~/layouts/Default.astro'
 import { i18nFactory } from '~/i18n'
 const _ = i18nFactory(Astro.currentLocale as any)
 
-const title = 'Devices'
-const description = 'My devices'
+const title = _({
+	en: 'Devices',
+	fr: 'Appareils',
+})
+const description = _({
+	en: 'My devices',
+	fr: 'Mes appareils',
+})
 ---
 
 <Default

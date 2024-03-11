@@ -15,8 +15,14 @@ import Avatar from '../components/Avatar.astro'
 const about = yaml.load(aboutYml) as any
 const cv = yaml.load(cvYml) as any
 
-const title = 'Curriculum Vitae'
-const description = 'My curriculum vitae'
+const title = _({
+	en: 'Curriculum Vitae',
+	fr: 'Curriculum Vitae',
+})
+const description = _({
+	en: 'My curriculum vitae',
+	fr: 'Mon curriculum vitae',
+})
 ---
 
 <Default

@@ -4,7 +4,6 @@ import { getAbsoluteLocaleUrl } from 'astro:i18n'
 import Layout from '~/layouts/Layout.astro'
 import type { Props as BaseProps } from '~/layouts/Layout.astro'
 import Avatar from '~/components/Avatar.astro'
-import LocalePicker from '~/components/LocalePicker.astro'
 import Footer from '~/components/Footer.astro'
 
 import { defaultLocale, i18nFactory } from '~/i18n'
@@ -32,18 +31,11 @@ const {
 
 	<main id="main">
 		<div class:list={['container', Astro.props.containerClass]}>
-			<div class="menu">
-				<div>
-					{!isHome &&
-						<a href={_url('/')}>
-							&lsaquo; {_('Back to home page')}
-						</a>
-					}
-				</div>
-				<div>
-					<LocalePicker />
-				</div>
-			</div>
+			{!isHome &&
+				<a href={_url('/')}>
+					&lsaquo; {_('Back to home page')}
+				</a>
+			}
 
 			<div class="title">
 				{showAvatar &&
@@ -63,13 +55,6 @@ const {
 
 <style>
 	/** Special wrappers */
-
-	.menu {
-		display: flex;
-		/* justify-content: space-between; */
-		gap: 1rem;
-		align-items: center;
-	}
 
 	.title {
 		margin-bottom: 1.5rem;

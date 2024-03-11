@@ -4,10 +4,16 @@ import yaml from 'js-yaml'
 import Default from '~/layouts/Default.astro'
 import LoadTimeline from '~/components/LoadTimeline.astro'
 
+import { i18nFactory } from '~/i18n'
+const _ = i18nFactory(Astro.currentLocale as any)
+
 import timelineYml from '~/data/timeline.yml?raw'
 const timeline = yaml.load(timelineYml) as any
 
-const title = 'Work Timeline'
+const title = _({
+	'en': 'Work Timeline',
+	'fr': 'Chronologie de travail',
+})
 ---
 
 <Default
@@ -16,13 +22,24 @@ const title = 'Work Timeline'
 
 	<form action="#" id="timelineSearch" class="form-inline mb-3">
 		<div class="form-group mr-3 mb-1">
-			<input class="form-control form-control-sm" type="text" name="searchField" placeholder="Search..." />
+			<input class="form-control form-control-sm" type="text" name="searchField" placeholder={_({
+				'en': 'Search...',
+				'fr': 'Rechercher...'
+			})} />
 		</div>
-		<button type="reset" class="btn btn-secondary btn-sm mr-3 mb-1">Reset</button>
+		<button type="reset" class="btn btn-secondary btn-sm mr-3 mb-1">
+			{_({
+				'en': 'Reset',
+				'fr': 'Réinitialiser'
+			})}
+		</button>
 		<div class="form-check">
 			<input class="form-check-input" type="checkbox" name="searchTagsOnly" id="searchTagsOnly" />
 			<label class="form-check-label" for="searchTagsOnly">
-				Search tags only
+				{_({
+					'en': 'Search tags only',
+					'fr': 'Rechercher uniquement les étiquettes'
+				})}
 			</label>
 		</div>
 	</form>
@@ -30,15 +47,50 @@ const title = 'Work Timeline'
 	<LoadTimeline items={timeline} />
 
 	<div class="legend">
-		<p>The meaning of most icons:</p>
+		<p>
+			{_({
+				'en': 'The meaning of most icons:',
+				'fr': 'La signification de la plupart des icônes :',
+			})}
+		</p>
 		<ul>
-			<li><i class="fas fa-code fa-fw"></i> Programming languages</li>
-			<li><i class="fas fa-toolbox fa-fw"></i> Tools, Frameworks</li>
-			<li><i class="fas fa-tag fa-fw"></i> Tags</li>
+			<li>
+				<i class="fas fa-code fa-fw"></i>
+				{_({
+					'en': 'Programming languages',
+					'fr': 'Langages de programmation',
+				})}
+			</li>
+			<li>
+				<i class="fas fa-toolbox fa-fw"></i>
+				{_({
+					'en': 'Tools, Frameworks',
+					'fr': 'Outils, Frameworks',
+				})}
+			</li>
+			<li>
+				<i class="fas fa-tag fa-fw"></i>
+				{_({
+					'en': 'Tags',
+					'fr': 'Étiquettes',
+				})}
+			</li>
 		</ul>
 		<ul>
-			<li><i class="fas fa-cube fa-fw"></i> Packages, Artifacts</li>
-			<li><i class="fas fa-cog fa-fw"></i> Automation, Tests (CI/CD)</li>
+			<li>
+				<i class="fas fa-cube fa-fw"></i>
+				{_({
+					'en': 'Packages, Artifacts',
+					'fr': 'Paquets, Artéfacts',
+				})}
+			</li>
+			<li>
+				<i class="fas fa-cog fa-fw"></i>
+				{_({
+					'en': 'Automation, Tests (CI/CD)',
+					'fr': 'Automatisation, Tests (CI/CD)',
+				})}
+			</li>
 		</ul>
 	</div>
 

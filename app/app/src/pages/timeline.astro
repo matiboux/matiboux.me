@@ -10,7 +10,10 @@ const _ = i18nFactory(Astro.currentLocale as any)
 import timelineYml from '~/data/timeline.yml?raw'
 const timeline = yaml.load(timelineYml) as any
 
-const title = 'Work Timeline'
+const title = _({
+	'en': 'Work Timeline',
+	'fr': 'Chronologie de travail',
+})
 ---
 
 <Default

@@ -1,0 +1,22 @@
+---
+import { getLocaleUrlList } from '~/i18n'
+
+const flagIcons: Record<string, string> = {
+	en: 'icon-[twemoji--flag-united-kingdom]',
+	fr: 'icon-[twemoji--flag-france]',
+}
+---
+
+<Fragment>
+	{getLocaleUrlList(Astro.url, Astro.currentLocale).map(({ locale, url }) =>
+		(
+			<a href={url} class="button">
+				{
+					flagIcons[locale]
+						? <span class={`icon ${flagIcons[locale]}`}></span>
+						: locale
+				}
+			</a>
+		))
+	}
+</Fragment>

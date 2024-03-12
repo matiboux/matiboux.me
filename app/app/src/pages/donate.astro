@@ -1,7 +1,13 @@
 ---
 import Default from '~/layouts/Default.astro'
 
-const title = 'Donate'
+import { i18nFactory } from '~/i18n'
+const _ = i18nFactory(Astro.currentLocale as any)
+
+const title = _({
+	en: 'Donate',
+	fr: 'Faire un don',
+})
 ---
 
 <Default
@@ -9,45 +15,164 @@ const title = 'Donate'
 	containerClass='mw-md'
 >
 
-	<p>You want to support me or my work? You can support me by donating or using some of the referral codes below!</p>
+	<p>
+		<Fragment set:html={_({
+			'en': 'You want to support me or my work?',
+			'fr': 'Vous voulez me soutenir moi ou mon travail ?',
+		})} />
+		<Fragment set:html={_({
+			'en': 'You can support me by donating or using some of the referral codes below!',
+			'fr': 'Vous pouvez me soutenir en faisant un don ou en utilisant certains des codes de parrainage ci-dessous !',
+		})} />
+	</p>
 	<hr />
 
-	<h2><i class="fas fa-money-check-alt fa-fw"></i> Donate some money</h2>
-	<p>Donate anything! Add a little message with it if you want.</p>
-	<p>Use conventional services:</p>
+	<h2>
+		<i class="fas fa-money-check-alt fa-fw"></i>
+		<Fragment set:html={_({
+			'en': 'Donate some money',
+			'fr': 'Faire un don',
+		})} />
+	</h2>
+	<p>
+		<Fragment set:html={_({
+			'en': 'Donate anything! Add a little message with it if you want.',
+			'fr': 'Faites n\'importe quel don ! Ajoutez un petit message si vous voulez.',
+		})} />
+	</p>
+	<p>
+		<Fragment set:html={_({
+			'en': 'Use conventional services:',
+			'fr': 'Utilisez des services conventionnels :',
+		})} />
+	</p>
 	<p>
 		<a href="https://www.paypal.me/Matioz/" class="btn btn-primary btn-sm" target="_blank"><i class="fab fa-paypal fa-fw"></i> Paypal.me</a>
 		<a href="https://ko-fi.com/A7371UX0" class="btn btn-info btn-sm" target="_blank"><i class="fas fa-mug-hot fa-fw"></i> Ko-Fi</a>
 		<!-- <a href="https://www.patreon.com/Matiboux" class="btn btn-danger btn-sm disabled" target="_blank"><i class="fab fa-patreon fa-fw"></i> Patreon</a> -->
 	</p>
-	<p>Or use my cryptocurrency addresses:</p>
+	<p>
+		<Fragment set:html={_({
+			'en': 'Or use my cryptocurrency addresses:',
+			'fr': 'Ou utilisez mes adresses de cryptomonnaie :',
+		})} />
+	</p>
 	<ul>
 		<!-- <li><i class="fab fa-bitcoin fa-fw"></i> Bitcoin (BTC): <code>32PMeTKpFSyzEzhmXUKv6qcG2ZFM2uaiDm</code></li> -->
-		<li><i class="fab fa-bitcoin fa-fw"></i> Bitcoin (BTC): <code>1AFZmdryDeGwy6rcg3UhgSN6bGm6SYYj5t</code></li>
-		<li><i class="fab fa-ethereum fa-fw"></i> Etherium (ETH): <code>0x0d638b30dd99E88EAF884c58b2a012bf4CBB6563</code></li>
-		<li>The Open Network (TON): <code>UQDuh6BHuNXfUe4l_rK4_nqVabQmO1CYePenOU_4Ew-6Vf3z</code></li>
-		<li>Stellar Lumens (XLM): <code>GDOWRMHB3B6ODOUDKQEJ3ZBS2U5SX6WYLPWQWDTEQQF36462FBH3UTUJ</code></li>
+		<li>
+			<i class="fab fa-bitcoin fa-fw"></i>
+			Bitcoin (BTC)<Fragment set:html={_({
+				'en': ':',
+				'fr': ' :',
+			})} />
+			<code>1AFZmdryDeGwy6rcg3UhgSN6bGm6SYYj5t</code>
+		</li>
+		<li>
+			<i class="fab fa-ethereum fa-fw"></i> Etherium (ETH)<Fragment set:html={_({
+				'en': ':',
+				'fr': ' :',
+			})} />
+			<code>0x0d638b30dd99E88EAF884c58b2a012bf4CBB6563</code>
+		</li>
+		<li>
+			The Open Network (TON)<Fragment set:html={_({
+				'en': ':',
+				'fr': ' :',
+			})} />
+			<code>UQDuh6BHuNXfUe4l_rK4_nqVabQmO1CYePenOU_4Ew-6Vf3z</code>
+		</li>
+		<li>
+			Stellar Lumens (XLM)<Fragment set:html={_({
+				'en': ':',
+				'fr': ' :',
+			})} />
+			<code>GDOWRMHB3B6ODOUDKQEJ3ZBS2U5SX6WYLPWQWDTEQQF36462FBH3UTUJ</code>
+		</li>
 	</ul>
 	<hr />
 
-	<h2><i class="far fa-heart fa-fw"></i> Use my referral codes</h2>
-	<p>You can help me by using these; it's free for you, and nice for me.</p>
+	<h2>
+		<i class="far fa-heart fa-fw"></i>
+		<Fragment set:html={_({
+			'en': 'Use my referral codes',
+			'fr': 'Utilisez mes codes de parrainage',
+		})} />
+	</h2>
+	<p>
+		<Fragment set:html={_({
+			'en': 'You can help me by using these; it\'s free for you, and nice for me.',
+			'fr': 'Vous pouvez m\'aider en utilisant ces codes ; c\'est gratuit pour vous, et sympa pour moi.',
+		})} />
+	</p>
 
-	<p><b>Marketplaces</b>: If you'd like to buy on these platforms, help me at the same time!</p>
+	<p>
+		<b set:html={_({
+			'en': 'Marketplaces',
+			'fr': 'Sites de vente',
+		})} /><Fragment set:html={_({
+			'en': ':',
+			'fr': ' :',
+		})} />
+		<Fragment set:html={_({
+			'en': 'If you\'d like to buy on these platforms, help me at the same time!',
+			'fr': 'Si vous voulez acheter sur ces plateformes, aidez-moi en même temps !',
+		})} />
+	</p>
 	<ul>
-		<li class="mb-1">For buying games:
-			<a href="https://www.instant-gaming.com/igr/Matiboux/" class="btn btn-secondary btn-sm" target="_blank">Instant-Gaming</a>
-			<a href="https://www.g2a.com/r/matiboux" class="btn btn-secondary btn-sm" target="_blank">G2A</a>
-			<a href="https://plus.g2a.com/r/matiboux" class="btn btn-secondary btn-sm" target="_blank">G2A Plus</a>
+		<li class="mb-1">
+			<Fragment set:html={_({
+				'en': 'For buying games:',
+				'fr': 'Pour acheter des jeux :',
+			})} />
+			<a href="https://www.instant-gaming.com/igr/Matiboux/" class="btn btn-secondary btn-sm" target="_blank">
+				Instant-Gaming
+			</a>
+			<a href="https://www.g2a.com/r/matiboux" class="btn btn-secondary btn-sm" target="_blank">
+				G2A
+			</a>
+			<a href="https://plus.g2a.com/r/matiboux" class="btn btn-secondary btn-sm" target="_blank">
+				G2A Plus
+			</a>
 		</li>
 	</ul>
 
-	<p><b>Specific items</b>: If you're interested in the following items, you can help too.</p>
+	<!-- <p><b>Specific items</b>: If you're interested in the following items, you can help too.</p> -->
+	<p>
+		<b set:html={_({
+			'en': 'Specific items',
+			'fr': 'Articles spécifiques',
+		})} /><Fragment set:html={_({
+			'en': ':',
+			'fr': ' :',
+		})} />
+		<Fragment set:html={_({
+			'en': 'If you\'re interested in the following items, you can help me too.',
+			'fr': 'Si vous êtes intéressé par les articles suivants, vous pouvez aussi m\'aider.',
+		})} />
 	<ul>
-		<li class="mb-1">For a new subscribtion: <a href="https://www.humblebundle.com/subscription?refc=E6Zs1K" class="btn btn-danger btn-sm" target="_blank">Humble Choice</a> (Humble Bundle)</li>
 		<li class="mb-1">
-			For buying: <a href="https://robertsspaceindustries.com/enlist?referral=STAR-XZ6C-RP3C" class="btn btn-dark btn-sm" target="_blank">Star Citizen / Squadron 42</a> (Roberts Space Industries). <br />
-			(plus, it gives you some extra in-game money!)
+			<Fragment set:html={_({
+				'en': 'For a new subscription:',
+				'fr': 'Pour une nouvelle souscription :',
+			})} />
+			<a href="https://www.humblebundle.com/subscription?refc=E6Zs1K" class="btn btn-danger btn-sm" target="_blank">
+				Humble Choice
+			</a>
+			(Humble Bundle)
+		</li>
+		<li class="mb-1">
+			<Fragment set:html={_({
+				'en': 'For buying:',
+				'fr': 'Pour acheter :',
+			})} />
+			<a href="https://robertsspaceindustries.com/enlist?referral=STAR-XZ6C-RP3C" class="btn btn-dark btn-sm" target="_blank">
+				Star Citizen / Squadron 42
+			</a>
+			(Roberts Space Industries). <br />
+			<Fragment set:html={_({
+				'en': '(plus, it gives you some extra in-game money!)',
+				'fr': '(en plus, ça vous donne un peu d\'argent bonus en jeu !)',
+			})} />
 		</li>
 	</ul>
 

@@ -1,8 +1,17 @@
 ---
 import Default from '~/layouts/Default.astro'
 
-const title = 'Devices'
-const description = 'My devices'
+import { i18nFactory } from '~/i18n'
+const _ = i18nFactory(Astro.currentLocale as any)
+
+const title = _({
+	en: 'Devices',
+	fr: 'Appareils',
+})
+const description = _({
+	en: 'My devices',
+	fr: 'Mes appareils',
+})
 ---
 
 <Default
@@ -11,9 +20,19 @@ const description = 'My devices'
 	containerClass='mw-lg'
 >
 
-	<p>The computer devices I had in my life: desktop computers, laptops, and smartphones.</p>
+	<p>
+		<Fragment set:html={_({
+			'en': 'The computer devices I had in my life: desktop computers, laptops, and smartphones.',
+			'fr': 'Les appareils informatiques que j\'ai eu dans ma vie : ordinateurs de bureau, portables, et smartphones.',
+		})} />
+	</p>
 
-	<h2>Computers</h2>
+	<h2>
+		<Fragment set:html={_({
+			'en': 'Computers',
+			'fr': 'Ordinateurs',
+		})} />
+	</h2>
 
 	<div class="devices-items">
 		<div class="item">
@@ -89,7 +108,12 @@ const description = 'My devices'
 		</div>
 	</div>
 
-	<h2>Phones</h2>
+	<h2>
+		<Fragment set:html={_({
+			'en': 'Phones',
+			'fr': 'Téléphones',
+		})} />
+	</h2>
 
 	<div class="devices-items">
 		<div class="item">
@@ -193,7 +217,7 @@ const description = 'My devices'
 <style>
 	.devices-items { margin-bottom: 1rem; padding-top: .5rem; padding-left: 0; border-left: 0 }
 
-	.devices-items .item { display: flex; margin-bottom: 1rem; align-items: start; justify-content: left }
+	.devices-items .item { display: flex; margin-bottom: 1rem; align-items: flex-start; justify-content: left }
 	@media print {
 		.devices-items .item { page-break-inside: avoid } }
 

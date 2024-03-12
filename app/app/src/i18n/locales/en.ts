@@ -5,10 +5,12 @@ const defaultLocale =
 	// Global
 	'Back to home page',
 	'and',
+	'or',
 
 	// Footer
 	'Open-source repository',
 	'Powered by',
+	'Change language:',
 	'Made with love by',
 
 	// Legal

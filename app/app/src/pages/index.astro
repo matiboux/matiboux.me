@@ -4,7 +4,8 @@ import yaml from 'js-yaml'
 
 import Default from '~/layouts/Default.astro'
 
-import { defaultLocale } from '~/i18n'
+import { i18nFactory, defaultLocale } from '~/i18n'
+const _ = i18nFactory(Astro.currentLocale as any)
 const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defaultLocale, path)
 
 import aboutYml from '~/data/about.yml?raw'
@@ -22,17 +23,40 @@ const title = 'Mathieu GUÉRIN'
 	<div class="row">
 		<div class="col-lg-5 mb-4 mb-lg-0 text-center text-sm-left">
 			<p>
-				Currently in my final year as an IT engineer student at <a href="https://www.epita.fr/">EPITA</a> in Data Science and Artificial Intelligence.
-				I'm also skilled as a back-end developer, leaning full-stack in web development.
-				I am involved in various projects both as part of my curriculum, and as a hobby.
+				<Fragment set:html={_({
+					en: `
+						Currently in my final year as an IT engineer student at
+						<a href="{0}">EPITA</a> in Data Science and Artificial Intelligence.
+					`,
+					fr: `
+						Actuellement en dernière année d'études d'ingénieur en informatique à
+						<a href="{0}">EPITA</a> en Data Science et Intelligence Artificielle.
+					`,
+				}, 'https://www.epita.fr/')} />
+				<Fragment set:html={_({
+					en: 'I\'m also skilled as a back-end developer, leaning full-stack in web development.',
+					fr: 'Je suis également compétent en développement back-end, orienté full-stack en développement web.',
+				})} />
+				<Fragment set:html={_({
+					en: 'I am involved in various projects both as part of my curriculum, and as a hobby.',
+					fr: 'Je suis impliqué dans divers projets, à la fois dans le cadre de mon cursus, et en tant que hobby.',
+				})} />
 			</p>
 			<p>
-				I am currently looking for a job or internship starting in February 2023.
-				I would welcome any opportunity to grow my expertise in fields such as Data Science, Artificial Intelligence or Big Data.
+				<Fragment set:html={_({
+					en: 'I am currently looking for a job or internship starting in February 2023.',
+					fr: 'Je suis actuellement à la recherche d\'un emploi ou d\'un stage à partir de février 2023.',
+				})} />
 			</p>
 			<p>
-				On this website you can find information about me and my projects.
-				You can also find me on the following platforms:
+				<Fragment set:html={_({
+					en: 'On this website you can find information about me and my projects.',
+					fr: 'Sur ce site, vous pouvez trouver des informations sur moi et mes projets.',
+				})} />
+				<Fragment set:html={_({
+					en: 'You can also find me on the following platforms:',
+					fr: 'Vous pouvez également me trouver sur les plateformes suivantes :',
+				})} />
 			</p>
 			<ul class="social-icons">
 				{['linkedin', 'github'].map(service =>
@@ -49,10 +73,19 @@ const title = 'Mathieu GUÉRIN'
 				)}
 			</ul>
 			<p>
-				You can contact me via: <br />
-				<i class={about.social.telegram.icon}></i> <a href={about.social.telegram.href}>Telegram</a>, or <br />
-				<i class={about.social.discord.icon}></i> <a href={about.social.discord.href}>Discord</a> ({about.social.discord.handle}), or <br />
-				<i class={about.social.proemail.icon}></i> <a href={about.social.proemail.href}>Email</a>, for professional inquiries
+				<Fragment set:html={_({
+					en: 'You can contact me via:',
+					fr: 'Vous pouvez me contacter via :',
+				})} /> <br />
+				<i class={about.social.telegram.icon}></i> <a href={about.social.telegram.href}>Telegram</a>,
+				<Fragment set:html={_('or')} /> <br />
+				<i class={about.social.discord.icon}></i> <a href={about.social.discord.href}>Discord</a> ({about.social.discord.handle}),
+				<Fragment set:html={_('or')} /> <br />
+				<i class={about.social.proemail.icon}></i> <a href={about.social.proemail.href}>Email</a>
+				(<Fragment set:html={_({
+					en: 'for professional inquiries',
+					fr: 'pour les demandes professionnelles',
+				})} />)
 			</p>
 		</div>
 		<div class="col-lg-7">
@@ -60,19 +93,55 @@ const title = 'Mathieu GUÉRIN'
 				<!-- <a href="https://matiboux.com/" class="list-group-item list-group-item-action">
 					<i class="fas fa-archive fa-fw"></i> Projects Platform</a> -->
 				<a href="https://matiboux.dev/" class="list-group-item list-group-item-action">
-					<i class="fab fa-github fa-fw"></i> Open-Source Repositories</a>
+					<i class="fab fa-github fa-fw"></i>
+					<Fragment set:html={_({
+						en: 'Open-Source Repositories',
+						fr: 'Repositories Open-Source',
+					})} />
+				</a>
 				<a href={_url('/cv')} class="list-group-item list-group-item-action">
-					<i class="fas fa-id-card fa-fw"></i> Curriculum Vitae (detailed)</a>
+					<i class="fas fa-id-card fa-fw"></i>
+					Curriculum Vitae
+					<Fragment set:html={_({
+						en: '(detailed)',
+						fr: '(détaillé)',
+					})} />
+				</a>
 				<a href="https://resume.matiboux.me/" class="list-group-item list-group-item-action">
-					<i class="fas fa-file-lines fa-fw"></i> Resume (printable PDF)</a>
+					<i class="fas fa-file-lines fa-fw"></i>
+					<Fragment set:html={_({
+						en: 'Resume (printable PDF)',
+						fr: 'CV (PDF imprimable)',
+					})} />
+				</a>
 				<a href={_url('/timeline')} class="list-group-item list-group-item-action">
-					<i class="fas fa-stream fa-fw"></i> Work timeline</a>
+					<i class="fas fa-stream fa-fw"></i>
+					<Fragment set:html={_({
+						en: 'Work timeline',
+						fr: 'Chronologie de travail',
+					})} />
+				</a>
 				<a href={_url('/about')} class="list-group-item list-group-item-action">
-					<i class="fas fa-user fa-fw"></i> About me</a>
+					<i class="fas fa-user fa-fw"></i>
+					<Fragment set:html={_({
+						en: 'About me',
+						fr: 'À propos de moi',
+					})} />
+				</a>
 				<a href={_url('/donate')} class="list-group-item list-group-item-action">
-					<i class="far fa-heart fa-fw"></i> Donate</a>
+					<i class="far fa-heart fa-fw"></i>
+					<Fragment set:html={_({
+						en: 'Donate',
+						fr: 'Faire un don',
+					})} />
+				</a>
 				<a href={_url('/legal')} class="list-group-item list-group-item-action">
-					<i class="fas fa-balance-scale fa-fw"></i> Legal</a>
+					<i class="fas fa-balance-scale fa-fw"></i>
+					<Fragment set:html={_({
+						en: 'Legal',
+						fr: 'Mentions Légales',
+					})} />
+				</a>
 			</div>
 		</div>
 	</div>

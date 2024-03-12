@@ -5,7 +5,8 @@ import yaml from 'js-yaml'
 import Default from '~/layouts/Default.astro'
 import LoadCVGroup from '~/components/LoadCVGroup.astro'
 
-import { defaultLocale } from '~/i18n'
+import { i18nFactory, defaultLocale } from '~/i18n'
+const _ = i18nFactory(Astro.currentLocale as any)
 const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defaultLocale, path)
 
 import aboutYml from '~/data/about.yml?raw'
@@ -14,8 +15,14 @@ import Avatar from '../components/Avatar.astro'
 const about = yaml.load(aboutYml) as any
 const cv = yaml.load(cvYml) as any
 
-const title = 'Curriculum Vitae'
-const description = 'My curriculum vitae'
+const title = _({
+	en: 'Curriculum Vitae',
+	fr: 'Curriculum Vitae',
+})
+const description = _({
+	en: 'My curriculum vitae',
+	fr: 'Mon curriculum vitae',
+})
 ---
 
 <Default
@@ -25,7 +32,10 @@ const description = 'My curriculum vitae'
 >
 
 	{about && (
-		<h2>About me</h2>
+		<h2 set:html={_({
+			'en': 'About me',
+			'fr': 'À propos de moi',
+		})} />
 		<div class="cv-about pb-2">
 			<div class="media">
 				{about.avatar &&

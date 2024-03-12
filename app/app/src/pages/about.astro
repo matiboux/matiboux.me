@@ -4,13 +4,17 @@ import yaml from 'js-yaml'
 
 import Default from '~/layouts/Default.astro'
 
-import { defaultLocale } from '~/i18n'
+import { i18nFactory, defaultLocale } from '~/i18n'
+const _ = i18nFactory(Astro.currentLocale as any)
 const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defaultLocale, path)
 
 import aboutYml from '~/data/about.yml?raw'
 const about = yaml.load(aboutYml) as any
 
-const title = 'About me'
+const title = _({
+	en: 'About me',
+	fr: 'À propos de moi',
+})
 ---
 
 <Default
@@ -51,7 +55,16 @@ const title = 'About me'
 	</p>
 	<hr />
 
-	<p><b>Want to contact me?</b> Here's how:</p>
+	<p>
+		<b set:html={_({
+			en: 'Want to contact me?',
+			fr: 'Vous voulez me contacter ?',
+		})} />
+		<Fragment set:html={_({
+			en: 'Here\'s how:',
+			fr: 'Voici comment :',
+		})} />
+	</p>
 	<p>
 		<a href={about.social.email.href} class="btn btn-secondary btn-sm"><i class={`${about.social.email.icon} fa-fw`}></i> Personal Email</a>
 		<a href={about.social.proemail.href} class="btn btn-secondary btn-sm"><i class={`${about.social.proemail.icon} fa-fw`}></i> Professional Email</a>

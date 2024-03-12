@@ -29,8 +29,8 @@ const description = _({
 
 	<h2>
 		<Fragment set:html={_({
-			'en': 'Computers',
-			'fr': 'Ordinateurs',
+			'en': 'Desktop computers',
+			'fr': 'Ordinateurs fixes',
 		})} />
 	</h2>
 
@@ -57,22 +57,6 @@ const description = _({
 		</div>
 		<div class="item">
 			<div class="type">
-				<i class="fas fa-laptop fa-fw"></i>
-			</div>
-			<div class="content">
-				<p class="date">??? – Today</p>
-				<ul>
-					<li><i class="icon fab fa-windows fa-fw"></i> <small>OS:</small> Windows 11 Home (64 bits)</li>
-					<li><i class="icon fas fa-microchip fa-fw"></i> <small>CPU:</small> Intel Core i5-8250U <small>@ 1.60GHz – 4 cores, 8 threads</small></li>
-					<li><i class="icon fas fa-fw"></i> <small>RAM:</small> 8GB <small>(2× 4GB) DDR4 @ 2400MHz</small></li>
-					<li><i class="icon fas fa-fw"></i> <small>GPU:</small> Nvidia Geforce GTX 1050 <small>(6GB VRAM)</small></li>
-					<li><i class="icon fas fa-hdd fa-fw"></i> <small>SATA SSD:</small> ~250GB <small>(System, Apps)</small></li>
-					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~1TB partition <small>(Data, Games)</small></li>
-				</ul>
-			</div>
-		</div>
-		<div class="item">
-			<div class="type">
 				<i class="fas fa-desktop fa-fw"></i>
 			</div>
 			<div class="content">
@@ -87,6 +71,32 @@ const description = _({
 					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~500GB <small>(Apps) (old, only 320GB usable)</small></li>
 					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~1TB <small>(Games, Temporary files) (old, damaged)</small></li>
 					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~2TB <small>(Data)</small></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<h2>
+		<Fragment set:html={_({
+			'en': 'Laptop computers',
+			'fr': 'Ordinateurs portables',
+		})} />
+	</h2>
+
+	<div class="devices-items">
+		<div class="item">
+			<div class="type">
+				<i class="fas fa-laptop fa-fw"></i>
+			</div>
+			<div class="content">
+				<p class="date">??? – Today</p>
+				<ul>
+					<li><i class="icon fab fa-windows fa-fw"></i> <small>OS:</small> Windows 11 Home (64 bits)</li>
+					<li><i class="icon fas fa-microchip fa-fw"></i> <small>CPU:</small> Intel Core i5-8250U <small>@ 1.60GHz – 4 cores, 8 threads</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>RAM:</small> 8GB <small>(2× 4GB) DDR4 @ 2400MHz</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>GPU:</small> Nvidia Geforce GTX 1050 <small>(6GB VRAM)</small></li>
+					<li><i class="icon fas fa-hdd fa-fw"></i> <small>SATA SSD:</small> ~250GB <small>(System, Apps)</small></li>
+					<li><i class="icon fas fa-fw"></i> <small>SATA HDD:</small> ~1TB partition <small>(Data, Games)</small></li>
 				</ul>
 			</div>
 		</div>

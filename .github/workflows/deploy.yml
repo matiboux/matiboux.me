@@ -77,22 +77,10 @@ jobs:
             --env-file .env \
             up
 
-      - name: Copy v1 application files
-        run: |
-          docker compose -f docker-compose-v1.yml -f docker-compose-v1.cicd.yml run --rm app &&
-          mkdir -p ./app/dist/v1 &&
-          cp -r ./v1/dist/* ./app/dist/v1
-
-      - name: Copy v2 application files
-        run: |
-          docker compose -f docker-compose-v2.yml -f docker-compose-v2.cicd.yml run --rm app &&
-          mkdir -p ./app/dist/v2 &&
-          cp -r ./v2/dist/* ./app/dist/v2
-
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
+          name: github-pages-app
           path: ./app/dist
 
   # Build v1 job
@@ -217,17 +205,17 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           # Expected artifact names:
-          # - github-pages
+          # - github-pages-app
           # - github-pages-v1
           # - github-pages-v2
-          pattern: github-pages*
+          pattern: github-pages-*
           path: .
 
       - name: Merge GitHub Pages artifacts
         run: |
           # Merge GitHub Pages artifacts
           mkdir -p ./app/dist &&
-            mv ./github-pages/* ./app/dist
+            mv ./github-pages-app/* ./app/dist
           mkdir -p ./app/dist/v1 &&
             mv ./github-pages-v1/* ./app/dist/v1
           mkdir -p ./app/dist/v2 &&

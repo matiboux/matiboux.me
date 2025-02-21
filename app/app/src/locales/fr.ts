@@ -1,4 +1,4 @@
-import type { I18n, Diff } from '../type'
+import type { I18n, Diff } from '~/i18n/type'
 
 const locale =
 {

@@ -1,13 +1,3 @@
-@layer utilities {
-	.icon-align {
-		@apply align-[-0.125em];
-	}
-
-	.icon-fw {
-		@apply w-5 text-center;
-	}
-}
-
 html, body {
 	position: relative;
 	width: 100%;

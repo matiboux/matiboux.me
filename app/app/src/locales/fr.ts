@@ -1,4 +1,6 @@
-import type { I18n, Diff } from '~/i18n/type'
+import type { Diff } from '~/i18n/type'
+
+import localeEn from '~/locales/en'
 
 const locale =
 {
@@ -21,9 +23,12 @@ const locale =
 	'Hosting provider': 'Hébergeur',
 } as const
 
-// Static type check
-export default locale satisfies
+type I18n = Readonly<Record<keyof typeof localeEn, string>>
+type LocaleType =
 	// Check for missing keys:
 	Readonly<Record<Diff<keyof I18n, keyof typeof locale>, string>> &
 	// Check for extra keys:
 	Readonly<Record<Diff<keyof typeof locale, keyof I18n>, never>>
+
+// Static type check
+export default locale satisfies LocaleType

@@ -134,7 +134,7 @@ jobs:
       - name: Check application files
         run: |
           # Check application files
-          [ -d ./app/dist ] && [ $(ls -1 ./app/dist | wc -l) -gt 0 ] \
+          [ -d ./v1/dist ] && [ $(ls -1 ./v1/dist | wc -l) -gt 0 ] \
             && echo "Application files found" \
             || ( echo "No application files found" && exit 1 )
 
@@ -186,6 +186,6 @@ jobs:
       - name: Check application files
         run: |
           # Check application files
-          [ -d ./app/dist ] && [ $(ls -1 ./app/dist | wc -l) -gt 0 ] \
+          [ -d ./v2/dist ] && [ $(ls -1 ./v2/dist | wc -l) -gt 0 ] \
             && echo "Application files found" \
             || ( echo "No application files found" && exit 1 )

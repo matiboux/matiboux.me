@@ -85,3 +85,107 @@ jobs:
           [ -d ./app/dist ] && [ $(ls -1 ./app/dist | wc -l) -gt 0 ] \
             && echo "Application files found" \
             || ( echo "No application files found" && exit 1 )
+
+  # Build v1 job
+  build-v1:
+    name: Build v1
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+
+      # Steps dependencies
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Execution steps
+
+      - name: Pull dependencies
+        run: |
+          # docker compose pull --ignore-buildable
+          docker compose \
+            -f ./docker-compose-v1.yml -f ./docker-compose-v1.cicd.yml \
+            --env-file .env \
+            pull --ignore-buildable
+
+      - name: Build for production
+        env:
+          GITHUB_REPOSITORY_URL: https://github.com/${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+          BUILD_CHECK: "true" # Run type checks
+        run: |
+          # docker compose build
+          export DOCKER_UID="$(id -u)"
+          docker compose \
+            -f ./docker-compose-v1.yml -f ./docker-compose-v1.cicd.yml \
+            --env-file .env \
+            build
+
+      - name: Copy application files
+        run: |
+          # docker compose up
+          export DOCKER_UID="$(id -u)"
+          docker compose \
+            -f ./docker-compose-v1.yml -f ./docker-compose-v1.cicd.yml \
+            --env-file .env \
+            up
+
+      - name: Check application files
+        run: |
+          # Check application files
+          [ -d ./app/dist ] && [ $(ls -1 ./app/dist | wc -l) -gt 0 ] \
+            && echo "Application files found" \
+            || ( echo "No application files found" && exit 1 )
+
+  # Build v2 job
+  build-v2:
+    name: Build v2
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+
+      # Steps dependencies
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Execution steps
+
+      - name: Pull dependencies
+        run: |
+          # docker compose pull --ignore-buildable
+          docker compose \
+            -f ./docker-compose-v2.yml -f ./docker-compose-v2.cicd.yml \
+            --env-file .env \
+            pull --ignore-buildable
+
+      - name: Build for production
+        env:
+          GITHUB_REPOSITORY_URL: https://github.com/${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+          BUILD_CHECK: "true" # Run type checks
+        run: |
+          # docker compose build
+          export DOCKER_UID="$(id -u)"
+          docker compose \
+            -f ./docker-compose-v2.yml -f ./docker-compose-v2.cicd.yml \
+            --env-file .env \
+            build
+
+      - name: Copy application files
+        run: |
+          # docker compose up
+          export DOCKER_UID="$(id -u)"
+          docker compose \
+            -f ./docker-compose-v2.yml -f ./docker-compose-v2.cicd.yml \
+            --env-file .env \
+            up
+
+      - name: Check application files
+        run: |
+          # Check application files
+          [ -d ./app/dist ] && [ $(ls -1 ./app/dist | wc -l) -gt 0 ] \
+            && echo "Application files found" \
+            || ( echo "No application files found" && exit 1 )

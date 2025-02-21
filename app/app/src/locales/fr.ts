@@ -1,6 +1,6 @@
 import type { Diff } from '~/i18n/type'
 
-import localeEn from '~/locales/en'
+import localeEn from './en'
 
 const locale =
 {

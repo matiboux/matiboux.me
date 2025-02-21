@@ -1,0 +1,72 @@
+---
+import Layout from '~/layouts/Layout.astro'
+import type { Props as BaseProps } from '~/layouts/Layout.astro'
+
+import '@fontsource-variable/inter'
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import bootstrapJs from 'bootstrap/dist/js/bootstrap.bundle.min.js?url'
+import favicon from '~/assets/favicon.png'
+
+export interface Props extends BaseProps
+{
+	noScripts?: boolean
+}
+---
+
+<Layout
+	{...Astro.props}
+	favicon={Astro.props.favicon ?? favicon}
+>
+
+	<slot />
+
+</Layout>
+
+<style>
+:global(html) {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+:global(body) {
+	display: flex;
+	background: #202020;
+	width: 100%;
+	min-height: 100%;
+	padding: 2em 1em;
+	flex-direction: column;
+	color: #f0f0f0;
+}
+@media print { :global(body) { color: #000 } }
+:global(body.page-error) { background: #903030 }
+
+:global(a) { color: #50a0f0 }
+:global(a):hover { color: #4080c0 }
+
+:global(hr) { border-color: rgba(255, 255, 255, .1) }
+
+@media (min-width: 576px) { :global(.mw-sm) { max-width: 540px } }
+@media (min-width: 768px) { :global(.mw-md) { max-width: 720px } }
+@media (min-width: 992px) { :global(.mw-lg) { max-width: 960px } }
+@media (min-width: 1200px) { :global(.mw-xl) { max-width: 1140px } }
+
+
+/** Main wrapper */
+
+:global(#main) {
+	display: block;
+	width: 100%;
+	margin: auto;
+}
+</style>
+
+{Astro.props.noScripts !== true && (
+	<script src={bootstrapJs}></script>
+	// <script>
+	// 	$('[data-toggle="popover"]').popover()
+	// 	$('[data-toggle="tooltip"]').tooltip()
+	// </script>
+)}

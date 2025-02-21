@@ -23,7 +23,8 @@ RUN apk add --no-cache \
 		build-base \
 		&& \
 	# Install Jekyll
-	gem install jekyll && \
+	gem install jekyll -v '~> 3.10.0' && \
+	gem install kramdown-parser-gfm -v '~> 1.1.0' && \
 	# Clean up
 	gem cleanup && \
 	apk del --no-cache \

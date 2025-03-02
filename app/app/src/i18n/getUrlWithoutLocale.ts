@@ -1,30 +1,39 @@
-import getLocaleByPath from './getLocaleByPath'
+import { getLocaleByPath } from 'astro:i18n'
 
 function getUrlWithoutLocale(url: URL | string): string
 {
 	const urlPathnames = []
 	const urlParts = typeof url === 'string' ? url.split('/') : url.pathname.split('/')
 
-	let i = 0
+	let i = !urlParts[0] ? 1 : 0
 	while (i < urlParts.length)
 	{
-		const locale = getLocaleByPath(urlParts[i] as string)
-		if (locale)
+		try
 		{
-			i++
-			continue
+			if (urlParts[i])
+			{
+				const locale = getLocaleByPath(urlParts[i] as string)
+				if (locale)
+				{
+					++i
+					continue
+				}
+			}
 		}
+		catch (error)
+		{}
 
 		urlPathnames.push(urlParts[i])
-		i++
+		++i
 	}
+
 	while (i < urlParts.length)
 	{
 		urlPathnames.push(urlParts[i])
-		i++
+		++i
 	}
 
-	return urlPathnames.join('/')
+	return '/' + urlPathnames.join('/')
 }
 
 export default getUrlWithoutLocale

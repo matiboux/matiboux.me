@@ -1,19 +1,22 @@
 # Matiboux.me
 
-Yet another Portfolio Website, but it's for Mati.
+Yet Another Portfolio Website, but it's for Mati.
 
-## Run locally
+
+## Development
+
+Run the following command to build & start the project for development:
 
 ```bash
-docker compose up --build -d
+docker compose \
+  -f docker-compose.yml -f docker-compose.override.yml \
+  --env-file .env \
+  watch
 ```
 
 
 ## License
 
-**MIT License**  
-Copyright (c) 2018-2024 Mathieu Guérin (Matiboux)
+Copyright (c) 2024 [Matiboux](https://github.com/matiboux) ([matiboux.me](https://matiboux.me))
 
-*You can find a copy of the MIT License in the **LICENSE** file.*
-
-Visit [my website](https://matiboux.me) to know more about me and to contact me.
+Licensed under the [MIT License](https://opensource.org/license/MIT). You can see a copy in the [LICENSE](LICENSE) file.

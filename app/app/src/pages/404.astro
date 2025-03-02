@@ -1,7 +1,7 @@
 ---
 import { getAbsoluteLocaleUrl } from 'astro:i18n'
 
-import Layout from '~/layouts/Layout.astro'
+import DefaultBase from '~/layouts/DefaultBase.astro'
 
 import { i18nFactory, defaultLocale } from '~/i18n'
 const _ = i18nFactory(Astro.currentLocale as any)
@@ -14,7 +14,7 @@ const title = _({
 })
 ---
 
-<Layout
+<DefaultBase
 	title={title}
 	bodyClass='page-error'
 	noScripts={true}
@@ -31,4 +31,4 @@ const title = _({
 		</div>
 	</main>
 
-</Layout>
+</DefaultBase>

@@ -1,21 +1,25 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig, envField } from 'astro/config'
 import mdx from '@astrojs/mdx'
-import tailwind from '@astrojs/tailwind'
+import tailwindcss from '@tailwindcss/vite'
 
-import i18n from './config/i18n'
+import { i18n } from '/src/config'
 
 // https://astro.build/config
 export default defineConfig({
-	vite: {
-		server: {
-			watch: {
-				usePolling: true,
-			},
-		},
-	},
-	i18n: i18n,
 	integrations: [
 		mdx(),
-		tailwind(),
 	],
+	vite: {
+		plugins: [
+			tailwindcss(),
+		],
+	},
+	i18n: i18n,
+	env: {
+		schema: {
+			GITHUB_REPOSITORY_URL: envField.string({ context: 'client', access: 'public', optional: true }),
+			GITHUB_SHA: envField.string({ context: 'client', access: 'public', optional: true }),
+		},
+		validateSecrets: true,
+	},
 })

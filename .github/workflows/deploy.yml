@@ -211,15 +211,24 @@ jobs:
           pattern: github-pages-*
           path: .
 
-      - name: Merge GitHub Pages artifacts
+      - name: Extract & Merge GitHub Pages artifacts
         run: |
-          # Merge GitHub Pages artifacts
-          mkdir -p ./app/dist &&
-            mv ./github-pages-app/* ./app/dist
-          mkdir -p ./app/dist/v1 &&
-            mv ./github-pages-v1/* ./app/dist/v1
-          mkdir -p ./app/dist/v2 &&
-            mv ./github-pages-v2/* ./app/dist/v2
+          # Extract & Merge GitHub Pages artifacts
+
+          echo '::group::Extract & Merge app artifact'
+          mkdir -p ./app/dist
+          tar -xf ./github-pages-app/artifact.tar -C ./app/dist
+          echo '::endgroup::'
+
+          echo '::group::Extract & Merge v1 artifact'
+          mkdir -p ./app/dist/v1
+          tar -xf ./github-pages-v1/artifact.tar -C ./app/dist/v1
+          echo '::endgroup::'
+
+          echo '::group::Extract & Merge v2 artifact'
+          mkdir -p ./app/dist/v2
+          tar -xf ./github-pages-v2/artifact.tar -C ./app/dist/v2
+          echo '::endgroup::'
 
       - name: Upload merged GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3

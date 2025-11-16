@@ -1,40 +1,54 @@
 # -- Generic rules:
 
-# Files without extension
-**/*
-!**/*/
-!**/*.*
-
 # Environment files
-**/.env.local
-**/.env.*.local
+.env*.local*
 
 # Temporary files
-**/._*
-**/*~
-**/*.cache
-**/*.log*
-**/*.swp
+._*
+*.cache
+*.log*
+*.swp
+*~
 
 # System files
-**/.DS_Store
-**/Thumbs.db
+.DS_Store
+Thumbs.db
+
+# -- Editor rules:
+
+# VS Code
+.vscode/**/*
+!.vscode/extensions.json
+
+# Jetbrains
+.idea/
+
+# Other
+*.njsproj
+*.ntvs*
+*.sln
+*.suo
+*.sw?
 
 # -- Application rules:
 
-# Node
-**/node_modules/
+# Node.js
+.pnpm-store/
+dist/
+node_modules/
 
 # Astro
-**/.astro/
-**/dist/
+.astro/
+.vite/
 
-# Jekyll
-**/_site/
-**/.jekyll-cache/
+# Playwright
+blob-report/
+playwright-report/
+playwright/.cache/
+test-results/
 
-# -- Specific to gitignore:
+# -- Service rules:
 
-# Build configuration files (allow)
-!**/Dockerfile
-!**/Makefile
+# All services
+/*/data/
+/*/**/.env*

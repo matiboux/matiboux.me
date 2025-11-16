@@ -1,82 +1,264 @@
-#syntax=docker/dockerfile:1.4
+#syntax=docker/dockerfile:1
 
 # This Dockerfile uses the service folder as context.
 
 
 # --
-# Upstream images
+# Global build arguments
 
-FROM node:20-slim AS node_upstream
-FROM nginx:alpine AS nginx_upstream
+ARG UID=1001
 
 
 # --
-# Npm image
+# Upstream images
 
-FROM node_upstream AS npm
+FROM node:24-slim AS node_upstream
+FROM nginx:1.29-alpine AS nginx_upstream
 
-# Create app directory
+
+# --
+# Base stage
+
+FROM node_upstream AS node_base
+
+# Set app directory
 WORKDIR /app
 
-# Source code should be mounted here
+# Set home directory for cache
+ENV HOME=/tmp
+
+
+# --
+# Build base stage
+
+FROM node_base AS node_build_base
+
+# Install pnpm
+RUN --mount=type=cache,id=npm,target=/root/.npm \
+	npm install -g pnpm
+
+
+# --
+# Deps base stage
+
+FROM node_build_base AS deps_base
+
+# Copy build configuration
+COPY --link ./app/package.json ./app/pnpm-lock.yaml ./
+
+
+# --
+# Deps dev stage
+
+FROM deps_base AS deps_dev
+
+# Install development dependencies
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
+	pnpm install --frozen-lockfile
+
+# Create Astro runtime directory
+RUN mkdir -p ./.astro
+
+
+# --
+# CLI image
+
+FROM node_build_base AS app_cli
+
+# Build arguments
+ARG UID
+
+# Install sudo
+# (hadolint: Ignore non-pinned apt package version)
+# hadolint ignore=DL3008
+RUN --mount=type=cache,sharing=locked,id=apt-cache,target=/var/cache/apt \
+	--mount=type=cache,sharing=locked,id=apt-lib,target=/var/lib/apt \
+	apt-get update && \
+	apt-get install -y --no-install-recommends sudo && \
+	echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+# Create user 'user' in group 'root' & 'sudo'
+# (hadolint: Ignore unchecked pipe failures)
+# hadolint ignore=DL4006
+RUN USERNAME="$(getent passwd "${UID}" 2>/dev/null | cut -d: -f1 || true)"; \
+	if [ -z "${USERNAME}" ]; then \
+		useradd -lm -u "${UID}" -U -G 0,sudo user; \
+	else \
+		usermod -a -G 0,sudo "${USERNAME}"; \
+	fi
+
+# Run as created non-root user
+USER ${UID}
+
+# Mount source code
 VOLUME /app
 
-COPY --link --chmod=755 ./docker-npm-entrypoint.sh /usr/local/bin/docker-npm-entrypoint
-
-ENTRYPOINT [ "docker-npm-entrypoint" ]
+# Run CLI command
+COPY --link --chmod=755 ./docker/cli-entrypoint.sh /usr/local/bin/app-cli-entrypoint
+ENTRYPOINT [ "app-cli-entrypoint" ]
 CMD [ "--help" ]
 
 
 # --
-# Base image
+# Lint image
 
-FROM node_upstream AS app_base
+FROM node_build_base AS app_lint
 
-# GitHub context environment variables
-ARG GITHUB_REPOSITORY_URL=""
-ENV GITHUB_REPOSITORY_URL=${GITHUB_REPOSITORY_URL}
-ARG GITHUB_SHA=""
-ENV GITHUB_SHA=${GITHUB_SHA}
+# Build arguments
+ARG UID
 
-# Create app directory
-WORKDIR /app
+# Run as non-root user
+USER ${UID}:0
+
+CMD [ "sh", "-c", "exit 0" ]
+
+
+# --
+# Test base stage
+
+FROM node_build_base AS test_base
+
+# Build arguments
+ARG UID
+
+# Set runtime environment
+ENV APP_ENV=test
+
+# Copy development dependencies
+ENV NODE_ENV=development
+COPY --from=deps_dev --link --chown="${UID}:0" /app/.astro/ ./.astro/
+COPY --from=deps_dev --link --chown="${UID}:0" /app/node_modules/ ./node_modules/
+
+
+# --
+# Test unit image
+
+FROM test_base AS test_unit
+
+# Build arguments
+ARG UID
+
+# Copy source code
+RUN chown "${UID}:0" .
+COPY --link --chown="${UID}:0" ./app/ ./
+
+# Run as non-root user
+USER ${UID}:0
+
+CMD [ "sh", "-c", "pnpm run test:vitest" ]
+
+
+# --
+# Test E2E image
+
+FROM test_base AS test_e2e
+
+# Build arguments
+ARG UID
+
+# Install Playwright dependencies
+ENV PLAYWRIGHT_BROWSERS_PATH=/etc/playwright/browsers
+COPY --from=deps_dev --link --chown="${UID}:0" /app/package.json /app/pnpm-lock.yaml ./
+RUN pnpm exec playwright install --with-deps
+
+# Copy source code
+RUN chown "${UID}:0" .
+COPY --link --chown="${UID}:0" ./app/ ./
+
+# Build application
+RUN pnpm run build-only
+
+# Run as non-root user
+USER ${UID}:0
+
+CMD [ "sh", "-c", "pnpm run test:playwright --output /tmp/playwright/test-results" ]
 
 
 # --
 # Dev image
 
-FROM app_base AS app_dev
+FROM node_build_base AS app_dev
 
+# Build arguments
+ARG UID
+
+# Set runtime environment
 ENV APP_ENV=dev
+
+# Copy development dependencies
 ENV NODE_ENV=development
+COPY --from=deps_dev --link --chown="${UID}:0" /app/.astro/ ./.astro/
+COPY --from=deps_dev --link --chown="${UID}:0" /app/node_modules/ ./node_modules/
 
-# Source code should be mounted here
-VOLUME /app
-VOLUME /app/node_modules
+# Copy source code
+RUN chown "${UID}:0" .
+COPY --link --chown="${UID}:0" ./app/ ./
 
-COPY --link --chmod=755 ./docker-dev-command.sh /usr/local/bin/docker-dev-command
+# Create user 'user' in group 'root'
+# (hadolint: Ignore unchecked pipe failures)
+# hadolint ignore=DL4006
+RUN USERNAME="$(getent passwd "${UID}" 2>/dev/null | cut -d: -f1 || true)"; \
+	if [ -z "${USERNAME}" ]; then \
+		useradd -lm -u "${UID}" -U -G 0 user; \
+	else \
+		usermod -a -G 0 "${USERNAME}"; \
+	fi
 
-CMD [ "docker-dev-command" ]
+# Run as created non-root user
+USER ${UID}
+
+# Set exposed port
+ARG PORT=8080
+ENV PORT=${PORT}
+EXPOSE ${PORT}
+
+# Start development server
+CMD [ "sh", "-c", "pnpm run dev --host --port \"${PORT}\"" ]
 
 
 # --
-# Prod build image
+# Prod build stage
 
-FROM app_base AS app_prod_build
+FROM node_build_base AS app_prod_build
 
+# Build arguments
+ARG UID
+
+# Set runtime environment
 ENV APP_ENV=prod
-ENV NODE_ENV=production
 
-# Install dev dependencies, required for build
-COPY --link ./app/package*.json ./app/tsconfig*.json ./app/astro.config.mjs .
-RUN npm clean-install --include=dev && \
-	npm cache clean --force
+# Copy development dependencies
+ENV NODE_ENV=development
+COPY --from=deps_dev --link --chown="${UID}:0" /app/node_modules/ ./node_modules/
 
-# Copy source code for build
-COPY --link ./app .
+# Copy source code
+COPY --link --chown="${UID}:0" ./app/ ./
+
+# Set app environment variables
+# : Deployment configuration
+ARG GITHUB_REPOSITORY_URL=''
+ENV GITHUB_REPOSITORY_URL=${GITHUB_REPOSITORY_URL}
+ARG GITHUB_SHA=''
+ENV GITHUB_SHA=${GITHUB_SHA}
+ARG VERSION_TAG=''
+ENV VERSION_TAG=${VERSION_TAG}
+# : Astro configuration
+ARG ASTRO_SITE_URL=''
+ENV ASTRO_SITE_URL=${ASTRO_SITE_URL}
+ARG ASTRO_BASE_PATH=''
+ENV ASTRO_BASE_PATH=${ASTRO_BASE_PATH}
+ARG ASTRO_ASSETS_PREFIX=''
+ENV ASTRO_ASSETS_PREFIX=${ASTRO_ASSETS_PREFIX}
+# : Application configuration
+# Add env vars for your application here.
 
 # Build application
-RUN npm run build
+ARG BUILD_CHECK='true'
+RUN if [ "${BUILD_CHECK}" = 'true' ]; then \
+		pnpm run build; \
+	else \
+		pnpm run build-only; \
+	fi
 
 
 # --
@@ -84,11 +266,20 @@ RUN npm run build
 
 FROM nginx_upstream AS app_prod
 
+# Set runtime environment
 ENV APP_ENV=prod
-ENV NODE_ENV=production
 
-# Set app directory
-WORKDIR /usr/share/nginx/html
+# Copy nginx configuration
+COPY --link ./nginx/default.conf.template /etc/nginx/templates/
 
-# Copy built static website files
-COPY --from=app_prod_build --link /app/dist .
+# Copy app production built files
+COPY --from=app_prod_build --link /app/dist/ /usr/share/nginx/html/
+
+# Set environment variables
+ARG NGINX_HOST='localhost'
+ENV NGINX_HOST=${NGINX_HOST}
+
+# Set exposed port
+ARG PORT='8080'
+ENV NGINX_PORT=${PORT}
+EXPOSE ${PORT}

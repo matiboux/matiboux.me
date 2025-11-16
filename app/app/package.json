@@ -1,15 +1,22 @@
 {
-  "name": "matiboux.me",
+  "name": "matiboux-me",
   "author": "Matiboux",
-  "license": "UNLICENSED",
-  "type": "module",
+  "license": "MIT",
   "version": "0.0.1",
+  "private": true,
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "check": "astro check --tsconfig tsconfig.prod.json",
+    "build-only": "astro build",
+    "build": "pnpm run check && pnpm run build-only",
+    "astro": "astro",
+    "astro:sync": "astro sync",
+    "astro:preview": "astro preview",
+    "test:vitest": "vitest run",
+    "test:playwright": "playwright test",
+    "deps:update": "pnpx npm-check-updates -t semver -u && pnpm i"
   },
   "repository": {
     "type": "git",
@@ -20,22 +27,26 @@
   },
   "homepage": "https://github.com/matiboux/matiboux.me#readme",
   "dependencies": {
-    "@astrojs/check": "^0.3.3",
-    "@astrojs/mdx": "^2.0.2",
-    "@astrojs/tailwind": "^5.1.0",
-    "@fontsource-variable/inter": "^5.0.16",
-    "@fortawesome/fontawesome-free": "^6.1.0",
-    "@iconify-json/twemoji": "^1.1.15",
-    "@iconify/tailwind": "^0.1.4",
-    "astro": "^4.0.6",
-    "bootstrap": "^4.3.1",
-    "js-yaml": "^4.1.0",
-    "sass": "^1.69.5",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "@astrojs/check": "^0.9.5",
+    "@astrojs/mdx": "^4.3.10",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/twemoji": "^1.2.4",
+    "@iconify/tailwind4": "^1.1.0",
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "^5.15.8",
+    "bootstrap": "^4.6.2",
+    "js-yaml": "^4.1.1",
+    "sass": "^1.94.0",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.56.1",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^20.10.6"
+    "@types/node": "^22.19.1",
+    "vitest": "^3.2.4"
   }
 }

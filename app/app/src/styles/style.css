@@ -14,7 +14,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Inter Variable', sans-serif;
-	font-size: 12pt; // or 16px or 1em
+	font-size: 12pt; /* or 16px or 1em */
 	color: #000;
 }
 

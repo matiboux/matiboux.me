@@ -1,35 +1,14 @@
-const defaultLocale =
-[
-	'Hello, world!',
+import { localeKeys } from './keys'
+import type { DefaultLocaleType } from './types.d.ts'
 
-	// Global
-	'Back to home page',
-	'and',
-	'or',
-
-	// Footer
-	'Open-source repository',
-	'Powered by',
-	'Change language:',
-	'Made with love by',
-
-	// Legal
-	'Legal',
-	'Owner & Webmaster',
-	'Hosting provider',
-] as const
-
-type Keys = typeof defaultLocale[number]
-type Type = { [key in Keys]: key }
-
-// Default locale uses the key as the value
-const locale = defaultLocale
-	.reduce<Type>((acc, key) =>
+// Default locale uses keys as both keys and values
+const locale = localeKeys
+	.reduce<DefaultLocaleType>((acc, key) =>
 		{
 			(acc as any)[key] = key
 			return acc
 		},
-		{} as Type,
+		{} as DefaultLocaleType,
 	)
 
-export default locale as Readonly<typeof locale>
+export default locale

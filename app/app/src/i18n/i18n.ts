@@ -1,89 +1,104 @@
-import en from './locales/en'
-import fr from './locales/fr'
-import { defaultLocale, type I18n } from './type'
-import type { Locales } from './type'
+import { i18n as i18nConfig } from '~/config'
+import type { Locales, I18nKeys } from './types.d.ts'
 
-const globalDictionary = {
-	'en': en,
-	'fr': fr,
-} as const satisfies Partial<Record<Locales, I18n>>
+export const defaultLocale = i18nConfig.defaultLocale
 
-function i18n(
-	locale: Locales,
-	key: keyof I18n,
-	...args: string[]
-): string
-function i18n(
-	locale: Locales,
-	dict: Partial<Record<Locales, string>>,
-	...args: string[]
-): string
-function i18n(
-	locale: Locales,
-	data: keyof I18n | Partial<Record<Locales, string>>,
-	...args: string[]
-): string
+export const locales = new Set(i18nConfig.locales.map(locale => typeof locale === 'string' ? locale : locale.path))
+
+function getLocaleKeysValue(
+	localeKeys: Record<string, any> | undefined,
+	key: string,
+): string | undefined
 {
-	const value =
-		typeof data === 'object'
-			? (
-				data[locale]
-				?? data[defaultLocale]
-				?? Object.values(data)[0] // Actually unordered
-				?? ''
-			) satisfies string
-			: (
-				globalDictionary[locale]?.[data]
-				?? data
-			) satisfies I18n[keyof I18n] satisfies string
+	if (!key)
+	{
+		// No key provided
+		return undefined
+	}
 
-	return value.replace(/{(\d+)}/g, (match, number) =>
+	// Try to access the exact key
+	let value = localeKeys?.[key]
+	if (value !== undefined)
+	{
+		return typeof value === 'string' ? value : undefined
+	}
+
+	// Otherwise, try to access nested keys
+	const keysPath = key.split('.')
+	let currentLocaleKeys: typeof localeKeys | string = localeKeys
+	for (const keyPart of keysPath)
+	{
+		if (!currentLocaleKeys || typeof currentLocaleKeys !== 'object' || !(keyPart in currentLocaleKeys))
 		{
-			const index = Number.parseInt(number)
-			return args[index] ?? match
+			currentLocaleKeys = undefined
+			break
 		}
-	)
+
+		currentLocaleKeys = currentLocaleKeys[keyPart]
+	}
+	if (typeof currentLocaleKeys === 'string')
+	{
+		return currentLocaleKeys
+	}
+
+	return undefined
 }
 
-// From `ToTuple<Union>`: https://stackoverflow.com/a/70061272
-type UnionToParm<U> = U extends any ? (k: U) => void : never
-type UnionToSect<U> = UnionToParm<U> extends ((k: infer I) => void) ? I : never
-type ExtractParm<F> = F extends { (a: infer A): void } ? A : never
-type SpliceOne<Union> = Exclude<Union, ExtractOne<Union>>
-type ExtractOne<Union> = ExtractParm<UnionToSect<UnionToParm<Union>>>
-type UnionToTuple<Union, Rslt extends any[] = []> =
-    SpliceOne<Union> extends never
-		? [ExtractOne<Union>, ...Rslt]
-		: UnionToTuple<SpliceOne<Union>, [ExtractOne<Union>, ...Rslt]>
-
-type TupleToUnion<Tuple extends any[], Rslt extends any = never> =
-	Tuple extends [infer Head, ...infer Tail]
-		? TupleToUnion<Tail, Head | Rslt>
-		: Rslt
-
-// From https://stackoverflow.com/a/52761156
-type OverloadedParameters<T> =
-	T extends { (...args: infer A1): any; (...args: infer A2): any } ? A1 | A2 :
-	T extends (...args: infer A) => any ? A :
-	any
-
-type ListTail<List extends any[]> = List extends [any, ...infer Tail] ? Tail : never
-
-type ListRecursiveTail<List extends any[], Rslt extends any[] = []> =
-	List extends [infer Head extends any[], ...infer Tail]
-		? ListRecursiveTail<Tail, [...Rslt, ListTail<Head>]>
-		: Rslt
-type UnionRecursiveTail<Union, Rslt extends any[] = []> =
-	TupleToUnion<ListRecursiveTail<UnionToTuple<Union>, Rslt>>
-
-function i18nFactory(locale: OverloadedParameters<typeof i18n>[0] | undefined)
+export function i18n(
+	locale: Locales | undefined,
+	keys: I18nKeys | string,
+	...args: any[]
+): string
 {
-	return (...args: UnionRecursiveTail<OverloadedParameters<typeof i18n>>) =>
-		i18n.apply(i18n, [locale ?? defaultLocale, ...args] as any)
-}
+	let value: string = ''
 
-export default i18n
+	if (typeof keys !== 'string')
+	{
+		// Try to get the value for the requested locale
+		// Otherwise, try to get the value for the default locale
+		// Otherwise, get the first value from the keys object
+		value = (
+			keys[locale!]
+			?? keys[defaultLocale]
+			?? Object.values(keys)[0]
+			?? ''
+		)
+	}
+	else if (keys)
+	{
+		// Try to get the value from requested locale keys
+		// Otherwise, try to get the value from default locale keys
+		// Otherwise, fallback to the key itself
+		value = (
+			getLocaleKeysValue(i18nConfig.localeKeys?.[locale!], keys)
+			?? getLocaleKeysValue(i18nConfig.localeKeys?.[defaultLocale], keys)
+			?? keys
+			?? ''
+		)
+	}
 
-export {
-	i18nFactory,
+	if (!value)
+	{
+		return value
+	}
+
+	if (args.length >= 1)
+	{
+		if (typeof args[0] === 'object')
+		{
+			// Arguments are passed as a dictionary
+			return value.replaceAll(
+				/{([^}]+)}/g,
+				(match, key) => String(args[0][key] ?? match),
+			)
+		}
+
+		// Arguments are passed as an array
+		return value.replaceAll(
+			/{(\d+)}/g,
+			(match, number) => String(args[Number.parseInt(number)] ?? match),
+		)
+	}
+
+	return value
 }

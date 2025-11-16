@@ -1,4 +1,4 @@
-#syntax=docker/dockerfile:1.4
+#syntax=docker/dockerfile:1
 
 # This Dockerfile uses the service folder as context.
 
@@ -7,16 +7,19 @@
 # Upstream images
 
 FROM ruby:3.2-alpine AS ruby_upstream
-FROM nginx:alpine AS nginx_upstream
+FROM nginx:1.29-alpine AS nginx_upstream
 
 
 # --
-# Base image
+# Prod build image
 
-FROM ruby_upstream AS app_base
+FROM ruby_upstream AS app_prod_build
 
 # Create app directory
 WORKDIR /app
+
+# Set runtime environment
+ENV APP_ENV=prod
 
 # Install dependencies
 RUN apk add --no-cache \
@@ -34,15 +37,7 @@ RUN apk add --no-cache \
 	apk cache clean && \
 	rm -rf /var/cache/apk/*
 
-# --
-# Prod build image
-
-FROM app_base AS app_prod_build
-
-ENV APP_ENV=prod
-ENV NODE_ENV=production
-
-# Download source code for v1 from GitHub
+# Download v1 source code from GitHub
 RUN wget -O app.tar.gz https://github.com/matiboux/matiboux.me/archive/refs/heads/v1.tar.gz && \
 	tar -xzf app.tar.gz --strip-components=1 && \
 	rm app.tar.gz
@@ -68,14 +63,20 @@ RUN jekyll build
 
 FROM nginx_upstream AS app_prod
 
+# Set runtime environment
 ENV APP_ENV=prod
-ENV NODE_ENV=production
 
-# Set app directory
-WORKDIR /usr/share/nginx/html
+# Copy nginx configuration
+COPY --link ./nginx/default.conf.template /etc/nginx/templates/
 
-# Make 'v1' directory
-RUN mkdir -p ./v1
+# Copy app production built files
+COPY --from=app_prod_build --link /app/_site/ /usr/share/nginx/html/v1/
 
-# Copy built static website files
-COPY --from=app_prod_build --link /app/_site ./v1
+# Set environment variables
+ARG NGINX_HOST='localhost'
+ENV NGINX_HOST=${NGINX_HOST}
+
+# Set exposed port
+ARG PORT='8080'
+ENV NGINX_PORT=${PORT}
+EXPOSE ${PORT}

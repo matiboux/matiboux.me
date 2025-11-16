@@ -13,7 +13,7 @@ ARG UID=1001
 # Upstream images
 
 FROM node:22-slim AS node_upstream
-FROM bitnami/nginx:1.27 AS nginx_upstream
+FROM nginx:1.29-alpine AS nginx_upstream
 
 
 # --
@@ -151,10 +151,17 @@ FROM nginx_upstream AS app_prod
 # Set runtime environment
 ENV APP_ENV=prod
 
-# Copy app production build
-COPY --from=app_prod_build --link /app/dist .
+# Copy nginx configuration
+COPY --link ./nginx/default.conf.template /etc/nginx/templates/
+
+# Copy app production built files
+COPY --from=app_prod_build --link /app/dist/ /usr/share/nginx/html/
+
+# Set environment variables
+ARG NGINX_HOST='localhost'
+ENV NGINX_HOST=${NGINX_HOST}
 
 # Set exposed port
-ARG PORT=8080
-ENV NGINX_HTTP_PORT_NUMBER=${PORT}
+ARG PORT='8080'
+ENV NGINX_PORT=${PORT}
 EXPOSE ${PORT}

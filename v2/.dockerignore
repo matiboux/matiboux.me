@@ -1,47 +1,59 @@
 # -- Generic rules:
 
-# Files without extension
-**/*
-!**/*/
-!**/*.*
-
 # Environment files
-**/.env.local
-**/.env.*.local
+**/.env*.local*
 
 # Temporary files
 **/._*
-**/*~
 **/*.cache
 **/*.log*
 **/*.swp
+**/*~
 
 # System files
 **/.DS_Store
 **/Thumbs.db
 
+# -- Editor rules:
+
+# VS Code
+**/.vscode/
+
+# Jetbrains
+**/.idea/
+
+# Other
+**/*.njsproj
+**/*.ntvs*
+**/*.sln
+**/*.suo
+**/*.sw?
+
 # -- Application rules:
 
-# Node
+# Node.js
+**/.pnpm-store/
+**/dist/
 **/node_modules/
 
 # Astro
 **/.astro/
-**/dist/
+**/.vite/
 
-# Jekyll
-**/_site/
-**/.jekyll-cache/
+# Playwright
+**/blob-report/
+**/playwright-report/
+**/playwright/.cache/
+**/test-results/
 
-# -- Specific to dockerignore:
+# -- Service rules:
+
+# All services
+data/
+**/.env*
+
+# -- Docker rules:
 
 # Docker configuration files
-**/Dockerfile
-**/docker-compose.yml
-**/docker-compose.*.yml
-
-# Dotfiles
-**/.editorconfig
-**/.gitattributes
-**/.gitignore
-**/.gitmodules
+Dockerfile
+docker-compose*.yml

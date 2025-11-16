@@ -73,7 +73,7 @@ COPY --link ./nginx/default.conf.template /etc/nginx/templates/
 COPY --from=app_prod_build --link /app/_site/ /usr/share/nginx/html/v1/
 
 # Set environment variables
-ARG NGINX_HOST='local'
+ARG NGINX_HOST='localhost'
 ENV NGINX_HOST=${NGINX_HOST}
 
 # Set exposed port

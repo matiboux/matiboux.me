@@ -1,3 +1,5 @@
+import { GITHUB_SHA, VERSION_TAG } from 'astro:env/client'
+
 import type { Props as BaseProps } from '~/layouts/Base.astro'
 
 export interface Site
@@ -5,6 +7,7 @@ export interface Site
 	lang?: BaseProps['lang']
 	title?: BaseProps['title']
 	description?: BaseProps['description']
+	version?: BaseProps['version']
 	author?: BaseProps['author']
 	keywords?: BaseProps['keywords']
 	generator?: BaseProps['generator']
@@ -23,6 +26,7 @@ export const site: Site = {
 	lang: 'en',
 	title: 'Matiboux.me',
 	description: 'My personal website, about me and my projects!',
+	version: GITHUB_SHA || VERSION_TAG || 'dev',
 	author: 'Matiboux',
 	themeColor: '#202020',
 	viewportScale: 1,

@@ -464,12 +464,12 @@ jobs:
           # Check services exit codes
           echo '::group::Check services exit codes'
           docker compose \
-            -f ./docker-compose.yml -f ./docker-compose.test-unit.yml \
+            -f ./docker-compose.yml -f ./docker-compose.test-e2e.yml \
             --env-file .env \
             ps -a
           NON_ZERO_EXIT_CODES=$(
             docker compose \
-              -f ./docker-compose.yml -f ./docker-compose.test-unit.yml \
+              -f ./docker-compose.yml -f ./docker-compose.test-e2e.yml \
               --env-file .env \
               ps -a --format '{{.ExitCode}}' \
             | grep -v '^0$' \

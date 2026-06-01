@@ -47,7 +47,7 @@
     "@playwright/test": "^1.57.0",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.19.1",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.0"
   },
   "pnpm": {
     "overrides": {

@@ -8,7 +8,7 @@ const _url = (path?: string) => getAbsoluteLocaleUrl(Astro.currentLocale ?? defa
 
 const title = 'Posts'
 
-const postModules = import.meta.glob('./posts/*.{md,mdx}', { eager: true })
+const postModules = import.meta.glob<{ url: string, frontmatter: { title: string, date: string } }>('./posts/*.{md,mdx}', { eager: true })
 const posts = Object.values(postModules)
 ---
 

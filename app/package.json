@@ -16,7 +16,7 @@
     "astro:preview": "astro preview",
     "test:vitest": "vitest run",
     "test:playwright": "playwright test",
-    "deps:update": "pnpx npm-check-updates -t semver -u && pnpm i"
+    "npm:lockfile": "npm install --package-lock-only --ignore-scripts"
   },
   "repository": {
     "type": "git",
@@ -27,31 +27,30 @@
   },
   "homepage": "https://github.com/matiboux/matiboux.me#readme",
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/mdx": "^4.3.12",
-    "@fontsource-variable/inter": "^5.2.8",
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/mdx": "^4.3.14",
+    "@fontsource-variable/inter": "^5.3.0",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@iconify-json/mdi": "^1.2.3",
-    "@iconify-json/twemoji": "^1.2.4",
-    "@iconify/tailwind4": "^1.2.0",
-    "@tailwindcss/vite": "^4.1.17",
-    "astro": "^5.16.3",
+    "@iconify-json/twemoji": "^1.2.5",
+    "@iconify/tailwind4": "^1.2.3",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.2.0",
     "bootstrap": "^4.6.2",
-    "js-yaml": "^4.1.1",
-    "sass": "^1.94.2",
+    "js-yaml": "^4.3.1",
+    "sass": "^1.102.0",
     "sharp": "^0.33.5",
-    "tailwindcss": "^4.1.17",
-    "typescript": "^5.9.3"
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@playwright/test": "^1.57.0",
+    "@playwright/test": "^1.62.1",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.19.1",
-    "vitest": "^3.2.6"
+    "@types/node": "^24.13.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
   },
-  "pnpm": {
-    "overrides": {
-      "volar-service-emmet@0.0.66": "0.0.67"
-    }
+  "imports": {
+    "#global.css": "./src/styles/global.css",
+    "#tailwind.css": "./src/styles/tailwind.css"
   }
 }

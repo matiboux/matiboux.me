@@ -16,7 +16,7 @@
     "astro:preview": "astro preview",
     "test:vitest": "vitest run",
     "test:playwright": "playwright test",
-    "deps:update": "pnpx npm-check-updates -t semver -u && pnpm i"
+    "npm:lockfile": "npm install --package-lock-only --ignore-scripts"
   },
   "repository": {
     "type": "git",
@@ -49,9 +49,8 @@
     "@types/node": "^22.19.1",
     "vitest": "^3.2.6"
   },
-  "pnpm": {
-    "overrides": {
-      "volar-service-emmet@0.0.66": "0.0.67"
-    }
+  "imports": {
+    "#global.css": "./src/styles/global.css",
+    "#tailwind.css": "./src/styles/tailwind.css"
   }
 }
